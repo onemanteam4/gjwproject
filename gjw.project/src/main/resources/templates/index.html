@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>공지사항 작성</title>
-
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/index.css">
 </head>
 <body>
     <!--상단 배너 시작-->
@@ -13,14 +14,43 @@
             <div class="box-wrapper">
                 <div class="box-viewport">
                     <ul class="box-slider-list">
-                        <li>배너1</li>
-                        <li>배너2</li>
-                        <li>배너3</li>
-                        <li>배너4</li>
-                        <li>배너5</li>
-                        <li>배너6</li>
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCY5OQjDmW1_SRO4saLQzveQ">
+                                <img src="/main image/top banner/boardFile.jpg">
+                            </a>
+                        </li>
+                        <li><a href="https://www.youtube.com/channel/UCY5OQjDmW1_SRO4saLQzveQ">
+                            <img src="/main image/top banner/top banner 피터의 매직.jpg">
+                            </a>
+                        </li>
+                        <li><a href="https://www.youtube.com/channel/UCY5OQjDmW1_SRO4saLQzveQ">
+                            <img src="/main image/top banner/top banner 감성교복.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCY5OQjDmW1_SRO4saLQzveQ">
+                                <img src="/main image/top banner/top banner 황리단길.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCY5OQjDmW1_SRO4saLQzveQ">
+                                <img src="/main image/top banner/top banner 경주월드 캐스트.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCY5OQjDmW1_SRO4saLQzveQ">
+                                <img src="/main image/top banner/boardFile.jpg">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCY5OQjDmW1_SRO4saLQzveQ">
+                                <img src="/main image/top banner/top banner 황리단길.jpg">
+                            </a>
+                        </li>
                     </ul>
                 </div>
+                <!-- transition-duration: 50s;
+    transform: translate3d(-7595px, 0px);-->
                 <div class="box-controller">
                     <ul class="box-pager-list">
                         <li>1번 컨트롤러</li>
@@ -37,9 +67,24 @@
         <div id="quickController">
             <span class="toggle-botten"></span>
             <ul>
-                <li>할인정보</li>
-                <li>공연정보</li>
-                <li>드라켄벨리</li>
+                <li>
+                    <a href="할인정보 페이지">
+                        <img src="/main image/PC quick/할인정보.png" alt="">
+                        <span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="공연정보 페이지">
+                        <img src="/main image/PC quick/공연 정보.png" alt="">
+                        <span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="드라켄벨리">
+                        <img src="/main image/PC quick/드라켄벨리.png" alt="">
+                        <span></span>
+                    </a>
+                </li>
             </ul>
         </div>
         <!--퀵 배너 끝-->
@@ -48,40 +93,96 @@
             <div class="topWrap">
                 <div class="main-top-top">
                     <div class="main-top-left">
-                        <div>경주월드 어뮤즈먼트</div>
-                        <div>캘리포니아비치</div>
+                        <a href="경주월드 어뮤즈먼트 사이트">
+                            <img src="/main image/main logo/경주월드 찐어뮤즈.png">
+                            경주월드 어뮤즈먼트</a>
+                        <a href="캘리포니아비치 사이트">
+                            <img src="/main image/main logo/캘리포니아비치 찐.png">
+                            캘리포니아비치
+                        </a>
                     </div>
                     <div class="main-top-middle">
-                        <div>경주월드 메인로고</div>
+                        <a href="경주월드 메인 사이트 주소">
+                            <img src="/main image/main logo/경주월드 메인로고.jpg" style="width: 196px; height: 78px;">
+                            
+                        </a>
                     </div>
                     <div class="main-top-right">
                         <div class="main-top-list">
                             <ul>
-                                <li>홈</li>
-                                <li>로그인</li>
-                                <li>회원가입</li>
-                                <li>단체예약</li>
-                                <li>연간이용권</li>
-                                <li>언어 선택</li>
+                                <li>
+                                    <a href="메인사이트 주소">홈</a>
+                                </li>
+                                <li>
+                                    <a href="로그인 사이트 주소">로그인</a>
+                                </li>
+                                <li>
+                                    <a href="회원가입 사이트 주소">회원가입</a>
+                                </li>
+                                <li class="reservation">
+                                    <a href="단체예약 사이트 주소">단체예약</a>
+                                </li>
+                                <li class="reservation">
+                                    <a href="연간이용권 사이트 주소">연간이용권</a>
+                                </li>
+                                <li class="choice">
+                                    <a href="">
+                                        <img src="/main image/main logo/Google__G__Logo.svg.png" style="height: 19px; width: 19;">
+                                        언어 선택
+                                        <img src="/main image/main logo/언어선택 화살표.png">
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                         <div class="main-top-search">
-                            <div>검색창</div>
-                            <div>돋보기</div>
+                            <form action="" name="frmSearch">
+                                <label for="search-label"></label>
+                                <input type="text" name="search-input">
+                            </form>
+                            <div>
+                                <img src="/main image/main logo/검색돋보기.png" style="height: 35px; width: 35px;">
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="main-top-bottom">
                     <div class="main-top-bottom-all">
                         <div class="main-top-menu">
-                            <div>
-                                <div>이용정보</div>
-                                <div>요금정보</div>
-                                <div>어뮤즈먼트 소개</div>
-                                <div>공연 및 이벤트</div>
-                                <div>고객센터</div>
-                                <div>스마트할인예약</div>
-                            </div>
+                            <ul>
+                                <li>
+                                    <a href="이용정보 주소들어가는 곳">
+                                        이용정보
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="이용요금 주소들어가는 곳">
+                                        요금정보
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="어트랙션 주소들어가는 곳">
+                                        어뮤즈먼트 소개
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="공연 및 이벤트 주소들어가는 곳">
+                                        공연 및 이벤트
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="공지사항 주소들어가는 곳">
+                                        고객센터
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="시작페이지 주소들어가는 곳">
+                                        스마트할인예약
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                            
                         </div>
                     </div>
                 </div>
@@ -842,6 +943,72 @@
                                 <a href="https://www.gjw.co.kr/">
                                     <img src="경주월드 로고" alt="">
                                 </a>
+                            </div>
+                            <div class="information-details-center">
+                                <div class="center-company">
+                                    <ul>
+                                        <li>
+                                            <a href="">경주월드 소개</a>
+                                        </li>
+                                        <li>
+                                            <a href="">이용약관</a>
+                                        </li>
+                                        <li>
+                                            <a href="">개인정보취급방침</a>
+                                        </li>
+                                        <li>
+                                            <a href="">제휴문의</a>
+                                        </li>
+                                        <li>
+                                            <a href="">채용안내 및 지원</a>
+                                        </li>
+                                        <li>
+                                            <a href="">이메일무단수집거부</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="center-company-imformation">
+                                    <ul>
+                                        <li>경주월드 주식회사 (경주지점)</li>
+                                        <li>주소 : 경주시 보문로 544(천군동)</li>
+                                        <li>대표전화 : 1544-8765</li>
+                                        <li>사업자등록번호 : 505-85-15586</li>
+                                        <li>대표이사 : 정원기, 함영관</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <ul>
+                                        <li>ⓒ GyeongjuWorld. All rights reserved.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="right-company-imformation">
+                               <div class="company-family">
+                                    <ul>
+                                        <li>
+                                            관련사이트 바로가기
+                                            <div>
+                                                <ul>
+                                                    <li>
+                                                        <a href="http://www.asiacement.co.kr">아세아시멘트</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="http://www.asiasan.co.kr">아세아산업개발</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="http://www.yujinpanji.co.kr">유진판자공업</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="http://www.cheilacc.co.kr">제일산업</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="http://www.a-pack.co.kr">에이팩</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                               </div> 
                             </div>
                         </div>
                     </div>

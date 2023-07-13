@@ -1,0 +1,86 @@
+.box-wrapper{
+    width: 100%;
+}
+
+
+.box-viewport {
+    width: 100%;
+    overflow-x: hidden;
+    width: 1197px;
+}
+
+
+
+.box-slider-list {
+   
+    height: 110px;
+    display: flex;
+}   
+
+.box-pager-list {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    
+}
+
+.topWrap {
+    width: 1300px;
+    height: 96px;
+}
+
+.main-top-left {
+    width: 150px;
+    height: 42px;
+    
+}
+
+.main-top-left a {
+    font-size: 0.67rem;
+}
+
+
+
+
+.main-top-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+.main-top-left a {
+    color: #707070;
+}
+
+.main-top-list ul li a{
+    color: #707070;
+    font-weight: 300;
+    font-size: 0.67rem;
+}
+
+.main-top-list ul li.reservation a{
+    color: #f26c4f;
+}
+
+.main-top-list ul li.choice a {
+    display: flex;
+}
+
+.main-top-search {
+    display: flex;
+}
+
+.main-top-bottom {
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    height: 54px;
+    display: block;
+}
+.main-top-bottom-all {
+    display: block;
+}
+
+
+.main-top-menu ul{
+    display: block;
+}
