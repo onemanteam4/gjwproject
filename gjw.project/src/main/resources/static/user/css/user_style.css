@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    vertical-align: baseline;
+}
+
+html{
+    
+    background-color: #FFFFFF;
+
+    overflow-y: scroll;
+    overflow-x: auto;
+}
+
+body {
+    background-color: #FFFFFF;
+    margin: 0px;
+
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: -0.5px;
+    color: #333;
+    line-height: 1.5;
+
+}
+
+div {
+    display: block;
+}
+
+button {
+    cursor: pointer;
+}
+
+footer {
+    display: block;
+    font-size: 12px;
+    font-weight: 300;
+    margin: 80px 0px 40px;
+
+}
