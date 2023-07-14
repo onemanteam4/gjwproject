@@ -1,0 +1,176 @@
+/*전체부분*/
+.wrap_contents {
+    padding: 50px 0px;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0px auto;
+}
+
+.wrap {
+    max-width: 1280px;
+    padding: 0px 40px;
+    margin: 0px auto;
+}
+
+/*헤더*/
+#header {
+    margin-top: 46px;
+    display: block;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header h1 img {
+    width: 160px;
+}
+
+#container {
+    margin-top: 40px;
+}
+
+.page-title h2 {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.contents {
+    margin-top: 40px;
+}
+
+.small-page {
+    width: 588px;
+    margin: 0px auto;
+}
+
+.age-type {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    border: none;
+    padding: 0px;
+    text-align: center;
+}
+
+.age-type a {
+    margin: 0px 12px;
+    padding: 40px 20px 20px;
+
+    color: #333;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+
+    width: 280px;
+    height: 213px;
+
+    text-decoration: none;
+}
+
+.age-icon {
+    display: inline-block;
+    width: 66px;
+    height: 66px;
+}
+
+.age-type p {
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+.age-type span {
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 5px;
+    line-height: 1.25;
+}
+
+.sns-signup {
+    margin-top: 40px;
+}
+
+.sns-signup h3 {
+    font-weight: 400;
+}
+
+.sns-signup-btn {
+    font-size: 14px;
+    width: 100%;
+    margin-top: 10px;
+    border-color: #ddd;
+    color: #333;
+
+    display: inline-block;
+    padding: 0px 24px;
+    height: 48px;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 5px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.sns-signup span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 135px;
+    width: 100%;
+    text-align: center;
+    line-height: 48px;
+}
+
+.sns-signup-btn img {
+    text-align: center;
+
+    width: 24px;
+    height: 24px;
+    line-height: 48px;
+}
+
+.sns-signup-btn p {
+    margin-left: 5px;
+}
+
+
+
+
+
+
+
+#footer img {
+    width: 80px;
+    display: block;
+}
+
+#footer ul {
+    display: block;
+    margin-top: 10px;
+    list-style: none;
+}
+
+#footer li {
+    display: list-item;
+    float: left;
+    margin-left: 20px;
+    text-align: center;
+}
+
+#footer li:nth-child(1) {
+    margin-left: 0px;
+}
+
+#footer li:nth-child(5) {
+    clear: both;
+    margin-left: 0px;
+}
+
+#footer li:nth-child(7) {
+    clear: both;
+    margin-left: 0px;
+    color: #aaa;
+    letter-spacing: 0.5px;
+}
