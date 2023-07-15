@@ -135,40 +135,44 @@ header h1 img {
     margin-left: 5px;
 }
 
+footer {
+    display: block;
+    font-size: 12px;
+    font-weight: 300;
+    margin: 80px 0px 40px;
 
+    height: 90px;
+}
 
-
-
-
-
-#footer img {
+footer img {
     width: 80px;
     display: block;
 }
 
-#footer ul {
+footer ul {
     display: block;
+    height: 54px;
     margin-top: 10px;
     list-style: none;
 }
 
-#footer li {
+footer li {
     display: list-item;
     float: left;
     margin-left: 20px;
     text-align: center;
 }
 
-#footer li:nth-child(1) {
+footer li:nth-child(1) {
     margin-left: 0px;
 }
 
-#footer li:nth-child(5) {
+footer li:nth-child(5) {
     clear: both;
     margin-left: 0px;
 }
 
-#footer li:nth-child(7) {
+footer li:nth-child(7) {
     clear: both;
     margin-left: 0px;
     color: #aaa;

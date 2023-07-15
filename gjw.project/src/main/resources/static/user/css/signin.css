@@ -1,3 +1,4 @@
+
 /*전체부분*/
 .wrap {
     width: 1280px;
@@ -63,6 +64,8 @@ header h1 img {
     font-weight: 400;
     border: none;
     border-bottom: 1px solid #e5e5e5;
+
+    cursor: pointer;
 }
 
 .input-type input[type="password"] {
@@ -76,7 +79,14 @@ header h1 img {
     appearance: none;
     border: none;
     border-bottom: 1px solid #e5e5e5;
+
+    cursor: pointer;
 }
+
+.input-type input:hover {
+    border-bottom: 1px solid #f85549;
+}
+
 /*아이디 저장 및 아이디 비밀번호 찾기*/
 .signin-menu {
     display: flex;
@@ -234,34 +244,44 @@ header h1 img {
     font-weight: 400;
 }
 
-#footer img {
+footer {
+    display: block;
+    font-size: 12px;
+    font-weight: 300;
+    margin: 80px 0px 40px;
+
+    height: 90px;
+}
+
+footer img {
     width: 80px;
     display: block;
 }
 
-#footer ul {
+footer ul {
     display: block;
+    height: 54px;
     margin-top: 10px;
     list-style: none;
 }
 
-#footer li {
+footer li {
     display: list-item;
     float: left;
     margin-left: 20px;
     text-align: center;
 }
 
-#footer li:nth-child(1) {
+footer li:nth-child(1) {
     margin-left: 0px;
 }
 
-#footer li:nth-child(5) {
+footer li:nth-child(5) {
     clear: both;
     margin-left: 0px;
 }
 
-#footer li:nth-child(7) {
+footer li:nth-child(7) {
     clear: both;
     margin-left: 0px;
     color: #aaa;
