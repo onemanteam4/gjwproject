@@ -1,0 +1,42 @@
+html {
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: auto;
+    font-size: 18px;
+}
+
+
+body, div, ul, li, h1, h2, h3, h4, h5, span, p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    box-sizing: border-box;
+    letter-spacing: -1px;
+    line-height: 1.4;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+
+    display: block;
+}
+
+h2, h3, h4, h5 {
+    letter-spacing: -2px;
+    display: block;
+}
+
+ul {
+    list-style: none;
+    
+}
+
+a {
+    text-decoration: none;
+    box-sizing: border-box;
+    cursor: pointer;
+}
