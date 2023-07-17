@@ -157,9 +157,7 @@ body {
 #main-top {
     
     position: relative;
-    position: sticky;
-    top: 10px;
-    z-index: 10;
+
 }
 
 .topWrap {
@@ -340,12 +338,14 @@ body {
     border-bottom: 1px solid #e1e1e1;
     clear: both;
     width: 100%;
-    position: sticky;
+    position: absolute;
     
     height: 55px;
-    top: 200px;
+    top: 100px;
     background-color: #ffffff;
     z-index: 103;
+
+
 }
 
 .main-top-bottom-all {
