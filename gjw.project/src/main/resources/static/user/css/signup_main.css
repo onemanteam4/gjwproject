@@ -1,0 +1,368 @@
+/*전체부분*/
+body {
+    background-color: #FFFFFF;
+    margin: 0px;
+}
+
+.wrap_contents {
+    padding: 50px 0px;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0px auto;
+}
+
+.wrap {
+    max-width: 1280px;
+    padding: 0px 40px;
+    margin: 0px auto;
+}
+
+/*헤더*/
+#header {
+    margin-top: 46px;
+    display: block;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header h1 img {
+    width: 160px;
+}
+
+#container {
+    margin-top: 40px;
+}
+
+.contents {
+    margin-top: 40px;
+}
+
+.small-page {
+    max-width: 588px;
+    margin: 0px auto;
+}
+
+.page-title {
+    margin-bottom: 56px;
+}
+
+.page-title h2 {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.input-type {
+    margin-top: 24px;
+}
+
+.small-wrap {
+    position: relative;
+}
+
+.input-type label {
+    display: block;
+    color: #aaa;
+
+}
+
+.input-type input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    border-bottom: 1px solid #e5e5e5;
+    line-height: 40px;
+
+    cursor: pointer;
+}
+
+.input-type input::placeholder {
+    font-size: 14px;
+    color: #aaa;
+    font-weight: 300;
+}
+
+.input-type input:hover {
+    border-bottom: 1px solid #f85549;
+}
+
+#signup-id {
+    padding-right: 134px;
+}
+
+.check-btn {
+    display: inline-block;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 5px;
+    font-weight: 400;
+    padding: 0px 24px;
+    font-size: 12px;
+    height: 32px;
+    line-height: 32px;
+    position: absolute;
+    bottom: 8px;
+    right: 0;
+    text-decoration: none;
+    border-color: #ddd;
+    color: #333;
+}
+
+.check-result {
+    font-size: 14px;
+    color: #2498E5;
+}
+
+.check-result.false {
+    color: #f85549;
+}
+
+#signup-name {
+    padding-right: 134px;
+}
+
+.small-wrap .radio-type {
+    position: absolute;
+    
+    right: 0px;
+    bottom: 8px;
+}
+
+.radio-type input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border: 0;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+}
+
+
+.radio-type label {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    padding-left: 21px;
+    color: #333;
+    position: relative;
+    cursor: pointer;
+}
+
+.radio-type label::after {
+    content: '';
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 25%;
+    left: 0;
+    background-image: url(/donguk_img/radio_type2_white.png);
+    background-size: 16px;
+}
+
+.radio-type input[type="radio"]:checked + label::after {
+    background-image: url(/donguk_img/radio_type2_red.png);
+}
+
+.radio-type span {
+    margin-left: 10px;
+    
+}
+
+.radio-type span label {
+    font-size: 18px;
+}
+
+.local-pick {
+    display: flex;
+    width: 100%;
+}
+
+.slt-type {
+    width: 286px;
+    margin: 0px 8px;
+
+    font-size: 18px;
+    border-bottom: 1px solid #e5e5e5;
+    height: 40px;
+    padding-right: 15px;
+    line-height: 40px;
+    position: relative;
+    /*background: url(/donguk_img/arrow_down.png) center right no-repeat;
+    background-size: 12px;*/
+}
+
+.slt-type option {
+    font-size: 14px;
+    display: block;
+    border-collapse: collapse;
+    min-height: 14px;
+    padding: 0px 2px 1px;
+}
+
+.signup_agree {
+    margin-top: 40px;
+}
+
+.terms-wrap {
+    margin-top: 10px;
+}
+
+.terms {
+    font-size: 14px;
+    height: 150px;
+    padding: 20px;
+    margin-top: 10px;
+    overflow: auto;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    color: #aaa;
+}
+
+ol {
+    list-style: none;
+}
+
+.terms ol li:first-child {
+    margin-top: 0;
+}
+
+.terms ol li {
+    margin-top: 10px;
+}
+
+.terms li ol {
+    padding-left: 20px;
+}
+
+
+
+.inner:first-child {
+    margin-top: 0px;
+}
+
+.inner {
+    margin-top: 20px;
+}
+
+.agree-wrap {
+    margin-top: 40px;
+}
+
+.agree-list .check-type {
+    font-size: 14px;
+    margin-top: 10px;
+}
+/* 체크박스 시작 */
+.check-type {
+    position: relative;
+}
+
+.chkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border: 0;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+}
+
+.chkbox + label {
+    display: inline-block;
+    position: relative;
+    padding-left: 34px;
+    cursor: pointer;
+}
+
+.chkbox + label::after {
+    content: '';
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(/donguk_img/chkbox_white.png);
+    background-size: 24px;
+}
+
+.chkbox:checked + label::after {
+    background-image: url(/donguk_img/chkbox_red.png);
+}
+/*체크박스 끝*/
+
+
+
+
+
+.signup-btn {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.type-btn {
+    width: 100%;
+    padding: 0px;
+    text-decoration: none;
+    background: #f85549;
+    background-color: #f85549;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 0;
+
+    display: inline-block;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+footer {
+    display: block;
+    font-size: 12px;
+    font-weight: 300;
+    margin: 80px 0px 40px;
+
+    height: 90px;
+}
+
+footer img {
+    width: 80px;
+    display: block;
+}
+
+footer ul {
+    display: block;
+    height: 54px;
+    margin-top: 10px;
+    list-style: none;
+}
+
+footer li {
+    display: list-item;
+    float: left;
+    margin-left: 20px;
+    text-align: center;
+}
+
+footer li:nth-child(1) {
+    margin-left: 0px;
+}
+
+footer li:nth-child(5) {
+    clear: both;
+    margin-left: 0px;
+}
+
+footer li:nth-child(7) {
+    clear: both;
+    margin-left: 0px;
+    color: #aaa;
+    letter-spacing: 0.5px;
+}
