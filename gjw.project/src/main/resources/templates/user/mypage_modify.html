@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/user/css/user_style.css">
+    <link rel="stylesheet" href="/static/user/css/mypage_modify.css">
+    <title>회원정보 수정</title>
+</head>
+<body>
+    <div id="wrap_containers">
+        <div class="wrap">
+            <header id="header">
+                <h1>
+                    <a href="" class="home-btn">
+                        <img src="/donguk_img/logo.png" alt="경주월드">
+                    </a>
+                </h1>
+                <nav class="nav-menu">
+                    <ul>
+                        <li class="nav-ticket">
+                            <a href="">
+                                <img src="/donguk_img/util_icon_regi.png" alt="통합예매">
+                                통합예매
+                            </a>
+                        </li>
+                        <li class="nav-logout">
+                            <a href="">
+                                <img src="/donguk_img/util_icon_person.png" alt="로그아웃">
+                                마이페이지
+                            </a>
+                        </li>
+                        <li class="nav-logout">
+                            <a href="">
+                                <img src="/donguk_img/util_icon_out.png" alt="로그아웃">
+                                로그아웃
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <div id="container">
+                <div class="contents">
+                    <div class="small-page">
+                        <div class="page-title">
+                            <h2>회원 정보</h2>
+                        </div>
+                        <div class="input_wrap">
+                            <div class="input-type">
+                                <div class="small-wrap">
+                                    <label for="signup-name">이름</label>
+                                        <input type="text" name="signup-name" id="signup-name" readonly="readonly" value="">
+                                        <div class="radio-type">
+                                            <span>
+                                                <input type="radio" name="signup-gender" id="male" value="01">
+                                                <label for="male">남자</label>
+                                            </span>
+                                            <span class="signup-name-span2">
+                                                <input type="radio" name="signup-gender" id="female" value="02">
+                                                <label for="female">여자</label>
+                                            </span>
+                                        </div>
+                                </div> 
+                            </div>
+                            <div class="input-type">
+                                <div class="small-wrap">
+                                    <label for="signup-id">아이디</label>
+                                    <input type="text" name="signup-id" id="signup-id" placeholder="6~10자리, 영문으로 시작">
+                                </div>
+                                <p class="check-result false" id="check-result"></p>
+                            </div>
+                            <div class="input-type">
+                                <label for="signup-pw">비밀번호</label>
+                                <input type="password" name="signup-pw" id="signup-pw" placeholder="9~20자리, 영문/숫자/특수문자 3개조합">
+                            </div>
+                            <div class="input-type">
+                                <label for="signup-pw-chk">비밀번호 확인</label>
+                                <input type="password" name="chk-signup-pw" id="chk-signup-pw">
+                            </div>
+                            <div class="input-type">
+                                <label for="signup-email">이메일</label>
+                                <input type="email" name="signup-email" id="signup-email">
+                            </div>
+                            <div class="input-type">
+                                <label for="signup-phone">휴대폰 번호</label>
+                                <input type="tel" name="signup-hp" id="signup-hp" value="" readonly="readonly">
+                            </div>
+                            <div class="input-type">
+                                <label for="signup-birth">생년월일</label>
+                                <input type="tel" name="signup-birth" id="signup-birth" value="" readonly="readonly">
+                            </div>
+                            <div class="input-type">
+                                <label>지역</label>
+                                <div class="local-pick">
+                                    <select class="slt-type" name="addsido" id="addsido">
+                                        <option value="">서울</option>
+                                        <option value="">부산</option>
+                                    </select>
+                                    <select class="slt-type" name="addsigungu" id="addsigungu">
+                                        <option value="">종로구</option>
+                                        <option value="">용산구</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="signup_agree">
+                            <div class="terms-wrap">
+                                <div class="inner">
+                                    <div class="check-type">
+                                        <input type="checkbox" class="chkbox" name="checkrow" id="chk1">
+                                        <label for="chk1">
+                                            경주월드 이용약관(필수)
+                                        </label>
+                                    </div>
+                                    <div class="terms">
+                                        <ol>
+                                            <li>
+                                                제 1조 목적
+                                                <br>
+                                                이 약관은 경주월드(주) (이하 "회사"라 합니다)에서 제공하는 인터넷 정보 서비스 (이하 "서비스"라 한다)의 이용 조건ㆍ절차, 이용자의 권리ㆍ의무 및 기타 필요한 사항을 규정함을 목적으로 합니다.
+                                            </li>
+                                            <li>
+                                                제 2 조 약관의 효력과 변경
+                                                <ol>
+                                                    <li>서비스는 본 약관에 규정된 조항을 변경 없이 이용자가 수락하는 것을 조건으로 제공됩니다. 이용자께서 본 서비스를 사용하면 본 약관에 대하여 이용자가 동의한다는 것을 의미합니다.</li>
+                                                    <li>(회사)는 약관의 규제 등에 관한 법률, 전자거래 기본법, 전자서명법, 정보통신망 이용 촉진 등에 관한 법률, 방문판매 등에 관한 법률, 소비자 보호법 등 관련법을 위배하지 않는 범위에서 이 약관을 개정할 수있습니다.</li>
+                                                    <li>(회사)는 전자상거래 등에서의 소비자보호에 관한 법률, 전자거래 기본법, 전자서명법, 정보통신망 이용촉진 등에 관한 법률, 방문판매 등에 관한 법률, 소비자보호법 등 관련법을 위해하지 않는 범위에서 이 약관을 개정할 수 있습니다.</li>
+                                                </ol>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                <div class="inner">
+                                    <div class="check-type">
+                                        <input type="checkbox" class="chkbox" name="checkrow" id="chk2">
+                                        <label for="chk2">
+                                            개인정보 보호정책 동의(필수)
+                                        </label>
+                                    </div>
+                                    <div class="terms">
+                                        경주월드는 귀하의 개인정보보호를 매우 중요시하며, 『정보통신망 이용촉진 및 정보보호에 관한 법률』상의 개인정보보호규정 및 정보통신부가 제정한 『개인정보보호지침』을 준수하고 있습니다. 경주월드는 개인정보취급방침을 통하여 귀하께서 제공하시는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며 개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다.
+                                        <br>
+                                        <br>
+                                        경주월드는 개인정보취급방침을 홈페이지 화면에 공개함으로써 귀하께서 언제나 용이하게 보실 수 있도록 조치하고 있습니다.
+                                    </div>
+                                </div>
+                            </div>
+                            <span>
+                                (나이스평가정보에서 인증 받은 휴대폰 번호를 사용하고 있습니다.)
+                            </span>
+                            <div class="agree-wrap">
+                                <div class="agree-list">
+                                    서비스 및 이벤트 혜택에 대한 정보 수신(선택)
+                                    <div class="check-type">
+                                        <input type="checkbox" class="chkbox" name="emailflag" id="emailflag" value="">
+                                        <label for="emailflag">이메일</label>
+                                    </div>
+                                    <div class="check-type">
+                                        <input type="checkbox" class="chkbox" name="smsflag" id="smsflag" value="">
+                                        <label for="smsflag">SMS</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="signup-btn">
+                                <button class="btn-modify-leave" name="btn-leave">탈퇴하기</button>
+                                <button class="btn-modify-modify" name="btn-modify">수정하기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <img src="/donguk_img/logo.png" alt="경주월드">
+                    <ul>
+                        <li> 경주월드 주식회사(경주지점) </li>
+                        <li> 주소 경주시 보문로 544(천군동) </li>
+                        <li> 대표전화 1544-8765 </li>
+                        <li> 사업자등록번호, 505-85-15586 </li>
+                        <li> 대표이사 정원기, 함영관 </li>
+                        <li> 개인정보관리자 권준오 </li>
+                        <li> ⓒ GyeongjuWorld. All rights reserved. </li>
+                    </ul>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
