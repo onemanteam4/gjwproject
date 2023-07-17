@@ -1,0 +1,721 @@
+body {
+    top: 0;
+}
+
+.WrapTop {
+    position: relative;
+}
+#TopLNB {
+    width: 100%;
+    height: 260px;
+    clear: both;
+    background-image: url(/gjw.project/src/main/resources/static/img-kdh/TopLNBimg.jpg);
+    z-index: 101;
+
+}
+
+.backimg {
+    height: 260px;
+    background-color: rgba(0, 0, 0, 0.56);
+}
+
+.backimg h2 {
+    font-weight: 500;
+    font-size: 57px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 210px;
+}
+
+#TopLocation {
+    position: absolute;
+    bottom: 0;
+    border-top: 1px solid #959595;
+    width: 100%;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.56);
+}
+
+.WrapWidth {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1300px;
+}
+
+.WrapWidth::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+
+.first-ul {
+    display: flex;
+
+    margin: 0 auto;
+}
+
+.homeimg {
+    display: inline-block;
+    border-right: 1px solid #959595;
+    width: 40px;
+    height: 39px;
+    background-image: url(/gjw.project/src/main/resources/static/img-kdh/homeimg.png);
+    background-repeat: no-repeat;
+    background-position: 0px -298px;
+}
+.homeimg a {
+    width: 40px;
+    display: inline-block;
+    height: 39px;
+    line-height: 36px;
+    color: #ffffff;
+    padding: 0px 15px;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.add-menu {
+    
+    border-right: 1px solid #959595;
+    width: 185px;
+    height: 39px;
+    background-image: url(/gjw.project/src/main/resources/static/img-kdh/sign.png);
+    background-repeat: no-repeat;
+    background-position: 145px 0px;
+}
+
+.add-menu span {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    color: #ffffff;
+    padding: 0 17px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.select-menu {
+    border: 1px solid #e5e5e5;
+    width: calc(100% + 2px);
+    margin-left: -1px;
+    background-color: #ffffff;
+    display: none;
+}
+
+.select-menu a {
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 17px;
+    color: #555555;
+    font-size: 12.5px;
+}
+
+.select-menu a:hover {
+    background-color: #959595;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#WrapContents {
+    clear: both;
+    min-width: 900px;
+    padding-top: 410px;
+}
+
+#ContentTitle {
+    height: 90px;
+}
+
+#ContentTitle h3 {
+    float: left;
+    height: 90px;
+    width: 30%;
+    font-weight: 500;
+    color: #252525;
+    font-size: 26.7px;
+    line-height: 110px;
+    letter-spacing: -2px;
+}
+
+.ContentControl {
+    float: right;
+    height: 90px;
+    width: 70%;
+}
+
+.ContentControl ul {
+    float: right;
+    margin-top: 40px;
+}
+
+.snslistBtn {
+    
+    display: inline-block;
+    height: 32px;
+    cursor: pointer;
+    margin-left: 5px;
+    padding: 0px 10px 0px 28px;
+    background-image: url(/gjw.project/src/main/resources/static/img-kdh/공유하기img.png);
+    background-position: -3px -603px;
+    color: #252525;
+    font-size: 0px;
+    font-weight: 500;
+    line-height: 28px;
+    position: relative;
+}
+
+.snslist{
+    display: none;
+    border: 1px solid #ed1c24;
+    position: absolute;
+    top: 36px;
+    right: 0px;
+    width: 264px;
+    min-height: 181px;
+    background-color: #ffffff;
+    z-index: 101;
+    cursor: default;
+}
+
+.close {
+    position: absolute;
+    top: 11px;
+    right: 8px;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    background-image: url(/gjw.project/src/main/resources/static/img-kdh/sign.png);
+    background-position: -12px -511px;
+} /* 공유하기 버튼 누르기 */
+
+.clipboardUrlBtn {
+    
+    display: inline-block;
+    height: 32px;
+    cursor: pointer;
+    margin-left: 5px;
+    padding: 0px 10px 0px 28px;
+    background-image: url(/gjw.project/src/main/resources/static/img-kdh/공유하기img.png);
+    background-position: -3px -403px;
+    color: #252525;
+    font-size: 0px;
+    font-weight: 500;
+    line-height: 28px;
+    position: relative;
+}
+
+.printBtn {
+    
+    display: inline-block;
+    height: 32px;
+    cursor: pointer;
+    margin-left: 5px;
+    padding: 0px 10px 0px 28px;
+    background-image: url(/gjw.project/src/main/resources/static/img-kdh/공유하기img.png);
+    background-position: -3px -503px;
+    color: #252525;
+    font-size: 0px;
+    font-weight: 500;
+    line-height: 28px;
+    position: relative;
+}
+
+/* 어트랙션 서치 부분 시작  */
+
+#AttractionSearch {
+    width: 1682.5px;
+    height: 200px;
+    background-color: #f4f4f4;
+    padding: 20px 0;
+    margin-left: 4px;
+}
+
+.WrapWidthh {
+    margin: 0 auto;
+    width: 100%;
+    height: 168px;
+    max-width: 1300px;
+}
+
+.temabar {
+    float: left;
+    width: 1050px;
+    height: 168px;
+}
+
+.qwe {
+    height: 80px;
+    clear: both;
+}
+
+.rightbar {
+    display: inline-block;
+    position: relative;
+    margin: 20px 0;
+    padding-left: 30px;
+    padding-top: 8px;
+    width: 200px;
+    height: 44px;
+    background: #3bb375;
+    font-size: 18px;
+    color: #ffffff;
+    vertical-align: middle;
+    float: left; 
+}
+
+.rightbar::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 0;
+    height: 0;
+    border: 22px solid transparent;
+    border-left-color: #3bb375;
+}
+
+#AttractionSearch ul:nth-child(2) {
+    margin-left: 250px;
+    vertical-align: middle;
+    width: calc(100% - 250px);
+    height: 0;
+}
+
+.select-list {
+    float: left;
+    height: 80px;
+    line-height: 80px;
+    width: 20%;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.WrapWidthh input {
+    display: none;
+}
+
+.WrapWidthh label {
+    cursor: pointer;
+}
+
+.WrapWidthh input + label::before {
+    content: ' ';
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    vertical-align: middle;
+    margin: 0 6px 0 0;
+    background-image: url(/gjw.project/src/main/resources/static/img-kdh/sign.png);
+    background-repeat: no-repeat;
+    background-position: -213px -1214px;
+}
+
+.SearchHeightArea {
+    margin-left: 250px;
+    vertical-align: middle;
+    width: calc(100% - 250px);
+    padding-top: 36px;
+}
+
+.ui-slider {
+    border: 0px solid #c5c5c5;
+    background-color: #cfcfcf;
+    height: 14px;
+    border-radius: 3px;
+    position: relative;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.user-slider-handle {
+    background-image: url(/gjw.project/src/main/resources/static/img-kdh/sign.png);
+    background-repeat: no-repeat;
+    background-position: -215px -1315px;
+
+    width: 23px;
+    height: 23px;
+    padding-top: 30px;
+    position: absolute;
+    z-index: 2;
+    top: -4px;
+
+    cursor: pointer;
+    outline: none;
+    touch-action: none;
+}
+
+
+.min {
+    position: absolute;
+    top: 25px;
+
+    font-size: 17px;
+    color: #cfcfcf;
+}
+
+.max {
+    position: absolute;
+    top: 25px;
+    right: 0;
+
+    font-size: 17px;
+    color: #cfcfcf;
+}
+
+.ButtonArea {
+    float: left;
+    width: 225px;
+    height: 128px;
+    margin-top: 20px;
+    border-left: 1px solid #e0e0e0;
+    margin-left: 25px;
+}
+
+.searchBtn {
+    width: 200px;
+    height: 128px;
+    line-height: 124px;
+    background-color: #ed1d25;
+    float: right;
+    padding-right: 20px;
+    color: #ffffff;
+    font-size: 19.5px;
+    font-weight: 500;
+    background-image: url(/gjw.project/src/main/resources/static/img-kdh/공유하기img.png);
+    background-repeat: no-repeat;
+    background-position: -288px -163px;
+    cursor: pointer;
+}
+
+#AttractionNotice {
+    text-align: center;
+    font-size: 32px;
+    color: #000000;
+    padding-top: 50px;
+}
+
+#AttractionNotice img {
+    vertical-align: middle;
+}
+
+/* 중간 놀이기구 부분 시작 */
+
+#AttractionList {
+    padding-bottom: 50px;
+}
+
+.WrapWidthhh {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1300px;
+}
+
+#AttractionList ul {
+    width: 100%;
+    height: 0;
+    margin-top: 60px;
+}
+
+#AttractionList ul li:nth-child(5n+1) {
+    margin-left: 0;
+    clear: both;
+}
+
+.ContainerRows {
+    width: calc(20% - 20px);
+    float: left;
+    height: 262px;
+    margin-left: 24px;
+    margin-bottom: 56px;
+    position: relative;
+}
+
+.ContainerRows a {
+    color: #000000;
+    
+}
+
+.thumwrap {
+    height: 165.5px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.photo {
+    padding-bottom: 69%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    position: relative;
+}
+
+.loction {
+    display: block;
+    font-weight: 300;
+    font-size: 13px;
+    color: #fff;
+    padding: 4px 6px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.infomation {
+    padding: 24px 0 0;
+    font-size: 14px;
+    color: #555555;
+    height: 96px;
+}
+
+.name {
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.name p {
+    display: block;
+    font-weight: 300;
+    margin-top: 4px;
+}
+
+.add-ButtonArea {
+    clear: both;
+    padding: 0 0 30px 0;
+    text-align: center;
+}
+
+.add-ButtonArea span {
+    display: inline-block;
+    height: 50px;
+    line-height: 46px;
+    padding: 0 63px 0 33px;
+    border: 1px solid #000000;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #676767;
+    background-image: url(/gjw.project/src/main/resources/static/img-kdh/sign.png);
+    background-repeat: no-repeat;
+    background-position: top -702px right -240px;
+    cursor: pointer;
+}
+
+/* 하단 바 시작 */
+
+#WrapBottom {
+    clear: both;
+    background-color: #ffffff;
+}
+
+#BottomFNB {
+    background-color: #2f3336;
+    height: 60px;
+}
+
+#BottomSNS ul {
+    height: 0px;
+}
+
+.Sns-first-li {
+    margin-left: 0px;
+    float: left;
+}
+
+.Sns-Remain-li {
+    float: left;
+    margin-left: 15px;
+}
+
+#BottomSNS ul li a {
+    display: inline-block;
+    height: 60px;
+    line-height: 60px;
+    font-weight: 300;
+    color: #ffffff;
+    font-size: 13px;
+}
+
+#BottomSNS ul li span {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-color: #4589ce;
+    background-image: url(/gjw.project/src/main/resources/static/img-kdh/snsimg.png);
+    background-position: 50% -12px;
+    border-radius: 16px;
+    vertical-align: middle;
+    margin: 0 10px;
+}
+
+#BottomSNS ul li:nth-child(2) span {
+    background-color: #3eb852;
+    background-position: 50% -312px;
+}
+
+#BottomSNS ul li:nth-child(3) span {
+    background-color: #7231a3;
+    background-position: 50% -412px;
+}
+
+#BottomSNS ul li:nth-child(4) span {
+    background-color: #e62c28;
+    background-position: 50% -512px;
+}
+
+#BottomSNS ul li:nth-child(5) span {
+    background-color: #000;
+    background-position: 50% -1410px;
+}
+
+#BottomSNS ul li:nth-child(6) span {
+    background-color: #e7b919;
+    background-position: 50% -1465px;
+}
+
+#BottomGoTop {
+    float: right;
+    display: inline-block;
+    width: 105px;
+    height: 60px;
+    background-color: #1e2123;
+    text-align: center;
+    font-weight: 300;
+    font-size: 13px;
+    color: #ffffff;
+    background-image: url(/gjw.project/src/main/resources/static/img-kdh/sign.png);
+    background-position: 17px -89px;
+    padding-left: 20px;
+    padding-top: 22px;
+    cursor: pointer;
+}
+
+#BottomContents {
+    width: 2537px;
+    height: 174px;
+}
+
+.WrapWidth-last {
+    width: 1300px;
+    height: 174px;
+    margin: 0px 200px;
+}
+
+#BottomLeft {
+    
+    float: left;
+    width: 250px;
+}
+
+#BottomLogo {
+    margin-top: 33px;
+}
+
+#BottomCenter {
+    float: left;
+    width: 886px;
+    height: 174px;
+}
+
+#BottomMenu {
+    height: 33px;
+    clear: both;
+    padding-top: 33px;
+}
+
+#BottomMenu ul {
+    height: 0px;
+}
+
+#BottomMenu ul li:first-child {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+#BottomMenu ul li {
+    float: left;
+    margin-left: 8px;
+    padding-left: 8px;
+    background-position: -11px -2px;
+}
+
+#BottomMenu ul li:nth-child(n+2):nth-child(-n+6) {
+background-image: url(/gjw.project/src/main/resources/static/img-kdh/Bottommenu.png);
+}
+
+#BottomMenu ul li a {
+    color: #707070;
+    font-size: 13px;
+}
+
+#BottomMobileLogo {
+    display: none;
+}
+
+#BottomInfomation {
+    clear: both;
+    padding-top: 15px;
+}
+
+#BottomInfomation ul li:first-child {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+#BottomInfomation ul li {
+    display: inline-block;
+    margin-left: 8px;
+    padding-left: 8px;
+    background-position: -12px -405px;
+    color: #898989;
+    font-size: 13px;
+}
+
+#BottomInfomation ul li:nth-child(n+2):nth-child(-n+5) {
+    background-image: url(/gjw.project/src/main/resources/static/img-kdh/Bottommenu.png);
+}
+
+
+#BottomCopyright {
+    clear: both;
+    padding-top: 7px;
+    padding-bottom: 50px;
+}
+
+#BottomCopyright ul li {
+    color: #a1a1a1;
+    font-size: 13px;
+}
+
+#BottomRight {
+    float: left;
+}
+
+#BottomFamily {
+    width: 164px;
+    height: 36px;
+    line-height: 36px;
+    border: 1px solid #d6d6d6;
+    font-weight: 300;
+    font-size: 13px;
+    color: #8a8a8a;
+    text-align: center;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+#BottomFamily ul li {
+    height: 36px;
+    line-height: 36px;
+    position: relative;
+}
+
+/* 하단 끝 */
+
+

@@ -8,6 +8,8 @@ body {
     top: 0 !important;
     margin: 0px;
     padding: 0px;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 
@@ -154,7 +156,10 @@ body {
 
 #main-top {
     
-    position: relative
+    position: relative;
+    position: sticky;
+    top: 10px;
+    z-index: 10;
 }
 
 .topWrap {
@@ -181,7 +186,7 @@ body {
    margin: 0 auto;
    width: 100%;
    max-width: 1300px;
-
+    cursor: pointer;
 }
 
 .main-top-left {
@@ -192,7 +197,7 @@ body {
 
 .main-top-left ul {
     margin-top: 25px;
-  
+    
 }
 
 
@@ -454,6 +459,10 @@ body {
     background-image: url('/main_image/main_logo/button_collection.png');
     background-repeat: no-repeat;
     background-position: right -468px top -204px;
+}
+
+main {
+    height: 4722px;
 }
 
 #main-content {
