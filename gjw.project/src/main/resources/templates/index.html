@@ -6,45 +6,50 @@
     <title>공지사항 작성</title>
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="/static/css/index.css">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    </head>
+<body style="position: relative; min-height: 100%; top: 0px;">
     <!--상단 배너 시작-->
-    <header>
+    <header >
         <div id="TopBanner">
-            <div class="box-wrapper">
-                <div class="box-viewport">
-                    <ul class="box-slider-list">
-                        <li>
-                            <a href="https://www.youtube.com/channel/UCY5OQjDmW1_SRO4saLQzveQ">
-                                <img src="/main image/top banner/boardFile.jpg">
+            <div class="box-wrapper" style="max-width: 100%;">
+                <div class="box-viewport" style="width: 100%; overflow: hidden; position: relative; height: 110px;">
+                    <ul class="box-slider-list" style="width: 715%; position: relative;">
+                        <!-- transition-duration: 1s; transform: translate3d(-761, , );-->
+                        <li style="background-image: url('/main_image/top_banner/boardFile.jpg');">
+                            <a href="https://www.youtube.com/channel/UCY5OQjDmW1_SRO4saLQzveQ" target="_blank">
+                                
                             </a>
                         </li>
-                        <li><a href="https://www.youtube.com/channel/UCY5OQjDmW1_SRO4saLQzveQ">
-                            <img src="/main image/top banner/top banner 피터의 매직.jpg">
+                        <li style="background-image: url('/main_image/top_banner/topbanner피터의매직.jpg');">
+                            <a href="https://www.youtube.com/channel/UCY5OQjDmW1_SRO4saLQzveQ" target="_blank">
+                            
                             </a>
                         </li>
-                        <li><a href="https://www.youtube.com/channel/UCY5OQjDmW1_SRO4saLQzveQ">
-                            <img src="/main image/top banner/top banner 감성교복.jpg" alt="">
+                        <li style="background-image: url('/main_image/top_banner/topbanner감성교복.jpg');">
+                            <a href="https://www.youtube.com/channel/UCY5OQjDmW1_SRO4saLQzveQ" target="_blank">
                             </a>
                         </li>
-                        <li>
-                            <a href="https://www.youtube.com/channel/UCY5OQjDmW1_SRO4saLQzveQ">
-                                <img src="/main image/top banner/top banner 황리단길.jpg" alt="">
+                        <li style="background-image: url('/main_image/top_banner/topbanner황리단길.jpg');">
+                            <a href="https://www.youtube.com/channel/UCY5OQjDmW1_SRO4saLQzveQ" target="_blank">
+                                
                             </a>
                         </li>
-                        <li>
-                            <a href="https://www.youtube.com/channel/UCY5OQjDmW1_SRO4saLQzveQ">
-                                <img src="/main image/top banner/top banner 경주월드 캐스트.jpg" alt="">
+                        <li style="background-image: url('/main_image/top_banner/topbanner경주월드캐스트.jpg');">
+                            <a href="https://www.youtube.com/channel/UCY5OQjDmW1_SRO4saLQzveQ" target="_blank">
+                               
                             </a>
                         </li>
-                        <li>
-                            <a href="https://www.youtube.com/channel/UCY5OQjDmW1_SRO4saLQzveQ">
-                                <img src="/main image/top banner/boardFile.jpg">
+                        <li style="background-image: url('/main_image/top_banner/boardFile.jpg');">
+                            <a href="https://www.youtube.com/channel/UCY5OQjDmW1_SRO4saLQzveQ" target="_blank">
+                                
                             </a>
                         </li>
-                        <li>
-                            <a href="https://www.youtube.com/channel/UCY5OQjDmW1_SRO4saLQzveQ">
-                                <img src="/main image/top banner/top banner 황리단길.jpg">
+                        <li style="background-image: url('/main_image/top_banner/topbanner피터의매직.jpg');">
+                            <a href="https://www.youtube.com/channel/UCY5OQjDmW1_SRO4saLQzveQ" target="_blank">
+                            
                             </a>
                         </li>
                     </ul>
@@ -52,13 +57,23 @@
                 <!-- transition-duration: 50s;
     transform: translate3d(-7595px, 0px);-->
                 <div class="box-controller">
-                    <ul class="box-pager-list">
-                        <li>1</li>
-                        <li>1</li>
-                        <li>1</li>
-                        <li>1</li>
-                        <li>1</li>
-                    </ul>
+                    <div class="box-pager">
+                        <div class="box-pager-item">
+                            <a href="" class="box-pager-link">1</a>
+                        </div>
+                        <div class="box-pager-item">
+                            <a href="" class="box-pager-link">2</a>
+                        </div>
+                        <div class="box-pager-item">
+                            <a href="" class="box-pager-link">3</a>
+                        </div>
+                        <div class="box-pager-item">
+                            <a href="" class="box-pager-link">4</a>
+                        </div>
+                        <div class="box-pager-item">
+                            <a href="" class="box-pager-link">5</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -69,20 +84,20 @@
             <ul>
                 <li>
                     <a href="할인정보 페이지">
-                        <img src="/main image/PC quick/할인정보.png" alt="">
-                        <span></span>
+                        <img src="/main_image/PC quick/할인정보.png" alt="">
+                        <span>할인정보</span>
                     </a>
                 </li>
                 <li>
                     <a href="공연정보 페이지">
-                        <img src="/main image/PC quick/공연 정보.png" alt="">
-                        <span></span>
+                        <img src="/main_image/PC quick/공연 정보.png" alt="">
+                        <span>공연정보</span>
                     </a>
                 </li>
-                <li>
+                <li class="draken">
                     <a href="드라켄벨리">
-                        <img src="/main image/PC quick/드라켄벨리.png" alt="">
-                        <span></span>
+                        <img src="/main_image/PC quick/드라켄벨리.png" alt="">
+                        <span>드라켄벨리</span>
                     </a>
                 </li>
             </ul>
@@ -91,20 +106,25 @@
         <!--상단 메인 시작-->
         <div id="main-top">
             <div class="topWrap">
-                <div class="main-top-top" style="top : 110px">
+                <div class="main-top-top">
                     <div class="main-top-top-details">
                         <div class="main-top-left">
-                            <a href="경주월드 어뮤즈먼트 사이트">
-                                <img src="/main image/main logo/경주월드 찐어뮤즈.png" style="width: 50px; height: 42px;">
-                                경주월드 어뮤즈먼트</a>
-                            <a href="캘리포니아비치 사이트">
-                                <img src="/main image/main logo/캘리포니아비치 찐.png" style="width: 50px; height: 42px;">
-                                캘리포니아비치
-                            </a>
+                            <ul class="main-top-left-ul">
+                                <li class="first">
+                                    <a href="경주월드 어뮤즈먼트 사이트" class="on"> 
+                                        경주월드 어뮤즈먼트
+                                    </a>
+                                </li>
+                                <li class="second">
+                                    <a href="캘리포니아비치 사이트">
+                                        캘리포니아비치
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                         <div class="main-top-middle">
                             <a href="경주월드 메인 사이트 주소">
-                                <img src="/main image/main logo/경주월드 메인로고.jpg" style="width: 196px; height: 78px;">
+                                <img src="/main_image/main_logo/경주월드 메인로고.jpg" style="width: 196px; height: 78px;">
                                 
                             </a>
                         </div>
@@ -121,72 +141,147 @@
                                         <a href="회원가입 사이트 주소">회원가입</a>
                                     </li>
                                     <li class="reservation">
-                                        <a href="단체예약 사이트 주소">단체예약</a>
+                                        <a href="단체예약 사이트 주소" style="color: #f26c4f;">단체예약</a>
                                     </li>
                                     <li class="reservation">
-                                        <a href="연간이용권 사이트 주소">연간이용권</a>
+                                        <a href="연간이용권 사이트 주소" style="color: #f26c4f;">연간이용권</a>
                                     </li>
                                     <li class="choice">
                                         <a href="">
-                                            <img src="/main image/main logo/Google__G__Logo.svg.png" style="height: 19px; width: 19;">
+                                            <img src="/main_image/main_logo/Google__G__Logo.svg.png" style="height: 19px; width: 19;">
                                             언어 선택
-                                            <img src="/main image/main logo/언어선택 화살표.png">
+                                            <img src="/main_image/main_logo/언어선택 화살표.png">
                                         </a>
                                     </li>
                                 </ul>
                             </div>
-                            <div class="main-top-search">
+                            <div class="main-top-search" style="display: block;">
                                 <form action="" name="frmSearch">
-                                    <label for="search-label"></label>
-                                    <input type="text" name="search-input" class="hash-tag-input">
+                                    <label for="search-label">
+                                        검색어
+                                        <strong class="sound_only">필수</strong>
+                                    </label>
+                                    <input type="text" name="search-input" class="hash-tag-input1" style="display: none;">
+                                    <div class="hash-tag-input2"></div>
+                                    <input type="text" class="sch_submit" value="검색">
                                 </form>
-                                <div>
-                                    <img src="/main image/main logo/검색돋보기.png" style="height: 35px; width: 35px;" class="glass">
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="main-top-bottom" style="top:200px; height: 55px;">
+                <div class="main-top-bottom">
                     <div class="main-top-bottom-all">
-                        <div class="main-top-menu" style="width: 100%; left: 0px; top: 0px; height: 54px;">
+                        <div class="main-top-menu" style=" width: 100%; left: 0px; top: 0px;">
                             <ul style="margin-top: 0px;">
-                                <li>
-                                    <a href="이용정보 주소들어가는 곳">
+                                <li class="list-hover">
+                                    <a href="이용정보 주소들어가는 곳" style="font-size: 20px;">
                                         이용정보
-                                        <!--게시글 세부 ul li 작성해놓기-->
                                     </a>
+                                    <ul class="hover">
+                                        <li style="padding: 0px 20px;">
+                                            <a href="">운영시간</a>
+                                        </li>
+                                        <li style="padding: 0px 20px;">
+                                            <a href="">운휴정보</a>
+                                        </li>
+                                        <li style="padding: 0px 20px;">
+                                            <a href="">이용꿀팁</a>
+                                        </li>
+                                        <li style="padding: 0px 20px;">
+                                            <a href="">주차안내</a>
+                                        </li>
+                                        <li style="padding: 0px 20px;">
+                                            <a href="">찾아오시는길</a>
+                                        </li>
+                                    </ul>
                                 </li>
-                                <li>
-                                    <a href="이용요금 주소들어가는 곳">
+                                <li class="list-hover">
+                                    <a href="요금정보 주소들어가는 곳" style="font-size: 20px;">
                                         요금정보
                                     </a>
+                                    <ul class="hover">
+                                        <li style="padding: 0px 20px;">
+                                            <a href="">이용요금</a>
+                                        </li>
+                                        <li style="padding: 0px 20px;">
+                                            <a href="">우대프로그램</a>
+                                        </li>
+                                        <li style="padding: 0px 20px;">
+                                            <a href="">제휴카드</a>
+                                        </li>
+                                        <li style="padding: 0px 20px;">
+                                            <a href="">기업체 특판안내</a>
+                                        </li>
+                                    </ul>
                                 </li>
-                                <li>
-                                    <a href="어트랙션 주소들어가는 곳">
+                                <li class="list-hover">
+                                    <a href="어트랙션 주소들어가는 곳" style="font-size: 20px;">
                                         어뮤즈먼트 소개
                                     </a>
+                                    <ul class="hover">
+                                        <li style="padding: 0px 20px;">
+                                            <a href="">추천코스</a>
+                                        </li>
+                                        <li style="padding: 0px 20px;">
+                                            <a href="">어트랙션</a>
+                                        </li>
+                                        <li style="padding: 0px 20px;">
+                                            <a href="">레스토랑&스낵</a>
+                                        </li>
+                                        <li style="padding: 0px 20px;">
+                                            <a href="">부대시설</a>
+                                        </li>
+                                        <li style="padding: 0px 20px;">
+                                            <a href="">가이드맵</a>
+                                        </li>
+                                    </ul>
                                 </li>
-                                <li>
-                                    <a href="공연 및 이벤트 주소들어가는 곳">
+                                <li class="list-hover">
+                                    <a href="공연 및 이벤트 주소들어가는 곳" style="font-size: 20px;">
                                         공연 및 이벤트
                                     </a>
+                                    <ul class="hover">
+                                        <li style="padding: 0px 20px;">
+                                            <a href="">추천코스</a>
+                                    </ul>
                                 </li>
-                                <li>
-                                    <a href="공지사항 주소들어가는 곳">
+                                <li class="list-hover">
+                                    <a href="공지사항 주소들어가는 곳" style="font-size: 20px;">
                                         고객센터
                                     </a>
+                                    <ul class="hover">
+                                        <li style="padding: 0px 20px;">
+                                            <a href="">공지사항</a>
+                                        </li>
+                                        <li style="padding: 0px 20px;">
+                                            <a href="">고객소리함</a>
+                                        </li>
+                                        <li style="padding: 0px 20px;">
+                                            <a href="">자주묻는질문</a>
+                                        </li>
+                                        <li style="padding: 0px 20px;">
+                                            <a href="">분실물센터</a>
+                                        </li>
+                                    </ul>
                                 </li>
-                                <li>
-                                    <a href="시작페이지 주소들어가는 곳">
+                                <li class="list-hover">
+                                    <a href="시작페이지 주소들어가는 곳" style="font-size: 20px;">
                                         스마트할인예약
                                     </a>
+                                    <ul class="hover">
+                                        <li style="padding: 0px 20px;">
+                                            <a href="">티켓예매</a>
+                                        </li>
+                                        <li style="padding: 0px 20px;">
+                                            <a href="">단체예약</a>
+                                        </li>
+                                        <li style="padding: 0px 20px;">
+                                            <a href="">연간이용</a>
+                                        </li>
+                                    </ul>
                                 </li>
-
-
                             </ul>
-                            
                         </div>
                     </div>
                 </div>
@@ -198,98 +293,98 @@
     <main>
         <div id="main-content">
             <div class="main-visual">
+                
                 <div class="main-slider">
-                    <div class="main-slider-wrap">
+                    <div class="main-slider-wrap" style="max-width: 3900px;">
                         <!--위 box-viewport와 같이 묶어서 슬라이드쇼 만든듯-->
-                        <nav class="center-main-banner">
-                            <ul class="center-main-banner-list">
+                        <div class="center-main-banner" style="width: 100%; overflow: hidden; position: relative; height: 610px;">
+                            <ul class="center-main-banner-list" style="width: 615%; position: relative; transition-duration: 0s; transform: translate3d(-6500px, 0px, 0px);">
                                 <!--box-slider-->
-                                <li>
-                                    <a href="kb 제휴 우대 주소">
-                                        <img src="/main image/main-main/kb제휴 우대.jpg" alt="">
+                                <li style="float: left; list-style: none; position: relative; width: 1300px;" class="box-clone">
+                                    <a href="kb 제휴 우대 주소" style="background-image: url('/main_image/main-main/kb제휴우대.jpg');" class="pcSlide">
+                                        
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="델리하우스 주소">
-                                        <img src="/main image/main-main/델리하우스.jpg">
+                                <li style="float: left; list-style: none; position: relative; width: 1300px;" class="box-clone">
+                                    <a href="델리하우스 주소" style="background-image: url('/main_image/main-main/델리하우스.jpg');" class="pcSlide">
+
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="쿨한 여름 주소">
-                                        <img src="/main image/main-main/쿨한 여름.jpg">
+                                <li style="float: left; list-style: none; position: relative; width: 1300px;" class="box-clone">
+                                    <a href="쿨한 여름 주소" style="background-image: url('/main_image/main-main/쿨한여름.jpg');" class="pcSlide">
+                                       
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="드롤의 플리마켓 우대 주소">
-                                        <img src="/main image/main-main/드롤의 플리마켓.jpg">
+                                <li style="float: left; list-style: none; position: relative; width: 1300px;">
+                                    <a href="드롤의 플리마켓 우대 주소" style="background-image: url('/main_image/main-main/드롤의플리마켓.jpg');" class="pcSlide">
+                                        
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="kb 제휴 우대 주소">
-                                        <img src="/main image/main-main/kb제휴 우대.jpg" alt="">
+                                <li style="float: left; list-style: none; position: relative; width: 1300px;">
+                                    <a href="kb 제휴 우대 주소" style="background-image: url('/main_image/main-main/kb제휴우대.jpg');" class="pcSlide">
+                                        
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="델리하우스 주소">
-                                        <img src="/main image/main-main/델리하우스.jpg">
+                                <li style="float: left; list-style: none; position: relative; width: 1300px;">
+                                    <a href="델리하우스 주소" style="background-image: url('/main_image/main-main/델리하우스.jpg');" class="pcSlide">
+
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="쿨한 여름 주소">
-                                        <img src="/main image/main-main/쿨한 여름.jpg">
+                                <li style="float: left; list-style: none; position: relative; width: 1300px;">
+                                    <a href="쿨한 여름 주소" style="background-image: url('/main_image/main-main/쿨한여름.jpg');" class="pcSlide">
+                                       
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="드롤의 플리마켓 우대 주소">
-                                        <img src="/main image/main-main/드롤의 플리마켓.jpg">
+                                <li style="float: left; list-style: none; position: relative; width: 1300px;">
+                                    <a href="드롤의 플리마켓 우대 주소" style="background-image: url('/main_image/main-main/드롤의플리마켓.jpg');" class="pcSlide">
+                                        
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="kb 제휴 우대 주소">
-                                        <img src="/main image/main-main/kb제휴 우대.jpg" alt="">
+                                <li style="float: left; list-style: none; position: relative; width: 1300px;" class="box-clone">
+                                    <a href="kb 제휴 우대 주소" style="background-image: url('/main_image/main-main/kb제휴우대.jpg');" class="pcSlide">
+                                        
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="델리하우스 주소">
-                                        <img src="/main image/main-main/델리하우스.jpg">
+                                <li style="float: left; list-style: none; position: relative; width: 1300px;" class="box-clone">
+                                    <a href="델리하우스 주소" style="background-image: url('/main_image/main-main/델리하우스.jpg');" class="pcSlide">
+
                                     </a>
                                 </li>
                             </ul>
-                        </nav>
+                        </div>
                     </div>
                     <div class="center-main-pointer">
-                        <ul class="center-main-pointer-list">
-                            <li>1번 점</li>
-                            <li>2번 점</li>
-                            <li>3번 점</li>
-                            <li>4번 점</li>
-                            <li>일시정지</li>
-                        </ul>
-                        <ul class="center-main-direction">
-                            <li>
-                                <i class="fa-solid fa-chevron-left"></i>
-                            </li>
-                            <li>
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </li>
-                        </ul>
+                        <div class="box-pager-main">
+                            <div class="box-pager-item">
+                                <a href="" class="box-pager-link">1</a>
+                            </div>
+                            <div class="box-pager-item">
+                                <a href="" class="box-pager-link">2</a>
+                            </div>
+                            <div class="box-pager-item">
+                                <a href="" class="box-pager-link">3</a>
+                            </div>
+                            <div class="box-pager-item">
+                                <a href="" class="box-pager-link">4</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="main-slider-btn">
+                <a href="" class="sliderPre"></a>
+                <a href="" class="sliderNext"></a>
+            </div>
             <div class="main-open-time">
                 <span>
-                    <img src="/main image/main-main/시계.PNG" style="width: 24px; height: 24px;">
-                    <p>오늘의 운영시간</p>
+                    오늘의 운영시간
                 </span>
                 <b>10:00~18:00</b>
             </div>
             <div class="main-notice">
                 <div class="main-notice-plus">
-                    <div class="main-notice-wrapwidth">
-                        <span>
-                            <img src="/main image/main-main/확성기.PNG" style="width: 27px; height: 27px;">
-                        </span>
-                        </div>
+                    <span class="icon">
+                    </span>
                     <div class="notice-list">
                         <ul class="notice-list-details">
                             <li>
@@ -298,7 +393,7 @@
                                 </a>
                                 <span>2023-07-04</span>
                             </li>
-                            <!-- <li>
+                            <li>
                                 <a href="담배판매 중단안내 주소">
                                     담배판매 중단안내
                                 </a>
@@ -321,92 +416,74 @@
                                     고객 1, 2주차장 유료화 안내
                                 </a>
                                 <span>2022-10-14</span>
-                            </li> -->
+                            </li>
                         </ul>
                     </div>
+                    <ul class="list-botten">
+                        <li class="list-botten-updown">
+                            <span style="background-image: url('/main_image/main_logo/main_sign_collection.png'); background-position: -13px -917px; border-left: 1px solid #dadada;" >
+                                위
+                            </span>
+                            <span style="background-image: url('/main_image/main_logo/main_sign_collection.png'); background-position: -13px -965px;">
+                                아래
+                            </span>
+                        </li>
+                    
+                        <li class="plus">
+                            <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DD0100">더보기 +</a>
+                        </li>
+                    </ul>
                 </div>
-                <ul class="list-botten">
-                    <li class="list-botten-up">
-                        <span>
-                            <img src="/main image/main-main/리스트 위 화살표.PNG" style="width: 25px; height: 25px;">
-                        </span>
-                    </li>
-                    <li class="list-botten-down">
-                        <span>
-                            <img src="/main image/main-main/리스트 아래 화살표.PNG" style="width: 25px; height: 25px;">
-                        </span>
-                    </li>
-                    <li>
-                        <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DD0100">더보기 +</a>
-                    </li>
-                </ul> 
             </div> 
             <div class="main-sale">
-                <div>
+                <div class="main-sale-main">
                     <div class="main-sale-wrapwidth">
                         <h4>
-                            <span>
-                                <b>요금할인정보</b>
-                                <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DA0400">더보기 +</a>
-                                
-                            </span>
+                            <b>요금할인정보</b>
+                            <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DA0400">더보기 +</a>
                             <p>할인은 크게! 노는건 즐겁게!</p>
                         </h4>
                         <ul id="sale-container">
                             <li>
                                 <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DA0400/view/15">
-                                    
-                                    <img src="/main image/main-main/할인정보/홈페이지 회원 우대.jpg" style="height: 310px; width: 310px;">
-                                    
+                                  <div class="photo" style="background-image: url('/main_image/main-main/할인정보/홈페이지회원우대.jpg')"></div>
                                 </a>
                             </li>
                             <li>
                                 <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DA0400/view/166">
                                     
-                                        <img src="/main image/main-main/할인정보/에브리타임.jpg" style="height: 310px; width: 310px;">
+                                    <div class="photo" style="background-image: url('/main_image/main-main/할인정보/에브리타임.jpg')"></div>
                                     
                                 </a>
                             </li>
                             <li>
                                 <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DA0400/view/162">
-                                    <div>
-                                        <img src="/main image/main-main/할인정보/kb우대.jpg" style="height: 310px; width: 310px;">
-                                    </div>
+                                    <div class="photo" style="background-image: url('/main_image/main-main/할인정보/kb우대.jpg')"></div>
                                 </a>
                             </li>
                             <li>
                                 <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DA0400/view/161">
-                                    <div>
-                                        <img src="/main image/main-main/할인정보/만나이 통일법 우대.jpg" style="height: 310px; width: 310px;">
-                                    </div>
+                                    <div class="photo" style="background-image: url('/main_image/main-main/할인정보/만나이통일법우대.jpg')"></div>
                                 </a>
                             </li>
                             <li>
                                 <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DA0400/view/160">
-                                    <div>
-                                        <img src="/main image/main-main/할인정보/summer우대.jpg" style="height: 310px; width: 310px;">
-                                    </div>
+                                    <div class="photo" style="background-image: url('/main_image/main-main/할인정보/summer우대.jpg')"></div>
                                 </a>
                             </li>   
                             <li>
                                 <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DA0400/view/81">
-                                    <div>
-                                        <img src="/main image/main-main/할인정보/생일 우대.jpg" style="height: 310px; width: 310px;">
-                                    </div>
+                                    <div class="photo" style="background-image: url('/main_image/main-main/할인정보/생일우대.jpg')"></div>
                                 </a>
                             </li>
                             <li>
                                 <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DA0400/view/75">
-                                    <div>
-                                        <img src="/main image/main-main/할인정보/경주페이 우대.jpg" style="height: 310px; width: 310px;">
-                                    </div>
+                                    <div class="photo" style="background-image: url('/main_image/main-main/할인정보/경주페이우대.jpg')"></div>
                                 </a>
                             </li>
                             <li>
                                 <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DA0400/view/58">
-                                    <div>
-                                        <img src="/main image/main-main/할인정보/중고생 우대.jpg" style="height: 310px; width: 310px;">
-                                    </div>
+                                    <div class="photo" style="background-image: url('/main_image/main-main/할인정보/중고생우대.jpg')"></div>
                                 </a>
                             </li>
                         </ul>
@@ -419,71 +496,215 @@
                     <h4>어트랙션운휴정보
                         <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DA0200">더보기 +</a>
                     </h4>
-                    <div class="box-wrapper">
-                        <div class="box-viewport">
+                    <div class="box-wrapper" style="max-width: 1173px; margin: 0px auto;">
+                        <div class="box-viewport" style="width: 100%; overflow: hidden; position: relative; height: 300px;">
                             <ul class="box-slider">
                                 <!--36개...-->
                                 <li class="box-clone">
                                     <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/28">
-                                        <div>
+                                        <div class="theme-photo" style="background-image: url('/main_image/theme_park/');">
                                             <!--이미지 들어갈 곳-->
                                         </div>
-                                        <span>댄싱컵</span>
-                                        <span>정상운영중</span>
+                                        <span class="title">댄싱컵</span>
+                                        <span class="state-on">정상운영중</span>
                                     </a>
                                 </li>
                                 <li class="box-clone">
                                     <a href="https://www.gjw.co.kr//Contents/contents.php?cmsNo=DB0200/view/50">
-                                        <div>
+                                        <div class="theme-photo" style="background-image: url(/main_image/theme_park/발키리.gif);">
                                             <!--이미지 들어갈 곳-->
                                         </div>
-                                        <span>발키리</span>
-                                        <span>정상운영중</span>
+                                        <span class="title">발키리</span>
+                                        <span class="state-on">정상운영중</span>
                                     </a>
                                 </li>
                                 <li class="box-clone">
                                     <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/24">
-                                        <div>
+                                        <div class="theme-photo" style="background-image: url(/main_image/theme_park/섬머린스플리쉬.jpg);">
                                             <!--이미지 들어갈 곳-->
                                         </div>
-                                        <span>섬머린스플래쉬</span>
-                                        <span>운휴중</span>
+                                        <span class="title">섬머린스플래쉬</span>
+                                        <span class="state-on">운휴중</span>
                                     </a>
                                 </li>
                                 <li class="box-clone">
                                     <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/5">
-                                        <div>
+                                        <div class="theme-photo" style="background-image: url(/main_image/theme_park/스와니의클라우드라이드.jpg);">
                                             <!--이미지 들어갈 곳-->
                                         </div>
-                                        <span>스와니의 클라우드 라이드</span>
-                                        <span>운휴중</span>
+                                        <span class="title">스와니의 클라우드 라이드</span>
+                                        <span class="state-on">운휴중</span>
                                     </a>
                                 </li>
                                 <li class="box-clone">
                                     <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/2">
-                                        <div>
+                                        <div class="theme-photo" style="background-image: url(/main_image/theme_park/드롤의위자드.jpg);">
                                             <!--이미지 들어갈 곳-->
                                         </div>
-                                        <span>드롤의 위자드트레인</span>
-                                        <span>운휴중</span>
+                                        <span class="title">드롤의 위자드트레인</span>
+                                        <span class="state-on">운휴중</span>
                                     </a>
                                 </li>
                                 <li class="box-clone">
                                     <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/1">
-                                        <div>
+                                        <div class="theme-photo" style="background-image: url(/main_image/theme_park/트리키의볼하우스.jpg);">
                                             <!--이미지 들어갈 곳-->
                                         </div>
-                                        <span>트리키리키의 볼하우스</span>
-                                        <span>정상운영중</span>
+                                        <span class="title">트리키리키의 볼하우스</span>
+                                        <span class="state-on">정상운영중</span>
                                     </a>
                                 </li>
                                 <li class="box-clone">
                                     <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/3">
-                                        <div>
+                                        <div class="theme-photo" style="background-image: url(/main_image/theme_park/글린다의매직펌킨.jpg);">
                                             <!--이미지 들어갈 곳-->
                                         </div>
-                                        <span>글린다의 매직펌킨</span>
-                                        <span>정상운영중</span>
+                                        <span class="title">글린다의 매직펌킨</span>
+                                        <span class="state-on">정상운영중</span>
+                                    </a>
+                                </li>
+                                <li class="box-clone">
+                                    <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/28">
+                                        <div class="theme-photo" style="background-image: url(/main_image/theme_park/보기의문라이트세일.jpg);">
+                                            <!--이미지 들어갈 곳-->
+                                        </div>>
+                                        <span class="title">보기의 문라이트세일</span>
+                                        <span class="state-on">정상운영중</span>
+                                    </a>
+                                </li>
+                                <li class="box-clone">
+                                    <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/28">
+                                        <div class="theme-photo" style="background-image: url(/main_image/theme_park/페기의케로셀.jpg);">
+                                            <!--이미지 들어갈 곳-->
+                                        </div>
+                                        <span class="title">페기의 케로셀</span>
+                                        <span class="state-on">정상운영중</span>
+                                    </a>
+                                </li>
+                                <li class="box-clone">
+                                    <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/28">
+                                        <div class="theme-photo" style="background-image: url(/main_image/theme_park/스파키의매직카.jpg);">
+                                            <!--이미지 들어갈 곳-->
+                                        </div>
+                                        <span class="title">스파키의 매직카</span>
+                                        <span class="state-on">정상운영중</span>
+                                    </a>
+                                </li>
+                                <li class="box-clone">
+                                    <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/28">
+                                        <div class="theme-photo" style="background-image: url(/main_image/theme_park/파에톤.gif);">
+                                            <!--이미지 들어갈 곳-->
+                                        </div>
+                                        <span class="title">파에톤</span>
+                                        <span class="state-on">정상운영중</span>
+                                    </a>
+                                </li>
+                                <li class="box-clone">
+                                    <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/28">
+                                        <div class="theme-photo" style="background-image: url(/main_image/theme_park/메가드롭.jpg);">
+                                            <!--이미지 들어갈 곳-->
+                                        </div>
+                                        <span class="title">메가드롭</span>
+                                        <span class="state-on">정상운영중</span>
+                                    </a>
+                                </li>
+                                <li class="box-clone">
+                                    <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/28">
+                                        <div class="theme-photo" style="background-image: url(/main_image/theme_park/토네이도.jpg);">
+                                            <!--이미지 들어갈 곳-->
+                                        </div>
+                                        <span class="title">토네이도</span>
+                                        <span class="state-on">정상운영중</span>
+                                    </a>
+                                </li>
+                                <li class="box-clone">
+                                    <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/28">
+                                        <div class="theme-photo" style="background-image: url(/main_image/theme_park/그랜드캐년대탐험.jpg);">
+                                            <!--이미지 들어갈 곳-->
+                                        </div>
+                                        <span class="title">그랜드캐년대탐험</span>
+                                        <span class="state-on">정상운영중</span>
+                                    </a>
+                                </li>
+                                <li class="box-clone">
+                                    <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/28">
+                                        <div class="theme-photo" style="background-image: url(/main_image/theme_park/드래곤레이스.jpg);">
+                                            <!--이미지 들어갈 곳-->
+                                        </div>
+                                        <span class="title">드래곤레이스</span>
+                                        <span class="state-on">정상운영중</span>
+                                    </a>
+                                </li>
+                                <li class="box-clone">
+                                    <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/28">
+                                        <div class="theme-photo" style="background-image: url(/main_image/theme_park/크라크.gif);">
+                                            <!--이미지 들어갈 곳-->
+                                        </div>
+                                        <span class="title">크라크</span>
+                                        <span class="state-on">정상운영중</span>
+                                    </a>
+                                </li>
+                                <li class="box-clone">
+                                    <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/28">
+                                        <div class="theme-photo" style="background-image: url(/main_image/theme_park/드라켄.gif);">
+                                            <!--이미지 들어갈 곳-->
+                                        </div>
+                                        <span class="title">드라켄</span>
+                                        <span class="state-on">정상운영중</span>
+                                    </a>
+                                </li>
+                                <li class="box-clone">
+                                    <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/28">
+                                        <div class="theme-photo" style="background-image: url(/main_image/theme_park/범퍼카.jpg);">
+                                            <!--이미지 들어갈 곳-->
+                                        </div>
+                                        <span class="title">범퍼카</span>
+                                        <span class="state-on">정상운영중</span>
+                                    </a>
+                                </li>
+                                <li class="box-clone">
+                                    <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/28">
+                                        <div class="theme-photo" style="background-image: url(/main_image/theme_park/급류타기.jpg);">
+                                            <!--이미지 들어갈 곳-->
+                                        </div>
+                                        <span class="title">급류타기</span>
+                                        <span class="state-on">정상운영중</span>
+                                    </a>
+                                </li>
+                                <li class="box-clone">
+                                    <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/28">
+                                        <div class="theme-photo" style="background-image: url(/main_image/theme_park/패밀리바이킹.jpg);">
+                                            <!--이미지 들어갈 곳-->
+                                        </div>
+                                        <span class="title">패밀리 바이킹</span>
+                                        <span class="state-on">정상운영중</span>
+                                    </a>
+                                </li>
+                                <li class="box-clone">
+                                    <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/28">
+                                        <div class="theme-photo" style="background-image: url(/main_image/theme_park/가족열차.jpg);">
+                                            <!--이미지 들어갈 곳-->
+                                        </div>
+                                        <span class="title">가족열차</span>
+                                        <span class="state-on">정상운영중</span>
+                                    </a>
+                                </li>
+                                <li class="box-clone">
+                                    <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/28">
+                                        <div class="theme-photo" style="background-image: url(/main_image/theme_park/비룡열차.jpg);">
+                                            <!--이미지 들어갈 곳-->
+                                        </div>
+                                        <span class="title">비룡열차</span>
+                                        <span class="state-on">정상운영중</span>
+                                    </a>
+                                </li>
+                                <li class="box-clone">
+                                    <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/28">
+                                        <div class="theme-photo" style="background-image: url(/main_image/theme_park/미로탐험.jpg);">
+                                            <!--이미지 들어갈 곳-->
+                                        </div>
+                                        <span class="title">미로탐험</span>
+                                        <span class="state-on">정상운영중</span>
                                     </a>
                                 </li>
                                 <li class="box-clone">
@@ -491,214 +712,97 @@
                                         <div>
                                             <!--이미지 들어갈 곳-->
                                         </div>
-                                        <span>보기의 문라이트세일</span>
-                                        <span>정상운영중</span>
+                                        <span class="title">킹 바이킹</span>
+                                        <span class="state-on">정상운영중</span>
                                     </a>
                                 </li>
                                 <li class="box-clone">
                                     <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/28">
-                                        <div>
+                                        <div class="theme-photo" style="background-image: url(/main_image/theme_park/킹바이킹.jpg);">
                                             <!--이미지 들어갈 곳-->
                                         </div>
-                                        <span>페기의 케로셀</span>
-                                        <span>정상운영중</span>
+                                        <span class="title">에어벌룬</span>
+                                        <span class="state-on">정상운영중</span>
                                     </a>
                                 </li>
                                 <li class="box-clone">
                                     <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/28">
-                                        <div>
+                                        <div class="theme-photo" style="background-image: url(/main_image/theme_park/바운스스핀.jpg);">
                                             <!--이미지 들어갈 곳-->
                                         </div>
-                                        <span>스파키의 매직카</span>
-                                        <span>정상운영중</span>
+                                        <span class="title">바운스스핀</span>
+                                        <span class="state-on">정상운영중</span>
                                     </a>
                                 </li>
                                 <li class="box-clone">
                                     <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/28">
-                                        <div>
+                                        <div class="theme-photo" style="background-image: url('/main_image/theme_park/');">
                                             <!--이미지 들어갈 곳-->
                                         </div>
-                                        <span>파에톤</span>
-                                        <span>정상운영중</span>
+                                        <span class="title">댄싱컵</span>
+                                        <span class="state-on">정상운영중</span>
+                                    </a>
+                                </li>
+                                <li class="box-clone">
+                                    <a href="https://www.gjw.co.kr//Contents/contents.php?cmsNo=DB0200/view/50">
+                                        <div class="theme-photo" style="background-image: url(/main_image/theme_park/발키리.gif);">
+                                            <!--이미지 들어갈 곳-->
+                                        </div>
+                                        <span class="title">발키리</span>
+                                        <span class="state-on">정상운영중</span>
                                     </a>
                                 </li>
                                 <li class="box-clone">
                                     <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/28">
-                                        <div>
+                                        <div class="theme-photo" style="background-image: url(/main_image/theme_park/비룡열차.jpg);">
                                             <!--이미지 들어갈 곳-->
                                         </div>
-                                        <span>메가드롭</span>
-                                        <span>정상운영중</span>
+                                        <span class="title">비룡열차</span>
+                                        <span class="state-on">정상운영중</span>
+                                    </a>
+                                </li>
+                                <li class="box-clone">
+                                    <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/1">
+                                        <div class="theme-photo" style="background-image: url(/main_image/theme_park/트리키의볼하우스.jpg);">
+                                            <!--이미지 들어갈 곳-->
+                                        </div>
+                                        <span class="title">트리키리키의 볼하우스</span>
+                                        <span class="state-on">정상운영중</span>
+                                    </a>
+                                </li>
+                                <li class="box-clone">
+                                    <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/2">
+                                        <div class="theme-photo" style="background-image: url(/main_image/theme_park/드롤의위자드.jpg);">
+                                            <!--이미지 들어갈 곳-->
+                                        </div>
+                                        <span class="title">드롤의 위자드트레인</span>
+                                        <span class="state-on">운휴중</span>
+                                    </a>
+                                </li>
+                                <li class="box-clone">
+                                    <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/3">
+                                        <div class="theme-photo" style="background-image: url(/main_image/theme_park/글린다의매직펌킨.jpg);">
+                                            <!--이미지 들어갈 곳-->
+                                        </div>
+                                        <span class="title">글린다의 매직펌킨</span>
+                                        <span class="state-on">정상운영중</span>
                                     </a>
                                 </li>
                                 <li class="box-clone">
                                     <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/28">
-                                        <div>
+                                        <div class="theme-photo" style="background-image: url(/main_image/theme_park/보기의문라이트세일.jpg);">
                                             <!--이미지 들어갈 곳-->
                                         </div>
-                                        <span>토네이도</span>
-                                        <span>정상운영중</span>
-                                    </a>
-                                </li>
-                                <li class="box-clone">
-                                    <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/28">
-                                        <div>
-                                            <!--이미지 들어갈 곳-->
-                                        </div>
-                                        <span>그랜드캐년대탐험</span>
-                                        <span>정상운영중</span>
-                                    </a>
-                                </li>
-                                <li class="box-clone">
-                                    <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/28">
-                                        <div>
-                                            <!--이미지 들어갈 곳-->
-                                        </div>
-                                        <span>드래곤레이스</span>
-                                        <span>정상운영중</span>
-                                    </a>
-                                </li>
-                                <li class="box-clone">
-                                    <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/28">
-                                        <div>
-                                            <!--이미지 들어갈 곳-->
-                                        </div>
-                                        <span>크라크</span>
-                                        <span>정상운영중</span>
-                                    </a>
-                                </li>
-                                <li class="box-clone">
-                                    <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/28">
-                                        <div>
-                                            <!--이미지 들어갈 곳-->
-                                        </div>
-                                        <span>드라켄</span>
-                                        <span>정상운영중</span>
-                                    </a>
-                                </li>
-                                <li class="box-clone">
-                                    <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/28">
-                                        <div>
-                                            <!--이미지 들어갈 곳-->
-                                        </div>
-                                        <span>범퍼카</span>
-                                        <span>정상운영중</span>
-                                    </a>
-                                </li>
-                                <li class="box-clone">
-                                    <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/28">
-                                        <div>
-                                            <!--이미지 들어갈 곳-->
-                                        </div>
-                                        <span>급류타기</span>
-                                        <span>정상운영중</span>
-                                    </a>
-                                </li>
-                                <li class="box-clone">
-                                    <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/28">
-                                        <div>
-                                            <!--이미지 들어갈 곳-->
-                                        </div>
-                                        <span>패밀리 바이킹</span>
-                                        <span>정상운영중</span>
-                                    </a>
-                                </li>
-                                <li class="box-clone">
-                                    <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/28">
-                                        <div>
-                                            <!--이미지 들어갈 곳-->
-                                        </div>
-                                        <span>가족열차</span>
-                                        <span>정상운영중</span>
-                                    </a>
-                                </li>
-                                <li class="box-clone">
-                                    <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/28">
-                                        <div>
-                                            <!--이미지 들어갈 곳-->
-                                        </div>
-                                        <span>비룡열차</span>
-                                        <span>정상운영중</span>
-                                    </a>
-                                </li>
-                                <li class="box-clone">
-                                    <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/28">
-                                        <div>
-                                            <!--이미지 들어갈 곳-->
-                                        </div>
-                                        <span>미로탐험</span>
-                                        <span>정상운영중</span>
-                                    </a>
-                                </li>
-                                <li class="box-clone">
-                                    <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/28">
-                                        <div>
-                                            <!--이미지 들어갈 곳-->
-                                        </div>
-                                        <span>킹 바이킹</span>
-                                        <span>정상운영중</span>
-                                    </a>
-                                </li>
-                                <li class="box-clone">
-                                    <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/28">
-                                        <div>
-                                            <!--이미지 들어갈 곳-->
-                                        </div>
-                                        <span>에어벌룬</span>
-                                        <span>정상운영중</span>
-                                    </a>
-                                </li>
-                                <li class="box-clone">
-                                    <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/28">
-                                        <div>
-                                            <!--이미지 들어갈 곳-->
-                                        </div>
-                                        <span>바운스스핀</span>
-                                        <span>정상운영중</span>
-                                    </a>
-                                </li>
-                                <li class="box-clone">
-                                    <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/28">
-                                        <div>
-                                            <!--이미지 들어갈 곳-->
-                                        </div>
-                                        <span>댄싱컵</span>
-                                        <span>정상운영중</span>
-                                    </a>
-                                </li>
-                                <li class="box-clone">
-                                    <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/28">
-                                        <div>
-                                            <!--이미지 들어갈 곳-->
-                                        </div>
-                                        <span>발키리</span>
-                                        <span>정상운영중</span>
-                                    </a>
-                                </li>
-                                <li class="box-clone">
-                                    <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/28">
-                                        <div>
-                                            <!--이미지 들어갈 곳-->
-                                        </div>
-                                        <span>섬머린스플래쉬</span>
-                                        <span>운휴중</span>
-                                    </a>
-                                </li>
-                                <li class="box-clone">
-                                    <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/28">
-                                        <div>
-                                            <!--이미지 들어갈 곳-->
-                                        </div>
-                                        <span>스와니의 클라우드 라이드</span>
-                                        <span>운휴중</span>
+                                        <span class="title">보기의 문라이트세일</span>
+                                        <span class="state-on">정상운영중</span>
                                     </a>
                                 </li>
                             </ul>
                         </div>
                         <div class="main-attraction-button">
                             <div class="main-attraction-buttons">
-                                <div>Pre</div>
-                                <div>Next</div>
+                                <a href="" class="box-pre">Pre</a>
+                                <a href="" class="box-next">Next</a>
                             </div>
                         </div>
                     </div>
@@ -707,16 +811,16 @@
             <div class="main-guide">
                 <div class="main-guide-wrapwidth">
                     <h4>눈으로 즐기는<b>가이드</b></h4>
-                    <div class="main-guide-box-wrapper">
-                        <div class="main-guide-box-viewport">
+                    <div class="main-guide-box-wrapper" style="max-width: 894px; margin: 0px auto;">
+                        <div class="main-guide-box-viewport" style="width: 100%; overflow: hidden; position: relative; height: 450px;">
                             <ul>
                                 <!--아래 날짜는 dispaly none 설정으로 되어있음-->
                                 <li>
                                     <a href="https://www.gjw.co.kr/Board/boardFile.php?key=2853&mode=thumnail">
-                                        <div class="phote">플레이G 이미지 들어갈 곳
+                                        <div class="photo-guide" style="background-image: url('/main_image/guide/황리단길플레이G.jpg');">
                                             <span class="badge">플레이G</span>
                                         </div>
-                                        <div>
+                                        <div class="information">
                                             <span class="information-name">황리단길에서 플레이지G 빠...</span>
                                             <p>황리단길에도 경주월드가 있다고???!!??!</p>
                                             <span class="information-data">2022-11-02</span>
@@ -725,10 +829,10 @@
                                 </li>
                                 <li>
                                     <a href="https://www.gjw.co.kr/Board/boardFile.php?key=2853&mode=thumnail">
-                                        <div class="phote">치즈몽땅 이미지 들어갈 곳
+                                        <div class="photo-guide" style="background-image: url('/main_image/guide/황금십원빵.jpg');">
                                             <span class="badge">치즈몽땅</span>
                                         </div>
-                                        <div>
+                                        <div class="information">
                                             <span class="information-name">치.즈.몽.땅 황금십원빵</span>
                                             <p>인싸들의 간식! 치.즈.몽.땅 황금십원빵</p>
                                             <span class="information-data">2022-06-14</span>
@@ -737,10 +841,10 @@
                                 </li>
                                 <li>
                                     <a href="https://www.gjw.co.kr/Board/boardFile.php?key=2853&mode=thumnail">
-                                        <div class="phote">신상음식 이미지 들어갈 곳
+                                        <div class="photo-guide" style="background-image: url('/main_image/guide/맛있는봄이왔나봄.jpg');">
                                             <span class="badge">신상음식</span>
                                         </div>
-                                        <div>
+                                        <div class="information">
                                             <span class="information-name">맛있는 봄이 왔나봄</span>
                                             <p>경주월드에 맛있는 봄이 왔나봄~ 신상먹거리 모음.zip</p>
                                             <span class="information-data">2022-04-27</span>
@@ -749,10 +853,10 @@
                                 </li>
                                 <li>
                                     <a href="https://www.gjw.co.kr/Board/boardFile.php?key=2853&mode=thumnail">
-                                        <div class="phote">젤리버디 이미지 들어갈 곳
+                                        <div class="photo-guide" style="background-image: url('/main_image/guide/데일리라이크.jpg');">
                                             <span class="badge">젤리버디</span>
                                         </div>
-                                        <div>
+                                        <div class="information">
                                             <span class="information-name">경주월드에 데일리라이크가 ...</span>
                                             <p>경주월드 기념품샵 드롤의 마켓 플라자에 #젤리버디가 놀러왔데!!!</p>
                                             <span class="information-data">2023-07-05</span>
@@ -761,10 +865,10 @@
                                 </li>
                                 <li>
                                     <a href="https://www.gjw.co.kr/Board/boardFile.php?key=2853&mode=thumnail">
-                                        <div class="phote">KB PAY 결제방법 이미지 들어갈 곳
+                                        <div class="photo-guide" style="background-image: url('/main_image/guide/kb결제방법.jpg');">
                                             <span class="badge">KB페이</span>
                                         </div>
-                                        <div>
+                                        <div class="information">
                                             <span class="information-name">KB PAY 결제방법</span>
                                             <p>간편하고 편리한 KB페이를 이용해보세요</p>
                                             <span class="information-data">2023-07-05</span>
@@ -773,10 +877,10 @@
                                 </li>
                                 <li>
                                     <a href="https://www.gjw.co.kr/Board/boardFile.php?key=2853&mode=thumnail">
-                                        <div class="phote">우주저렴 이미지 들어갈 곳
+                                        <div class="photo-guide" style="background-image: url('/main_image/guide/우주를즐기는방법.jpg');">
                                             <span class="badge">우주를 즐기는 방법</span>
                                         </div>
-                                        <div>
+                                        <div class="information">
                                             <span class="information-name">우주를 즐기는 방법</span>
                                             <p>경주월드에서도 우주와 똑같은 무중력을 느낄 수 있다!?</p>
                                             <span class="information-data">2022-11-29</span>
@@ -785,10 +889,10 @@
                                 </li>
                                 <li>
                                     <a href="https://www.gjw.co.kr/Board/boardFile.php?key=2853&mode=thumnail">
-                                        <div class="phote">플레이G 이미지 들어갈 곳
+                                        <div class="photo-guide" style="background-image: url('/main_image/guide/황리단길플레이G.jpg');">
                                             <span class="badge">플레이G</span>
                                         </div>
-                                        <div>
+                                        <div class="information">
                                             <span class="information-name">황리단길에서 플레이지G 빠질 수 없G</span>
                                             <p>황리단길에도 경주월드가 있다고???!!??!</p>
                                             <span class="information-data">2022-11-02</span>
@@ -797,10 +901,10 @@
                                 </li>
                                 <li>
                                     <a href="https://www.gjw.co.kr/Board/boardFile.php?key=2853&mode=thumnail">
-                                        <div class="phote">치즈몽땅 이미지 들어갈 곳
+                                        <div class="photo-guide" style="background-image: url('/main_image/guide/황금십원빵.jpg');">
                                             <span class="badge">치즈몽땅</span>
                                         </div>
-                                        <div>
+                                        <div class="information">
                                             <span class="information-name">치.즈.몽.땅 황금십원빵</span>
                                             <p>인싸들의 간식! 치.즈.몽.땅 황금십원빵</p>
                                             <span class="information-data">2022-06-14</span>
@@ -809,10 +913,10 @@
                                 </li>
                                 <li>
                                     <a href="https://www.gjw.co.kr/Board/boardFile.php?key=2853&mode=thumnail">
-                                        <div class="phote">신상음식 이미지 들어갈 곳
+                                        <div class="photo-guide" style="background-image: url('/main_image/guide/맛있는봄이왔나봄.jpg');">
                                             <span class="badge">신상음식</span>
                                         </div>
-                                        <div>
+                                        <div class="information">
                                             <span class="information-name">맛있는 봄이 왔나봄</span>
                                             <p>경주월드에 맛있는 봄이 왔나봄~ 신상먹거리 모음.zip</p>
                                             <span class="information-data">2022-04-27</span>
@@ -821,10 +925,10 @@
                                 </li>
                                 <li>
                                     <a href="https://www.gjw.co.kr/Board/boardFile.php?key=2853&mode=thumnail">
-                                        <div class="phote">젤리버디 이미지 들어갈 곳
+                                        <div class="photo-guide" style="background-image: url('/main_image/guide/데일리라이크.jpg');">
                                             <span class="badge">젤리버디</span>
                                         </div>
-                                        <div>
+                                        <div class="information">
                                             <span class="information-name">경주월드에 데일리라이크가 ...</span>
                                             <p>경주월드 기념품샵 드롤의 마켓 플라자에 #젤리버디가 놀러왔데!!!</p>
                                             <span class="information-data">2023-07-05</span>
@@ -833,10 +937,10 @@
                                 </li>
                                 <li>
                                     <a href="https://www.gjw.co.kr/Board/boardFile.php?key=2853&mode=thumnail">
-                                        <div class="phote">KB PAY 결제방법 이미지 들어갈 곳
+                                        <div class="photo-guide" style="background-image: url('/main_image/guide/kb결제방법.jpg');">
                                             <span class="badge">KB페이</span>
                                         </div>
-                                        <div>
+                                        <div class="information">
                                             <span class="information-name">KB PAY 결제방법</span>
                                             <p>간편하고 편리한 KB페이를 이용해보세요</p>
                                             <span class="information-data">2023-07-05</span>
@@ -845,10 +949,10 @@
                                 </li>
                                 <li>
                                     <a href="https://www.gjw.co.kr/Board/boardFile.php?key=2853&mode=thumnail">
-                                        <div class="phote">우주저렴 이미지 들어갈 곳
-                                            <span class="badge">우주를 즐기는 방법</span>
+                                        <div class="photo-guide" style="background-image: url('/main_image/guide/우주를즐기는방법.jpg');">
+                                            <span class="badge">우주저렴</span>
                                         </div>
-                                        <div>
+                                        <div class="information">
                                             <span class="information-name">우주를 즐기는 방법</span>
                                             <p>경주월드에서도 우주와 똑같은 무중력을 느낄 수 있다!?</p>
                                             <span class="information-data">2022-11-29</span>
@@ -859,8 +963,8 @@
                         </div>
                         <div class="main-guide-butten">
                             <div class="main-guide-butten-direction">
-                                <div>Pre</div>
-                                <div>Next</div>
+                                <a href="" class="guide-pre">Pre</a>
+                                <a href="" class="guide-next">Next</a>
                             </div>
                         </div>
                     </div>
@@ -869,32 +973,32 @@
             <div class="main-youtube">
                 <div class="main-youtube-wrapwidth">
                     <h4>
-                        <img src="유튜브 이미지 들어갈 곳" alt="유튜브">
+                        <img src="/main_image/main_logo/icon_youtube.png" alt="유튜브">
                         <span>경주월드 TV</span>
                         <p>생생한 현장감을 느끼고 싶다면 구독과 좋아요!</p>
                     </h4>
                     <ul>
                         <li>
                             <a href="https://youtu.be/i1xEZ7uAvos" target="_blank">
-                                <img src="응답하라 1985! 이미지 들어갈 곳">
+                                <img src="/main_image/youtube/응답하라.jpg">
                                 <div class="youtube-information">응답하라 1985! 도투락빌리지로 경주월드 추억여행 떠나자</div>
                             </a>
                         </li>
                         <li>
                             <a href="https://youtu.be/2QjpfCabq9E" target="_blank">
-                                <img src="경주월드 도투락빌리지 이미지 들어갈 곳">
+                                <img src="/main_image/youtube/도투락빌리지와함께.jpg">
                                 <div class="youtube-information">#경주월드 도투락빌리지와 함께 턴백 1985 추억 만들러 가자</div>
                             </a>
                         </li>
                         <li>
                             <a href="https://youtu.be/sfgBjOV1f0Y" target="_blank">
-                                <img src="도투락이즈 백 이미지 들어갈 곳">
+                                <img src="/main_image/youtube/도투락이즈백.jpg">
                                 <div class="youtube-information">도투락이즈 백 경주월드 제대로 즐길 준비 완료</div>
                             </a>
                         </li>
                         <li>
                             <a href="https://youtu.be/T7G2bTvS3v8" target="_blank">
-                                <img src="경주맛집 경주월드 먹거리 이미지 들어갈 곳">
+                                <img src="/main_image/youtube/롤코걸이.jpg">
                                 <div class="youtube-information">#경주맛집 경주월드 먹거리 롤코걸이 소개해드려요</div>
                             </a>
                         </li>
@@ -905,26 +1009,26 @@
                 <div class="main-instagram-wrapwidth">
                     <h4>
                         <span>
-                            <img src="인스타그램 이미지 들어갈 곳" alt="인스타그램">
+                            <img src="/main_image/instargram/인스타그램로고.png" alt="인스타그램">
                         </span>
                         <b>#경주월드</b>
                         해시태그로 올려주세요!
                     </h4>
                     <ul class="main-instagram-information">
-                        <li>
-                            <a href="" target="_blank"></a>
+                        <li style="background-image: url('/main_image/instargram/인생N년차.png')">
+                            <a href="https://www.instagram.com/p/CuA6MBDyKcF/" target="_blank"></a>
                         </li>
-                        <li>
-                            <a href="" target="_blank"></a>
+                        <li style="background-image: url('/main_image/instargram/경주월드퀴즈.png');">
+                            <a href="https://www.instagram.com/p/CtdgRe4RZb9/" target="_blank"></a>
                         </li>
-                        <li>
-                            <a href="" target="_blank"></a>
+                        <li style="background-image: url('/main_image/instargram/나무.png');">
+                            <a href="https://www.instagram.com/p/CtdFD0XpamB/" target="_blank"></a>
                         </li>
-                        <li>
-                            <a href="" target="_blank"></a>
+                        <li style="background-image: url('/main_image/instargram/캘리포니아비치.png');">
+                            <a href="https://www.instagram.com/p/CtX4ggvLBkq/" target="_blank"></a>
                         </li>
-                        <li>
-                            <a href="" target="_blank"></a>
+                        <li style="background-image: url('/main_image/instargram/물폭포.png');">
+                            <a href="https://www.instagram.com/p/CtLBcbzyO7b/" target="_blank"></a>
                         </li>
                     </ul>
                 </div>
@@ -932,15 +1036,16 @@
             <div class="main-facebook">
                 <div class="main-facebook-wrapwidth">
                     <h4>
-                        <span>경주월드<b>페이스북</b></span>
+                        <hr>경주월드
+                        <b>페이스북</b>
                     </h4>
                     <ul class="main-facebook-information">
                         <li>
                             <a href="https://www.facebook.com/hi.gjw/posts/pfbid02s7oZZf4iv8gv96ZRQPhcKeiBbjzhH4bAaRftNyJucb6av5U8kKrJH2zaD7hozqNfl" target="_blank">
-                                <div class="photo" 페이스북 정보 사진 들어갈 곳>
-                                    <span class="badge"></span>
+                                <div class="facebook-photo" style="background-image: url('/main_image/facebook/스와니.png');">
+                                    <span class="facebook-badge"></span>
                                 </div>
-                                <div>
+                                <div class="facebook-infomation">
                                     <p>하늘 위 정원을 지키는 백조마법사 스와니~~
                                         #경주월드 #위자드가든 귀요미 캐릭터들과
                                         스릴부터 추억까지 제대로 저~~…</p>
@@ -949,10 +1054,10 @@
                         </li>
                         <li>
                             <a href="https://www.facebook.com/hi.gjw/posts/pfbid02aGuioctUBMDSCv5f7QgxCnwdUFMkVqsFvF6dAdWvkeKN4sNMwPUe6NxmLXs9zWPxl" target="_blank">
-                                <div class="photo" 페이스북 정보 사진 들어갈 곳>
-                                    <span class="badge"></span>
+                                <div class="facebook-photo" style="background-image: url('/main_image/facebook/글린다.png');">
+                                    <span class="facebook-badge"></span>
                                 </div>
-                                <div>
+                                <div class="facebook-infomation">
                                     <p>오늘따라 경주월드 더 가고 싶지 않니?
                                         우리 귀여운 #보기 랑 #글린다와 함께
                                         #경주월드 떠나자!
@@ -962,10 +1067,10 @@
                         </li>
                         <li>
                             <a href="https://www.facebook.com/hi.gjw/posts/pfbid02jNWCZwenyFn9RGGKX7PHevURm7hDxazcPkZpTxiDdG4RjjpuxZdR7AifpL91X7wvl" target="_blank">
-                                <div class="photo" 페이스북 정보 사진 들어갈 곳>
-                                    <span class="badge"></span>
+                                <div class="facebook-photo" style="background-image: url('/main_image/facebook/경주월드대학.png')">
+                                    <span class="facebook-badge"></span>
                                 </div>
-                                <div>
+                                <div class="facebook-infomation">
                                     <p>경주월드 대학 #척척학사 찾아요
                                         과별로 과제 다르니까 확인 필쑤~
                                         @어울리는 과 찾아주자ㅋㅋ</p>
@@ -974,10 +1079,10 @@
                         </li>
                         <li>
                             <a href="https://www.facebook.com/hi.gjw/posts/pfbid02hqpqjNoo8m5WSZmBdmc4VgoQ8NZBd6dkCzCUquw5Egw7gG3od84RrCT3AYCWSPDdl" target="_blank">
-                                <div class="photo" 페이스북 정보 사진 들어갈 곳>
-                                    <span class="badge"></span>
+                                <div class="facebook-photo" style="background-image: url('/main_image/facebook/세계헌혈자의날.png');">
+                                    <span class="facebook-badge"></span>
                                 </div>
-                                <div>
+                                <div class="facebook-infomation">
                                     <p>#세계헌혈자의날 기념 헌혈자 감사 특별우대!
                                         기간: 6월10일(토)~ 23일(금) 14일간
                                         2023년 발급 헌혈증 및 신분증 제시시
@@ -996,112 +1101,121 @@
         <div id="footer-bottom">
             <div class="footer-category">
                 <div class="footer-category-list">
-                    <ul>
-                        <li>
-                            <span>페이스북 이미지 들어가는 곳?</span>
-                            <a href="http://www.facebook.com/hi.gjw" target="_blank">공식페이스북</a>
-                        </li>
-                        <li>
-                            <span>네이버 블로그 이미지 들어가는 곳?</span>
-                            <a href="https://blog.naver.com/hi_gjw" target="_blank">공식블로그</a>
-                        </li>
-                        <li>
-                            <span>인스타그램 이미지 들어가는 곳?</span>
-                            <a href="https://www.instagram.com/hi_gyeongju/" target="_blank">공식인스타그램</a>
-                        </li>
-                        <li>
-                            <span>유튜브 이미지 들어가는 곳?</span>
-                            <a href="https://www.youtube.com/channel/UCY5OQjDmW1_SRO4saLQzveQ/feed" target="_blank">공식유튜브</a>
-                        </li>
-                        <li>
-                            <span>틱톡 이미지 들어가는 곳?</span>
-                            <a href="https://www.tiktok.com/@hi_gjw" target="_blank">공식틱톡</a>
-                        </li>
-                        <li>
-                            <span>카카오톡 이미지 들어가는 곳?</span>
-                            <a href="https://pf.kakao.com/_xcExbpC" target="_blank">공식카카오톡채널</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-category-top">
-                    위로 올라가게 하는거 생각하기...
+                    <div class="bottom-sns">
+                        <ul>
+                            <li>
+                                <span></span>
+                                <a href="http://www.facebook.com/hi.gjw" target="_blank">공식페이스북</a>
+                            </li>
+                            <li>
+                                <span></span>
+                                <a href="https://blog.naver.com/hi_gjw" target="_blank">공식블로그</a>
+                            </li>
+                            <li>
+                                <span></span>
+                                <a href="https://www.instagram.com/hi_gyeongju/" target="_blank">공식인스타그램</a>
+                            </li>
+                            <li>
+                                <span></span>
+                                <a href="https://www.youtube.com/channel/UCY5OQjDmW1_SRO4saLQzveQ/feed" target="_blank">공식유튜브</a>
+                            </li>
+                            <li>
+                                <span></span>
+                                <a href="https://www.tiktok.com/@hi_gjw" target="_blank">공식틱톡</a>
+                            </li>
+                            <li>
+                                <span></span>
+                                <a href="https://pf.kakao.com/_xcExbpC" target="_blank">공식카카오톡채널</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <span class="footer-category-top">
+                        TOP
+                        <script>
+                            let topBtn = document.querySelector(".footer-category-top");
+                            topBtn.onclick = () => {
+                                window.scrollTo({
+                                    top: 0,
+                                    scbehavior: "smooth"
+                                })
+                            };
+                        </script>
+                    </span>
                 </div>
             </div>
             <div class="company-information">
                 <div class="company-information-details">
-                    <div>
-                        <div>
-                            <div class="information-details-left">
-                                <a href="https://www.gjw.co.kr/">
-                                    <img src="경주월드 로고" alt="">
-                                </a>
+                    <div class="bottom-left">
+                        <div class="information-details-left">
+                            <a href="https://www.gjw.co.kr/">
+                                <img src="/main_image/logo_0.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="information-details-center">
+                            <div class="center-company">
+                                <ul>
+                                    <li>
+                                        <a href="">경주월드 소개</a>
+                                    </li>
+                                    <li>
+                                        <a href="">이용약관</a>
+                                    </li>
+                                    <li>
+                                        <a href="">개인정보취급방침</a>
+                                    </li>
+                                    <li>
+                                        <a href="">제휴문의</a>
+                                    </li>
+                                    <li>
+                                        <a href="">채용안내 및 지원</a>
+                                    </li>
+                                    <li>
+                                        <a href="">이메일무단수집거부</a>
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="information-details-center">
-                                <div class="center-company">
-                                    <ul>
-                                        <li>
-                                            <a href="">경주월드 소개</a>
-                                        </li>
-                                        <li>
-                                            <a href="">이용약관</a>
-                                        </li>
-                                        <li>
-                                            <a href="">개인정보취급방침</a>
-                                        </li>
-                                        <li>
-                                            <a href="">제휴문의</a>
-                                        </li>
-                                        <li>
-                                            <a href="">채용안내 및 지원</a>
-                                        </li>
-                                        <li>
-                                            <a href="">이메일무단수집거부</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="center-company-imformation">
-                                    <ul>
-                                        <li>경주월드 주식회사 (경주지점)</li>
-                                        <li>주소 : 경주시 보문로 544(천군동)</li>
-                                        <li>대표전화 : 1544-8765</li>
-                                        <li>사업자등록번호 : 505-85-15586</li>
-                                        <li>대표이사 : 정원기, 함영관</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <ul>
-                                        <li>ⓒ GyeongjuWorld. All rights reserved.</li>
-                                    </ul>
-                                </div>
+                            <div class="center-company-imformation">
+                                <ul>
+                                    <li>경주월드 주식회사 (경주지점)</li>
+                                    <li>주소 : 경주시 보문로 544(천군동)</li>
+                                    <li>대표전화 : 1544-8765</li>
+                                    <li>사업자등록번호 : 505-85-15586</li>
+                                    <li>대표이사 : 정원기, 함영관</li>
+                                </ul>
                             </div>
-                            <div class="right-company-imformation">
-                               <div class="company-family">
-                                    <ul>
-                                        <li>
-                                            관련사이트 바로가기
-                                            <div>
-                                                <ul>
-                                                    <li>
-                                                        <a href="http://www.asiacement.co.kr">아세아시멘트</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="http://www.asiasan.co.kr">아세아산업개발</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="http://www.yujinpanji.co.kr">유진판자공업</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="http://www.cheilacc.co.kr">제일산업</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="http://www.a-pack.co.kr">에이팩</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                    </ul>
-                               </div> 
+                            <div class="bottom-copyright">
+                                <ul>
+                                    <li>ⓒ GyeongjuWorld. All rights reserved.</li>
+                                </ul>
                             </div>
+                        </div>
+                        <div class="right-company-imformation">
+                            <div class="company-family">
+                                <ul>
+                                    <li>
+                                        관련사이트 바로가기
+                                        <div>
+                                            <ul class="company-name">
+                                                <li>
+                                                    <a href="http://www.asiacement.co.kr">아세아시멘트</a>
+                                                </li>
+                                                <li>
+                                                    <a href="http://www.asiasan.co.kr">아세아산업개발</a>
+                                                </li>
+                                                <li>
+                                                    <a href="http://www.yujinpanji.co.kr">유진판자공업</a>
+                                                </li>
+                                                <li>
+                                                    <a href="http://www.cheilacc.co.kr">제일산업</a>
+                                                </li>
+                                                <li>
+                                                    <a href="http://www.a-pack.co.kr">에이팩</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div> 
                         </div>
                     </div>
                 </div>
