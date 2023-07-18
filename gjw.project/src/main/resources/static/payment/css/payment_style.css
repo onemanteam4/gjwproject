@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+* {
+    font-family: 'Lato', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+    
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    vertical-align: baseline;
+}
+
+html{
+    background-color: #FFFFFF;
+
+    overflow-y: scroll;
+    overflow-x: auto;
+    
+}
+
+body {
+    background-color: #FFFFFF;
+    margin: 0px;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: -0.5px;
+    color: #333;
+    /*line-height: 1.5;*/
+
+}
+
+div {
+    display: block;
+}
+
+button {
+    cursor: pointer;
+}
