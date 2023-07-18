@@ -1,0 +1,255 @@
+
+body {
+    background-color: #FFFFFF;
+    margin: 0px;
+}
+
+.wrap {
+    max-width: 1280px;
+    padding: 0px 40px;
+    margin: 0px auto;
+}
+
+/*헤더*/
+#header {
+    margin-top: 46px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+header a {
+    text-decoration: none;
+}
+
+header h1 img {
+    width: 160px;
+}
+
+.nav-menu ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 191px;
+    height: 21px;
+
+    list-style: none;
+}
+
+.nav-menu li {
+    font-size: 14px;
+}
+
+.nav-menu a {
+    color: #333;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.nav-menu img {
+    width: 16px;
+    height: 16px;
+
+}
+/*헤더 끝*/
+
+#container {
+    margin-top: 40px;
+}
+
+.page-title h2 {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.page-title p {
+    font-size: 21px;
+    color: #aaa;
+}
+
+.main-menu {
+    margin-top: 40px;
+    position: relative;
+}
+
+.main-menu .big-wrap {
+    padding-right: 204px;
+}
+
+.big-wrap {
+    display: flex;
+}
+
+.big-wrap a {
+    display: block;
+    height: 100%;
+    color: #fff;
+    padding: 48px 32px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.big-wrap .object {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    vertical-align: middle;
+}
+
+.big-wrap strong {
+    font-size: 28px;
+    font-weight: 700;
+    display: block;
+    
+
+}
+
+.big-wrap .desc {
+    display: block;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.list span {
+    display: inline-block;
+    font-size: 12px;
+    padding: 4px 16px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+}
+
+.list p:first-child {
+    margin-top: 40px;
+}
+
+.list p {
+    margin-top: 8px;
+}
+
+.big-amuse {
+    width: 486px;
+    height: 580px;
+    padding-bottom: 70px;
+    position: relative;
+    margin: 0px 12px;
+    box-sizing: content-box;
+}
+
+.big-amuse a {
+    opacity: 1;
+    background-image: url(/donguk_img/ticket_big_amuse_bg.jpg);
+}
+
+.big-cali {
+    width: 486px;
+    height: 580px;
+    padding-bottom: 70px;
+    position: relative;
+    margin: 0px 12px;
+    box-sizing: content-box;
+}
+
+.big-cali a {
+    opacity: 1;
+    background-image: url(/donguk_img/ticket_big_cali_bg.jpg);
+}
+
+.small-wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.small-wrap-menu {
+    width: 180px;
+    height: 180px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.small-wrap-menu:nth-child(1) {
+    margin-top: 0px;
+    background: #f87b61;
+    background-image: url(/donguk_img/small_menu_obj1.png);
+}
+
+.small-wrap-menu:nth-child(2) {
+    margin-top: 20px;
+    background: #70d85c;
+    background-image: url(/donguk_img/small_menu_obj2.png);
+}
+
+.small-wrap-menu:nth-child(3) {
+    opacity: 0.7;
+    margin-top: 20px;
+    background: #61d9f8;
+    background-image: url(/donguk_img/small_menu_obj3.png);
+}
+
+.small-wrap-menu a {
+    opacity: 1;
+    display: block;
+    height: 100%;
+    color: #fff;
+    padding: 20px 15px;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.small-wrap-menu:nth-child(3) a {
+    opacity: 0.5;
+}
+
+.small-wrap-menu strong {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/*footer 시작*/
+footer {
+    display: block;
+    font-size: 12px;
+    font-weight: 300;
+    margin: 80px 0px 40px;
+
+    height: 90px;
+}
+
+footer img {
+    width: 80px;
+    display: block;
+}
+
+footer ul {
+    display: block;
+    height: 54px;
+    margin-top: 10px;
+    list-style: none;
+}
+
+footer li {
+    display: list-item;
+    float: left;
+    margin-left: 20px;
+    text-align: center;
+}
+
+footer li:nth-child(1) {
+    margin-left: 0px;
+}
+
+footer li:nth-child(5) {
+    clear: both;
+    margin-left: 0px;
+}
+
+footer li:nth-child(7) {
+    clear: both;
+    margin-left: 0px;
+    color: #aaa;
+    letter-spacing: 0.5px;
+}
