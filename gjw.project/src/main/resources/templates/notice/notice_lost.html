@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>공지사항 작성</title>
+    <title>분실물센터</title>
     <link rel="stylesheet" href="/static/css/notice.dyj/notice_style.css">
-    <link rel="stylesheet" href="/static/css/notice.dyj/notice.css">
+    <link rel="stylesheet" href="/static/css/notice.dyj/notice_total_lost.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -355,7 +355,7 @@
         <div id="notice-contents">
             <div class="notice-contents-title">
                 <div class="notice-wrap-width">
-                    <h3>공지사항</h3>
+                    <h3>분실물센터</h3>
                     <div class="content-control">
                         <ul>
                             <li class="snslistBtn">
@@ -412,169 +412,90 @@
             <div class="notice-print">
                 <div class="board-wrap-width">
                     <div class="board-information">
-                        <form action="" method="" class="search_frm">
-                            <input type="hidden" class="cmsNo">
-                            <input type="hidden" class="bgrp">
-                            <div class="board-count">
-                                <ul>
-                                    <li>
-                                        전체게시물 :
-                                        <span>13</span>
-                                        건
-                                    </li>
-                                    <li>현재페이지 : 1 / 1</li>
-                                </ul>
-                            </div>
-                            <div class="board-search">
-                                <select name="srl">
-                                    <option value="title">제목</option>
-                                    <option value="name">작성자</option>
-                                </select>
-                                <label for="">검색어 필수</label>
-                                <input type="text" name="stl" class="stl" placeholder="value">
+                        <form action="" method="" id="search-frm"> 
+                            <div class="lost-date">
+                                <span>SEARCH</span>
+                                <input type="text" name="sdate" id="sdate" placeholder="습득일" class="Date-Picker">
+                                ~
+                                <input type="text" name="edate" id="edate" placeholder="습득일" class="Date-Picker">
+                                <input type="text" name="stl" id="stl" placeholder="습득물">
                                 <input type="submit" value="조회">
                             </div>
+                            <input type="hidden" name="srl" id="srl" value="title">
+                            <input type="hidden" name="cmsNo" id="cmsNo" value="DD0600">
+                            <input type="hidden" name="bgrp" id="bgrp">
                         </form>
                     </div>
-                    <div class="board-list">
+                    <div class="lost-list">
+                        <div class="lost-note">
+                            <p>
+                                ※분실물(유실물) 관할경찰서 이관시
+                                <b>경주경찰서 생활질서계 054)760-0379</b>
+                                또는 경찰청 유실물 통합포털사이트 
+                                <b>로스트112</b>
+                                에서 확인바랍니다.
+                            </p>
+                            <strong>*분실물 보관기간 최대 6개월</strong>
+                            <a href="https://www.lost112.go.kr/" target="_blank">로스트112 바로가기</a>
+                        </div>
                         <table>
                             <colgroup>
                                 <col class="num">
+                                <col class="cate">
                                 <col class="subject">
-                                <col class="file">
-                                <col class="hit">
                                 <col class="write">
+                                <col class="result">
+                                <thead>
+                                    <tr>
+                                        <th>번호</th>
+                                        <th>구분</th>
+                                        <th>습득물</th>
+                                        <th>습득장소</th>
+                                        <th>습득일</th>
+                                        <th>처리결과</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>594</td>
+                                        <td>지갑</td>
+                                        <td class="subject">갈색 카드 지갑-김*현</td>
+                                        <td>
+                                            <span class="location">패밀리바이킹</span>
+                                        </td>
+                                        <td>2023-07-05</td>
+                                        <td>
+                                            <span class="keep">보관중</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>593</td>
+                                        <td>핸드폰</td>
+                                        <td class="subject">흰색 삼성핸드폰(포차코 흰색 케이스)</td>
+                                        <td>
+                                            <span class="location">공원내</span>
+                                        </td>
+                                        <td>2023-07-05</td>
+                                        <td>
+                                            <span class="keep">보관중</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>593</td>
+                                        <td>지갑</td>
+                                        <td class="subject">갈색 카드 지갑(하와이안 옷 키링)</td>
+                                        <td>
+                                            <span class="location">공원내</span>
+                                        </td>
+                                        <td>2023-06-10</td>
+                                        <td>
+                                            <span class="keep">폐기</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
                             </colgroup>
-                            <thead>
-                                <tr>
-                                    <th>번호</th>
-                                    <th>제목</th>
-                                    <th>첨부</th>
-                                    <th>조회수</th>
-                                    <th>등록일</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td> 공지 </td>
-                                    <td class="subject">
-                                        <a href="">고객1, 2주차장 유료화 안내</a>
-                                    </td>
-                                    <td></td>
-                                    <td>55712</td>
-                                    <td>2022-10-14</td>
-                                </tr>
-                                <tr>
-                                    <td> 공지 </td>
-                                    <td class="subject">
-                                        <a href="">캐쉬밴드 조회안내</a>
-                                    </td>
-                                    <td></td>
-                                    <td>8332</td>
-                                    <td>2021-08-31</td>
-                                </tr>
-                                <tr>
-                                    <td> 11 </td>
-                                    <td class="subject">
-                                        <a href="">섬머린스플래쉬 여름기간 운행안내</a>
-                                    </td>
-                                    <td></td>
-                                    <td>659</td>
-                                    <td>2023-07-04</td>
-                                </tr>
-                                <tr>
-                                    <td> 10 </td>
-                                    <td class="subject">
-                                        <a href="">담배판매 중단안내</a>
-                                    </td>
-                                    <td></td>
-                                    <td>208</td>
-                                    <td>2023-06-27</td>
-                                </tr>
-                                <tr>
-                                    <td> 9 </td>
-                                    <td class="subject">
-                                        <a href="">kb국민카드 제휴 종료 안내</a>
-                                    </td>
-                                    <td></td>
-                                    <td>405</td>
-                                    <td>2023-06-23</td>
-                                </tr>
-                                <tr>
-                                    <td> 8 </td>
-                                    <td class="subject">
-                                        <a href="">치즈앤샷 오픈</a>
-                                    </td>
-                                    <td></td>
-                                    <td>6190</td>
-                                    <td>2023-01-27</td>
-                                </tr>
-                                <tr>
-                                    <td> 7 </td>
-                                    <td class="subject">
-                                        <a href="">카카오 T셔틀 오픈</a>
-                                    </td>
-                                    <td></td>
-                                    <td>10373</td>
-                                    <td>2023-08-22</td>
-                                </tr>
-                                <tr>
-                                    <td> 6 </td>
-                                    <td class="subject">
-                                        <a href="">새로운 이용권 통합 안내</a>
-                                    </td>
-                                    <td></td>
-                                    <td>22540</td>
-                                    <td>2023-08-10</td>
-                                </tr>
-                                <tr>
-                                    <td> 5 </td>
-                                    <td class="subject">
-                                        <a href="">운영시작시간 변경안내</a>
-                                    </td>
-                                    <td></td>
-                                    <td>4878</td>
-                                    <td>2022-06-09</td>
-                                </tr>
-                                <tr>
-                                    <td> 4 </td>
-                                    <td class="subject">
-                                        <a href="">캐스트 모집 공고</a>
-                                    </td>
-                                    <td></td>
-                                    <td>24242</td>
-                                    <td>2022-03-07</td>
-                                </tr>
-                                <tr>
-                                    <td> 3 </td>
-                                    <td class="subject">
-                                        <a href="">오후권 사용시간 변경 안내</a>
-                                    </td>
-                                    <td></td>
-                                    <td>10475</td>
-                                    <td>2021-03-29</td>    
-                                </tr>
-                                <tr>
-                                    <td> 2 </td>
-                                    <td class="subject">
-                                        <a href="">연간 이용권 이용약관 일부 개정 안내</a>
-                                    </td>
-                                    <td></td>
-                                    <td>5784</td>
-                                    <td>2021-03-08</td>
-                                </tr>
-                                <tr>
-                                    <td> 1 </td>
-                                    <td class="subject">
-                                        <a href="">어뮤즈먼트 생활 속 거리두기 안내</a>
-                                    </td>
-                                    <td></td>
-                                    <td>107022</td>
-                                    <td>2020-06-29</td>
-                                </tr>    
-                            </tbody>
                         </table>
-                    </div>
+                    </div>    
                     <div class="board-list-pager">
                         <div class="list-page">
                             <ul>
@@ -586,6 +507,12 @@
                                 </li>
                                 <li class="on">
                                     <a href="" data-pagenumber="1" >1</a>
+                                </li>
+                                <li class=>
+                                    <a href="" data-pagenumber="2" >2</a>
+                                </li>
+                                <li class=>
+                                    <a href="" data-pagenumber="3" >3</a>
                                 </li>
                                 <li>
                                     <a href="">></a>
