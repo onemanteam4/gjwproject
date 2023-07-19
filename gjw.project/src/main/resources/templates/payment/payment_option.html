@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/payment/css/payment_style.css">
+    <link rel="stylesheet" href="/static/payment/css/payment_option.css">
+    <title>결제 옵션선택</title>
+</head>
+<body>
+    <div id="wrap_containers">
+        <div class="wrap">
+            <header id="header">
+                <h1>
+                    <a href="" class="home-btn">
+                        <img src="/donguk_img/logo.png" alt="경주월드">
+                    </a>
+                </h1>
+                <nav class="nav-menu">
+                    <ul>
+                        <li class="nav-ticket">
+                            <a href="">
+                                <img src="/donguk_img/util_icon_regi.png" alt="통합예매">
+                                통합예매
+                            </a>
+                        </li>
+                        <li class="nav-logout">
+                            <a href="">
+                                <img src="/donguk_img/util_icon_person.png" alt="로그아웃">
+                                마이페이지
+                            </a>
+                        </li>
+                        <li class="nav-logout">
+                            <a href="">
+                                <img src="/donguk_img/util_icon_out.png" alt="로그아웃">
+                                로그아웃
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <div id="container">
+                <div class="page-title">
+                    <h2>옵션 선택</h2>
+                    <p>사용하실 이용권을 선택해주세요</p>
+                </div>
+                <div class="contents">
+                    <form name="contents-form">
+                        <div class="box-wrap">
+                            <section class="left-box">
+                                <h3>어뮤즈먼트 이용권</h3>
+                                <div class="ticket-preview">
+                                    <dl class="ticket-estimate">
+                                        <dt>방문 예정 날짜</dt>
+                                        <dd>2023-07-28</dd>
+                                        <dt>이용기간</dt>
+                                        <dd>2023-07-28 ~ 2023-07-28</dd>
+                                    </dl>
+                                    <div class="amount">
+                                        <div class="inner">
+                                            <div class="total">
+                                                <b>결제예정금액</b>
+                                                <div class="amount-input">
+                                                    <input type="text" id="total" name="total" value="0">
+                                                    <span>원</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="right-box">
+                                <div class="select-ticket">
+                                    <div class="ticket-list" id="group1">
+                                        <div class="ticket-name">
+                                            <img src="/donguk_img/payment/ticket_card.jpg" alt="카드사 제휴 할인">
+                                            <div class="ticket-inner">
+                                                <strong>카드사 제휴 할인</strong>
+                                                <p>
+                                                    <span class="span1">안내</span>
+                                                    해당 월에 결제 & 이용 가능
+                                                </p>
+                                                <p>
+                                                    <span class="span2">이용시간</span>
+                                                    10:00 ~ 20:00
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="option-area" id="option1" style="display: none;">
+                                            <ul>
+                                                <li>
+                                                    <b class="option-name">BC카드</b>
+                                                    <span>24,000원</span>
+                                                    <div class="ticket-btn">
+                                                        <button type="button" class="btn-dec" onclick="cardDecrease(0, 24000)"></button>
+                                                        <input type="text" id="01" value= 0>
+                                                        <button type="button" class="btn-inc" onclick="cardIncrease(0, 24000)"></button>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <b class="option-name">NH카드</b>
+                                                    <span>24,000원</span>
+                                                    <div class="ticket-btn">
+                                                        <button type="button" class="btn-dec" onclick="cardDecrease(1, 24000)"></button>
+                                                        <input type="text" id="02" value="0">
+                                                        <button type="button" class="btn-inc" onclick="cardIncrease(1, 24000)"></button>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <b class="option-name">현대카드</b>
+                                                    <span>24,000원</span>
+                                                    <div class="ticket-btn">
+                                                        <button type="button" class="btn-dec" onclick="cardDecrease(2, 24000)"></button>
+                                                        <input type="text" id="03" value="0">
+                                                        <button type="button" class="btn-inc" onclick="cardIncrease(2, 24000)"></button>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <b class="option-name">삼성카드</b>
+                                                    <span>24,000원</span>
+                                                    <div class="ticket-btn">
+                                                        <button type="button" class="btn-dec" onclick="cardDecrease(3, 24000)"></button>
+                                                        <input type="text" id="04" value="0">
+                                                        <button type="button" class="btn-inc" onclick="cardIncrease(3, 24000)"></button>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <b class="option-name">롯데카드</b>
+                                                    <span>24,000원</span>
+                                                    <div class="ticket-btn">
+                                                        <button type="button" class="btn-dec" onclick="cardDecrease(4, 24000)"></button>
+                                                        <input type="text" id="05" value="0">
+                                                        <button type="button" class="btn-inc" onclick="cardIncrease(4, 24000)"></button>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <dl class="option-total">
+                                                <dt>소계</dt>
+                                                <dd>
+                                                    <div class="option-amount-input">
+                                                        <input type="text" id="subtotal1" name="subtotal1" value="0" disabled readonly>
+                                                        <span>원</span>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="ticket-list" id="group2">
+                                        <div class="ticket-name">
+                                            <img src="/donguk_img/payment/gamsung.png" alt="감성교복 패키지(특가)">
+                                            <div class="ticket-inner">
+                                                <strong>감성교복 패키지(특가)</strong>
+                                                <p>
+                                                    <span class="span1">안내</span>
+                                                    이용권+감성교복
+                                                </p>
+                                                <p>
+                                                    <span class="span2">이용시간</span>
+                                                    10:00 ~ 20:00
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="option-area" id="option2" style="display: none;">
+                                            <ul>
+                                                <li>
+                                                    <b class="option-name">대인</b>
+                                                    <span>49,900원</span>
+                                                    <div class="ticket-btn">
+                                                        <button type="button" class="btn-dec" onclick="gamDecrease(0, 49900)"></button>
+                                                        <input type="text" value="0">
+                                                        <button type="button" class="btn-inc" onclick="gamIncrease(0, 49900)"></button>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <b class="option-name">소인</b>
+                                                    <span>45,400원</span>
+                                                    <div class="ticket-btn">
+                                                        <button type="button" class="btn-dec" onclick="gamDecrease(1, 45400)"></button>
+                                                        <input type="text" value="0">
+                                                        <button type="button" class="btn-inc" onclick="gamIncrease(1, 45400)"></button>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <dl class="option-total">
+                                                <dt>소계</dt>
+                                                <dd>
+                                                    <div class="option-amount-input">
+                                                        <input type="text" id="subtotal2" name="subtotal2" value="0" disabled readonly>
+                                                        <span>원</span>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="ticket-list" id="group3">
+                                        <div class="ticket-name">
+                                            <img src="/donguk_img/payment/kbpay_icon.jpg" alt="KBPAY 특가">
+                                            <div class="ticket-inner">
+                                                <strong>KBPAY 특가</strong>
+                                                <p>
+                                                    <span class="span1">안내</span>
+                                                    KBPAY로 결제하면 특가!
+                                                </p>
+                                                <p>
+                                                    <span class="span2">이용시간</span>
+                                                    10:00 ~ 20:00
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="option-area" id="option3" style="display: none;">
+                                            <ul>
+                                                <li>
+                                                    <b class="option-name">대인</b>
+                                                    <span>24,000원</span>
+                                                    <div class="ticket-btn">
+                                                        <button type="button" class="btn-dec" onclick="kbDecrease(0, 24000)"></button>
+                                                        <input type="text" value="0">
+                                                        <button type="button" class="btn-inc" onclick="kbIncrease(0, 24000)"></button>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <b class="option-name">소인</b>
+                                                    <span>18,000원</span>
+                                                    <div class="ticket-btn">
+                                                        <button type="button" class="btn-dec" onclick="kbDecrease(1, 18000)"></button>
+                                                        <input type="text" value="0">
+                                                        <button type="button" class="btn-inc" onclick="kbIncrease(1, 18000)"></button>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <dl class="option-total">
+                                                <dt>소계</dt>
+                                                <dd>
+                                                    <div class="option-amount-input">
+                                                        <input type="text" id="subtotal3" name="subtotal3" value="0" disabled readonly>
+                                                        <span>원</span>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="ticket-list" id="group4">
+                                        <div class="ticket-name">
+                                            <img src="/donguk_img/payment/ticket_free.png" alt="온라인 회원 할인">
+                                            <div class="ticket-inner">
+                                                <strong>온라인 회원 할인</strong>
+                                                <p>
+                                                    <span class="span1">안내</span>
+                                                    홈페이지 회원 기본 혜택
+                                                </p>
+                                                <p>
+                                                    <span class="span2">이용시간</span>
+                                                    10:00 ~ 20:00
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="option-area" id="option4" style="display: none;">
+                                            <ul>
+                                                <li>
+                                                    <b class="option-name">대인</b>
+                                                    <span>33,400원</span>
+                                                    <div class="ticket-btn">
+                                                        <button type="button" class="btn-dec" onclick="onDecrease(0, 33400)"></button>
+                                                        <input type="text" value="0">
+                                                        <button type="button" class="btn-inc" onclick="onIncrease(0, 33400)"></button>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <b class="option-name">청소년</b>
+                                                    <span>28,900원</span>
+                                                    <div class="ticket-btn">
+                                                        <button type="button" class="btn-dec" onclick="onDecrease(1, 28900)"></button>
+                                                        <input type="text" value="0">
+                                                        <button type="button" class="btn-inc" onclick="onIncrease(1, 28900)"></button>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <b class="option-name">소인</b>
+                                                    <span>24,400원</span>
+                                                    <div class="ticket-btn">
+                                                        <button type="button" class="btn-dec" onclick="onDecrease(2, 24400)"></button>
+                                                        <input type="text" value="0">
+                                                        <button type="button" class="btn-inc" onclick="onIncrease(2, 24400)"></button>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <dl class="option-total">
+                                                <dt>소계</dt>
+                                                <dd>
+                                                    <div class="option-amount-input">
+                                                        <input type="text" id="subtotal4" name="subtotal4" value="0" disabled readonly>
+                                                        <span>원</span>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="ticket-list" id="group5">
+                                        <div class="ticket-name">
+                                            <img src="/donguk_img/payment/ticket_after.jpg" alt="야간 할인권">
+                                            <div class="ticket-inner">
+                                                <strong>야간 할인권(4시)</strong>
+                                                <p>
+                                                    <span class="span1">안내</span>
+                                                    16시부터 입장가능
+                                                </p>
+                                                <p>
+                                                    <span class="span1">이용시간</span>
+                                                    16:00 ~ 20:00
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="option-area" id="option5" style="display: none;">
+                                            <ul>
+                                                <li>
+                                                    <b class="option-name">대인/청소년</b>
+                                                    <span>25,400원</span>
+                                                    <div class="ticket-btn">
+                                                        <button type="button" class="btn-dec" onclick="afDecrease(0, 25400)"></button>
+                                                        <input type="text" value="0">
+                                                        <button type="button" class="btn-inc" onclick="afIncrease(0, 25400)"></button>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <b class="option-name">소인</b>
+                                                    <span>19,400원</span>
+                                                    <div class="ticket-btn">
+                                                        <button type="button" class="btn-dec" onclick="afDecrease(1, 19400)"></button>
+                                                        <input type="text" value="0">
+                                                        <button type="button" class="btn-inc" onclick="afIncrease(1, 19400)"></button>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <dl class="option-total">
+                                                <dt>소계</dt>
+                                                <dd>
+                                                    <div class="option-amount-input">
+                                                        <input type="text" id="subtotal5" name="subtotal5" value="0" disabled readonly>
+                                                        <span>원</span>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="btn-wrap">
+                                        <a href="" class="back-btn">뒤로</a>
+                                        <a href="" class="next-btn">다음</a>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <footer id="footer">
+                <img src="/donguk_img/logo.png" alt="경주월드">
+                <ul>
+                    <li> 경주월드 주식회사(경주지점) </li>
+                    <li> 주소 경주시 보문로 544(천군동) </li>
+                    <li> 대표전화 1544-8765 </li>
+                    <li> 사업자등록번호, 505-85-15586 </li>
+                    <li> 대표이사 정원기, 함영관 </li>
+                    <li> 개인정보관리자 권준오 </li>
+                    <li> ⓒ GyeongjuWorld. All rights reserved. </li>
+                </ul>
+            </footer>
+        </div>
+    </div>
+    <script src="/static/payment/js/payment_option.js"></script>
+</body>
+</html>
