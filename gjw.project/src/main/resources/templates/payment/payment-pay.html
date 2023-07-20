@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/payment/css/payment_style.css">
+    <link rel="stylesheet" href="/static/payment/css/payment_pay.css">
+    <title>결제 단계</title>
+</head>
+<body>
+    <div id="wrap_containers">
+        <form name="form-payment">
+            <div class="wrap">
+                <header id="header">
+                    <h1>
+                        <a href="" class="home-btn">
+                            <img src="/donguk_img/logo.png" alt="경주월드">
+                        </a>
+                    </h1>
+                    <nav class="nav-menu">
+                        <ul>
+                            <li class="nav-ticket">
+                                <a href="">
+                                    <img src="/donguk_img/util_icon_regi.png" alt="통합예매">
+                                    통합예매
+                                </a>
+                            </li>
+                            <li class="nav-logout">
+                                <a href="">
+                                    <img src="/donguk_img/util_icon_person.png" alt="로그아웃">
+                                    마이페이지
+                                </a>
+                            </li>
+                            <li class="nav-logout">
+                                <a href="">
+                                    <img src="/donguk_img/util_icon_out.png" alt="로그아웃">
+                                    로그아웃
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+                <div id="container">
+                    <div class="page-title">
+                        <h2>결제 단계</h2>
+                        <p>선택하신 권종이 맞으신가요?</p>
+                    </div>
+                    <div class="contents">
+                        <div class="box-wrap">
+                            <section class="left-box">
+                                <h3></h3>
+                                <div class="ticket-preview">
+                                    <dl class="ticket-estimate">
+                                        <dt>방문 예정 날짜</dt>
+                                        <dd>2023-07-28</dd>
+                                        <dt>이용기간</dt>
+                                        <dd>2023-07-28 ~ 2023-07-28</dd>
+                                        <dt>선택 권종</dt>
+                                        <dd class="option-detail">
+                                            <div class="detail-list">
+                                                <img src="/donguk_img/payment/ticket_free.png" alt="온라인 회원 할인" class="thumb">
+                                                <strong>온라인 회원 할인</strong>
+                                                <b>33,400원</b>
+                                                <dl>
+                                                    <dt>대인 : 1매</dt>
+                                                    <dd>33,400원</dd>
+                                                </dl>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                    <div class="amount-total">
+                                        <h4>결제정보</h4>
+                                        <div class="inner">
+                                            <dl>
+                                                <dt>총 주문금액 (정상가)</dt>
+                                                <dd>48,000</dd>
+                                                <dt>할인 받으신 금액</dt>
+                                                <dd>-14,600</dd>
+                                            </dl>
+                                            <div class="total">
+                                                <b>총 결제금액</b>
+                                                <strong>
+                                                    <span>33,400</span>
+                                                    원
+                                                </strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="right-box">
+                                <div class="info-wrap">
+                                    <div class="check-position">
+                                        <h4>방문자 정보 입력</h4>
+                                        <div class="same-visitor">
+                                            <input type="checkbox" name="check" id="check">
+                                            <label for="check">
+                                                구매자와 방문자가 동일한가요?
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input-wrap">
+                                        <div class="input-type">
+                                            <label for="name">이름</label>
+                                            <input type="text" name="visit-name" id="visit-name">
+                                        </div>
+                                        <div class="input-type">
+                                            <label for="phone">휴대폰 번호</label>
+                                            <input type="text" name="visit-hp" id="visit-hp">
+                                        </div>
+                                        <div class="input-type">
+                                            <label for="email">이메일</label>
+                                            <input type="text" name="visit-email" id="visit-email">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pay-info">
+                                    <h4>결제 유형</h4>
+                                    <h5>*상품에 따라 유형이 제한될 수 있습니다.</h5>
+                                    <div class="pay-wrap">
+                                        <div class="pay-list">
+                                            <input type="radio" name="pay" id="pay1">
+                                            <label for="pay1" class="credit">신용카드</label>
+                                        </div>
+                                        <div class="pay-list">
+                                            <input type="radio" name="pay" id="pay2">
+                                            <label for="pay2" class="kakaopay">
+                                                <img src="/donguk_img/payment/pay_icon_kakao.png" alt="카카오페이">
+                                            </label>
+                                        </div>
+                                        <div class="pay-list">
+                                            <input type="radio" name="pay" id="pay3">
+                                            <label for="pay3" class="naverpay">
+                                                <img src="/donguk_img/payment/pay_icon_naver.png" alt="네이버페이">
+                                            </label>
+                                        </div>
+                                        <div class="pay-list">
+                                            <input type="radio" name="pay" id="pay4">
+                                            <label for="pay4" class="samsungpay">
+                                                <img src="/donguk_img/payment/pay_icon_samsung.png" alt="삼성페이">
+                                            </label>
+                                        </div>
+                                        <div class="pay-list">
+                                            <input type="radio" name="pay" id="pay5">
+                                            <label for="pay5" class="payco">
+                                                <img src="/donguk_img/payment/pay_icon_payco.png" alt="페이코">
+                                            </label>
+                                        </div>
+                                        <div class="pay-list">
+                                            <input type="radio" name="pay" id="pay6">
+                                            <label for="pay6" class="ssgpay">
+                                                <img src="/donguk_img/payment/pay_icon_ssg.png" alt="ssg페이">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ticket-note">
+                                    <div class="list" id="list1" onclick="showlist(0)">
+                                        <h5>취소 환불 안내</h5>
+                                        <ul>
+                                            <li>스마트 예매는 취소에 따른 위약금, 예매 수수료가 발생하지 않습니다. (100% 환불)</li>
+                                            <li>일부 티켓을 취소시에는 부분취소 거래로 환불에 영업일 기준 3~5일 소요될 수 있습니다.</li>
+                                            <li>당일 취소가 아닌 경우에는 환불에 영업일 기준 3~5일 소요될 수 있습니다.</li>
+                                            <li>제휴카드 결제 완료시점에서 '서비스 대상카드 아님/기타거래불가카드'라고 나오는 경우는 제휴카드가 아닌 경우입니다.</li>
+                                            <li>요금/이용 문의 : 1544-8765 (ARS, 대표전화)</li>
+                                        </ul>
+                                    </div>
+                                    <div class="list" id="list2"  onclick="showlist(1)">
+                                        <h5>구매 이용 안내</h5>
+                                        <ul>
+                                            <li>스마트 예매 고객은 바코드를 이용하여 바로(즉시)입장 가능합니다. (100% 환불)</li>
+                                            <li>연령제한 : 소인(36개월~초등학생), 청소년(중∙고등), 성인(대학생~일반)</li>
+                                            <li>자유이용권은 입장료가 포함된 가격입니다.</li>
+                                            <li>36개월 미만의 아동은 증빙서류 지참시에 한해 무료입니다. (단, 어린이 전용시설은 유료 )</li>
+                                            <li>생일쿠폰은 생일이 포함된 해당월에 사용 가능합니다.</li>
+                                            <li>놀이시설은 우천 및 기상상황에 따라 오픈이 지연되거나 조기 마감될 수 있습니다.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="btn-wrap">
+                                        <button type="button" class="pay-btn">결제</button>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <footer id="footer">
+                    <img src="/donguk_img/logo.png" alt="경주월드">
+                    <ul>
+                        <li> 경주월드 주식회사(경주지점) </li>
+                        <li> 주소 경주시 보문로 544(천군동) </li>
+                        <li> 대표전화 1544-8765 </li>
+                        <li> 사업자등록번호, 505-85-15586 </li>
+                        <li> 대표이사 정원기, 함영관 </li>
+                        <li> 개인정보관리자 권준오 </li>
+                        <li> ⓒ GyeongjuWorld. All rights reserved. </li>
+                    </ul>
+                </footer>
+            </div>
+        </form>
+    </div>
+    <script src="/static/payment/js/payment_pay.js"></script>
+</body>
+</html>
