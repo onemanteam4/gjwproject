@@ -60,22 +60,37 @@ quickController.onmouseout = () => {
 //맨 위 배너 슬라이드
 const boxSlider = document.querySelector(".box-slider-list");
 const boxSliderList = document.querySelectorAll(".box-slider-list li");
-let index = 0;
+let imgCount = 0;
 let slideCount = boxSliderList.length;
 
 
-
+banner();
 
 let slideWidth = -1903;
 
+function banner () {
+    // for(let i = 0; i < boxSliderList.length; i++) {
+    //     imgCount++;
+    // }
 
-function banner() {
-    boxSlider.style.width = '715%';
-    boxSlider.style.position = 'relative';
-    boxSlider.style.transition-duration = '1s'; 
-    boxSlider.style.transform = "(-" + 1903px, 0px, 0px);
+    let index = 0;
 
-    
+    setInterval( () => {
+        
+
+        boxSlider.style.transition = 'transform 1s ease-out';
+        boxSlider.style.transform = 'translate3d(-' + 1903*(index+1) + 'px, 0px, 0px)';
+        index ++;
+        
+        console.log(index);
+        if( index >= 4) {
+            index = -1;
+        }
+    }, 10000);
+       
+
 }
 
-setInterval(banner,)
+
+
+
