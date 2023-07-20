@@ -1,4 +1,4 @@
- body {
+body {
     top: 0;
 }
 
@@ -711,7 +711,7 @@
     
 }
 
-#AttractionsView {
+#FacilityView {
     border-top: 3px solid #000000;
     padding-top: 70px;
     height: 1363px;
@@ -775,9 +775,10 @@
 
 #AttractionsInfo ul li:first-child {
     font-size: 17px;
-    padding: 0 0 25px;
+    padding: 0 0 65px;
     line-height: 1.6;
     min-height: 188px;
+    
 }
 
 #AttractionsInfo ul li {
@@ -786,10 +787,12 @@
     font-weight: 300;
     color: #555555;
 
+    
     padding: 16px 16px 16px 140px;
     min-height: 54px;
     border-bottom: 1px solid #e0e0e0;
 }
+
 
 #AttractionsInfo ul li span {
     display: inline-block;

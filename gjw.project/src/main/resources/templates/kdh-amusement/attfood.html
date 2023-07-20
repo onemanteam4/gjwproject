@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>어트랙션 | 꿈, 사랑, 행복의 경주월드!</title>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <link rel="stylesheet" href="/static/css/kdh.css/attraction.css">
+    <link rel="stylesheet" href="/static/css/kdh.css/food.css">
     <link rel="stylesheet" href="/static/css/kdh.css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -361,11 +361,12 @@
 
 </div>
     <!-- 상단 어뮤즈먼트 소개 wrap 끝-->
-    <!-- 어트랙션 내용 wrap 시작-->
+
+    <!-- 레스토랑 스낵 wrap 시작-->
     <div id="WrapContents">
         <div id="ContentTitle">
             <div class="WrapWidth">
-                <h3>어트랙션</h3>
+                <h3>레스토랑&스낵</h3>
                 <div class="ContentControl">
                     <ul>
                     <li class="snslistBtn">
@@ -400,427 +401,76 @@
             </div>
         </div>
         <div id="WrapPrint">
-            <!-- 테마 & 키 부분 시작-->
-            <div id="AttractionSearch">
-                <div class="WrapWidthh">
-                    <ul class="temabar">
-                        <li class="qwe">
-                            <span class="rightbar">테마</span>
-                            <ul>
-                                <li class="select-list">
-                                    <input type="checkbox" name="theme" id="family" value="자녀">
-                                    <label for="family">
-                                        자녀
-                                    </label>
-                                </li>
-                                <li class="select-list">
-                                    <input type="checkbox" name="theme" id="couple" value="연인">
-                                    <label for="couple">
-                                        연인
-                                    </label>
-                                </li>
-                                <li class="select-list">
-                                    <input type="checkbox" name="theme" id="child" value="친구">
-                                    <label for="child">
-                                        친구
-                                    </label>
-                                </li>
-                                <li class="select-list">
-                                    <input type="checkbox" name="theme" id="rain" value="우천시">
-                                    <label for="rain">
-                                        우천시
-                                    </label>
-                                </li>
-                                <li class="select-list">
-                                    <input type="checkbox" name="theme" id="thrill" value="스릴">
-                                    <label for="thrill">
-                                        스릴
-                                    </label>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="qwe">
-                            <span class="rightbar">키</span>
-                            <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-                            <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-                            <script type="text/javascript" src="/static/js/jskdh/jquery.ui.touch-punch.min.js"></script>
-                            <input type="hidden" name="height" id="height" value="120">
-                            <div id="SearchHeightArea">
-                                <div id="SearchHeight" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
-                                        <div id="SearchHeightHandle" class="ui-slider-handle ui-corner-all ui-state-default "  tabindex="0" style="left: 33.3333%;">
-                                        </div>
-                                    <span class="min">80cm</span>
-                                    <span class="max">200cm</span>
-                                </div>
-                            </div>
-                            <script>
-									$( function() {
-										var handle = $( '#SearchHeightHandle' );
-										var tmp = $( '#height' );
-										$( '#SearchHeight' ).slider({
-											min: 80,
-											max: 200,
-											step: 5,
-											value: 120,
-											create: function() {
-												handle.text( $( this ).slider( "value" ) + "cm" );
-												tmp.val( $( this ).slider( "value" ) );
-											},
-											slide: function( event, ui ) {
-												handle.text( ui.value + "cm" );
-												tmp.val( ui.value );
-											}
-										});
-									} );
-                            </script>
-                        </li>
-                    </ul>
-                    <div class="ButtonArea">
-                        <button class="searchBtn">검색</button>
+            <div id="RestaurantList">
+                <div class="foodWrap">
+                    <div>
+                        <img src="" alt="">
                     </div>
-                </div>
-            </div>
-            <div id="AttractionNotice">
-                <img src="/static/img-kdh/어뮤즈먼트 소개-어트랙션-버튼클릭아이콘.png" alt="">
-                "테마를 선택하고, 드래그로 키를 선택하세요 "
-                <p style="font-size: 0.89rem;color: red;">놀이시설은 우천 및 기상상황에 따라 지연되거나 조기마감될 수 있습니다 </p>
-            </div>
-            <div id="AttractionList">
-                <div class="WrapWidthhh">
-                    <div style="display: none;"></div>
                     <ul id="ajaxContainer">
-                        <li class="ContainerRows" id="50">
-                            <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/50">
-                                <div class="thumwrap">
-                                    <div class="photo" style="background-image: url(/static/img-kdh/어트랙션/어트랙션-발키리/발키리2.gif)"> </div>
-                                    <span class="loction">드라켄밸리</span>
+                        <li class="ContainerRows" id="93">
+                            <a href="">
+                                <div class="thumWrap">
+                                    <div class="photo" style="background-image: url(/static/img-kdh/food/delihouse/house_2.jpg);"></div>
                                 </div>
                                 <div class="infomation">
-                                    <span class="name">발키리</span>
-                                    <p>앞으로 뒤로 전장을 날아다니는 발키리 격렬한 전투의 흔적...</p>
+                                    <span class="name">델리하우스</span>
+                                    <p>아메리카나가 델리하우스로 새단장하여 여러분들을 맞이합니다</p>
                                 </div>
                             </a>
                         </li>
-                        <li class="ContainerRows" id="14">
-                            <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/50">
-                                <div class="thumwrap">
-                                    <div class="photo" style="background-image: url(/static/img-kdh/어트랙션/어트랙션-드라켄/드라켄2.gif)"> </div>
-                                    <span class="loction">드라켄밸리</span>
+                        <li class="ContainerRows" id="94">
+                            <a href="">
+                                <div class="thumWrap">
+                                    <div class="photo" style="background-image: url(/static/img-kdh/food/fritz/fritz_2.jpg);"></div>
                                 </div>
                                 <div class="infomation">
-                                    <span class="name">드라켄</span>
-                                    <p>세계 6번째, 국내 최초! 90도 다이브코스터! 63m 높이에서 수...</p>
+                                    <span class="name">네덜란드 프리츠</span>
+                                    <p>아는 맛이 무서운 법! 네덜란드식 감자튀김을 즐겨보세요!</p>
                                 </div>
                             </a>
                         </li>
-                        <li class="ContainerRows" id="13">
-                            <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/50">
-                                <div class="thumwrap">
-                                    <div class="photo" style="background-image: url(/static/img-kdh/어트랙션/어트랙션-크라크/크라크2.gif)"> </div>
-                                    <span class="loction">드라켄밸리</span>
+                        <li class="ContainerRows" id="83">
+                            <a href="">
+                                <div class="thumWrap">
+                                    <div class="photo" style="background-image: url(/static/img-kdh/food/salad/salad_2.jpg);"></div>
                                 </div>
                                 <div class="infomation">
-                                    <span class="name">크라크</span>
-                                    <p>360도 회전하는 메가톤급 스릴 라이드! 거칠게 좌우로 몰아...</p>
+                                    <span class="name">그린 브라더 샐러드</span>
+                                    <p>그린브라더 샐러드는 한식 토핑을 샐러드에 담은 프리미엄 샐러드 입니...</p>
                                 </div>
                             </a>
                         </li>
-                        <li class="ContainerRows" id="12">
-                            <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/50">
-                                <div class="thumwrap">
-                                    <div class="photo" style="background-image: url(/static/img-kdh/어트랙션/어트랙션-드래곤레이스/드래곤레이스2.jpg)"> </div>
-                                    <span class="loction">드라켄벨리</span>
+                        <li class="ContainerRows" id="82">
+                            <a href="">
+                                <div class="thumWrap">
+                                    <div class="photo" style="background-image: url(/static/img-kdh/food/goldbread/bread_2.jpg);"></div>
                                 </div>
                                 <div class="infomation">
-                                    <span class="name">드래곤레이스</span>
-                                    <p>아기 드래곤이 나는 연습으 하는 곳! 귀여운 아기드래곤이 ...</p>
+                                    <span class="name">황금십원빵</span>
+                                    <p>치즈몽땅 황금십원빵 제주산 모짜렐라치즈가 쭈욱~~~</p>
                                 </div>
                             </a>
                         </li>
-                        <li class="ContainerRows" id="8">
-                            <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/50">
-                                <div class="thumwrap">
-                                    <div class="photo" style="background-image: url(/static/img-kdh/어트랙션/어트랙션-파에톤/파에톤2.gif)"> </div>
-                                    <span class="loction">엑스존</span>
+                        <li class="ContainerRows" id="81">
+                            <a href="">
+                                <div class="thumWrap">
+                                    <div class="photo" style="background-image: url(/static/img-kdh/food/cupnut/cupnut_2.jpg);"></div>
                                 </div>
                                 <div class="infomation">
-                                    <span class="name">파에톤</span>
-                                    <p>그리스 파에톤 신화를 테마로 한 세계 최강의 인버티드 롤...</p>
+                                    <span class="name">컵넛</span>
+                                    <p>보자마자 반하는 도넛 비주얼! 핫한 컵넛 경주월드에서 만나보세요</p>
                                 </div>
                             </a>
                         </li>
-                        <li class="ContainerRows" id="9">
-                            <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/50">
-                                <div class="thumwrap">
-                                    <div class="photo" style="background-image: url(/static/img-kdh/어트랙션/어트랙션-메가드롭/메가드롭2.jpg)"> </div>
-                                    <span class="badge">운휴기종</span>
-                                    <span class="loction">엑스존</span>
-                                </div>
-                                <div class="infomation">
-                                    <span class="name">메가드롭</span>
-                                    <p>지상 70m 하늘에서 떨어지는 기분! 하늘에서 내려다보는 경...</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="ContainerRows" id="1">
-                            <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/50">
-                                <div class="thumwrap">
-                                    <div class="photo" style="background-image: url(/static/img-kdh/어트랙션/어트랙션-트리키리키의볼하우스/볼하우스2.jpg)"> </div>
-                                    <span class="loction">위자드가든</span>
-                                </div>
-                                <div class="infomation">
-                                    <span class="name">트리키리키의 볼하우스</span>
-                                    <p>알록달록 다양한 색깔 스펀지 공으로 재미있는 공놀이! 과...</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="ContainerRows" id="2">
-                            <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/50">
-                                <div class="thumwrap">
-                                    <div class="photo" style="background-image: url(/static/img-kdh/어트랙션/어트랙션-드롤의위자드트레인/위자드트레인2.jpg)"> </div>
-                                    <span class="badge">운휴기종</span>
-                                    <span class="loction">위자드가든</span>
-                                </div>
-                                <div class="infomation">
-                                    <span class="name">드롤의 위자드트레인</span>
-                                    <p>드롤이 초대하는 환상의 마법마을 기차! 장난꾸러기 드롤과...</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="ContainerRows" id="3">
-                            <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/50">
-                                <div class="thumwrap">
-                                    <div class="photo" style="background-image: url(/static/img-kdh/어트랙션/어트랙션-글린다의매직펌킨/매직펌킨2.jpg)"> </div>
-                                    <span class="loction">위자드가든</span>
-                                </div>
-                                <div class="infomation">
-                                    <span class="name">글린다의 매직펌킨</span>
-                                    <p>예쁜 돼지 공주 글린다가 마법의 주문을 걸어놓은 매직 펌...</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="ContainerRows" id="4">
-                            <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/50">
-                                <div class="thumwrap">
-                                    <div class="photo" style="background-image: url(/static/img-kdh/어트랙션/어트랙션-보기의문라이트세일/문라이트세일2.jpg)"> </div>
-                                    <span class="loction">위자드가든</span>
-                                </div>
-                                <div class="infomation">
-                                    <span class="name">보기의 문라이트세일</span>
-                                    <p>거북이 마법사 보기선장과 달빛여행! 하늘을 나는 마법의 ...</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="ContainerRows" id="5">
-                            <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/50">
-                                <div class="thumwrap">
-                                    <div class="photo" style="background-image: url(/static/img-kdh/어트랙션/어트랙션-스와니의클라우드라이드/클라우드라이드2.jpg)"> 
-                                    </div>
-                                    <span class="loction">위자드가든</span>
-                                </div>
-                                <div class="infomation">
-                                    <span class="name">스와니의 클라우드 라이드</span>
-                                    <p>위자드가든에서 하늘을 꼭 한번 보세요. 위자드 가든의 높...</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="ContainerRows" id="6">
-                            <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/50">
-                                <div class="thumwrap">
-                                    <div class="photo" style="background-image: url(/static/img-kdh/어트랙션/어트랙션-페기의케로셀/케로셀2.jpg)"> </div>
-                                    <span class="loction">위자드가든</span>
-                                </div>
-                                <div class="infomation">
-                                    <span class="name">페기의 케로셀</span>
-                                    <p>페기의 케로셀이 마법으로 여러분을 공주와 왕자로 변신시...</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="ContainerRows" id="7">
-                            <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/50">
-                                <div class="thumwrap">
-                                    <div class="photo" style="background-image: url(/static/img-kdh/어트랙션/어트랙션-발키리/발키리2.gif)"> </div>
-                                    <span class="loction">위자드가든</span>
-                                </div>
-                                <div class="infomation">
-                                    <span class="name">스파키의 매직카</span>
-                                    <p>장난 꾸러기 스파키는 작지만 요리조리 재빠르고 멋진 운...</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="ContainerRows" id="10">
-                            <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/50">
-                                <div class="thumwrap">
-                                    <div class="photo" style="background-image: url(/static/img-kdh/어트랙션/어트랙션-토네이도/토네이도2.jpg)"> </div>
-                                    <span class="loction">엑스존</span>
-                                </div>
-                                <div class="infomation">
-                                    <span class="name">토네이도</span>
-                                    <p>국내 최고의 스릴 어트랙션 토네이도! 국내 최대 상승각도...</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="ContainerRows" id="11">
-                            <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/50">
-                                <div class="thumwrap">
-                                    <div class="photo" style="background-image: url(/static/img-kdh/어트랙션/어트랙션-그랜드캐년대탐험/그랜드캐년2.jpg)"> </div>
-                                    <span class="loction">엑스존</span>
-                                </div>
-                                <div class="infomation">
-                                    <span class="name">그랜드캐년대탐험</span>
-                                    <p>아메리카 대륙의 그랜드캐년 협곡 속에 아찔한 급류를 탐험...</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="ContainerRows" id="15">
-                            <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/50">
-                                <div class="thumwrap">
-                                    <div class="photo" style="background-image: url(/static/img-kdh/어트랙션/어트랙션-범퍼카/범퍼카2.jpg)"> </div>
-                                    <span class="loction">놀이기구</span>
-                                </div>
-                                <div class="infomation">
-                                    <span class="name">범퍼카</span>
-                                    <p>이리 쿵! 저리 쿵! 추억의 범퍼카! 요리조리 좌충우돌 박치...</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="ContainerRows" id="16">
-                            <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/50">
-                                <div class="thumwrap">
-                                    <div class="photo" style="background-image: url(/static/img-kdh/어트랙션/어트랙션-급류타기/급류타기2.jpg)"> </div>
-                                    <span class="loction">놀이기구</span>
-                                </div>
-                                <div class="infomation">
-                                    <span class="name">급류타기</span>
-                                    <p>가파른 수로를 따라 아찔한 급류타기! 통나무배를 타고 떠...</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="ContainerRows" id="17">
-                            <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/50">
-                                <div class="thumwrap">
-                                    <div class="photo" style="background-image: url(/static/img-kdh/어트랙션/어트랙션-패밀리바이킹/패바2.jpg)"> </div>
-                                    <span class="loction">놀이기구</span>
-                                </div>
-                                <div class="infomation">
-                                    <span class="name">패밀리 바이킹</span>
-                                    <p>바이킹과 보물섬을 향해 출발! 해적선이 거대한 파도를 타...</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="ContainerRows" id="20">
-                            <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/50">
-                                <div class="thumwrap">
-                                    <div class="photo" style="background-image: url(/static/img-kdh/어트랙션/어트랙션-가족열차/가족열차2.jpg)"> </div>
-                                    <span class="loction">놀이기구</span>
-                                </div>
-                                <div class="infomation">
-                                    <span class="name">가족열차</span>
-                                    <p>가족, 연인, 친구들이 함께 증기 기관차를 타면서 여행을 ...</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="ContainerRows" id="22">
-                            <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/50">
-                                <div class="thumwrap">
-                                    <div class="photo" style="background-image: url(/static/img-kdh/어트랙션/어트랙션-비룡열차/비룡열차2.jpg)"> </div>
-                                    <span class="badge">운휴기종</span>
-                                    <span class="loction">위자드가든</span>
-                                </div>
-                                <div class="infomation">
-                                    <span class="name">비룡열차</span>
-                                    <p>드래곤을 타고 꼬불꼬불 오르락 내리락! 아이들이 더 좋아...</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="ContainerRows" id="23">
-                            <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/50">
-                                <div class="thumwrap">
-                                    <div class="photo" style="background-image: url(/static/img-kdh/어트랙션/어트랙션-미로탐험/미로탐험2.jpg)"> </div>
-                                    <span class="loction">놀이기구</span>
-                                </div>
-                                <div class="infomation">
-                                    <span class="name">미로탐험</span>
-                                    <p>미로를 따라 구르고 넘어지는 재미! 이상한 에피소드와 미...</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="ContainerRows" id="24">
-                            <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/50">
-                                <div class="thumwrap">
-                                    <div class="photo" style="background-image: url(/static/img-kdh/어트랙션/어트랙션-섬머린스플래쉬/섬머린스2.jpg)"> </div>
-                                    <span class="badge">운휴기종</span>
-                                    <span class="loction">놀이기구</span>
-                                </div>
-                                <div class="infomation">
-                                    <span class="name">섬머린스플래쉬</span>
-                                    <p>국내 최초, 아시아 최고 높이 32m 수상 롤러코스터! 초대형 ...</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="ContainerRows" id="25">
-                            <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/50">
-                                <div class="thumwrap">
-                                    <div class="photo" style="background-image: url(/static/img-kdh/어트랙션/어트랙션-킹바이킹/킹바이킹2.jpg)"> </div>
-                                    <span class="loction">놀이기구</span>
-                                </div>
-                                <div class="infomation">
-                                    <span class="name">킹 바이킹</span>
-                                    <p>중세 시대 바이킹을 재현해낸 웅장한 스케일! 바이킹 사상 ...</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="ContainerRows" id="26">
-                            <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/50">
-                                <div class="thumwrap">
-                                    <div class="photo" style="background-image: url(/static/img-kdh/어트랙션/어트랙션-에어벌룬/에어벌룬2.jpg)"> </div>
-                                    <span class="loction">놀이기구</span>
-                                </div>
-                                <div class="infomation">
-                                    <span class="name">에어벌룬</span>
-                                    <p>빙글빙글 하늘을 날아가는 신나는 여행! 알록달록 에어벌룬...</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="ContainerRows" id="27">
-                            <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/50">
-                                <div class="thumwrap">
-                                    <div class="photo" style="background-image: url(/static/img-kdh/어트랙션/어트랙션-바운스스핀/바운스2.jpg)"> </div>
-                                    <span class="loction">놀이기구</span>
-                                </div>
-                                <div class="infomation">
-                                    <span class="name">바운스스핀</span>
-                                    <p>요리조리 통통 튀는 바운스! 언제 어떻게 튈지 모르는 즐거...</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="ContainerRows" id="28">
-                            <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/50">
-                                <div class="thumwrap">
-                                    <div class="photo" style="background-image: url(/static/img-kdh/어트랙션/어트랙션-댄싱컵/댄싱컵2.jpg)"> </div>
-                                    <span class="loction">놀이기구</span>
-                                </div>
-                                <div class="infomation">
-                                    <span class="name">댄싱컵</span>
-                                    <p>알록달록 예쁜 댄싱 컵이 빙글빙글! 댄싱컵 속에서 손잡이...</p>
-                                </div>
-                            </a>
-                        </li>
-                        <script></script>
-                        <script></script>
-                        <script></script>
-                        <script></script>
                     </ul>
-                    <div class="add-ButtonArea"  >
-                        <span id="GetMore">더보기</span>
+                    <div class="add-ButtonArea" id="GetMore" onclick="dataGetMore()">
+                        <span>더보기</span>
                     </div>
                 </div>
             </div>
-            <script type="text/javascript"></script>
-            <!-- 서브 컨텐츠 끝 -->
+            <script></script>
         </div>
     </div>
-    <!-- 놀이기구 전체 끝 -->
     <!-- 하단  바 시작-->
     <div id="WrapBottom">
         <div id="BottomFNB">
@@ -929,5 +579,6 @@
         </div>
     </div>
     <!-- 하단 바 끝 -->
+    
 </body>
 </html>
