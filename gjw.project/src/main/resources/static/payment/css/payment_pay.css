@@ -1,0 +1,474 @@
+
+body {
+    background-color: #FFFFFF;
+    margin: 0px;
+}
+
+.wrap {
+    max-width: 1280px;
+    padding: 0px 40px;
+    margin: 0px auto;
+}
+
+/*헤더*/
+#header {
+    margin-top: 46px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+header a {
+    text-decoration: none;
+}
+
+header h1 img {
+    width: 160px;
+}
+
+.nav-menu ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    height: 21px;
+
+    list-style: none;
+}
+
+.nav-menu li {
+    font-size: 14px;
+}
+
+.nav-menu a {
+    color: #333;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.nav-menu img {
+    width: 16px;
+    height: 16px;
+
+}
+
+/*바디 시작*/
+#container {
+    margin-top: 40px;
+}
+
+/*바디 헤드*/
+.page-title h2 {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.page-title p {
+    font-size: 21px;
+    color: #aaa;
+}
+/*바디 헤드 끝*/
+
+.contents {
+    margin-top: 40px;
+}
+
+.box-wrap {
+    display: flex;
+}
+
+.left-box {
+    width: 486px;
+}
+
+.left-box h3 {
+    background: url(/donguk_img/selected_amuse.png) center center no-repeat;
+    background-size: cover;
+
+    width: 100%;
+    height: 84px;
+    color: #fff;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 84px;
+    border-radius: 10px;
+    padding: 0px 20px;
+}
+
+.ticket-estimate {
+    margin-top: 24px;
+    line-height: 30px;
+}
+
+.ticket-estimate dt {
+    float: left;
+    clear: both;
+    color: #aaa;
+}
+
+.ticket-estimate dd {
+    float: right;
+    font-weight: 400;
+}
+
+.ticket-estimate .option-detail {
+    clear: both;
+    float: none;
+}
+
+.detail-list {
+    margin-top: 10px;
+    padding-left: 98px;
+    position: relative;
+    min-height: 78px;
+}
+
+.detail-list img {
+    width: 78px;
+    height: 78px;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    vertical-align: middle;
+}
+
+strong {
+    font-weight: 700;
+}
+
+.ticket-estimate .option-detail b {
+    float: right;
+    font-weight: 400;
+}
+
+.detail-list dl {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.ticket-estimate::after {
+    clear: both;
+    display: block;
+    content: '';
+}
+
+.amount-total {
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+.amount-total h4 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.amount-total .inner {
+    margin-top: 10px;
+    padding: 15px 20px 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+.amount-total dl {
+    line-height: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.amount-total dt {
+    clear: both;
+    float: left;
+}
+
+.amount-total dd {
+    float: right;
+}
+
+dl::after {
+    clear: both;
+    display: block;
+    content: '';
+}
+
+.total {
+    line-height: 50px;
+}
+
+.total b {
+    font-size: 18px;
+}
+
+.total strong {
+    float: right;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.total strong span {
+    color: #f85549;
+}
+
+.right-box {
+    width: 588px;
+    margin-left: 126px;
+}
+
+.info-wrap {
+    margin-top: 0px;
+}
+
+.check-position {
+    position: relative;
+}
+
+.check-position h4 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.check-position .same-visitor {
+    position: absolute;
+    top: 20%;
+    right: 0;
+    font-size: 14px;
+}
+
+#check {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+.same-visitor label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 34px;
+}
+
+.same-visitor label::after {
+    content: '';
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(/donguk_img/chkbox_white.png);
+    background-size: 24px;
+}
+
+#check:checked + label::after {
+    background-image: url(/donguk_img/chkbox_red.png);
+}
+
+.input-type {
+    margin-top: 24px;
+}
+
+.input-type label {
+    display: block;
+    color: #aaa;
+}
+
+.input-type input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    border-bottom: 1px solid #e5e5e5;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.input-type input:hover {
+    border-bottom: 1px solid #f85549;
+}
+
+.pay-info {
+    margin-top: 56px;
+}
+
+.pay-info h4 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.pay-info h5 {
+    font-weight: 400;
+}
+
+.pay-wrap {
+    margin: 0px -4px;
+}
+
+.pay-wrap::after {
+    clear: both;
+    content: '';
+    display: block;
+}
+
+.pay-list {
+    width: 190px;
+    float: left;
+    margin: 8px 4px 0px;
+}
+
+.pay-list input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0px;
+    margin: -1px;
+    border: 0px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+}
+
+.pay-list label {
+    text-align: center;
+    position: relative;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+
+    display: block;
+    padding: 8px 0px;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pay-list img {
+    width: 102px;
+    height: 16px;
+}
+
+.pay-list input[type="radio"]:checked + label {
+    border-color: #f85549;
+}
+
+.ticket-note {
+    margin-top: 40px;
+}
+
+.list {
+    border-top: 1px solid #f5f5f5;
+}
+
+.list:first-child {
+    border-top: none;
+}
+
+.ticket-note h5 {
+    font-size: 14px;
+    padding: 10px 0px;
+    position: relative;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.ticket-note h5::after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 20%;
+    right: 0;
+    background-image: url(/donguk_img/payment/arrow_down.png);
+    background-size: 12px;
+}
+
+.ticket-note .list.on h5:after {
+    background-image: url(/donguk_img/payment/arrow_up.png);
+}
+
+.ticket-note ul {
+    padding: 20px;
+    font-size: 12px;
+    background: #f5f5f5;
+    display: none;
+    list-style: none;
+}
+
+.ticket-note .list.on ul {
+    display: block;
+}
+
+.ticket-note li {
+    margin-top: 5px;
+    padding-left: 10px;
+    line-height: 15px;
+}
+
+.btn-wrap {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.pay-btn {
+    width: 100%;
+    padding: 0;
+
+    background-color: #f85549;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 0;;
+    
+    display: inline-block;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    border: 1px solid #f85549;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+footer {
+    display: block;
+    font-size: 12px;
+    font-weight: 300;
+    margin: 80px 0px 40px;
+
+    height: 90px;
+}
+
+footer img {
+    width: 80px;
+    display: block;
+}
+
+footer ul {
+    display: block;
+    height: 54px;
+    margin-top: 10px;
+    list-style: none;
+}
+
+footer li {
+    display: list-item;
+    float: left;
+    margin-left: 20px;
+    text-align: center;
+}
+
+footer li:nth-child(1) {
+    margin-left: 0px;
+}
+
+footer li:nth-child(5) {
+    clear: both;
+    margin-left: 0px;
+}
+
+footer li:nth-child(7) {
+    clear: both;
+    margin-left: 0px;
+    color: #aaa;
+    letter-spacing: 0.5px;
+}

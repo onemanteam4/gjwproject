@@ -1,0 +1,263 @@
+
+body {
+    background-color: #FFFFFF;
+    margin: 0px;
+}
+
+.wrap {
+    max-width: 1280px;
+    padding: 0px 40px;
+    margin: 0px auto;
+}
+
+/*헤더*/
+#header {
+    margin-top: 46px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+header a {
+    text-decoration: none;
+}
+
+header h1 img {
+    width: 160px;
+}
+
+.nav-menu ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    height: 21px;
+
+    list-style: none;
+}
+
+.nav-menu li {
+    font-size: 14px;
+}
+
+.nav-menu a {
+    color: #333;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.nav-menu img {
+    width: 16px;
+    height: 16px;
+
+}
+
+/*바디 시작*/
+#container {
+    margin-top: 40px;
+}
+
+/*바디 헤드*/
+.page-title h2 {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.page-title p {
+    font-size: 21px;
+    color: #aaa;
+}
+/*바디 헤드 끝*/
+
+.contents {
+    margin-top: 40px;
+}
+
+.search-wrap {
+    font-size: 14px;
+    padding-left: 180px;
+    position: relative;
+}
+
+.day-pick {
+    width: 667px;
+    float: left;
+    margin: 0px 24px;
+    position: relative;
+}
+
+.calendar-show:first-child {
+    margin-left: 0;
+}
+
+.calendar-show {
+    width: 321px;
+    margin-left: 24px;
+    padding: 5px 36px 5px 8px;
+    color: #aaa;
+    text-align: center;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    float: left;
+    cursor: pointer;
+    background: url(/donguk_img/calendar_icon.png) no-repeat;
+    background-size: 14px;
+    background-position: center right 12px;
+}
+
+.day-pick span {
+    color: #aaa;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+}
+
+.btn-month-wrap {
+    width: 180px;
+    padding: 0px 5px;
+    text-align: center;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.btn-month-wrap button {
+    width: 54px;
+    font-weight: 300;
+    margin: 1px 0px;
+    padding: 5px 8px;
+    color: #aaa;
+    position: relative;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.btn-month-wrap button::after {
+    content: '';
+    width: 1px;
+    height: 12px;
+    background-color: #ddd;
+    position: absolute;
+    top: 30%;
+    left: 0;
+}
+
+
+.btn-month-wrap button:first-child:after {
+    content: '';
+    width: 1px;
+    height: 12px;
+    background-color: #fff;
+    position: absolute;
+    top: 30%;
+    left: 0;
+}
+
+.monthbtn {
+    width: 154px;
+    font-size: 14px;
+    padding: 5px 8px;
+    line-height: 20px;
+    height: 32px;
+    font-weight: 400;
+
+    background-color: #f85549;
+    border: 1px solid #f85549;
+    color: #fff;
+
+    display: inline-block;
+    text-align: center;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    display: block;
+    font-size: 12px;
+    font-weight: 300;
+    margin: 80px 0px 40px;
+
+    height: 90px;
+}
+
+footer img {
+    width: 80px;
+    display: block;
+}
+
+footer ul {
+    display: block;
+    height: 54px;
+    margin-top: 10px;
+    list-style: none;
+}
+
+footer li {
+    display: list-item;
+    float: left;
+    margin-left: 20px;
+    text-align: center;
+}
+
+footer li:nth-child(1) {
+    margin-left: 0px;
+}
+
+footer li:nth-child(5) {
+    clear: both;
+    margin-left: 0px;
+}
+
+footer li:nth-child(7) {
+    clear: both;
+    margin-left: 0px;
+    color: #aaa;
+    letter-spacing: 0.5px;
+}
