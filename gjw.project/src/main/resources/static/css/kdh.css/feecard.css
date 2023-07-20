@@ -1,6 +1,4 @@
- body {
-    top: 0;
-}
+
 
 .box-wrapper {
     margin: 0px;
@@ -464,10 +462,12 @@
     height: 260px;
     top: -5px;
     clear: both;
-    background-image: url(/static/img-kdh/TopLNBimg.jpg);
+    background-image: url(/static/img-kdh/rateinformation.jpg);
+    background-position: 50% 50%;
     z-index: 101;
 
 }
+
 
 .backimg {
     height: 260px;
@@ -476,7 +476,7 @@
 
 .backimg h2 {
     font-weight: 500;
-    font-size: 57px;
+    font-size: 44px;
     color: #ffffff;
     text-align: center;
     line-height: 210px;
@@ -589,6 +589,12 @@
     font-size: 12.5px;
 }
 
+/*.add-menu span:hover {
+    background-color: #959595;
+    color: #ffffff;
+    text-decoration: none;
+} */
+
 #WrapContents {
     clear: both;
     min-width: 900px;
@@ -696,165 +702,119 @@
     position: relative;
 } 
 
-/* 해당 놀이기구 사진 및 설명 부분 시작 */
-
-#WrapPrint {
-    width: 2537px;
-    height: 1360px;
+.creditCardArea {
+    margin: 40px 0 80px;
 }
 
-.WrapWidth-1 {
-    margin: 0 192px;
-    max-width: 1300px;
-    width: 100%;
-    
-    
+.credithead h4 {
+    font-size: 40px;
+    line-height: 1.2;
+    font-weight: normal;
+    font-style: normal;
 }
 
-#AttractionsView {
-    border-top: 3px solid #000000;
-    padding-top: 70px;
-    height: 1363px;
+.creditNotice {
+    margin-top: 16px;
 }
 
-
-.FacilityPhotoArea {
-    height: 550px;
-    padding-top: 2px;
-}
-
-#AttractionsPhoto {
-    float: left;
-    width: 624px;
-    height: 550px;
-}
-
-#AttractionsPhoto div {
-    width: 624px;
-    height: 430px;
-    background-color: #333333;
-    background-repeat: no-repeat;
-    background-position: 50% 50%; 
-    /* 배경이미지 x,y축 위치 지정 */
-    background-size: cover;
-}
-
-#AttractionsPhoto ul li:first-child {
-    margin-left: 0px;
-}
-
-#AttractionsPhoto ul li {
-    margin-left: 8px;
-    width: 150px;
-    height: 110px;
-    margin-top: 8px;
-    background-color: #c9c9c9;
-    float: left;
-    background-repeat: no-repeat;
-    background-position: 50% 50%; 
-    background-size: cover;
-    cursor: pointer;
-}
-
-#AttractionsInfo {
-    float: right;
-    width: calc(100% - 702px);
-    /* 괄호안의 계산 결과를 속성값으로 해줌 */
-}
-
-#AttractionsInfo h4 {
-    font-size: 32px;
-    font-weight: 500;
-    line-height: 35px;
-    height: 50px;
-}
-
-#AttractionsInfo ul {
-    height: 473px;
-}
-
-#AttractionsInfo ul li:first-child {
-    font-size: 17px;
-    padding: 0 0 25px;
-    line-height: 1.6;
-    min-height: 188px;
-}
-
-#AttractionsInfo ul li {
+.creditNotice li {
+    margin-top: 4px;
+    padding-left: 12px;
     position: relative;
-    font-size: 15px;
-    font-weight: 300;
-    color: #555555;
-
-    padding: 16px 16px 16px 140px;
-    min-height: 54px;
-    border-bottom: 1px solid #e0e0e0;
 }
 
-#AttractionsInfo ul li span {
-    display: inline-block;
-    width: 110px;
-    text-align: center;
-    margin-right: 30px;
-    top: 16px;
-    left: 0;
-
-    font-weight: 400;
-    color: #000000;
-    background-image: url(/static/img-kdh/bullet.png);
-    background-position: -303px -606px;
+.creditNotice li::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    background: #000;
+    border-radius: 50px;
     position: absolute;
+    top: 10px;
+    left: 0;
 }
 
-.FacilityMapArea {
+.creditNotice li .creditEx {
+    color: #fe2419;
+}
+
+.creditNotice .note {
+    margin-top: 4px;
+    color: #999;
+}
+
+.creditList {
     margin-top: 40px;
-    height: 540px;
 }
 
-.FacilityMapArea h4 {
-    font-size: 24px;
-    padding: 10px 0;
-    height: 57.7;
+.creditList > ul {
+    display: flex;
+    flex-wrap: wrap; /* 나열된 요소의 총 넓이가 부모보다 클 때 다음줄에 이어서 나열해주는 기능 display flex랑 같이 사용 */
+    margin: -8px;
 }
 
-.FacilityMap {
+.creditList .creditinfo {
+    width: calc(33.333% - 16px);
+    margin: 8px;
+    padding: 56px 0;
     text-align: center;
-    background: #f5f5f5;
     border: 1px solid #e5e5e5;
-    height: 482.6px;
+    border-radius: 8px;
 }
 
-.FacilityMap img {
-    width: 100%;
-    max-width: 640px;
-    vertical-align: top;
-    /* 해당 박스 상단 수직 정렬 */
+.creditinfo h5 {
+    font-size: 24px;
+    font-weight: 700;
 }
 
-.Bottom-Btn-Area {
-    clear: both;
-    text-align: right;
-    padding: 30px 0 80px 0;
+.creditinfo img {
+    max-width: 200px;
+    margin-top: 16px;
 }
 
-.Bottom-Btn-Area a {
-    display: inline-block;
-    height: 50px;
-    width: 140px;
-    text-align: center;
-    line-height: 44px;
-
-    border: 2px solid #ed1c24;
-    border-radius: 25px;
-    font-size: 19px;
-    color: #ed1c24;
-    background-color: #f7f7f7;
+.creditinfo ul {
+    margin-top: 24px;
 }
 
-/* 위치정보 지도 부분까지 끝 */
+.creditinfo li:first-child {
+    margin-top: 0;
+}
 
-/* 하단 공식sns 부분 시작 */
+.creditinfo li {
+    margin-top: 18px;
+}
+
+.creditinfo .creditCall a {
+    border-top: none;
+}
+
+.creditinfo a {
+    padding-top: 10px;
+    padding-left: 30px;
+    color: #000;
+    border-top: 1px solid #e5e5e5;
+    position: relative;
+}
+
+.creditinfo .creditCall a::before {
+    background-image: url(/static/img-kdh/card/icon_call.png);
+}
+
+.creditinfo a::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url(/static/img-kdh/card/icon_card.png);
+    background-size: 24px;
+    position: absolute;
+    top: 8px;
+    left: 0;
+}
+
+/* 하단 바 시작 */
+
 #WrapBottom {
+    padding-top: 130px;
     clear: both;
     background-color: #ffffff;
 }
@@ -1026,6 +986,7 @@ background-image: url(/static/img-kdh/Bottommenu.png);
     background-image: url(/static/img-kdh/Bottommenu.png);
 }
 
+
 #BottomCopyright {
     clear: both;
     padding-top: 7px;
@@ -1059,4 +1020,6 @@ background-image: url(/static/img-kdh/Bottommenu.png);
     line-height: 36px;
     position: relative;
 }
+
 /* 하단 끝 */
+

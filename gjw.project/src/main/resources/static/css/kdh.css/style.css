@@ -6,7 +6,7 @@ html {
 }
 
 
-body, div, ul, li, h1, h2, h3, h4, h5, span, p {
+body, div, ul, li, h1, h2, h3, h4, h5, span, p, dl, dd, dt {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -16,6 +16,7 @@ body {
     box-sizing: border-box;
     letter-spacing: -1px;
     line-height: 1.4;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 div {

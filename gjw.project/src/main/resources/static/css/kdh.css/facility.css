@@ -1,4 +1,4 @@
- body {
+body {
     top: 0;
 }
 
@@ -493,7 +493,7 @@
 
 .WrapWidth {
     margin: 0 auto;
-    margin-left: 180px;
+
     width: 100%;
     max-width: 1300px;
 }
@@ -590,15 +590,15 @@
 }
 
 #WrapContents {
+    width: 1754.6px;
+    height: 1000px;
     clear: both;
     min-width: 900px;
     padding-top: 410px;
 }
 
 #ContentTitle {
-    width: 1370px;
     height: 90px;
-    margin-left: 10px;
 }
 
 #ContentTitle h3 {
@@ -620,7 +620,7 @@
 
 .ContentControl ul {
     float: right;
-    margin-top: 35px;
+    margin-top: 40px;
 }
 
 .snslistBtn {
@@ -694,167 +694,97 @@
     font-weight: 500;
     line-height: 28px;
     position: relative;
-} 
-
-/* 해당 놀이기구 사진 및 설명 부분 시작 */
-
-#WrapPrint {
-    width: 2537px;
-    height: 1360px;
 }
 
-.WrapWidth-1 {
-    margin: 0 192px;
+#RestaurantList {
+
+}
+
+.foodWrap {
+    margin: 0 auto;
+    width: 100%;
+    height: 865px;
     max-width: 1300px;
+}
+
+#RestaurantList ul {
     width: 100%;
-    
-    
+    margin-top: 0px;
 }
 
-#AttractionsView {
-    border-top: 3px solid #000000;
-    padding-top: 70px;
-    height: 1363px;
-}
-
-
-.FacilityPhotoArea {
-    height: 550px;
-    padding-top: 2px;
-}
-
-#AttractionsPhoto {
+#RestaurantList ul li {
+    width: calc(20% - 20px);
     float: left;
-    width: 624px;
-    height: 550px;
+    margin-left: 24px;
+    margin-bottom: 56px;
 }
 
-#AttractionsPhoto div {
-    width: 624px;
-    height: 430px;
-    background-color: #333333;
-    background-repeat: no-repeat;
-    background-position: 50% 50%; 
-    /* 배경이미지 x,y축 위치 지정 */
-    background-size: cover;
-}
-
-#AttractionsPhoto ul li:first-child {
-    margin-left: 0px;
-}
-
-#AttractionsPhoto ul li {
-    margin-left: 8px;
-    width: 150px;
-    height: 110px;
-    margin-top: 8px;
-    background-color: #c9c9c9;
-    float: left;
-    background-repeat: no-repeat;
-    background-position: 50% 50%; 
-    background-size: cover;
-    cursor: pointer;
-}
-
-#AttractionsInfo {
-    float: right;
-    width: calc(100% - 702px);
-    /* 괄호안의 계산 결과를 속성값으로 해줌 */
-}
-
-#AttractionsInfo h4 {
-    font-size: 32px;
-    font-weight: 500;
-    line-height: 35px;
-    height: 50px;
-}
-
-#AttractionsInfo ul {
-    height: 473px;
-}
-
-#AttractionsInfo ul li:first-child {
-    font-size: 17px;
-    padding: 0 0 25px;
-    line-height: 1.6;
-    min-height: 188px;
-}
-
-#AttractionsInfo ul li {
-    position: relative;
-    font-size: 15px;
-    font-weight: 300;
-    color: #555555;
-
-    padding: 16px 16px 16px 140px;
-    min-height: 54px;
-    border-bottom: 1px solid #e0e0e0;
-}
-
-#AttractionsInfo ul li span {
-    display: inline-block;
-    width: 110px;
-    text-align: center;
-    margin-right: 30px;
-    top: 16px;
-    left: 0;
-
-    font-weight: 400;
-    color: #000000;
-    background-image: url(/static/img-kdh/bullet.png);
-    background-position: -303px -606px;
-    position: absolute;
-}
-
-.FacilityMapArea {
-    margin-top: 40px;
-    height: 540px;
-}
-
-.FacilityMapArea h4 {
-    font-size: 24px;
-    padding: 10px 0;
-    height: 57.7;
-}
-
-.FacilityMap {
-    text-align: center;
-    background: #f5f5f5;
-    border: 1px solid #e5e5e5;
-    height: 482.6px;
-}
-
-.FacilityMap img {
-    width: 100%;
-    max-width: 640px;
-    vertical-align: top;
-    /* 해당 박스 상단 수직 정렬 */
-}
-
-.Bottom-Btn-Area {
+#RestaurantList ul li:nth-child(5n+1) {
+    margin-left: 0;
     clear: both;
-    text-align: right;
-    padding: 30px 0 80px 0;
 }
 
-.Bottom-Btn-Area a {
+#RestaurantList ul li a {
+    color: #000000;
+}
+
+.thumWrap {
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.photo {
+    padding-top: 100%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    position: relative;
+}
+
+.infomation {
+    padding: 24px 0 0;
+    font-size: 13px;
+    color: #555555;
+}
+
+.name {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+#RestaurantList ul li div p {
+    display: block;
+    font-weight: 300;
+    margin-top: 4px;
+}
+
+.add-ButtonArea {
+    clear: both;
+    padding-top: 100px;
+    text-align: center;
+}
+
+.add-ButtonArea span {
     display: inline-block;
     height: 50px;
-    width: 140px;
-    text-align: center;
-    line-height: 44px;
-
-    border: 2px solid #ed1c24;
+    line-height: 46px;
+    padding: 0 63px 0 33px;
+    border: 1px solid #000000;
     border-radius: 25px;
-    font-size: 19px;
-    color: #ed1c24;
-    background-color: #f7f7f7;
+    font-size: 18px;
+    color: #676767;
+    background-image: url(/static/img-kdh/sign.png);
+    background-repeat: no-repeat;
+    background-position: top -702px right -240px;
+    cursor: pointer;
+    
 }
 
-/* 위치정보 지도 부분까지 끝 */
+/* 하단 바 시작 */
 
-/* 하단 공식sns 부분 시작 */
 #WrapBottom {
+    padding-top: 130px;
     clear: both;
     background-color: #ffffff;
 }
@@ -1026,6 +956,7 @@ background-image: url(/static/img-kdh/Bottommenu.png);
     background-image: url(/static/img-kdh/Bottommenu.png);
 }
 
+
 #BottomCopyright {
     clear: both;
     padding-top: 7px;
@@ -1059,4 +990,5 @@ background-image: url(/static/img-kdh/Bottommenu.png);
     line-height: 36px;
     position: relative;
 }
+
 /* 하단 끝 */

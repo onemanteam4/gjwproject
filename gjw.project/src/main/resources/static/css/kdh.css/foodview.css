@@ -1,4 +1,4 @@
- body {
+body {
     top: 0;
 }
 
@@ -700,7 +700,7 @@
 
 #WrapPrint {
     width: 2537px;
-    height: 1360px;
+    height: 1642px;
 }
 
 .WrapWidth-1 {
@@ -711,7 +711,7 @@
     
 }
 
-#AttractionsView {
+#FacilityView {
     border-top: 3px solid #000000;
     padding-top: 70px;
     height: 1363px;
@@ -775,9 +775,10 @@
 
 #AttractionsInfo ul li:first-child {
     font-size: 17px;
-    padding: 0 0 25px;
+    padding: 0 0 290px;
     line-height: 1.6;
     min-height: 188px;
+    
 }
 
 #AttractionsInfo ul li {
@@ -786,10 +787,12 @@
     font-weight: 300;
     color: #555555;
 
+    
     padding: 16px 16px 16px 140px;
     min-height: 54px;
     border-bottom: 1px solid #e0e0e0;
 }
+
 
 #AttractionsInfo ul li span {
     display: inline-block;
@@ -806,6 +809,54 @@
     position: absolute;
 }
 
+/* 주요 메뉴 부분 */
+
+#RestaurantMenu {
+    margin-top: 45px;
+    height: 289px;
+}
+
+#RestaurantMenu h4 {
+    font-size: 24px;
+    padding: 10px 0;
+}
+
+#RestaurantMenu ul {
+    width: 1300px;
+    height: 231px;
+}
+
+#RestaurantMenu ul li:nth-child(5n+1) {
+    margin-left: 0px;
+}
+
+#RestaurantMenu ul li {
+    width: 247px;
+    height: 215px;
+    float: left;
+    border: 1px solid #dedede;
+    margin-bottom: 16px;
+    background-color: #ffffff;
+}
+
+.photo {
+    padding-top: 66.9%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat; /* 이미지 사이즈가 작아서 크기내에 같은 이미지 반복 여부 x */
+    background-size: cover;
+    position: relative;
+}
+
+.food-info {
+    padding: 12px 0;
+    text-align: center;
+}
+
+.name {
+    font-size: 15px;
+}
+
+/* 주요 메뉴 끝*/
 .FacilityMapArea {
     margin-top: 40px;
     height: 540px;
