@@ -82,7 +82,7 @@ body {
 #quickController {
     width: 138px;
     position: fixed;
-    right: -73px;
+    right: -145px;
     top: 50%;
     transform: translate(-50%);
     z-index: 111;
@@ -174,14 +174,14 @@ body {
 
 .main-top-top {
     clear: both;
-    top: 110px;
     
     position: absolute;
     width: 100%;
     height: 90px;
     background-color: #ffffff;
     /* z-index: 102; */
-    top: 0;
+    top: 0
+
  }
 
 .main-top-top-details {
@@ -209,7 +209,7 @@ body {
 
 }
 .first {
-   background-image: url('/main_image/main_logo/collection.png');
+   background-image: url('/static/main-image/main-logo/collection.png');
    background-repeat: no-repeat;
    background-position: -17px -1107px;
    padding-left: 62px;
@@ -226,7 +226,7 @@ body {
 }
 
 .second {
-    background-image: url('/main_image/main_logo/collection.png');
+    background-image: url('/static/main-image/main-logo/collection.png');
    background-repeat: no-repeat;
    background-position: -17px -1207px;
    padding-left: 62px;
@@ -314,7 +314,7 @@ body {
     float: right;
     text-indent: -9999px;
     border: none;
-    background-image: url('/main_image/main_logo/돋보기.png');
+    background-image: url('/static/main-image/main-logo/glass.png');
     background-repeat: no-repeat;
     background-position: -2px -200px;
     background-color: #ffffff;
@@ -345,7 +345,7 @@ body {
     position: absolute;
     
     height: 55px;
-    top: 100px;
+    top: 61.5%;
     background-color: #ffffff;
     z-index: 103;
 
@@ -364,7 +364,7 @@ body {
     overflow: hidden;
     transition: 0.4s;
     width: 100%; 
-    height: 374px;
+    
     top: 0px; 
     
 }
@@ -381,10 +381,15 @@ body {
     position: relative;
 }
 
-.main-top-menu ul > li:hover .hover {
+/* .main-top-menu ul > li:hover .hover {
     display: block;
     opacity: 1;
+} */
+
+.main-top-menu ul > li:hover .main-top-menu {
+    height: 374px;
 }
+
 
 .main-top-menu ul li a{
     display: inline-block;
@@ -426,8 +431,7 @@ body {
     height: 299px;
     padding-top: 14px;
     
-    display: none;
-    opacity: 0;
+
 }
 
 .list-hover ul li {
@@ -460,7 +464,7 @@ body {
     border-bottom: 1px solid #eaeaea;
     text-align: left;
     padding-left: 10px;
-    background-image: url('/main_image/main_logo/button_collection.png');
+    background-image: url('/static/main-image/main-logo/button-collection.png');
     background-repeat: no-repeat;
     background-position: right -468px top -204px;
 }
@@ -498,7 +502,7 @@ main {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, .5);
-    /* z-index: 5; */
+    z-index: 5;
 }
 .main-visual::after{
     content: '';
@@ -584,13 +588,14 @@ main {
     position: absolute;
     left: 50%;
     top: 7%;
+    z-index: 6;
 }
 
 
 
 
-.main-slider-btn a {
-    background-image: url('/main_image/main_logo/main_sign_collection.png');
+.main-slider-btn button {
+    background-image: url('/static/main-image/main-logo/main-sign-collection.png');
     position: absolute;
     top: 50%;
     margin-top: -30px;
@@ -600,6 +605,8 @@ main {
     /* z-index: 10; */
 
     cursor: pointer;
+    border: none;
+    border-radius: 50%;
 }
 
 .sliderPre{
@@ -615,7 +622,6 @@ main {
     right: 50%;
     margin-right: -680px;
 }
-
 
 
 .main-open-time {
@@ -636,7 +642,7 @@ main {
     padding-left: 32px;
     vertical-align: middle;
     position: relative;
-    background-image: url('/main_image/main_logo/main_sign_collection.png');
+    background-image: url('/static/main-image/main-logo/main-sign-collection.png');
     background-position: -15px -1496px;
     
     height: 25px;
@@ -681,7 +687,7 @@ main {
     width: 39px;
     height: 39px;
     background-color: #ffffff;
-    background-image: url('/main_image/main_logo/main_sign_collection.png');
+    background-image: url('/static/main-image/main-logo/main-sign-collection.png');
     background-repeat: no-repeat;
     background-position: -10px -861px;
     border-radius: 19px;
@@ -828,7 +834,7 @@ main {
     font-size: 0.78rem;
     line-height: 26px;
     text-align: center;
-    background-image: url('/main_image/main_logo/main_sign_collection.png');
+    background-image: url('/static/main-image/main-logo/main-sign-collection.png');
     background-repeat: no-repeat;
     background-position: -10px 861px;
     position: absolute;
@@ -934,6 +940,21 @@ main {
     margin-left: 5px;
 }
 
+.main-attraction ul li a span.state-off {
+    color: #f26522;
+    border-bottom: 1px solid #f26522;
+    font-size: 0.78rem;
+}
+
+
+
+
+
+
+
+
+
+
 .box-viewport {
     
 }
@@ -942,7 +963,7 @@ main {
     width: 2815%;
     position: relative;
     transition: 0.5s;
-    transform: translate3d(-2450px, 0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
 
     margin-top: 50px;
 }
@@ -970,7 +991,7 @@ main {
 .title {
     display: block;
     font-weight: 700;
-    font-size: 1.0rem;
+    font-size: 0.9rem;
     margin-top: 20px;
     letter-spacing: 1px;
 }
@@ -989,7 +1010,7 @@ main {
     overflow: hidden;
     width: 20px;
     height: 30px;
-    background-image: url('/main_image/main_logo/main_sign_collection.png');
+    background-image: url('/static/main-image/main-logo/main-sign-collection.png');
     background-repeat: no-repeat;
     background-position: -20px -415px;
     position: absolute;
@@ -1003,7 +1024,7 @@ main {
     overflow: hidden;
     width: 20px;
     height: 30px;
-    background-image: url('/main_image/main_logo/main_sign_collection.png');
+    background-image: url('/static/main-image/main-logo/main-sign-collection.png');
     background-repeat: no-repeat;
     background-position: -20px -515px;
     position: absolute;
@@ -1040,7 +1061,7 @@ main {
     width: 815%;
     position: relative;
     transition-duration: 0.5s;
-    transform: translate3d(-2808px, 0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
     margin-top: 50px;
 }
 
@@ -1110,7 +1131,7 @@ main {
     overflow: hidden;
     width: 20px;
     height: 30px;
-    background-image: url('/main_image/main_logo/main_sign_collection.png');
+    background-image: url('/static/main-image/main-logo/main-sign-collection.png');
     background-repeat: no-repeat;
     background-position: -20px -415px;
     position: absolute;
@@ -1124,7 +1145,7 @@ main {
     overflow: hidden;
     width: 20px;
     height: 30px;
-    background-image: url('/main_image/main_logo/main_sign_collection.png');
+    background-image: url('/static/main-image/main-logo/main-sign-collection.png');
     background-repeat: no-repeat;
     background-position: -20px -515px;
     position: absolute;
@@ -1238,7 +1259,7 @@ main {
 
 .main-facebook {
     height: 710px;
-    background-image: url('/main_image/facebook_배경.jpg');
+    background-image: url('/static/main-image/facebook-background.jpg');
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
@@ -1307,7 +1328,7 @@ main {
     bottom: -24px;
     left: 50%;
     margin-left: -24px;
-    background-image: url('/main_image/main_logo/main_sign_collection.png');
+    background-image: url('/static/main-image/main-logo/main-sign-collection.png');
     background-repeat: no-repeat;
     background-position: -5px -703px;
 }
@@ -1358,7 +1379,7 @@ main {
     width: 32px;
     height: 32px;
     background-color: #4589ce;
-    background-image: url('/main_image/main_logo/collection.png');
+    background-image: url('/static/main-image/main-logo/collection.png');
     background-repeat: no-repeat;
     background-position: 50% -12px;
     border-radius: 16px;
@@ -1413,7 +1434,7 @@ main {
     font-weight: 300;
     font-size: 0.75rem;
     color: #ffffff;
-    background-image: url('/main_image/main_logo/button_collection.png');
+    background-image: url('/static/main-image/main-logo/button-collection.png');
     background-repeat: no-repeat;
     background-position: 17px -89px;
     padding-left: 20px;
@@ -1459,7 +1480,7 @@ main {
 .center-company ul li:first-child {
     margin-left: 0px;
     padding-left: 0px;
-    background-image: url('/main_image/main_logo/bullet.png');
+    background-image: url('/static/main-image/main-logo/bullet.png');
     background-repeat: no-repeat;
     background-position: -11px -2px;
 }
@@ -1467,7 +1488,7 @@ main {
     float: left;
     margin-left: 8px;
     padding-left: 8px;
-    background-image: url('/main_image/main_logo/bullet.png');
+    background-image: url('/static/main-image/main-logo/bullet.png');
     background-repeat: no-repeat;
     background-position: -11px -2px;
 }
@@ -1494,7 +1515,7 @@ main {
     display: inline-block;
     margin-left: 8px;
     padding-left: 8px;
-    background-image: url('/main_image/main_logo/bullet.png');
+    background-image: url('/static/main-image/main-logo/bullet.png');
     background-repeat: no-repeat;
     background-position: -12px -405px;
     color: #898989;
