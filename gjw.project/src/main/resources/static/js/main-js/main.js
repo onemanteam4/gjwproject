@@ -68,7 +68,7 @@ function banner () {
 
     let index = 0;
 
-    setInterval( () => {
+    let time = setInterval( () => {
         
 
         boxSlider.style.transition = 'transform 1s ease-out';
@@ -84,6 +84,32 @@ function banner () {
             }, 1010)
         }
     }, 10000);
+    boxSlider.onmouseover = () => {
+        clearInterval(time);
+        console.log("멈춰!");
+    }
+
+    boxSlider.onmouseout = () => {
+
+        index = 0;
+        time = setInterval( () => {
+            console.log("재시작!");
+
+            boxSlider.style.transition = 'transform 1s ease-out';
+            boxSlider.style.transform = 'translate3d(-'+ 1903*(index+1) + 'px, 0px, 0px)';
+            index ++;
+            
+            console.log(index+1);
+            if( index >= 5) {
+                index = -1;
+    
+                setTimeout(() => {
+                    boxSlider.style.transition = 'transform 0s ease-out';
+                    boxSlider.style.transform = 'translate3d( 0px, 0px, 0px)';
+                }, 501)
+            }
+        }, 10000);
+    }
        
 
 }
@@ -94,8 +120,7 @@ const centerMainBannerList = document.querySelector(".center-main-banner-list");
 const bannerList = document.querySelectorAll(".center-main-banner-list li");
 const sliderPre = document.querySelector(".sliderPre");
 const sliderNext = document.querySelector(".sliderNext");
-let x = centerMainBannerList.style.transform;
-let result = x.substring(x.lastIndexOf("-")+1, 17);
+
 mainbanner();
 
 function mainbanner () {
