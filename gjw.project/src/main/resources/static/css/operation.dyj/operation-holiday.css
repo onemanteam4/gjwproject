@@ -749,342 +749,216 @@ body {
     background-position: -3px -503px;
 }
 
-.operation-select {
-    height: 570px;
-    background-image: url('/static/main-image/notice/operation-main.jpg');
+.select-day {
+    background-color: #f4f4f4;
+    padding: 35px, 0px;
 }
 
-.operation-wrap-width {
-    margin: 0px auto;
+.select-width {
+    margin: 0px, auto;
     width: 100%;
     max-width: 1300px;
-
-    
 }
 
-.operation-select .cols1 {
+.select-day-details .left {
+    width: 240px;
     float: left;
-    width: calc(50% - 219px);
-    height: 570px;
-    padding: 130px 0px 0px 85px;
-}
-
-.operation-select .cols1 span {
-    font-size: 3.06rem;
-    color: #ffffff;
-    font-weight: 300;
-    display: block;
-    line-height: 65px;
-    letter-spacing: -5px;
-}
-.operation-select .cols1 span:nth-child(2) {
-    font-weight: 500;
-}
-
-.operation-select .cols1 p {
-    clear: both;
-    font-weight: 100;
-    font-size: 1rem;
-    letter-spacing: 1px;
-    color: #ffffff;
-    line-height: 24px;
-}
-
-.operation-select .cols1 span.view-calendar {
-    display: inline-block;
-    height: 56px;
-    border: 2px solid #ffffff;
-    line-height: 52px;
-    padding: 0px 33px;
-    border-radius: 28px;
-    font-size: 1.44rem;
-    color: #ffffff;
-    margin-top: 60px;
-    cursor: pointer;
-}
-
-.operation-select .cols2 {
-    float: left;
-    width: 438px;
-    height: 570px;
-    background-image: url('/static/main-image/notice/op-main-back.png');
-    background-repeat: no-repeat;
-    background-position: bottom center;
-    padding: 198px 50px 0px 50px;
-
-}
-
-.operation-select .cols2 span.month {
-    display: inline-block;
-    width: 100%;
-    height: 74px;
-    line-height: 72px;
-    text-align: center;
+    font-size: 2.22rem;
     font-family: 'NanumSquare';
     font-weight: 800;
-    font-size: 1.78rem;
     color: #000000;
-}
-
-.operation-select .cols2 table {
-    width: 100%;
-    height: 288px;
-}
-
-.operation-select .cols2 table thead {
-    background-color: #ffe04d;
-    height: 37px;
-}
-
-table {
-    border-collapse: collapse;
-}
-
-
-.operation-select .cols2 table thead th {
-    font-weight: 700;
-    font-size: 0.83rem;
-}
-
-.operation-select .cols2 table tbody td {
     text-align: center;
-    font-size: 0.89rem;
-    font-weight: 700;
+    height: 100px;
+    line-height: 100px;
 }
 
-.operation-select .cols2 table tbody td span {
+.select-day-details .right {
+    margin-left: 240px;
+}
+
+.select-day-details div .prev {
+    float: left;
     display: inline-block;
-    width: 35px;
-    height: 35px;
-    line-height: 28px;
-    border-radius: 17px;
-    border: 3px solid #ffd200;
-    color: #000000;
+    height: 100px;
+    line-height: 96px;
+    width: 80px;
+    cursor: pointer;
+    text-align: -9999px;
+    background-image: url('/static/main-image/main-logo/button-collection.png');
+    background-position: -197px, -1477px;
+    background-repeat: repeat;
+}
+
+.select-day-details ul {
+    float: left;
+    width: calc(100% - 160px);
+}
+
+.select-day-details ul li:first-child {
+    background-position: 50% - 100px;
+    margin-left: 0px;
+}
+
+.select-day-details ul li {
+    float: left;
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    background-color: #ffffff;
+    overflow: hidden;
+    position: relative;
+    background-image: url('/static/operation/day.png');
+    background-position: 50% top;
+    background-repeat: no-repeat;
     cursor: pointer;
 }
 
-.operation-select .cols2 table tbody td.on span {
-    background-color: #ffffff;
-    border: 3px solid #ed1c24;
-} 
-
-.operation-select .cols3 {
-    float: left;
-    width: calc(50% - 219px);
-    height: 570px;
-    padding: 250px 0px 0px 90px;
-}
-
-.operation-select .cols3 ul li {
-    padding: 28px 0px;
-}
-
-.operation-select .cols3 ul li:first-child a {
-    background-position: -383px -494px;
-}
-
-.operation-select .cols3 ul li a {
+.select-day-details ul li span {
     display: inline-block;
-    width: 177px;
-    height: 65px;
-    line-height: 61px;
-    padding-left: 75px;
-    font-size: 1.33rem;
-    color: #ffffff;
-    background-color: #b0070b;
-    border-radius: 32px;
-    letter-spacing: -2px;
-    background-image: url('/static/main-image/calendar/collection.png');
-    background-repeat: no-repeat;
-
-    text-align: left;
-}
-
-.calendar-wrapwidth {
-    margin: 0px auto;
+    height: 63px;
+    line-height: 51px;
     width: 100%;
-    max-width: 1300px;
-}
-
-.operation-time {
-    height: auto;
-    text-align: center;
-    padding-top: 93px;
-    padding-bottom: 80px;
-}
-
-.operation-time p.time {
-    color: #4d4d4d;
-    font-size: 2.78rem;
-    height: 86px;
-}
-
-.operation-time p.time span.open {
-    position: relative;
-}
-
-.operation-time p.time span.mark {
-    color: #717171;
-    font-size: 0.83rem;
+    font-family: 'NanumSquare';
     font-weight: 700;
+    font-size: 1.78rem;
+    color: #6b6b6b;
+    text-align: center;
+    bottom: 0px;
     position: absolute;
-    top: -33px;
-    left: 0px;
 }
 
-.operation-time p.time span.num {
-    color: #1c1c1c;
-    font-size: 4.11rem;
-    font-family: 'NanumSquare';
-    width: 340px;
-    height: 86px;
-    line-height: 92px;
+.select-day-details ul li:nth-child(2) {
+    background-position: 50% - 200px;
+}
+
+.select-day-details ul li:nth-child(3) {
+    background-position: 50% - 300px;
+}
+
+.select-day-details ul li:nth-child(4) {
+    background-position: 50% - 400px;
+}
+
+.select-day-details ul li:nth-child(5) {
+    background-position: 50% - 1200px;
+}
+
+.select-day-details ul li.on {
+    background-color: #ed1c24;
+}
+
+.select-day-details ul li.on span {
+    color: #ffffff;
+}
+
+.select-day-details ul li:nth-child(6) {
+    background-position: 50% - 600px;
+}
+
+.select-day-details ul li:nth-child(6) span{
+    color: #1d92f5;
+}
+
+.select-day-details ul li:nth-child(7) {
+    background-position: 50% - 0px;
+}
+
+.select-day-details ul li:nth-child(7) span{
+    color: #f73b4b;
+}
+
+.select-day-details div .next {
+    float: left;
     display: inline-block;
-    background-color: #f4f4f4;
-    border-radius: 7px;
-    vertical-align: middle;
-}
-.operation-time p.time span.closed {
-    position: relative;
-}
-
-
-
-
-
-.operation-time-calendar {
-    display: none;
-    background-color: #f4f4f4;
-    height: 1010px;
+    height: 100px;
+    line-height: 96px;
+    width: 80px;
+    cursor: pointer;
+    text-indent: -9999px;
+    background-image: url('/static/main-image/main-logo/button-collection.png');
+    background-position: -377px, -1477px;
+    background-repeat: no-repeat;
 }
 
-.time-wrapwidth {
+.information {
+    padding: 65px, 0px, 0px, 0px;
+}
+
+.information-width {
     margin: 0px auto;
     width: 100%;
     max-width: 1300px;
 }
 
-.operation-time-calendar span.month {
-    display: inline-block;
-    width: 100%;
-    height: 110px;
-    line-height: 110px;
-    font-size: 2.33rem;
-    color: #242423;
-    text-align: center;
-    font-family: 'NanumSquare';
-    font-weight: 700;
-}
-
-.operation-time-calendar span.month a.prev {
-    margin-right: 40px;
-    background-position: -204px -4px;
-}
-
-.operation-time-calendar span.month a {
-    display: inline-block;
-    width: 45px;
-    height: 45px;
-    background-image: url('/static/main-image/main-logo/button-collection.png');
-    background-repeat: no-repeat;
-    background-position: -404px -4px;
-    vertical-align: middle;
-}
-
-.operation-time-calendar span.month a.next {
-    margin-left: 40px;
-}
-
-.operation-time-calendar table {
-    width: 100%;
-    height: 790px;
-    border-top: 1px solid #000000;
-}
-
-.operation-time-calendar table thead th {
-    font-weight: 700;
-    font-size: 0.83rem;
-    height: 56px;
-    line-height: 46px;
-    border-bottom: 1px solid #e0e0e0;
-    background-image: url('/static/main-image/calendar/day.png');
-    background-repeat: no-repeat;
-    background-position: 50% 0px;
-    vertical-align: top;
-    color: #5b5b5b;
-}
-
-.operation-time-calendar table thead th:nth-child(2) {
-    background-position: 50% -100px;
-}
-
-.operation-time-calendar table thead th:nth-child(3) {
-    background-position: 50% -200px;
-}
-
-.operation-time-calendar table thead th:nth-child(4) {
-    background-position: 50% -300px;
-}
-
-.operation-time-calendar table thead th:nth-child(5) {
-    background-position: 50% -400px;
-}
-
-.operation-time-calendar table thead th:nth-child(6) {
-    background-position: 50% -500px;
-}
-
-.operation-time-calendar table thead th:nth-child(7) {
-    background-position: 50% -600px;
-}
-
-.operation-time-calendar table tbody tr td:first-child {
-    border-left: 1px solid #e0e0e0;
-}
-
-.operation-time-calendar table tbody tr td {
-    border-bottom: 1px solid #e0e0e0;
-    border-right: 1px solid #e0e0e0;
-    padding: 10px;
-    vertical-align: top;
-    color: #353535;
-    width: 14.28%;
-}
-
-.operation-time-calendar table tbody tr td span.date {
-    display: block;
-    font-size: 0.83rem;
+.information h4 {
+    font-size: 1.5rem;
     font-weight: 300;
-    color: #353535;
-    padding-bottom: 10px;
+    height: 55px;
+    line-height: 51px;
 }
 
-.operation-time-calendar table tbody tr td span.date_m {
-    display: none;
+.ajax-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: none;
 }
 
-.operation-time-calendar table tbody tr td span.time.day {
-    background-position: -406px -1211px;
+.ajax-container li:nth-child(5n+1) {
+    margin-left: 0px;
 }
 
-.operation-time-calendar table tbody tr td span.time {
-    display: block;
-    font-size: 0.83rem;
+.ajax-container li {
+    width: calc(20% - 16px);
+    float: left;
+    margin-left: 20px;
+    margin-bottom: 28px;
+    border: 1px solid #dedede;
+    min-height: 334px;
+    background-color: #ffffff;
+    position: relative;
+}
+
+.ajax-container li a {
     color: #000000;
-    background-image: url('/static/main-image/main-logo/glass.png');
+}
+
+.container-row div.photo {
+    height: 166px;
     background-repeat: no-repeat;
-    height: 30px;
-    line-height: 30px;
-    padding-left: 30px;
+    background-position: 50% 50%;
+    background-size: cover;
+    position: relative;
+
 }
 
-.operation-time-calendar table tbody tr td span.time.night {
-    background-position: -406px -1261px;
+.information-width::after {
+    content: '';
+    clear: both;
+    display: block;
 }
 
-.operation-time-calendar table tbody tr td span.time.all{
-    background-position: -406px -1311px;
+.information::after {
+    content: '';
+    clear: both;
+    display: block;
 }
+
+.content-width {
+    margin: 0px auto;
+    width: 100%;
+    max-width: 1300px;
+}
+
+.total-information {
+    padding: 21px, 0px, 65px, 0px;
+}
+
+
+
+
+
+
+
 
 
 
