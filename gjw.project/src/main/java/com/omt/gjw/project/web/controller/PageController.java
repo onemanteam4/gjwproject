@@ -11,8 +11,10 @@ public class PageController {
 		return "index";
 	}
 	
-	@GetMapping("/user/signin")
+	@GetMapping("/auth/signin")
 	public String loadSignin() {
-		return "user/signin";
+		return "auth/signin";
 	}
+	
+	
 }

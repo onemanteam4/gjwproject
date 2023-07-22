@@ -140,7 +140,7 @@ header h1 img {
 
 .big-amuse a {
     opacity: 1;
-    background-image: url(/donguk_img/ticket_big_amuse_bg.jpg);
+    background-image: url(/static/donguk-img/ticket_big_amuse_bg.jpg);
 }
 
 .big-cali {
@@ -154,7 +154,7 @@ header h1 img {
 
 .big-cali a {
     opacity: 1;
-    background-image: url(/donguk_img/ticket_big_cali_bg.jpg);
+    background-image: url(/static/donguk-img/ticket_big_cali_bg.jpg);
 }
 
 .small-wrap {
@@ -173,20 +173,20 @@ header h1 img {
 .small-wrap-menu:nth-child(1) {
     margin-top: 0px;
     background: #f87b61;
-    background-image: url(/donguk_img/small_menu_obj1.png);
+    background-image: url(/static/donguk-img/small_menu_obj1.png);
 }
 
 .small-wrap-menu:nth-child(2) {
     margin-top: 20px;
     background: #70d85c;
-    background-image: url(/donguk_img/small_menu_obj2.png);
+    background-image: url(/static/donguk-img/small_menu_obj2.png);
 }
 
 .small-wrap-menu:nth-child(3) {
     opacity: 0.7;
     margin-top: 20px;
     background: #61d9f8;
-    background-image: url(/donguk_img/small_menu_obj3.png);
+    background-image: url(/static/donguk-img/small_menu_obj3.png);
 }
 
 .small-wrap-menu a {

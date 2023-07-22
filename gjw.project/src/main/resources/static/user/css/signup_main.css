@@ -90,6 +90,11 @@ header h1 img {
     border-bottom: 1px solid #f85549;
 }
 
+.input-type input:focus {
+    outline: none;
+    border-bottom: 1px solid #f85549;
+}
+
 #signup-id {
     padding-right: 134px;
 }
@@ -161,12 +166,12 @@ header h1 img {
     position: absolute;
     top: 25%;
     left: 0;
-    background-image: url(/donguk_img/radio_type2_white.png);
+    background-image: url(/static/donguk-img/radio_type2_white.png);
     background-size: 16px;
 }
 
 .radio-type input[type="radio"]:checked + label::after {
-    background-image: url(/donguk_img/radio_type2_red.png);
+    background-image: url(/static/donguk-img/radio_type2_red.png);
 }
 
 .radio-type span {
@@ -288,12 +293,12 @@ ol {
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url(/donguk_img/chkbox_white.png);
+    background-image: url(/static/donguk-img/chkbox_white.png);
     background-size: 24px;
 }
 
 .chkbox:checked + label::after {
-    background-image: url(/donguk_img/chkbox_red.png);
+    background-image: url(/static/donguk-img/chkbox_red.png);
 }
 /*체크박스 끝*/
 

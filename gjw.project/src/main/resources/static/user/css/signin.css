@@ -87,6 +87,11 @@ header h1 img {
     border-bottom: 1px solid #f85549;
 }
 
+.input-type input:focus {
+    outline: none;
+    border-bottom: 1px solid #f85549;
+}
+
 /*아이디 저장 및 아이디 비밀번호 찾기*/
 .signin-menu {
     display: flex;

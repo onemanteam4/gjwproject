@@ -80,7 +80,7 @@ header h1 img {
 }
 
 .left-box h3 {
-    background: url(/donguk_img/selected_amuse.png) center center no-repeat;
+    background: url(/static/donguk-img/selected_amuse.png) center center no-repeat;
     background-size: cover;
 
     width: 100%;
@@ -118,7 +118,7 @@ header h1 img {
     left: -60px;
     width: 24px;
     height: 24px;
-    background-image: url(/donguk_img/btn_prev.png);
+    background-image: url(/static/donguk-img/btn_prev.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 12px;
@@ -130,7 +130,7 @@ header h1 img {
     right: -60px;
     width: 24px;
     height: 24px;
-    background-image: url(/donguk_img/btn_next.png);
+    background-image: url(/static/donguk-img/btn_next.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 12px;
