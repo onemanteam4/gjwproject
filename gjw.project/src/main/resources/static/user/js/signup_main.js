@@ -2,6 +2,10 @@ const checkBtn = document.querySelector(".check-btn");
 const signupId = document.querySelector("#signup-id");
 const agreeCheckInput = document.querySelector(".agree-check-input");
 
+const addsigungu = document.querySelector("#addsigungu");
+const addsidoop = document.querySelectorAll("#addsido");
+const addsigunguop = document.querySelectorAll("#addsigungu");
+
 let checkUsernameFlag = false;
 let passwordCheckFlag = false;
 
@@ -44,7 +48,7 @@ signupBtn.onclick = () => {
 		userGender: gendername.value,
 		userBirth: inputData[9].value,
 		userPhone: inputData[10].value,
-		regionCode: 1,
+		regionCode: regionCode,
 		userRoles: "ROLE_USER",
 		"checkUsernameFlag": checkUsernameFlag,
 		checkagreeFlag: agreeCheckInput.value,
@@ -75,6 +79,52 @@ signupBtn.onclick = () => {
 		}
 	})
 }
+
+/* 지역 선택 */
+let siCode = 1;
+let regionCode = 1;
+regionLoad();
+function regionLoad() {
+	$.ajax({
+		async: false,
+		type: "get",
+		url: `/auth/signup/${siCode}`,
+		dataType: "json",
+		success: (response) => {
+			getRegion(response.data);
+
+		},
+		error : (error) => {
+			console.log("요청실패");
+			console.log(error);
+		}
+	})
+}
+
+function getRegion(data) {
+	
+	for(let i = 0; i < data.length; i++) {
+		let suboption = document.createElement("option");
+		suboption.text = data[i].regionGuName;
+		suboption.value = data[i].regionCode;
+
+		addsigungu.options.add(suboption);
+	}
+}
+
+for(let i = 0; i < addsidoop.length; i++) {
+	addsidoop[i].onclick = () => {
+		siCode = addsidoop[i].value;
+		addsigungu.options.length = 0;
+		regionLoad();
+	}
+}
+
+addsigungu.onclick = () => {
+	regionCode = addsigungu.value;
+	console.log(regionCode);
+}
+/* 지역 선택 끝 */
 
 /* 약관 동의 */
 const allcheck = document.querySelector("#allchk");
@@ -167,30 +217,3 @@ function checkPassword() {
 	}
 
 }
-
-/*
-chkSignupPw.onblur = () => {
-		let pas1 = signupPw.value;
-		let pas2 = chkSignupPw.value;
-		console.log("signupPw.value"+signupPw.value);
-		console.log("chkSignupPw.value"+chkSignupPw.value);
-		console.log("pas1"+pas1);
-		console.log("pas2"+pas2);
-		if(pas1 != pas2) {
-			alert("비밀번호가 일치하지 않습니다.");
-		}else {
-			alert("비밀번호가 일치합니다.");
-		}
-}
-*/
-
-/* location db에서 가져오기 */
-
-
-
-
-
-
-
-
-
