@@ -28,14 +28,14 @@ ul {
 
 li {
     display: list-item;
-    text-align: center;
+    
     margin: 0px;
     padding: 0px;
     list-style: none;
 }
 
 a {
-    color: #141414;
+    
     text-decoration: none;
 }
 
