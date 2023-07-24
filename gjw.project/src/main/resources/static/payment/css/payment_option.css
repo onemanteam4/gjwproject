@@ -81,7 +81,7 @@ header h1 img {
 }
 
 .left-box h3 {
-    background: url(/donguk_img/selected_amuse.png) center center no-repeat;
+    background: url(/static/donguk-img/selected_amuse.png) center center no-repeat;
     background-size: cover;
 
     width: 100%;
@@ -189,7 +189,7 @@ header h1 img {
     position: absolute;
     top: 50%;
     right: 0;
-    background: url(/donguk_img/payment/arrow_down.png) no-repeat;
+    background: url(/static/donguk-img/payment/arrow_down.png) no-repeat;
     background-size: 12px;
 }
 
@@ -200,7 +200,7 @@ header h1 img {
     position: absolute;
     top: 50%;
     right: 0;
-    background: url(/donguk_img/payment/arrow_up.png) no-repeat;
+    background: url(/static/donguk-img/payment/arrow_up.png) no-repeat;
     background-size: 12px;
 }
 
@@ -261,7 +261,7 @@ header h1 img {
 }
 
 .btn-dec {
-    background: url(/donguk_img/payment/btn_minus.png) center center no-repeat;
+    background: url(/static/donguk-img/payment/btn_minus.png) center center no-repeat;
     background-size: 6px;
     border: 1px solid #aaa;
     border-radius: 50%;
@@ -271,7 +271,7 @@ header h1 img {
 }
 
 .btn-inc {
-    background: url(/donguk_img/payment/btn_plus.png) center center no-repeat;
+    background: url(/static/donguk-img/payment/btn_plus.png) center center no-repeat;
     background-size: 6px;
     border: 1px solid #aaa;
     border-radius: 50%;

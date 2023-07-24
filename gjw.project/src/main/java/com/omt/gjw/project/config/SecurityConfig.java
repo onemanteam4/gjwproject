@@ -1,31 +1,21 @@
 package com.omt.gjw.project.config;
 
-import java.io.IOException;
-
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.web.authentication.AuthenticationFailureHandler;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import com.omt.gjw.project.config.auth.AuthFailureHandler;
 
-import lombok.RequiredArgsConstructor;
-
 @EnableWebSecurity
 @Configuration
-@RequiredArgsConstructor
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Bean
-	public BCryptPasswordEncoder passwordEncoder() {
+	public PasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
 	}
 	
@@ -41,10 +31,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		.permitAll()
 		.and()
 		.formLogin()
-		.loginPage("/user/signin")
-		.loginProcessingUrl("/user/signin")
+		.loginPage("/auth/signin")
+		.loginProcessingUrl("/auth/signin")
 		.failureHandler(new AuthFailureHandler())
-		.defaultSuccessUrl("/index");
+		.defaultSuccessUrl("/")
+		
+		.and()
+		.logout()
+		.logoutUrl("/logout")
+		.logoutSuccessUrl("/auth/signin");
 		
 	}
 }

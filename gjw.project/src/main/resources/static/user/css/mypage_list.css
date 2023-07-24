@@ -100,7 +100,7 @@ header h1 img {
     border-radius: 5px;
     float: left;
     cursor: pointer;
-    background: url(/donguk_img/calendar_icon.png) no-repeat;
+    background: url(/static/donguk-img/calendar_icon.png) no-repeat;
     background-size: 14px;
     background-position: center right 12px;
 }

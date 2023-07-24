@@ -82,7 +82,7 @@ header h1 img {
 }
 
 .left-box h3 {
-    background: url(/donguk_img/selected_amuse.png) center center no-repeat;
+    background: url(/static/donguk-img/selected_amuse.png) center center no-repeat;
     background-size: cover;
 
     width: 100%;
@@ -259,12 +259,12 @@ dl::after {
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url(/donguk_img/chkbox_white.png);
+    background-image: url(/static/donguk-img/chkbox_white.png);
     background-size: 24px;
 }
 
 #check:checked + label::after {
-    background-image: url(/donguk_img/chkbox_red.png);
+    background-image: url(/static/donguk-img/chkbox_red.png);
 }
 
 .input-type {
@@ -380,12 +380,12 @@ dl::after {
     position: absolute;
     top: 20%;
     right: 0;
-    background-image: url(/donguk_img/payment/arrow_down.png);
+    background-image: url(/static/donguk-img/payment/arrow_down.png);
     background-size: 12px;
 }
 
 .ticket-note .list.on h5:after {
-    background-image: url(/donguk_img/payment/arrow_up.png);
+    background-image: url(/static/donguk-img/payment/arrow_up.png);
 }
 
 .ticket-note ul {
