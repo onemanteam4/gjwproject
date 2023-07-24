@@ -15,4 +15,14 @@ public class PageController {
 	public String loadSignin() {
 		return "user/signin";
 	}
+	
+	@GetMapping("/kdh-amusement/attraction")
+	public String loadAttraction() {
+		return "/kdh-amusement/attraction";
+	}
+	
+	@GetMapping("/kdh-amusement/RcdCourse")
+	public String loadRcdCourse() {
+		return "/kdh-amusement/RcdCourse";
+	}
 }

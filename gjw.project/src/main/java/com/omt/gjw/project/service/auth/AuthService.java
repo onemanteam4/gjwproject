@@ -1,5 +1,7 @@
 package com.omt.gjw.project.service.auth;
 
-public interface AuthService {
+import java.util.List;
 
+public interface AuthService {
+	
 }
