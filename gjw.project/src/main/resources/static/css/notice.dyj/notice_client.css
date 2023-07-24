@@ -470,7 +470,7 @@ body {
 }
 #TopLNB {
     position: relative;
-    background-image: url('/main_image/notice/subvisual_04.jpg');
+    background-image: url('/static/main-image/notice/subvisual-04.jpg');
 }
 
 #TopLNB > div {
