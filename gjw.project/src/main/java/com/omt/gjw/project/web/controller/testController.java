@@ -8,7 +8,7 @@ public class testController {
 
 	@GetMapping("/hours-of-operation/operation-find")
 	public String loadFind() {
-		return "hours-of-operation/operation-find";
+		return "/hours-of-operation/operation-find";
 	}
 	
 }

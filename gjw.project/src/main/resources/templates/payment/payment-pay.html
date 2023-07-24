@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <link rel="stylesheet" href="/static/payment/css/payment_style.css">
     <link rel="stylesheet" href="/static/payment/css/payment_pay.css">
     <title>결제 단계</title>
@@ -11,35 +12,9 @@
     <div id="wrap_containers">
         <form name="form-payment">
             <div class="wrap">
-                <header id="header">
-                    <h1>
-                        <a href="" class="home-btn">
-                            <img src="/static/donguk-img/logo.png" alt="경주월드">
-                        </a>
-                    </h1>
-                    <nav class="nav-menu">
-                        <ul>
-                            <li class="nav-ticket">
-                                <a href="">
-                                    <img src="/static/donguk-img/util_icon_regi.png" alt="통합예매">
-                                    통합예매
-                                </a>
-                            </li>
-                            <li class="nav-logout">
-                                <a href="">
-                                    <img src="/static/donguk-img/util_icon_person.png" alt="로그아웃">
-                                    마이페이지
-                                </a>
-                            </li>
-                            <li class="nav-logout">
-                                <a href="">
-                                    <img src="/static/donguk-img/util_icon_out.png" alt="로그아웃">
-                                    로그아웃
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </header>
+                
+            	<th:block th:replace="/fragments/header"></th:block>
+            
                 <div id="container">
                     <div class="page-title">
                         <h2>결제 단계</h2>

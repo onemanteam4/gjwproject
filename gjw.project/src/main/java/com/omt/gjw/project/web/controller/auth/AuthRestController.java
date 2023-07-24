@@ -5,6 +5,7 @@ import java.util.List;
 import javax.validation.Valid;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,6 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.omt.gjw.project.handler.aop.annotation.ValidCheck;
 import com.omt.gjw.project.service.auth.AuthService;
+import com.omt.gjw.project.service.auth.PrincipalDetails;
+import com.omt.gjw.project.service.auth.PrincipalDetailsService;
 import com.omt.gjw.project.web.dto.CMRespDto;
 import com.omt.gjw.project.web.dto.auth.GuListRespDto;
 import com.omt.gjw.project.web.dto.auth.SignupReqDto;
@@ -27,6 +30,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class AuthRestController {
 
+	private final PrincipalDetailsService principalDetailsService;
 	private final AuthService authService;
 	
 	@ValidCheck
@@ -73,4 +77,18 @@ public class AuthRestController {
 		}
 		return ResponseEntity.ok().body(new CMRespDto<>(1, "success to load", list));
 	}
+	
+	@GetMapping("/principal")
+	public ResponseEntity<?> getPrincipal(@AuthenticationPrincipal PrincipalDetails principalDetails) {
+		if(principalDetailsService == null) {
+			return ResponseEntity.badRequest().body(new CMRespDto<>(-1, "principal is null", null));
+		}
+		
+		return ResponseEntity.ok(new CMRespDto<>(1, "success to load", principalDetails.getUser()));
+	}
+	
+	
+	
+	
+	
 }
