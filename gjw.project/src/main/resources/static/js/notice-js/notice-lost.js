@@ -114,3 +114,85 @@ function banner () {
 
 }
 
+
+//달력
+let nowMonth = new Date();
+let today = new Date();
+
+window.onload = function() {Calendar();}
+
+function Calendar() {
+    let firstDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth(), 1);
+    //시작 전체
+    let lastDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth() + 1, 0);
+    //마지막 전체
+    
+    let year = today.getFullYear();
+    let month = today.getMonth() + 1;
+    let day = today.getDate();
+    let startDayValue = year + "-" + month + "-" + day;
+
+    console.log(startDayValue);
+
+
+    let calendarMonthStartDay = firstDate.getDay();
+    //시작 일
+    let calendarMonthLastDate = lastDate.getDate();
+    //마지막 일
+
+    console.log(firstDate);
+    console.log(lastDate);
+    console.log(calendarMonthStartDay);
+
+    let tbodyCalendar = document.querySelector(".ul-datepicker-calendar > tbody");
+
+    let calendarWeekCount = Math.ceil((calendarMonthStartDay + calendarMonthLastDate) / 7);
+
+    console.log(calendarWeekCount);
+
+    let nowRow = tbodyCalendar.insertRow();
+
+    for(let i = 0; i < calendarMonthStartDay; i++) {
+        let nowColum = nowRow.insertCell();
+    }
+
+    for(let nowDay = firstDate; nowDay <= lastDate; nowDay.setDate(nowDay.getDate() + 1)) {
+        let nowColum = nowRow.insertCell();
+        nowColum.innerHTML += `
+            <span>${nowDay.getDate()}</span>
+        `;
+
+
+
+        if(nowDay.getDay() == 6) {
+            nowRow = tbodyCalendar.insertRow();
+        }
+
+        nowColum.style.cursor = "pointer";
+
+        
+    }
+    const Cols2 = document.querySelectorAll(".ul-datepicker-calendar tbody tr td span");
+    const Cols = document.querySelector(".ul-datepicker-calendar tbody tr td");
+    const Sdate = document.querySelector("#sdate");
+    const uiDatepickerCurrent = document.querySelector(".ui-datepicker-current");
+    for(let i = 0; i < 30; i ++) {
+       
+        
+        Cols2[i].onclick = () => {
+            for(let j = 0; j < 30; j ++) {
+                Cols2[j].classList.remove("on");
+            }
+
+
+
+            Cols2[i].classList.add("on");
+            
+        }
+        uiDatepickerCurrent.onclick = () => {
+            Sdate.value = startDayValue;
+            console.log(startDayValue);
+        }
+
+    }
+}

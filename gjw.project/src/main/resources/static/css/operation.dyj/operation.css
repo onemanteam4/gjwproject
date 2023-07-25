@@ -852,7 +852,7 @@ table {
     font-weight: 700;
 }
 
-.operation-select .cols2 table tbody td span {
+.operation-select .cols2 table tbody td span{
     display: inline-block;
     width: 35px;
     height: 35px;
@@ -863,9 +863,10 @@ table {
     cursor: pointer;
 }
 
-.operation-select .cols2 table tbody td.on span {
+.operation-select .cols2 table tbody td span.on {
     background-color: #ffffff;
     border: 3px solid #ed1c24;
+    
 } 
 
 .operation-select .cols3 {
