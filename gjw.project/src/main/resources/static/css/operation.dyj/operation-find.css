@@ -809,6 +809,31 @@ body {
     display: block;
 }
 
+.map-content-list li{
+	position: relative;
+	z-index: 101;
+}
+
+
+.notice-details {
+	position: relative;
+	z-index: 102;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .map-img ul li.on {
     display: block;
 }

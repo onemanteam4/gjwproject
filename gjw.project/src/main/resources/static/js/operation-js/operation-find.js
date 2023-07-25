@@ -79,7 +79,19 @@ function banner () {
 
 }
 
-const mapContentList = document.querySelectorAll(".map-content-list li");
+
+
+
+
+
+
+
+
+
+
+
+
+const mapContentList = document.querySelectorAll(".map-content-list li div");
 const tabSelectorList = document.querySelectorAll(".tab-selector-list li");
 const detailList = document.querySelectorAll(".detail");
 const detail = document.querySelector(".detail");
@@ -97,6 +109,7 @@ for(let i= 0; i < tabSelectorList.length; i++) {
 			detailList[j].className = "detail";
 			tabSelectorList[j].classList.remove("on");
 			
+			mapContentList[j].style.display = 'none';
 			console.log("안쪽 반복도 돌아감.");
 		}
 		if(detailList[i].className == "detail") {
@@ -104,6 +117,7 @@ for(let i= 0; i < tabSelectorList.length; i++) {
 			console.log("작동은 됨.");
 			
 			tabSelectorList[i].classList.add("on");
+			mapContentList[i].style.display = 'block';
 			}
 		}
 	
@@ -112,7 +126,7 @@ for(let i= 0; i < tabSelectorList.length; i++) {
 
 
 
-
+//지도 api 들고온 것.
 var infowindow = new naver.maps.InfoWindow({
 	content: contentString
 });
@@ -130,7 +144,7 @@ var gjw = new naver.maps.LatLng(35.8363, 129.2821),
         position: gjw
     });
 
-var contentString = [
+var contentString1 = [
         '<div class="iw_inner">',
         '   <h3>경주월드</h3>',
         '   <p>경상북도 경주시 천군동 191-5 | 보문로 554(우) 38117<br />',
@@ -142,7 +156,7 @@ var contentString = [
     ].join('');
 
 var infowindow = new naver.maps.InfoWindow({
-    content: contentString
+    content: contentString1
 });
 
 naver.maps.Event.addListener(marker, "click", function(e) {
@@ -180,8 +194,17 @@ var polyline = new naver.maps.Polyline({
     ]
 });
 
+
+
+
+
+
+
+
+
+
 var infowindow = new naver.maps.InfoWindow({
-	content: contentString
+	content: contentString2
 });
 
 
@@ -197,7 +220,7 @@ var gjw = new naver.maps.LatLng(35.8363, 129.2821),
         position: gjw
     });
 
-var contentString = [
+var contentString2 = [
         '<div class="iw_inner">',
         '   <h3>경주월드</h3>',
         '   <p>경상북도 경주시 천군동 191-5 | 보문로 554(우) 38117<br />',
@@ -209,7 +232,7 @@ var contentString = [
     ].join('');
 
 var infowindow = new naver.maps.InfoWindow({
-    content: contentString
+    content: contentString2
 });
 
 naver.maps.Event.addListener(marker, "click", function(e) {
@@ -351,6 +374,16 @@ var polyline2 = new naver.maps.Polyline({
     ]
 });
 
+
+
+
+
+
+
+
+
+
+
 var infowindow = new naver.maps.InfoWindow({
 	content: contentString
 });
@@ -359,12 +392,12 @@ var infowindow = new naver.maps.InfoWindow({
 var HOME_PATH = window.HOME_PATH || '.';
 
 var gjw = new naver.maps.LatLng(35.8363, 129.2821),
-    map = new naver.maps.Map('map', {
+    map3 = new naver.maps.Map('map3', {
         center: gjw.destinationPoint(0, 500),
         zoom: 13
     }),
     marker = new naver.maps.Marker({
-        map: map,
+        map: map3,
         position: gjw
     });
 
@@ -387,14 +420,14 @@ naver.maps.Event.addListener(marker, "click", function(e) {
     if (infowindow.getMap()) {
         infowindow.close();
     } else {
-        infowindow.open(map, marker);
+        infowindow.open(map3, marker);
     }
 });
 
-infowindow.open(map, marker);
+infowindow.open(map3, marker);
 
 var polyline3 = new naver.maps.Polyline({
-    map: map,
+    map: map3,
     path: [
         new naver.maps.LatLng(35.8403, 129.2014),
         new naver.maps.LatLng(35.8383, 129.2024),
@@ -417,6 +450,56 @@ var polyline3 = new naver.maps.Polyline({
         new naver.maps.LatLng(35.8363, 129.2821)
     ]
 });
+
+
+
+
+
+
+
+
+
+var infowindow = new naver.maps.InfoWindow({
+	content: contentString
+});
+
+
+var HOME_PATH = window.HOME_PATH || '.';
+
+var gjw = new naver.maps.LatLng(35.8363, 129.2821),
+    map4 = new naver.maps.Map('map4', {
+        center: gjw.destinationPoint(0, 500),
+        zoom: 13
+    }),
+    marker = new naver.maps.Marker({
+        map: map4,
+        position: gjw
+    });
+
+var contentString = [
+        '<div class="iw_inner">',
+        '   <h3>경주월드</h3>',
+        '   <p>경상북도 경주시 천군동 191-5 | 보문로 554(우) 38117<br />',
+        '       <br />',
+        '       1544-8765 | #테마파크, #놀이동산<br />',
+        '       <a href="http://localhost:8000" target="_blank">https://www.gjw.co.kr/</a>',
+        '   </p>',
+        '</div>'
+    ].join('');
+
+var infowindow = new naver.maps.InfoWindow({
+    content: contentString
+});
+
+naver.maps.Event.addListener(marker, "click", function(e) {
+    if (infowindow.getMap()) {
+        infowindow.close();
+    } else {
+        infowindow.open(map4, marker);
+    }
+});
+
+infowindow.open(map4, marker);
 
 var polyline4 = new naver.maps.Polyline({
     map: map,
@@ -443,8 +526,61 @@ var polyline4 = new naver.maps.Polyline({
     ]
 });
 
+
+
+
+
+
+
+
+
+
+
+
+var infowindow = new naver.maps.InfoWindow({
+	content: contentString
+});
+
+
+var HOME_PATH = window.HOME_PATH || '.';
+
+var gjw = new naver.maps.LatLng(35.8363, 129.2821),
+    map5 = new naver.maps.Map('map5', {
+        center: gjw.destinationPoint(0, 500),
+        zoom: 13
+    }),
+    marker = new naver.maps.Marker({
+        map: map5,
+        position: gjw
+    });
+
+var contentString = [
+        '<div class="iw_inner">',
+        '   <h3>경주월드</h3>',
+        '   <p>경상북도 경주시 천군동 191-5 | 보문로 554(우) 38117<br />',
+        '       <br />',
+        '       1544-8765 | #테마파크, #놀이동산<br />',
+        '       <a href="http://localhost:8000" target="_blank">https://www.gjw.co.kr/</a>',
+        '   </p>',
+        '</div>'
+    ].join('');
+
+var infowindow = new naver.maps.InfoWindow({
+    content: contentString
+});
+
+naver.maps.Event.addListener(marker, "click", function(e) {
+    if (infowindow.getMap()) {
+        infowindow.close();
+    } else {
+        infowindow.open(map5, marker);
+    }
+});
+
+infowindow.open(map5, marker);
+
 var polyline5 = new naver.maps.Polyline({
-    map: map,
+    map: map5,
     path: [
         new naver.maps.LatLng(35.8403, 129.2014),
         new naver.maps.LatLng(35.8383, 129.2024),
@@ -467,4 +603,6 @@ var polyline5 = new naver.maps.Polyline({
         new naver.maps.LatLng(35.8363, 129.2821)
     ]
 });
+
+
 

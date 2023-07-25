@@ -564,6 +564,11 @@ body {
     display: none;
 }
 
+.notice-details {
+	position: relative;
+	z-index: 301;
+}
+
 .notice-details ul li a {
     display: inline-block;
     width: 100%;
@@ -635,8 +640,8 @@ body {
     position: relative;
 }
 
-.snslist {
-    display: none;
+.snslist visible{
+    
     border: 1px solid #ed1c24;
     position: absolute;
     top: 36px;
@@ -648,9 +653,7 @@ body {
     cursor: default;
 }
 
-.snslistBtn:hover .snslist{
-    display: block;
-}
+
 
 
 .snslist > b {
