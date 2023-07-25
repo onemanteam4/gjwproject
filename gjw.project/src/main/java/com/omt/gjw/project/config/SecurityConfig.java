@@ -9,11 +9,17 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import com.omt.gjw.project.config.auth.AuthFailureHandler;
+import com.omt.gjw.project.service.auth.PrincipalOauth2UserService;
+
+import lombok.RequiredArgsConstructor;
 
 @EnableWebSecurity
 @Configuration
+@RequiredArgsConstructor
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
+	private final PrincipalOauth2UserService principalOauth2UserService;
+	
 	@Bean
 	public PasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();
@@ -34,6 +40,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		.loginPage("/auth/signin")
 		.loginProcessingUrl("/auth/signin")
 		.failureHandler(new AuthFailureHandler())
+		
+		.and()
+		.oauth2Login()
+		.userInfoEndpoint()
+		.userService(principalOauth2UserService)
+		.and()
+		
 		.defaultSuccessUrl("/")
 		
 		.and()

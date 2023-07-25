@@ -4,7 +4,7 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
 <mapper namespace="com.omt.gjw.project.domain.user.RegionRepository">
-	<select id="getGuList" parameterType="int" resultType="com.omt.gjw.project.domain.user.Region">
+	<select id="getGuList" parameterType="Integer" resultType="com.omt.gjw.project.domain.user.Region">
 	SELECT
 		region_code,
 		region_si,

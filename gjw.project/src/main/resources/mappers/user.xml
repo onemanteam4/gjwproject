@@ -28,7 +28,7 @@
 		0,
 		#{user_name},
 		#{user_id},
-		NULL,
+		#{oauth2_id},
 		#{user_password},
 		#{user_email},
 		#{user_birth},
@@ -40,5 +40,23 @@
 		NOW()
 	 );
 	</insert>
+	
+	<select id="findOAuth2UserByUsername" parameterType="String" resultType="com.omt.gjw.project.domain.user.User">
+	SELECT
+		user_code,
+		user_name,
+		user_id,
+		oauth2_id,
+		user_password,
+		user_email,
+		user_birth,
+		user_phone,
+		user_gender,
+		region_code
+	FROM
+		user_mst
+	WHERE
+		oauth2_id = #{oauth2_id}
+	</select>
 
 </mapper>

@@ -17,4 +17,20 @@ public class AuthPageController {
 	public String loadSignupMain() {
 		return "auth/signup_main";
 	}
+	
+	@GetMapping("/mypage")
+	public String loadMypage() {
+		return "auth/mypage";
+	}
+	
+	@GetMapping("/mypage_list")
+	public String loadMypageList() {
+		return "auth/mypage_list";
+	}
+	
+	@GetMapping("/mypage_modify")
+	public String loadMypageModification() {
+		return "auth/mypage_modify";
+	}
+	
 }

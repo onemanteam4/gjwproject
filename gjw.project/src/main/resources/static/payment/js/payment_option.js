@@ -49,9 +49,9 @@ function cardIncrease(num, price) {
     let toTotal = Number(allTotal.value);
 
     if(result >= 1) {
-        alert("최대 선택가능 수량을 초과했습니다./n추가 선택이 불가능 합니다.");
+        alert("최대 선택가능 수량을 초과했습니다.\n추가 선택이 불가능 합니다.");
     }else if(sum >= 1) {
-        alert("최대 선택가능 수량을 초과했습니다./n추가 선택이 불가능 합니다.");
+        alert("최대 선택가능 수량을 초과했습니다.\n추가 선택이 불가능 합니다.");
     } else if(result >= 0) {
         result += 1;
         inputNum[num].value = result;
@@ -99,9 +99,9 @@ function gamIncrease(num, price) {
     let toTotal = Number(allTotal.value);
 
     if(result >= 15) {
-        alert("최대 선택가능 수량을 초과했습니다./n추가 선택이 불가능 합니다.");
+        alert("최대 선택가능 수량을 초과했습니다.\n추가 선택이 불가능 합니다.");
     }else if(sum >= 15) {
-        alert("최대 선택가능 수량을 초과했습니다./n추가 선택이 불가능 합니다.");
+        alert("최대 선택가능 수량을 초과했습니다.\n추가 선택이 불가능 합니다.");
     } else if(result >= 0) {
         result += 1;
         inputNum[num].value = result;
@@ -149,9 +149,9 @@ function kbIncrease(num, price) {
     let toTotal = Number(allTotal.value);
 
     if(result >= 2) {
-        alert("최대 선택가능 수량을 초과했습니다./n추가 선택이 불가능 합니다.");
+        alert("최대 선택가능 수량을 초과했습니다.\n추가 선택이 불가능 합니다.");
     }else if(sum >= 2) {
-        alert("최대 선택가능 수량을 초과했습니다./n추가 선택이 불가능 합니다.");
+        alert("최대 선택가능 수량을 초과했습니다.\n추가 선택이 불가능 합니다.");
     } else if(result >= 0) {
         result += 1;
         inputNum[num].value = result;
@@ -199,9 +199,9 @@ function onIncrease(num, price) {
     let toTotal = Number(allTotal.value);
 
     if(result >= 15) {
-        alert("최대 선택가능 수량을 초과했습니다./n추가 선택이 불가능 합니다.");
+        alert("최대 선택가능 수량을 초과했습니다.\n추가 선택이 불가능 합니다.");
     }else if(sum >= 15) {
-        alert("최대 선택가능 수량을 초과했습니다./n추가 선택이 불가능 합니다.");
+        alert("최대 선택가능 수량을 초과했습니다.\n추가 선택이 불가능 합니다.");
     } else if(result >= 0) {
         result += 1;
         inputNum[num].value = result;
@@ -250,9 +250,9 @@ function afIncrease(num, price) {
     let toTotal = Number(allTotal.value);
 
     if(result >= 15) {
-        alert("최대 선택가능 수량을 초과했습니다./n추가 선택이 불가능 합니다.");
+        alert("최대 선택가능 수량을 초과했습니다.\n추가 선택이 불가능 합니다.");
     }else if(sum >= 15) {
-        alert("최대 선택가능 수량을 초과했습니다./n추가 선택이 불가능 합니다.");
+        alert("최대 선택가능 수량을 초과했습니다.\n추가 선택이 불가능 합니다.");
     } else if(result >= 0) {
         result += 1;
         inputNum[num].value = result;
@@ -266,13 +266,17 @@ function afIncrease(num, price) {
 
 }
 
+/*
+class hi {
 
+    username = "choi";
+    hello() {
+        alert("hihi");
+    };
+}
 
+let kim = new hi();
 
-
-
-
-/* input아이디가 0001이고 option아이디가 0001 일때
-    이버튼을 누르면 아이디 0001의 input의 value가 1씩 감소한다.
-    이때 input의 value는 0보다 작을 수 없다. */
-
+console.log(kim.hello());
+console.log(kim.username);
+*/

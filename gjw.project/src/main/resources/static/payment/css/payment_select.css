@@ -13,9 +13,10 @@ body {
 /*헤더*/
 #header {
     margin-top: 46px;
-    display: flex;
-    justify-content: space-between;
+}
 
+header h1 {
+    float: left;
 }
 
 header a {
@@ -26,17 +27,18 @@ header h1 img {
     width: 160px;
 }
 
+.nav-menu {
+    float: right;
+}
+
 .nav-menu ul{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 300px;
     height: 21px;
 
     list-style: none;
 }
 
 .nav-menu li {
+    float: left;
     font-size: 14px;
 }
 
@@ -51,6 +53,19 @@ header h1 img {
     height: 16px;
 
 }
+
+.nav-menu ul::after {
+    clear: both;
+    display: block;
+    content: '';
+}
+
+header::after {
+    clear: both;
+    display: block;
+    content: '';
+}
+/*헤더 끝*/
 
 /*바디 시작*/
 #container {
