@@ -1480,7 +1480,7 @@ body {
 
     border: 1px solid #cccccc;
     background: #f5f5f5 url('/static/main-image/calendar/lost-main.png') 50% 50% repeat-x;
-    color: #333333;
+    color: black;
 
     display: block;
     padding: 0.25em;
@@ -1497,4 +1497,12 @@ body {
     background: #ffe45c url('/static/main-image/calendar/lost-click.png') 50% top
     repeat-x;
     color: #363636;
+}
+
+
+.ul-datepicker-calendar tbody tr td span:hover {
+    border: 1px solid #fbd850;
+    background: #ffffff url('/static/main-image/calendar/lost-hover.png') 50% 50% repeat-x;
+    font-weight: bold;
+    color: #eb8f00;
 }

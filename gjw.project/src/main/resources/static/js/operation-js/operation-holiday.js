@@ -80,5 +80,75 @@ function banner () {
 }
 
 
+let nowMonth = new Date();
+let today = new Date();
 
+window.onload = function() {Calendar();}
+
+function Calendar() {
+    const right = document.querySelector(".right");
+    const rightUl = document.querySelector(".right ul");
+    const rightUlLi = document.querySelector(".right ul li");
+    let firstDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth(), 1);
+
+    let lastDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth() + 1, 0);
+    let year = today.getFullYear();
+    let month = today.getMonth() + 1;
+    let day = today.getDate();
+    let startDayValue = year + "-" + month + "-" + day;
+
+    let calendarMonthStartDay = firstDate.getDay();
+    //시작 일
+    let calendarMonthLastDate = lastDate.getDate();
+    //마지막 일
+
+    console.log(calendarMonthStartDay);
+
+    
+
+    let calendarWeekCount = Math.ceil((calendarMonthStartDay + calendarMonthLastDate) / 7);
+    console.log(calendarWeekCount);
+
+
+for(let i = 0; i < 1; i ++) {
+    right.innerHTML += `
+        <ul>
+            <li>
+                <span>${today.getDate()}</span>
+            </li>
+            <li>
+                <span>${today.getDate()}</span>
+            </li>
+            <li>
+                <span>${today.getDate()}</span>
+            </li>
+            <li>
+                <span>${today.getDate()}</span>
+            </li>
+            <li class="on">
+                <span>${today.getDate()}</span>
+            </li>
+            <li>
+                <span>${today.getDate()}</span>
+            </li>
+            <li>
+                <span>${today.getDate()}</span>
+            </li>
+        </ul>
+    `
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+};
 

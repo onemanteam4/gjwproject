@@ -115,6 +115,16 @@ function banner () {
 }
 
 
+
+
+
+
+
+
+
+
+
+
 //달력
 let nowMonth = new Date();
 let today = new Date();
@@ -122,6 +132,20 @@ let today = new Date();
 window.onload = function() {Calendar();}
 
 function Calendar() {
+    const Cols2 = document.querySelectorAll(".ul-datepicker-calendar tbody tr td span");
+    const daydate = document.querySelector(".ul-datepicker-calendar tbody tr td span");
+    const Cols = document.querySelector(".ul-datepicker-calendar tbody tr td");
+    const Sdate = document.querySelector("#sdate");
+    const Edate = document.querySelector("#edate");
+    const DatePicker = document.querySelectorAll(".Date-Picker");
+    const uiDatepickerCurrent = document.querySelector(".ui-datepicker-current");
+    const ulDatepickerClose = document.querySelector(".ul-datepicker-close");
+    let year1 = today.getFullYear();
+    let month1 = today.getMonth() + 1;
+    let day1 = today.getDate();
+    let startDayValue1 = year1 + "-" + month1 + "-" + day1;
+
+
     let firstDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth(), 1);
     //시작 전체
     let lastDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth() + 1, 0);
@@ -158,11 +182,30 @@ function Calendar() {
 
     for(let nowDay = firstDate; nowDay <= lastDate; nowDay.setDate(nowDay.getDate() + 1)) {
         let nowColum = nowRow.insertCell();
+
+        let nowYear = nowDay.getFullYear();
+        let nowMonth = nowDay.getMonth() + 1;
+        let nowDate = nowDay.getDate();
+        let starDate = nowYear + "-" + nowMonth + "-" + nowDate;
+        
+        
+        console.log(starDate);
+        
+        
+        
         nowColum.innerHTML += `
-            <span>${nowDay.getDate()}</span>
+            <span id="span">${nowDay.getDate()}</span>
         `;
         
-      
+        nowColum.innerHTML += `
+            <span id="colum" style = "display: none;">${nowDay.getFullYear()}-${nowDay.getMonth() + 1}-${nowDay.getDate()}
+            </span>
+        `;
+        
+
+    
+
+
 
         
 
@@ -174,36 +217,98 @@ function Calendar() {
 
        
 
-        
+        console.log(lastDate.getDate());
     }
-    const Cols2 = document.querySelectorAll(".ul-datepicker-calendar tbody tr td span");
-    const daydate = document.querySelector(".ul-datepicker-calendar tbody tr td span");
-    const Cols = document.querySelector(".ul-datepicker-calendar tbody tr td");
-    const Sdate = document.querySelector("#sdate");
-    const DatePicker = document.querySelectorAll(".Date-Picker");
-    const uiDatepickerCurrent = document.querySelector(".ui-datepicker-current");
-    const ulDatepickerClose = document.querySelector(".ul-datepicker-close");
-    let year1 = today.getFullYear();
-    let month1 = today.getMonth() + 1;
-    let day1 = today.getDate();
-    let startDayValue1 = year + "-" + month + "-" + day;
+
+    for(let i = 0; i < lastDate.getDate(); i ++) {
+        const Cols2 = document.querySelectorAll(".ul-datepicker-calendar tbody tr td span#span");
+        const colum = document.querySelectorAll("#colum");
+
+
+        Cols2[i].onclick = () => {
+            for(let j = 0; j < lastDate.getDate(); j ++) {
+                Cols2[j].classList.remove("on");
+            }
+
+
+            Sdate.value = colum[i].innerText;
+            Cols2[i].classList.add("on");
+        }
+    }
+
+Sdate.onclick = () => {
+    const ulDatepickerDiv = document.querySelector(".ul-datepicker-div");
+    ulDatepickerDiv.style.display = 'block';
+    close();
+    
+
+    for(let i = 0; i < lastDate.getDate(); i ++) {
+        const Cols2 = document.querySelectorAll(".ul-datepicker-calendar tbody tr td span#span");
+        const colum = document.querySelectorAll("#colum");
+
+
+        Cols2[i].onclick = () => {
+            for(let j = 0; j < lastDate.getDate(); j ++) {
+                Cols2[j].classList.remove("on");
+            }
+
+
+            Sdate.value = colum[i].innerText;
+            Cols2[i].classList.add("on");
+            ulDatepickerDiv.style.display = 'none';
+        }
+    }
+}    
+
+
+
+function close () {
+    const ulDatepickerDiv = document.querySelector(".ul-datepicker-div");
+    ulDatepickerClose.onclick = () => {
+        ulDatepickerDiv.style.display = 'none';
+   }
+}
+
+
+
+
+Edate.onclick = () => {
+    const ulDatepickerDiv = document.querySelector(".ul-datepicker-div");
+    ulDatepickerDiv.style.display = 'block';
+    close();
+
+    for(let i = 0; i < lastDate.getDate(); i ++) {
+        const Cols2 = document.querySelectorAll(".ul-datepicker-calendar tbody tr td span#span");
+        const colum = document.querySelectorAll("#colum");
+
+
+        Cols2[i].onclick = () => {
+            for(let j = 0; j < lastDate.getDate(); j ++) {
+                Cols2[j].classList.remove("on");
+            }
+
+
+            Edate.value = colum[i].innerText;
+            Cols2[i].classList.add("on");
+            ulDatepickerDiv.style.display = 'none';
+        }
+    }
+}
+    
+
+
+
+
+
+
+
+
 
 
     for(let i = 0; i < 31; i ++) {
        
         
-        Cols2[i].onclick = () => {
-            for(let j = 0; j < 31; j ++) {
-                Cols2[j].classList.remove("on");
-            }
-
-
-            
-            Cols2[i].classList.add("on");
-            
-            
-            
-        }
+       
         uiDatepickerCurrent.onclick = () => {
             Sdate.value = startDayValue;
             console.log(startDayValue);
@@ -211,45 +316,68 @@ function Calendar() {
 
     }
 
-    for(let i = 0; i < DatePicker.length; i++) {
-        const ulDatepickerDiv = document.querySelector(".ul-datepicker-div");
-        DatePicker[i].onclick = () => {
+//     for(let i = 0; i < DatePicker.length; i++) {
+//         const ulDatepickerDiv = document.querySelector(".ul-datepicker-div");
+//         DatePicker[i].onclick = () => {
             
         
-            ulDatepickerDiv.style.display = 'block';
-        }
-        ulDatepickerClose.onclick = () => {
-            ulDatepickerDiv.style.display = 'none';
-        }
-    }
+//             ulDatepickerDiv.style.display = 'block';
+//         }
+//         ulDatepickerClose.onclick = () => {
+//             ulDatepickerDiv.style.display = 'none';
+//         }
+//     }
+// }
+
+
+//전년도 달
+
+const ulDatepickerPrev = document.querySelector(".ul-datepicker-prev");
+const ulDatepickerNext = document.querySelector(".ul-datepicker-next");
+
+ulDatepickerPrev.onclick = () => {
+    prevCalendar();
 }
 
-
-
-
-
-function please(nowColum) {
-    let clickedYear = today.getFullYear();
-    let clickedMonth = today.getMonth() + 1;
-    let clickedDate = this.getAttribute('on');
-
-    clickedDate = clickedDate > 10 ? clickedDate : '0' + clickedDate;
-    clickedMonth = clickedMonth > 10 ? clickedMonth : '0' + clickedMonth;
-    clickedYMD = clickedYear + "-" + clickedMonth + "-" + clickedDate;
-
-    Sdate.value = clickedYMD;
-    self.close();
-    console.log(clickedYMD);
+ulDatepickerNext.onclick = () => {
+    nextCalendaar();
 }
+
 
 function prevCalendar() {
-    nowMonth = new Date(nowMonth.getFullYear, nowMonth.getMonth() - 1, nowMonth.getDate());
+    let ulDatepickerCalendar = document.querySelector(".ul-datepicker-calendar tbody");
+    nowMonth = new Date(nowMonth.getFullYear(), nowMonth.getMonth() - 1, nowMonth.getDate());
+    console.log(nowMonth);
+    ulDatepickerCalendar.innerHTML = "";
     Calendar();
 
-    let ulDatepickerPrev = document.querySelector(".ul-datepicker-prev");
+    let ulDatepickerYear = document.querySelector(".ul-datepicker-year");
+    ulDatepickerYear.innerText = nowMonth.getFullYear();
+    let ulDatepickerMonth = document.querySelector(".ul-datepicker-month");
+    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
     if(nowMonth.getMonth() < 9) {
-        
+        ulDatepickerMonth.innerText = "0" + (nowMonth.getMonth() + 1) + "월" + "(" + months[nowMonth.getMonth()] + ")"; 
+    } else{
+        ulDatepickerMonth.innerText =  + (nowMonth.getMonth() + 1) + "월" + "(" + months[nowMonth.getMonth()] + ")";
     }
 }
 
 
+function nextCalendaar() {
+    let ulDatepickerCalendar = document.querySelector(".ul-datepicker-calendar tbody");
+    nowMonth = new Date(nowMonth.getFullYear(), nowMonth.getMonth() + 1, nowMonth.getDate());
+    console.log(nowMonth);
+    ulDatepickerCalendar.innerHTML = "";
+    Calendar();
+
+    let ulDatepickerYear = document.querySelector(".ul-datepicker-year");
+    ulDatepickerYear.innerText = nowMonth.getFullYear();
+    let ulDatepickerMonth = document.querySelector(".ul-datepicker-month");
+    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
+    if(nowMonth.getMonth() < 9) {
+        ulDatepickerMonth.innerText = "0" + (nowMonth.getMonth() + 1) + "월" + "(" + months[nowMonth.getMonth()] + ")"; 
+    } else{
+        ulDatepickerMonth.innerText =  + (nowMonth.getMonth() + 1) + "월" + "(" + months[nowMonth.getMonth()] + ")";
+    }
+}
+}

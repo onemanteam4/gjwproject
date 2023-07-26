@@ -775,7 +775,20 @@ body {
 
 .select-day-details .right {
     margin-left: 240px;
+    display: flex;
+
 }
+
+.select-day-details .right button {
+    
+    border:none;
+    background: #f4f4f4;
+}
+
+
+
+
+
 
 .select-day-details span.prev {
     float: left;
@@ -884,6 +897,7 @@ body {
     background-image: url('/static/main-image/main-logo/button-collection.png');
     background-position: -377px -1477px;
     background-repeat: no-repeat;
+
 }
 
 .information {
