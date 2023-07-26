@@ -83,6 +83,7 @@ function banner () {
 let nowMonth = new Date();
 let today = new Date();
 
+
 window.onload = function() {Calendar();}
 
 function Calendar() {
@@ -91,53 +92,106 @@ function Calendar() {
     const rightUlLi = document.querySelector(".right ul li");
     let firstDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth(), 1);
 
+    console.log(firstDate);
+
+
     let lastDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth() + 1, 0);
+    let CalendarMonthLastDate = lastDate.getDate();
     let year = today.getFullYear();
     let month = today.getMonth() + 1;
     let day = today.getDate();
+    let prevMonthLastDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth(), 0);
+    let TodayDay = nowMonth.getDay();
+    
     let startDayValue = year + "-" + month + "-" + day;
 
-    let calendarMonthStartDay = firstDate.getDay();
-    //시작 일
-    let calendarMonthLastDate = lastDate.getDate();
-    //마지막 일
-
-    console.log(calendarMonthStartDay);
 
     
 
-    let calendarWeekCount = Math.ceil((calendarMonthStartDay + calendarMonthLastDate) / 7);
-    console.log(calendarWeekCount);
+    let arWeek = [0, 0, 0, 0, 0, 0, 0];
+
+    let weekDay = day;
+
+   
+
+    for(let i = TodayDay; i < 7; i++) {
+        arWeek[i] = weekDay++;
+
+        if(weekDay > CalendarMonthLastDate) {
+            weekDay = 1;
+        }
+    }
+    
+    weekDay = day;
+    for(let j = TodayDay - 1; j >= 0; j--) {
+        weekDay--;
+
+        if(weekDay == 0) {
+            weekDay = prevMonthLastDate.getDate();
+        }
+
+        arWeek[j] = weekDay;
+    }
+
+    console.log("이거" + arWeek);
+
+    for(let i = 0; i < 7; i ++) {
+        rightUl.innerHTML += `
+                <li>
+                    <span>${arWeek[i]}</span>
+                </li>
+                
+        `
+        
+    }
 
 
-for(let i = 0; i < 1; i ++) {
-    right.innerHTML += `
-        <ul>
-            <li>
-                <span>${today.getDate()}</span>
-            </li>
-            <li>
-                <span>${today.getDate()}</span>
-            </li>
-            <li>
-                <span>${today.getDate()}</span>
-            </li>
-            <li>
-                <span>${today.getDate()}</span>
-            </li>
-            <li class="on">
-                <span>${today.getDate()}</span>
-            </li>
-            <li>
-                <span>${today.getDate()}</span>
-            </li>
-            <li>
-                <span>${today.getDate()}</span>
-            </li>
-        </ul>
-    `
+const rightPrevBtn = document.querySelector(".right button span.prev");    
+rightPrevBtn.onclick = () => {
+    rightUl.innerHTML = ``;
+    Calendar();
     
 }
+
+   
+let nextMonthStartDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth() + 1, 1);
+    let weekYear = year;
+    let weekMonth = month;
+    weekDay = day;
+    console.log("요거" + nextMonthStartDate);
+    arWeek = ["","","","","","",""];
+
+
+for (let y = TodayDay; y < 7; y++) {
+    arWeek[y] = weekYear + "-" + weekMonth + "-" + weekDay;
+    weekDay++;
+
+    if(weekDay > CalendarMonthLastDate) {
+        weekYear = nextMonthStartDate.getFullYear();
+        weekMonth = nextMonthStartDate.getMonth() + 1;
+        weekDay = 1;
+    }
+}
+
+weekDay = day;
+
+for (let z = TodayDay - 1; z >= 0; z--) {
+    weekDay--;
+
+    if(weekDay == 0) {
+        weekYear = prevMonthLastDate.getFullYear();
+        weekMonth = prevMonthLastDate.getMonth() + 1;
+        weekDay = prevMonthLastDate;
+    }
+    arWeek[z] = weekYear + "-" + weekMonth + "-" + weekDay;
+}
+
+console.log("이거" + arWeek);
+
+
+    
+
+
 
 
 
@@ -151,4 +205,5 @@ for(let i = 0; i < 1; i ++) {
 
 
 };
+
 
