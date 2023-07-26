@@ -161,8 +161,10 @@ function Calendar() {
         nowColum.innerHTML += `
             <span>${nowDay.getDate()}</span>
         `;
+        
+      
 
-
+        
 
         if(nowDay.getDay() == 6) {
             nowRow = tbodyCalendar.insertRow();
@@ -170,23 +172,36 @@ function Calendar() {
 
         nowColum.style.cursor = "pointer";
 
+       
+
         
     }
     const Cols2 = document.querySelectorAll(".ul-datepicker-calendar tbody tr td span");
+    const daydate = document.querySelector(".ul-datepicker-calendar tbody tr td span");
     const Cols = document.querySelector(".ul-datepicker-calendar tbody tr td");
     const Sdate = document.querySelector("#sdate");
+    const DatePicker = document.querySelectorAll(".Date-Picker");
     const uiDatepickerCurrent = document.querySelector(".ui-datepicker-current");
-    for(let i = 0; i < 30; i ++) {
+    const ulDatepickerClose = document.querySelector(".ul-datepicker-close");
+    let year1 = today.getFullYear();
+    let month1 = today.getMonth() + 1;
+    let day1 = today.getDate();
+    let startDayValue1 = year + "-" + month + "-" + day;
+
+
+    for(let i = 0; i < 31; i ++) {
        
         
         Cols2[i].onclick = () => {
-            for(let j = 0; j < 30; j ++) {
+            for(let j = 0; j < 31; j ++) {
                 Cols2[j].classList.remove("on");
             }
 
 
-
+            
             Cols2[i].classList.add("on");
+            
+            
             
         }
         uiDatepickerCurrent.onclick = () => {
@@ -195,4 +210,46 @@ function Calendar() {
         }
 
     }
+
+    for(let i = 0; i < DatePicker.length; i++) {
+        const ulDatepickerDiv = document.querySelector(".ul-datepicker-div");
+        DatePicker[i].onclick = () => {
+            
+        
+            ulDatepickerDiv.style.display = 'block';
+        }
+        ulDatepickerClose.onclick = () => {
+            ulDatepickerDiv.style.display = 'none';
+        }
+    }
 }
+
+
+
+
+
+function please(nowColum) {
+    let clickedYear = today.getFullYear();
+    let clickedMonth = today.getMonth() + 1;
+    let clickedDate = this.getAttribute('on');
+
+    clickedDate = clickedDate > 10 ? clickedDate : '0' + clickedDate;
+    clickedMonth = clickedMonth > 10 ? clickedMonth : '0' + clickedMonth;
+    clickedYMD = clickedYear + "-" + clickedMonth + "-" + clickedDate;
+
+    Sdate.value = clickedYMD;
+    self.close();
+    console.log(clickedYMD);
+}
+
+function prevCalendar() {
+    nowMonth = new Date(nowMonth.getFullYear, nowMonth.getMonth() - 1, nowMonth.getDate());
+    Calendar();
+
+    let ulDatepickerPrev = document.querySelector(".ul-datepicker-prev");
+    if(nowMonth.getMonth() < 9) {
+        
+    }
+}
+
+
