@@ -70,7 +70,7 @@ function banner () {
         boxSlider.style.transform = 'translate3d(-' + 1903*(index+1) + 'px, 0px, 0px)';
         index ++;
         
-        console.log(index);
+        
         if( index >= 4) {
             index = -1;
         }
@@ -84,7 +84,9 @@ function banner () {
 // let today = new Date();
 // let m = 0;
 // let week = 0;
-
+// var day = new Date();
+// day.setDate(day.getDate()-day.getDay());
+// console.log("확인 :" + day);
 
 // window.onload = function() {Calendar(week);}
 
@@ -108,7 +110,7 @@ function banner () {
     
 //     let startDayValue = year + "-" + month + "-" + day;
 
-
+    
     
 
 //     let arWeek = [0, 0, 0, 0, 0, 0, 0];
@@ -117,8 +119,10 @@ function banner () {
 //     var weekDay = (day + (week*7));
     
 //    console.log("음.." + weekDay);
+   
 
 //     for(let i = TodayDay; i < 7; i++) {
+
 //         if(weekDay <= 0) {
 //             weekDay = firstDate.getDate();
 //         }
@@ -130,7 +134,7 @@ function banner () {
 //         if(weekDay > CalendarMonthLastDate) {
 //             weekDay = 1;
 //         }
-        
+//         console.log("오른쪽" + weekDay);
 //     }
 //     weekDay = (day + (week*7));
     
@@ -173,7 +177,7 @@ function banner () {
     
 // }
 
-   
+// }
 // let nextMonthStartDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth() + 1, 1);
 //     let weekYear = year;
 //     let weekMonth = month;
@@ -211,40 +215,78 @@ function banner () {
 // };
 const rightUl = document.querySelector(".right ul");
 var day = new Date();
-day.setDate(day.getDate()-day.getDay());
+let today = new Date();
+let nowMonth = new Date();
+let firstDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth(), 1);
+let prevMonthLastDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth() , 1);
+let year = today.getFullYear();
+let month = today.getMonth() + 1;
+let days = today.getDate();
+console.log("ggg" + prevMonthLastDate.getDate());
+let i = 0;
+day.setDate(day.getDate()-3);
 
 console.log(day);
 set_day();
 
 function week_calandar(week) {
+    let prevMonth = new Date(nowMonth.getFullYear(), nowMonth.getMonth() , 0);
+    let today2 = new Date(year, month, days);
+    if(date > prevMonth.getDate()) {
+       i--; 
+       
+        console.log("젭알" + i);
+        
+    }
     day.setDate(day.getDate()+week*7);
-
+    console.log("d"+ day);
+    let TodayDay = nowMonth.getDay();
     var title = day.getFullYear() + "/" + (day.getMonth()+1);
     var date = "";
     for(var i = 0; i < 7; i++) {
-        date += day.getDate() + "|";
-        console.log(date);
-        if(day.getDate() == 1) {
-            title += "~" + day.getFullYear() + "/" + (day.getMonth()+1);
-            day.setDate(day.getDate()+1);
-        }
+        console.log(day.getDate());
+        date = day.getDate() + i;
+        console.log("뭐지" + date);
+    if(date > prevMonth.getDate()) {
+        
+       
+        
+        break;
     }
-        day.setDate(day.getDate()-7);
-        for(let i = 0; i < 7; i ++) {
-                   rightUl.innerHTML += `
+        
+        rightUl.innerHTML += `
                             <li>
                               <span>${date}</span>
                             </li>
                             
                  `
-                    
-           }
+        
+        
+    }
+if(date > prevMonth.getDate()) {
+    
+    console.log("이건 제발.." + prevMonth.getMonth());
+    
+    for(let j = 0; j < 7-prevMonth.getDay(); j ++) {
+        date = prevMonthLastDate.getDate() + j
+        
+        console.log("하" + date);
+
+        rightUl.innerHTML += `
+                            <li>
+                              <span>${date}</span>
+                            </li>
+                            
+                 `
+    }
+    
+}
     
 }
 
 function set_day() {
     day = new Date();
-    day.setDate(day.getDate()-day.getDay());
+    day.setDate(day.getDate()-3);
 
     week_calandar(0);
 }
@@ -255,3 +297,10 @@ rightPrevBtn.onclick = () => {
 
    week_calandar(-1)
 };
+
+
+function prevCalendar() {
+    prevMonth = new Date(nowMonth.getFullYear(), nowMonth.getMonth() - 1, nowMonth.getDate());   // 현재 달을 1 감소
+    
+    
+}
