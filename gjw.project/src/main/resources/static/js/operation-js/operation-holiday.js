@@ -80,130 +80,178 @@ function banner () {
 }
 
 
-let nowMonth = new Date();
-let today = new Date();
+// let nowMonth = new Date();
+// let today = new Date();
+// let m = 0;
+// let week = 0;
 
 
-window.onload = function() {Calendar();}
+// window.onload = function() {Calendar(week);}
 
-function Calendar() {
-    const right = document.querySelector(".right");
-    const rightUl = document.querySelector(".right ul");
-    const rightUlLi = document.querySelector(".right ul li");
-    let firstDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth(), 1);
-
-    console.log(firstDate);
-
-
-    let lastDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth() + 1, 0);
-    let CalendarMonthLastDate = lastDate.getDate();
-    let year = today.getFullYear();
-    let month = today.getMonth() + 1;
-    let day = today.getDate();
-    let prevMonthLastDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth(), 0);
-    let TodayDay = nowMonth.getDay();
+// function Calendar(week) {
+//     const right = document.querySelector(".right");
+//     const rightUl = document.querySelector(".right ul");
+//     const rightUlLi = document.querySelector(".right ul li");
+//     let firstDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth(), 1);
+//     let today2 = new Date();
     
-    let startDayValue = year + "-" + month + "-" + day;
+//     console.log(firstDate);
+
+
+//     let lastDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth() + 1, 0);
+//     let CalendarMonthLastDate = lastDate.getDate();
+//     let year = today.getFullYear();
+//     let month = today.getMonth() + 1;
+//     let day = today.getDate();
+//     let prevMonthLastDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth(), 0);
+//     let TodayDay = nowMonth.getDay();
+    
+//     let startDayValue = year + "-" + month + "-" + day;
 
 
     
 
-    let arWeek = [0, 0, 0, 0, 0, 0, 0];
+//     let arWeek = [0, 0, 0, 0, 0, 0, 0];
 
-    let weekDay = day;
+    
+//     var weekDay = (day + (week*7));
+    
+//    console.log("음.." + weekDay);
+
+//     for(let i = TodayDay; i < 7; i++) {
+//         if(weekDay <= 0) {
+//             weekDay = firstDate.getDate();
+//         }
+       
+
+//         arWeek[i] = weekDay++;
+        
+
+//         if(weekDay > CalendarMonthLastDate) {
+//             weekDay = 1;
+//         }
+        
+//     }
+//     weekDay = (day + (week*7));
+    
+//     for(let j = TodayDay - 1; j >= 0; j--) {
+//         weekDay--;
+        
+//         if(weekDay <= 0) {
+//             weekDay = prevMonthLastDate.getDate();
+//         }
+
+//         arWeek[j] = weekDay;
+//     }
+
+//     console.log("이거" + arWeek);
+
+//     for(let i = 0; i < 7; i ++) {
+//         rightUl.innerHTML += `
+//                 <li>
+//                     <span>${arWeek[i]}</span>
+//                 </li>
+                
+//         `
+        
+//     }
+
+
+// const rightPrevBtn = document.querySelector(".right button span.prev");    
+// rightPrevBtn.onclick = () => {
+//     rightUl.innerHTML = ``;
+    
+    
+//         m = m-1;
+//         Calendar(m);
+//         console.log("먹힌다!");
+    
+//         console.log(weekDay);
+    
+
+//     console.log(arWeek);
+    
+// }
 
    
+// let nextMonthStartDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth() + 1, 1);
+//     let weekYear = year;
+//     let weekMonth = month;
+//     weekDay = day;
+//     console.log("요거" + nextMonthStartDate);
+//     arWeek = ["","","","","","",""];
 
-    for(let i = TodayDay; i < 7; i++) {
-        arWeek[i] = weekDay++;
 
-        if(weekDay > CalendarMonthLastDate) {
-            weekDay = 1;
+// for (let y = TodayDay; y < 7; y++) {
+//     arWeek[y] = weekYear + "-" + weekMonth + "-" + weekDay;
+//     weekDay++;
+
+//     if(weekDay > CalendarMonthLastDate) {
+//         weekYear = nextMonthStartDate.getFullYear();
+//         weekMonth = nextMonthStartDate.getMonth() + 1;
+//         weekDay = 1;
+//     }
+// }
+
+// weekDay = day;
+
+// for (let z = TodayDay - 1; z >= 0; z--) {
+//     weekDay--;
+
+//     if(weekDay == 0) {
+//         weekYear = prevMonthLastDate.getFullYear();
+//         weekMonth = prevMonthLastDate.getMonth() + 1;
+//         weekDay = prevMonthLastDate;
+//     }
+//     arWeek[z] = weekYear + "-" + weekMonth + "-" + weekDay;
+// }
+
+// console.log("이거" + arWeek);
+
+// };
+const rightUl = document.querySelector(".right ul");
+var day = new Date();
+day.setDate(day.getDate()-day.getDay());
+
+console.log(day);
+set_day();
+
+function week_calandar(week) {
+    day.setDate(day.getDate()+week*7);
+
+    var title = day.getFullYear() + "/" + (day.getMonth()+1);
+    var date = "";
+    for(var i = 0; i < 7; i++) {
+        date += day.getDate() + "|";
+        console.log(date);
+        if(day.getDate() == 1) {
+            title += "~" + day.getFullYear() + "/" + (day.getMonth()+1);
+            day.setDate(day.getDate()+1);
         }
     }
+        day.setDate(day.getDate()-7);
+        for(let i = 0; i < 7; i ++) {
+                   rightUl.innerHTML += `
+                            <li>
+                              <span>${date}</span>
+                            </li>
+                            
+                 `
+                    
+           }
     
-    weekDay = day;
-    for(let j = TodayDay - 1; j >= 0; j--) {
-        weekDay--;
+}
 
-        if(weekDay == 0) {
-            weekDay = prevMonthLastDate.getDate();
-        }
+function set_day() {
+    day = new Date();
+    day.setDate(day.getDate()-day.getDay());
 
-        arWeek[j] = weekDay;
-    }
-
-    console.log("이거" + arWeek);
-
-    for(let i = 0; i < 7; i ++) {
-        rightUl.innerHTML += `
-                <li>
-                    <span>${arWeek[i]}</span>
-                </li>
-                
-        `
-        
-    }
-
+    week_calandar(0);
+}
 
 const rightPrevBtn = document.querySelector(".right button span.prev");    
 rightPrevBtn.onclick = () => {
-    rightUl.innerHTML = ``;
-    Calendar();
-    
-}
+   rightUl.innerHTML = ``;
 
-   
-let nextMonthStartDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth() + 1, 1);
-    let weekYear = year;
-    let weekMonth = month;
-    weekDay = day;
-    console.log("요거" + nextMonthStartDate);
-    arWeek = ["","","","","","",""];
-
-
-for (let y = TodayDay; y < 7; y++) {
-    arWeek[y] = weekYear + "-" + weekMonth + "-" + weekDay;
-    weekDay++;
-
-    if(weekDay > CalendarMonthLastDate) {
-        weekYear = nextMonthStartDate.getFullYear();
-        weekMonth = nextMonthStartDate.getMonth() + 1;
-        weekDay = 1;
-    }
-}
-
-weekDay = day;
-
-for (let z = TodayDay - 1; z >= 0; z--) {
-    weekDay--;
-
-    if(weekDay == 0) {
-        weekYear = prevMonthLastDate.getFullYear();
-        weekMonth = prevMonthLastDate.getMonth() + 1;
-        weekDay = prevMonthLastDate;
-    }
-    arWeek[z] = weekYear + "-" + weekMonth + "-" + weekDay;
-}
-
-console.log("이거" + arWeek);
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   week_calandar(-1)
 };
-
-
