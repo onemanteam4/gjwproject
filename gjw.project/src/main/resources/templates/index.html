@@ -1,13 +1,15 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <title>메인 페이지</title>
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="/static/css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
     </head>
 <body style="position: relative; min-height: 100%; top: 0px;">
@@ -123,7 +125,7 @@
                             </ul>
                         </div>
                         <div class="main-top-middle">
-                            <a href="경주월드 메인 사이트 주소">
+                            <a href="/index">
                                 <img src="/static/main-image/main-logo/main-logo.jpg" style="width: 196px; height: 78px;">
                                 
                             </a>
@@ -132,13 +134,13 @@
                             <div class="main-top-list">
                                 <ul>
                                     <li>
-                                        <a href="메인사이트 주소">홈</a>
+                                        <a href="/index">홈</a>
                                     </li>
                                     <li>
-                                        <a href="로그인 사이트 주소">로그인</a>
+                                        <a href="/auth/signin">로그인</a>
                                     </li>
                                     <li>
-                                        <a href="회원가입 사이트 주소">회원가입</a>
+                                        <a href="/auth/signup_first">회원가입</a>
                                     </li>
                                     <li class="reservation">
                                         <a href="단체예약 사이트 주소" style="color: #f26c4f;">단체예약</a>
@@ -181,19 +183,19 @@
                                     </a>
                                     <ul class="hover" style="display: none;opacity: 0;">
                                         <li style="padding: 0px 20px;">
-                                            <a href="">운영시간</a>
+                                            <a href="/hours-of-operation/operation">운영시간</a>
                                         </li>
                                         <li style="padding: 0px 20px;">
-                                            <a href="">운휴정보</a>
+                                            <a href="/hours-of-operation/operation-holiday">운휴정보</a>
                                         </li>
                                         <li style="padding: 0px 20px;">
-                                            <a href="">이용꿀팁</a>
+                                            <a href="/hours-of-operation/operation-tip">이용꿀팁</a>
                                         </li>
                                         <li style="padding: 0px 20px;">
-                                            <a href="">주차안내</a>
+                                            <a href="/hours-of-operation/operation-parking">주차안내</a>
                                         </li>
                                         <li style="padding: 0px 20px;">
-                                            <a href="">찾아오시는길</a>
+                                            <a href="/hours-of-operation/operation-find">찾아오시는길</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -203,13 +205,13 @@
                                     </a>
                                     <ul class="hover" style="display: none;opacity: 0;">
                                         <li style="padding: 0px 20px;">
-                                            <a href="">이용요금</a>
+                                            <a href="/kdh-amusement/usefee">이용요금</a>
                                         </li>
                                         <li style="padding: 0px 20px;">
                                             <a href="">우대프로그램</a>
                                         </li>
                                         <li style="padding: 0px 20px;">
-                                            <a href="">제휴카드</a>
+                                            <a href="/kdh-amusement/feecard">제휴카드</a>
                                         </li>
                                         <li style="padding: 0px 20px;">
                                             <a href="">기업체 특판안내</a>
@@ -222,10 +224,10 @@
                                     </a>
                                     <ul class="hover" style="display: none;opacity: 0;">
                                         <li style="padding: 0px 20px;">
-                                            <a href="">추천코스</a>
+                                            <a href="/kdh-amusement/RcdCourse">추천코스</a>
                                         </li>
                                         <li style="padding: 0px 20px;">
-                                            <a href="">어트랙션</a>
+                                            <a href="/kdh-amusement/attraction">어트랙션</a>
                                         </li>
                                         <li style="padding: 0px 20px;">
                                             <a href="">레스토랑&스낵</a>
@@ -253,16 +255,16 @@
                                     </a>
                                     <ul class="hover" style="display: none;opacity: 0;">
                                         <li style="padding: 0px 20px;">
-                                            <a href="">공지사항</a>
+                                            <a href="/notice/notice_notice">공지사항</a>
                                         </li>
                                         <li style="padding: 0px 20px;">
-                                            <a href="">고객소리함</a>
+                                            <a href="/notice/notice_client">고객소리함</a>
                                         </li>
                                         <li style="padding: 0px 20px;">
-                                            <a href="">자주묻는질문</a>
+                                            <a href="/notice/notice_lost">자주묻는질문</a>
                                         </li>
                                         <li style="padding: 0px 20px;">
-                                            <a href="">분실물센터</a>
+                                            <a href="/notice/notice_question">분실물센터</a>
                                         </li>
                                     </ul>
                                 </li>

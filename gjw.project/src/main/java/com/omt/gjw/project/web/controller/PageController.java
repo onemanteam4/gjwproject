@@ -8,13 +8,14 @@ public class PageController {
 	
 	@GetMapping({"/", "/index"})
 	public String loadIndex() {
-		return "/index";
+		return "index";
 	}
 	
 	@GetMapping("/auth/signin")
 	public String loadSignin() {
 		return "auth/signin";
 	}
+	
 	
 	
 }
