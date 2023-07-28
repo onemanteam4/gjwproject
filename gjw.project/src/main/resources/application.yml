@@ -70,7 +70,18 @@ spring:
     cache: false
   
     
+ 
+    
 mybatis:
   mapper-locations:
   - /mappers/*.xml 
+  
+
+file:
+  path: C:/kdh/kdh/git/giwproject/gjw.project/src/main/resources/static/img-kdh/
+  
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
 
