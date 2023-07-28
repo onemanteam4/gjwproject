@@ -2,6 +2,30 @@ const ticketName = document.querySelectorAll(".ticket-name");
 const ticketList = document.querySelectorAll(".ticket-list");
 const optionArea = document.querySelectorAll(".option-area");
 
+const ticketEstimate = document.querySelector(".ticket-estimate");
+
+let dateY = localStorage.getItem("dateYear");
+let dateM = localStorage.getItem("dateMonth");
+let dateD = localStorage.getItem("dateDay");
+
+load();
+function load() {
+	ticketEstimate.innerHTML = 
+	"<dt>방문 예정 날짜</dt><dd>" + dateY + "-" + dateM + "-" + dateD + "</dd><dt>이용기간</dt><dd>" + dateY + "-" + dateM + "-" + dateD + "~" + dateY + "-" + dateM + "-" + dateD + "</dd>";
+}
+
+let cardN = 0;
+let gamBN = 0;
+let gamSN = 0;
+let kbBN = 0;
+let kbSN = 0;
+let onBN = 0;
+let onMN = 0;
+let onSN = 0;
+let afBN = 0;
+let afSN = 0;
+
+
 for(let i = 0; i < ticketName.length; i++) {
     ticketName[i].onclick = () => {
         
@@ -62,7 +86,6 @@ function cardIncrease(num, price) {
         toTotal += price;
         allTotal.value = toTotal;
     }
-    
 }
 
 /* 교복 */
@@ -266,17 +289,70 @@ function afIncrease(num, price) {
 
 }
 
-/*
-class hi {
+const nextBtn = document.querySelector(".next-btn");
+nextBtn.onclick = () => {
 
-    username = "choi";
-    hello() {
-        alert("hihi");
-    };
+	const inputNum1 = document.querySelectorAll("#option1 input");
+	const inputNum2 = document.querySelectorAll("#option2 input");
+	const inputNum3 = document.querySelectorAll("#option3 input");
+	const inputNum4 = document.querySelectorAll("#option4 input");
+	const inputNum5 = document.querySelectorAll("#option5 input");
+
+	for(let i = 0; i < inputNum1.length; i++) {
+		let cardNum = Number(inputNum1[i].value);
+		if(cardNum == 1) {
+			cardN = inputNum1[i].id;
+		}
+	}
+	
+	gamBN = Number(inputNum2[0].value);
+	gamSN = Number(inputNum2[1].value);
+	kbBN = Number(inputNum3[0].value);
+	kbSN = Number(inputNum3[1].value);
+	onBN = Number(inputNum4[0].value);
+	onMN = Number(inputNum4[1].value);
+	onSN = Number(inputNum4[2].value);
+	afBN = Number(inputNum5[0].value);
+	afSN = Number(inputNum5[1].value);
+	
+	let optionCount = {
+		"cardN" : cardN,
+		"gamBN" : gamBN,
+		"gamSN" : gamSN,
+		"kbBN" : kbBN,
+		"kbSN" : kbSN,
+		"onBN" : onBN,
+		"onMN" : onMN,
+		"onSN" : onSN,
+		"afBN" : afBN,
+		"afSN" : afSN,
+	}
+	
+	
+	localStorage.setItem("optionCount", JSON.stringify(optionCount));
+
+	location.href = "/payment/payment_pay"
+
 }
 
-let kim = new hi();
 
-console.log(kim.hello());
-console.log(kim.username);
-*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

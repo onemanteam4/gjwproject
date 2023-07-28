@@ -6,7 +6,6 @@ function getPrincipal() {
 		url: "/auth/principal",
 		dataType: "json",
 		success: (response) => {
-			console.log("hi");
 			user = response.data;
 		},
 		error: (error) => {
@@ -64,3 +63,7 @@ function loadHeader(user) {
 
 let user = getPrincipal();
 loadHeader(user);
+
+function getUser() {
+	return user;
+}
