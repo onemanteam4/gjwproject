@@ -1,10 +1,13 @@
 let prevBtn = document.querySelector(".prev");
 let nextBtn = document.querySelector(".next");
 
+
 window.onload = function() {buildCalendar();}
 
 let nowMonth = new Date(); // 현재 달을 페이지를 로드한 날로 초기화
 let today = new Date(); // 페이지를 로드한 날짜를 저장
+let yaer = null;
+let month = null;
 today.setHours(0,0,0,0);
 
 function buildCalendar() {
@@ -52,9 +55,22 @@ function buildCalendar() {
         }
 
     }
-
     
-
+    if(nowMonth.getMonth() == today.getMonth()) {
+		prevBtn.style.display = 'none';
+		nextBtn.style.display = 'block';
+	} else if(nowMonth.getMonth() == (today.getMonth()+1)) {
+		nextBtn.style.display = 'none';
+		prevBtn.style.display = 'block';
+	}
+	
+	year = nowMonth.getFullYear();
+	localStorage.setItem("dateYear", year);
+	month = nowMonth.getMonth()+1;
+	if(month < 10) {
+		month = ("0" + month);
+	}
+	localStorage.setItem("dateMonth", month);	
 }
 
 function choiceDate(nowColumn) {
@@ -62,11 +78,15 @@ function choiceDate(nowColumn) {
         document.getElementsByClassName("choiceDay")[0].classList.remove("choiceDay");  // 해당 날짜의 "choiceDay" class 제거
     }
     nowColumn.classList.add("choiceDay");           // 선택된 날짜에 "choiceDay" class 추가
+    
+    const choiceDay = document.querySelector(".choiceDay");
+    let day = choiceDay.textContent;
+    localStorage.setItem("dateDay", day);
 }
 
 function prevCalendar() {
     nowMonth = new Date(nowMonth.getFullYear(), nowMonth.getMonth() - 1, nowMonth.getDate());   // 현재 달을 1 감소
-    buildCalendar();    // 달력 다시 생성
+		buildCalendar();    // 달력 다시 생성
     let changeCal = document.querySelector(".inner b");
     if(nowMonth.getMonth() < 9) {
         changeCal.innerText = nowMonth.getFullYear() + ". 0" + (nowMonth.getMonth() + 1);
@@ -78,7 +98,6 @@ function prevCalendar() {
 // 다음달 버튼 클릭
 function nextCalendar() {
     nowMonth = new Date(nowMonth.getFullYear(), nowMonth.getMonth() + 1, nowMonth.getDate());   // 현재 달을 1 증가
-    
     buildCalendar();    // 달력 다시 생성
     let changeCal = document.querySelector(".inner b");
     if(nowMonth.getMonth() < 9) {
@@ -89,4 +108,24 @@ function nextCalendar() {
 
     
 }
+/*
+let date = null;
+localStorage.setItem("날짜", date);
+
+const btnType = document.querySelector(".btn-type");
+
+btnType.onclick = () => {
+
+}
+*/
+
+
+
+
+
+
+
+
+
+
 

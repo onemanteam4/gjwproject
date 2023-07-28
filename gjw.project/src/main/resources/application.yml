@@ -62,6 +62,13 @@ spring:
     url: jdbc:mariadb://web1.cpvf6npjx9ou.ap-northeast-2.rds.amazonaws.com:3306/gjw_project?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
     username: admin
     password: 1q2w3e4r
+  thymeleaf:
+    prefix: classpath:templates/
+    check-template-location: true
+    suffix: .html
+    mode: HTML
+    cache: false
+  
     
 mybatis:
   mapper-locations:

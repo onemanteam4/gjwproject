@@ -350,6 +350,7 @@ dl::after {
     height: 48px;
     line-height: 48px;
     text-align: center;
+    background: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 18px;
