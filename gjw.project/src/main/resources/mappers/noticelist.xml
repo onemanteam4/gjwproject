@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.omt.gjw.project.domain.noticelist.NoticeListRepository">
+	<insert id="save" parameterType="com.omt.gjw.project.domain.noticelist.NoticeList">
+		INSERT INTO
+			notice_notice
+		VALUES(
+			0,
+			#{notice_title},
+			NULL,
+			1,
+			NOW(),
+			NOW()
+		)
+
+	</insert>
+	<select id="getTodoList" parameterType="hashmap" resultType="com.omt.gjw.project.domain.noticelist.NoticeList">
+		SELECT
+			nn.notice_code,
+			nn.notice_title,
+			nn.notice_file,
+			nn.notice_count,
+			
+			tt.total_count,
+			
+			nn.notice_date,
+			nn.notice_update
+		FROM
+			notice_notice nn
+			LEFT OUTER JOIN (select
+								COUNT(*) AS total_count
+							from
+								notice_notice) tt ON(1 = 1)
+		ORDER by
+			notice_code DESC
+		limit
+			#{totalPage}, #{count};
+	
+	
+	</select>
+
+
+</mapper>
