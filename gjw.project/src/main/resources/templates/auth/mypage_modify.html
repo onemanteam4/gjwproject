@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <link rel="stylesheet" href="/static/user/css/user_style.css">
     <link rel="stylesheet" href="/static/user/css/mypage_modify.css">
     <title>회원정보 수정</title>
@@ -10,35 +11,9 @@
 <body>
     <div id="wrap_containers">
         <div class="wrap">
-            <header id="header">
-                <h1>
-                    <a href="" class="home-btn">
-                        <img src="/static/donguk-img/logo.png" alt="경주월드">
-                    </a>
-                </h1>
-                <nav class="nav-menu">
-                    <ul>
-                        <li class="nav-ticket">
-                            <a href="/payment/payment_first">
-                                <img src="/static/donguk-img/util_icon_regi.png" alt="통합예매">
-                                통합예매
-                            </a>
-                        </li>
-                        <li class="nav-logout">
-                            <a href="/auth/mypage">
-                                <img src="/static/donguk-img/util_icon_person.png" alt="로그아웃">
-                                마이페이지
-                            </a>
-                        </li>
-                        <li class="nav-logout">
-                            <a href="/logout">
-                                <img src="/static/donguk-img/util_icon_out.png" alt="로그아웃">
-                                로그아웃
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </header>
+            
+            <th:block th:replace="/fragments/header"></th:block>
+            
             <div id="container">
                 <div class="contents">
                     <div class="small-page">
@@ -49,14 +24,15 @@
                             <div class="input-type">
                                 <div class="small-wrap">
                                     <label for="signup-name">이름</label>
-                                        <input type="text" name="signup-name" id="signup-name" readonly="readonly" value="">
+                                        <input type="text" name="signup-name" id="signup-name" value="" readonly="readonly">
                                         <div class="radio-type">
+                                        	<input type="text" class="gendername" value="1" style="display: none;">
                                             <span>
-                                                <input type="radio" name="signup-gender" id="male" value="01">
+                                                <input type="radio" name="signup-gender" id="male" value="남자" checked>
                                                 <label for="male">남자</label>
                                             </span>
                                             <span class="signup-name-span2">
-                                                <input type="radio" name="signup-gender" id="female" value="02">
+                                                <input type="radio" name="signup-gender" id="female" value="여자">
                                                 <label for="female">여자</label>
                                             </span>
                                         </div>
@@ -65,7 +41,7 @@
                             <div class="input-type">
                                 <div class="small-wrap">
                                     <label for="signup-id">아이디</label>
-                                    <input type="text" name="signup-id" id="signup-id" placeholder="6~10자리, 영문으로 시작">
+                                    <input type="text" name="signup-id" id="signup-id" placeholder="6~10자리, 영문으로 시작" readonly="readonly">
                                 </div>
                                 <p class="check-result false" id="check-result"></p>
                             </div>
@@ -76,6 +52,7 @@
                             <div class="input-type">
                                 <label for="signup-pw-chk">비밀번호 확인</label>
                                 <input type="password" name="chk-signup-pw" id="chk-signup-pw">
+                                <input type="text" class="password-bool" value="false" style="display: none;">
                             </div>
                             <div class="input-type">
                                 <label for="signup-email">이메일</label>
@@ -93,12 +70,28 @@
                                 <label>지역</label>
                                 <div class="local-pick">
                                     <select class="slt-type" name="addsido" id="addsido">
-                                        <option value="">서울</option>
-                                        <option value="">부산</option>
+                                            <option value="1">서울</option>
+                                            <option value="2">부산</option>
+                                            <option value="3">대구</option>
+                                            <option value="4">인천</option>
+                                            <option value="5">광주</option>
+                                            <option value="6">대전</option>
+                                            <option value="7">울산</option>
+                                            <option value="8">세종</option>
+                                            <option value="9">경기</option>
+                                            <option value="10">강원</option>
+                                            <option value="11">충북</option>
+                                            <option value="12">충남</option>
+                                            <option value="13">전북</option>
+                                            <option value="14">전남</option>
+                                            <option value="15">경북</option>
+                                            <option value="16">경남</option>
+                                            <option value="17">제주</option>
+                                            <option value="18">해외</option>
+                                            <option value="19">미등록</option>
                                     </select>
                                     <select class="slt-type" name="addsigungu" id="addsigungu">
-                                        <option value="">종로구</option>
-                                        <option value="">용산구</option>
+                                        	<option value="1">선택</option>
                                     </select>
                                 </div>
                             </div>
@@ -106,6 +99,7 @@
                         <div class="signup_agree">
                             <div class="terms-wrap">
                                 <div class="inner">
+                                	<input type="text" class="agree-check-input" value="false" style="display: none;">
                                     <div class="check-type">
                                         <input type="checkbox" class="chkbox" name="checkrow" id="chk1">
                                         <label for="chk1">
@@ -183,5 +177,6 @@
             </footer>
         </div>
     </div>
+    <script type="text/javascript" src="/static/user/js/mypage_modify.js"></script>
 </body>
 </html>

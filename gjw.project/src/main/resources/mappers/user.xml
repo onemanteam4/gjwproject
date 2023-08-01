@@ -58,5 +58,25 @@
 	WHERE
 		oauth2_id = #{oauth2_id}
 	</select>
+	
+	<update id="updateUser" parameterType="com.omt.gjw.project.domain.user.User">
+	UPDATE
+		user_mst
+	SET
+		user_password = #{user_password},
+		user_email = #{user_email},
+		user_gender = #{user_gender},
+		region_code = #{region_code},
+		update_date = NOW()
+	WHERE
+		user_code = #{user_code};
+	</update>
 
+	<delete id="deleteUser" parameterType="com.omt.gjw.project.domain.user.User">
+	DELETE
+	FROM
+		user_mst
+	WHERE
+		user_code = #{user_code}
+	</delete>
 </mapper>

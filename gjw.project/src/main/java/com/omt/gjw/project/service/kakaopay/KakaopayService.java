@@ -14,7 +14,6 @@ import com.omt.gjw.project.web.dto.kakaopay.KakaopayReqDto;
 import lombok.extern.java.Log;
 import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
 @Service
 public class KakaopayService {
 	
@@ -28,9 +27,7 @@ public class KakaopayService {
 		headers.add("Authorization", "KakaoAK b0c6b94cede4bb8620cca2a2ac640c43");
 		headers.add("Content-type", "application/x-www-form-urlencoded;charset=utf-8");
 		
-		String userId = kakaopayReqDto.getUserId();
 		String total = kakaopayReqDto.getTotalPrice();
-		
 		
 		// 카카오페이 요청 양식
 		MultiValueMap<String, String> params = new LinkedMultiValueMap<String, String>();
@@ -38,24 +35,19 @@ public class KakaopayService {
 		params.add("partner_order_id", "1001"); // 가맹점 주문 번호
 		params.add("partner_user_id", "gjw"); // 가맹점 회원 ID
 		params.add("item_name", "ticket"); // 상품명
-		params.add("quantity", total); // 상품 수량
-		params.add("total_amount", "1000"); // 총금액
-		params.add("tax_free_amount", "100"); // 부가세
+		params.add("quantity", "1"); // 상품 수량
+		params.add("total_amount", total); // 총금액
+		params.add("tax_free_amount", "0"); // 부가세
 		params.add("approval_url", "http://localhost:8000/kakaopay/success"); // 성공시 redirect url
 		params.add("cancel_url", "http://localhost:8000/kakaopay/cancel"); // 취소시 redirect url
 		params.add("fail_url", "http://localhost:8000/kakaopay/fail"); // 실패 시 redirect url
 		
 		//파라미터, 헤더
 		HttpEntity<MultiValueMap<String, String>> body = new HttpEntity<MultiValueMap<String, String>>(params, headers);
-		System.out.println(body);
 		//외부에 보낼 url
 		RestTemplate restTemplate = new RestTemplate();
 		
 		kakaopayReadyRespDto = restTemplate.postForObject("https://kapi.kakao.com/v1/payment/ready", body, KakaopayReadyRespDto.class);
-//		KakaopayReadyRespDto p2 = kakaopayReadyRespDto;
-//		System.out.println("p2"+p2);
-//		String p1 = kakaopayReadyRespDto.getNext_redirect_pc_url();
-//		System.out.println("p1"+p1);
 		
 		return kakaopayReadyRespDto;
 	}
@@ -66,8 +58,6 @@ public class KakaopayService {
 		HttpHeaders headers = new HttpHeaders();
 		headers.add("Authorization", ("KakaoAK b0c6b94cede4bb8620cca2a2ac640c43"));
 		headers.add("Content-Type", "application/x-www-form-urlencoded;charset=utf-8");
-		
-
 		
 		// 카카오페이 요청 양식
 		MultiValueMap<String, String> params = new LinkedMultiValueMap<String, String>();
@@ -82,7 +72,6 @@ public class KakaopayService {
 		RestTemplate restTemplate = new RestTemplate();
 		
 		kakaopayApproveRespDto = restTemplate.postForObject("https://kapi.kakao.com/v1/payment/approve", body, KakaopayApproveRespDto.class);
-		System.out.println("승인 DTO : " + kakaopayApproveRespDto);
 		return kakaopayApproveRespDto;
 	}
 }

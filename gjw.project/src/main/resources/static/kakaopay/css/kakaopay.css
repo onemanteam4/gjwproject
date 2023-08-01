@@ -1,0 +1,357 @@
+
+body {
+    background-color: #FFFFFF;
+    margin: 0px;
+}
+
+.wrap {
+    max-width: 1280px;
+    padding: 0px 40px;
+    margin: 0px auto;
+}
+
+/*헤더*/
+#header {
+    margin-top: 46px;
+}
+
+header h1 {
+    float: left;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header h1 img {
+    width: 160px;
+}
+
+.nav-menu {
+    float: right;
+}
+
+.nav-menu ul{
+    height: 21px;
+
+    list-style: none;
+}
+
+.nav-menu li {
+    float: left;
+    font-size: 14px;
+}
+
+.nav-menu a {
+    color: #333;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.nav-menu img {
+    width: 16px;
+    height: 16px;
+
+}
+
+.nav-menu ul::after {
+    clear: both;
+    display: block;
+    content: '';
+}
+
+header::after {
+    clear: both;
+    display: block;
+    content: '';
+}
+/*헤더 끝*/
+
+/*바디 시작*/
+#container {
+    margin-top: 40px;
+}
+
+.my-info-wrap {
+    height: 75px;
+}
+.my-info-wrap h2 {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 75px;
+}
+
+.page-title p {
+    font-size: 21px;
+    color: #aaa;
+}
+
+.contents {
+    margin-top: 40px;
+}
+
+.contents h3 {
+    font-size: 25px;
+}
+
+.mypage-contents {
+    max-width: 588px;
+    margin: 0px auto;
+    text-align: center;
+    
+}
+
+.page-content {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    border-bottom: 1px solid #aaa;
+}
+
+.page-content-left {
+    padding-bottom: 10px;
+}
+
+.page-content-right {
+    padding-top: 35px;
+    vertical-align: bottom;
+}
+
+.ticket-estimate {
+    margin-top: 24px;
+    line-height: 30px;
+}
+
+.ticket-estimate dt {
+    float: left;
+    clear: both;
+    color: #aaa;
+}
+
+.ticket-estimate dd {
+    float: right;
+    font-weight: 400;
+}
+
+.ticket-estimate .option-detail {
+    clear: both;
+    float: none;
+}
+
+.detail-list {
+    margin-top: 10px;
+    padding-left: 98px;
+    position: relative;
+    min-height: 78px;
+}
+
+.detail-list img {
+    width: 78px;
+    height: 78px;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    vertical-align: middle;
+}
+
+.detail-list strong {
+	float: left;
+}
+
+strong {
+    font-weight: 700;
+}
+
+.ticket-estimate .option-detail b {
+    float: right;
+    font-weight: 400;
+}
+
+.detail-list dl {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.ticket-estimate::after {
+    clear: both;
+    display: block;
+    content: '';
+}
+
+.amount-total {
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+.amount-total h4 {
+    text-align: left;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.amount-total .inner {
+    margin-top: 10px;
+    padding: 15px 20px 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+.amount-total dl {
+    line-height: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.amount-total dt {
+    clear: both;
+    float: left;
+}
+
+.amount-total dd {
+    float: right;
+}
+
+dl::after {
+    clear: both;
+    display: block;
+    content: '';
+}
+
+.total {
+    line-height: 50px;
+}
+
+.total b {
+    float: left;
+    font-size: 18px;
+}
+
+.total strong {
+    float: right;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.total strong span {
+    color: #f85549;
+}
+
+.total::after {
+    clear: both;
+    display: block;
+    content: '';
+}
+
+
+
+
+
+
+
+
+
+
+
+.btn-list {
+    display: block;
+}
+
+
+.btn-wrap {
+    margin-left: -12px;
+    margin-right: -12px;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.back-btn {
+    width: 280px;
+    margin: 0px 12px;
+    text-decoration: none;
+    color: #333;
+
+    display: inline-block;
+    padding: 0px 24px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.myp-btn {
+    width: 280px;
+    margin: 0px 12px;
+    text-decoration: none;
+    background: #f85549;
+    border-color: #f85549;
+    color: #fff;
+
+    display: inline-block;
+    padding: 0px 24px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+
+/*footer 시작*/
+footer {
+    display: block;
+    font-size: 12px;
+    font-weight: 300;
+    margin: 80px 0px 40px;
+
+    height: 90px;
+}
+
+footer img {
+    width: 80px;
+    display: block;
+}
+
+footer ul {
+    display: block;
+    height: 54px;
+    margin-top: 10px;
+    list-style: none;
+}
+
+footer li {
+    display: list-item;
+    float: left;
+    margin-left: 20px;
+    text-align: center;
+}
+
+footer li:nth-child(1) {
+    margin-left: 0px;
+}
+
+footer li:nth-child(5) {
+    clear: both;
+    margin-left: 0px;
+}
+
+footer li:nth-child(7) {
+    clear: both;
+    margin-left: 0px;
+    color: #aaa;
+    letter-spacing: 0.5px;
+}

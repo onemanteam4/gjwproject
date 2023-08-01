@@ -4,9 +4,24 @@ const optionArea = document.querySelectorAll(".option-area");
 
 const ticketEstimate = document.querySelector(".ticket-estimate");
 
+/*const btnWrap = document.querySelector("btn-wrap");*/
+
 let dateY = localStorage.getItem("dateYear");
 let dateM = localStorage.getItem("dateMonth");
 let dateD = localStorage.getItem("dateDay");
+/*getUserInfo();
+function getUserInfo() {
+	if(getUser() != null) {
+		if(getUser.user_roles == "ROLE_USER") {
+			btnWrap.innerHTML =`
+			<button type="button" class="back-btn">뒤로</button>
+			<button type="button" class="next-btn">다음</button>
+			`
+		}
+		
+	}
+}*/
+
 
 load();
 function load() {
@@ -289,6 +304,12 @@ function afIncrease(num, price) {
 
 }
 
+
+
+
+console.log(getUser());
+
+
 const nextBtn = document.querySelector(".next-btn");
 nextBtn.onclick = () => {
 
@@ -331,17 +352,17 @@ nextBtn.onclick = () => {
 	
 	localStorage.setItem("optionCount", JSON.stringify(optionCount));
 
-	location.href = "/payment/payment_pay"
-
+	location.href = "/payment/payment_pay";
 }
-
-
-
-
-
-
-
-
+/*
+const signinBtn = document.querySelector(".signin-btn");
+signinBtn.onclick = () => {
+	location.href = "/auth/signin";
+}*/
+const backBtn = document.querySelector(".back-btn");
+backBtn.onclick = () => {
+	location.href = "/payment/payment_select";
+}
 
 
 

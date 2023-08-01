@@ -101,7 +101,6 @@ header::after {
 .input-type label {
     display: block;
     color: #aaa;
-
 }
 
 .input-type input {
@@ -113,6 +112,15 @@ header::after {
     line-height: 40px;
 
     cursor: pointer;
+}
+
+.input-type input:hover {
+    border-bottom: 1px solid #f85549;
+}
+
+.input-type input:focus {
+    outline: none;
+    border-bottom: 1px solid #f85549;
 }
 
 #signup-name {
@@ -179,6 +187,11 @@ header::after {
 }
 
 .input-type input:hover {
+    border-bottom: 1px solid #f85549;
+}
+
+.input-type input:focus {
+    outline: none;
     border-bottom: 1px solid #f85549;
 }
 

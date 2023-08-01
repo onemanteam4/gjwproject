@@ -3,6 +3,7 @@ package com.omt.gjw.project.service.auth;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.omt.gjw.project.domain.user.User;
@@ -15,6 +16,7 @@ import lombok.RequiredArgsConstructor;
 public class PrincipalDetailsService implements UserDetailsService {
 	
 	private final UserRepository userRepository;
+	private final PasswordEncoder passwordEncoder;
 	
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -32,6 +34,12 @@ public class PrincipalDetailsService implements UserDetailsService {
 		
 		return new PrincipalDetails(userEntity);
 		
+	}
+	
+	public boolean checkPassword(String p1, String p2) {
+		boolean status = false;
+		status = passwordEncoder.matches(p1, p2);
+		return status;
 	}
 
 }
