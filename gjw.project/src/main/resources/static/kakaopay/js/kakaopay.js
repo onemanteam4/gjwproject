@@ -3,21 +3,6 @@ const totalPrice = document.querySelector(".total span");
 let regularPrice = innerPrice[0].textContent * 1;
 let discountedPrice = innerPrice[1].textContent * -1;
 
-let visitNameFlag = false;
-let visitPhoneFlag = false;
-let visitEmailFlag = false;
-
-
-function showlist(num) {
-    const list = document.querySelectorAll(".list");
-
-    if(list[num].className == "list on") {
-        list[num].classList.remove("on");
-    }else if (list[num].className == "list") {
-        list[num].classList.add("on");
-    }
-}
-
 function getTicket() {
 	let ticket = null;
 	$.ajax({
@@ -33,10 +18,8 @@ function getTicket() {
 	});
 	return ticket;
 }
-
-
-const ticketEstimate = document.querySelector(".ticket-estimate");
-
+const pageContentRight = document.querySelector(".page-content-right");
+const pageTitle = document.querySelector(".page-title");
 let dateY = localStorage.getItem("dateYear");
 let dateM = localStorage.getItem("dateMonth");
 let dateD = localStorage.getItem("dateDay");
@@ -45,16 +28,15 @@ let optionData = JSON.parse(localStorage.getItem("optionCount"));
 load();
 
 function load() {
-	ticketEstimate.innerHTML = 
-	"<dt>방문 예정 날짜</dt><dd>" + dateY + "-" + dateM + "-" + dateD + "</dd>"
-	+"<dt>이용기간</dt>"
-	+"<dd>" + dateY + "-" + dateM + "-" + dateD + "~" + dateY + "-" + dateM + "-" + dateD + "</dd>"
-	+"<dt>선택 권종</dt>"
-	+`
-	<dd class="option-detail">
-		
-    </dd>
-    ` 
+	pageTitle.innerHTML = `
+	<div class="my-info-wrap">
+    	<h2>예매완료</h2>
+    </div>
+    <p>고객님의 방문예정일은 `+ dateY + "-" + dateM + "-" + dateD +`입니다.</p>
+    `;
+	
+	pageContentRight.innerHTML = 
+    "<p>이용기간 " + dateY + "-" + dateM + "-" + dateD + " ~ " + dateY + "-" + dateM + "-" + dateD + "</p>"
 }
 
 const optionDetail = document.querySelector(".option-detail");
@@ -243,87 +225,42 @@ function loadDetail() {
 	totalPrice.textContent = regularPrice + discountedPrice;
 }
 
-let totalAllPrice = totalPrice.textContent;
-console.log("totalAllPrice: "+totalAllPrice);
-const sameVisitorBtn = document.querySelector(".same-visitor input");
-const inputType = document.querySelectorAll(".input-wrap input");
-sameVisitorBtn.onclick = () => {
-	if(sameVisitorBtn.checked == true) {
-		let user = getUser();
-		inputType[0].value = user.user_name;
-		inputType[1].value = user.user_phone;
-		inputType[2].value = user.user_email;
-		visitNameFlag = true;
-		visitPhoneFlag = true;
-		visitEmailFlag = true;
-	} else if(sameVisitorBtn.checked == false) {
-		inputType[0].value = "";
-		inputType[1].value = "";
-		inputType[2].value = "";
-		visitNameFlag = false;
-		visitPhoneFlag = false;
-		visitEmailFlag = false;
-	}
-}
 
-function checkVisit() {
-	const nameReg = /^[가-힣]{2,4}$/;
-	const phoneReg = /^[0-9]{3}-[0-9]{4}-[0-9]{4}$/;
-	const emailReg = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
-	
-	if(nameReg.test(inputType[0].value)) {
-		visitNameFlag = true;
-	} else {
-		visitNameFlag = false;
-	}
-	if(phoneReg.test(inputType[1].value)) {
-		visitPhoneFlag = true;
-	} else {
-		visitPhoneFlag = false;
-	}
-	if(emailReg.test(inputType[2].value)) {
-		visitEmailFlag = true;
-	} else {
-		visitEmailFlag = false;
-	}
-}
 
-const payBtn = document.querySelector(".pay-btn");
 
-payBtn.onclick = () => {
-	checkVisit();
-	
-	let data = {
-		totalPrice: totalAllPrice,
-		visitNameFlag: visitNameFlag,
-		visitPhoneFlag: visitPhoneFlag,
-		visitEmailFlag: visitEmailFlag
+/* save하기 */
+bookTicket();
+
+function bookTicket() {
+	let ticketData = {
+		userCode: getUser().user_code,
+		cardNum: optionData.cardN,
+		uniformBNum: optionData.gamBN,
+		uniformSNum: optionData.gamSN,
+		kbBNum: optionData.kbBN,
+		kbSNum: optionData.kbSN,
+		onlineBNum: optionData.onBN,
+		onlineMNum: optionData.onMN,
+		onlineSNum: optionData.onSN,
+		afterBNum: optionData.afBN,
+		afterSNum: optionData.afSN
 	}
 	
 	$.ajax({
 		async: false,
 		type: "post",
-		url: "/kakaopay/ready",
+		url: "/payment/booking",
 		contentType: "application/json",
-		data: JSON.stringify(data),
+		data: JSON.stringify(ticketData),
 		dataType: "json",
 		success: (response) => {
-			location.href = response.data.next_redirect_pc_url;
-		},error: (error) => {
-			if(error.status == 400) {
-				   alert(JSON.stringify(error.responseJSON.data))
-			   }else {
-				   console.log("요청실패");
-				   console.log(error);
-			   }
+
+		},
+		error: (error) => {
+			console.log(error);
 		}
 	})
 }
-
-
-
-
-
 
 
 

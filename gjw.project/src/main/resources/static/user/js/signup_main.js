@@ -38,13 +38,14 @@ const inputData = document.querySelectorAll(".input_wrap input");
 
 signupBtn.onclick = () => {
 	checkPassword();
-	console.log(gendername.value);
+	console.log(inputData[9].value);
+	console.log(inputData[10].value);
 	
 	let signupData = {
 		userId: inputData[0].value,
-		userPassword:inputData[1].value,
-		userEmail:inputData[4].value,
-		userName:inputData[5].value,
+		userPassword: inputData[1].value,
+		userEmail: inputData[4].value,
+		userName: inputData[5].value,
 		userGender: gendername.value,
 		userBirth: inputData[9].value,
 		userPhone: inputData[10].value,

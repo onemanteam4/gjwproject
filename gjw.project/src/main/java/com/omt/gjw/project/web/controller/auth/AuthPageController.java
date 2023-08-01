@@ -33,4 +33,9 @@ public class AuthPageController {
 		return "auth/mypage_modify";
 	}
 	
+	@GetMapping("/mypage_leave")
+	public String loadMypageLeave() {
+		return "auth/mypage_leave";
+	}
+	
 }

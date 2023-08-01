@@ -146,6 +146,7 @@ public class PrincipalOauth2UserService extends DefaultOAuth2UserService{
 					.user_password(new BCryptPasswordEncoder().encode(id))
 					.user_email((String)response.get("email"))
 					.user_birth((String)response.get("birthday"))
+					.user_phone("010-0000-0000")
 					.user_gender(gen)
 					.user_roles("ROLE_USER")
 					.build();

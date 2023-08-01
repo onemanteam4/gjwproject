@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="/static/user/css/user_style.css">
+    <link rel="stylesheet" href="/static/user/css/mypage_leave.css">
+    <title>회원탈퇴</title>
+</head>
+<body>
+    <div id="wrap_containers">
+        <div class="wrap">
+
+            <th:block th:replace="/fragments/header"></th:block>
+
+            <div id="container">
+                <div class="contents">
+                    <div class="small-page">
+                        <div class="page-title">
+                            <h2>회원 탈퇴</h2>
+                            <p>
+                                신청 즉시 아이디는 탈퇴처리! <br>
+                                해당 아이디는 재사용 불가능해요!
+                            </p>
+                        </div>
+                        <div class="leave_wrap">
+                            <div class="input_wrap">
+                                <div class="input-type">
+                                    <label for="myId">아이디</label>
+                                    <input type="text" id="myId" name="username">
+                                </div>
+                                <div class="input-type">
+                                    <label for="myName">이름</label>
+                                    <input type="text" id="myName" name="myName">
+                                </div>
+                                <div class="input-type">
+                                    <label for="myPw">비밀번호</label>
+                                    <input type="password" id="myPw" name="password">
+                                </div>
+                            </div>
+                            <div class="signup-btn">
+                                <button class="btn-leave" name="btn-leave">탈퇴</button>
+                                <button class="btn-cancel" name="btn-cancel">취소</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <img src="/static/donguk-img/logo.png" alt="경주월드">
+                <ul>
+                    <li> 경주월드 주식회사(경주지점) </li>
+                    <li> 주소 경주시 보문로 544(천군동) </li>
+                    <li> 대표전화 1544-8765 </li>
+                    <li> 사업자등록번호, 505-85-15586 </li>
+                    <li> 대표이사 정원기, 함영관 </li>
+                    <li> 개인정보관리자 권준오 </li>
+                    <li> ⓒ GyeongjuWorld. All rights reserved. </li>
+                </ul>
+            </footer>
+        </div>
+    </div>
+    <script type="text/javascript" src="/static/user/js/mypage_leave.js"></script>
+</body>
+</html>
