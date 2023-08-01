@@ -11,6 +11,7 @@ import com.omt.gjw.project.domain.noticelist.NoticeList;
 import com.omt.gjw.project.domain.noticelist.NoticeListRepository;
 import com.omt.gjw.project.web.dto.noticelist.CreateNoticeReqDto;
 import com.omt.gjw.project.web.dto.noticelist.NoticeListRespDto;
+import com.omt.gjw.project.web.dto.noticelist.UpdateNoticeReqDto;
 
 import lombok.RequiredArgsConstructor;
 
@@ -27,7 +28,7 @@ public class NoticeListServiceImpl implements NoticeListService{
 	@Override
 	public List<NoticeListRespDto> getNoticeList(int page, int contentCount) throws Exception {
 		
-		List<NoticeList> noticeLists = noticeListRepository.getTodoList(createGetNoticeListMap(page, contentCount));
+		List<NoticeList> noticeLists = noticeListRepository.getNoticeList(createGetNoticeListMap(page, contentCount));
 		
 		System.out.println(createNoticeListRespDtos(noticeLists));
 		return createNoticeListRespDtos(noticeLists);
@@ -46,6 +47,17 @@ public class NoticeListServiceImpl implements NoticeListService{
 			NoticeListRespDtos.add(notice.toListDto());
 		});
 		return NoticeListRespDtos;
+	}
+	@Override
+	public boolean updateList(UpdateNoticeReqDto updateNoticeReqDto) throws Exception {
+		
+		
+		return noticeListRepository.updateList(updateNoticeReqDto.toEntity())>0 ;
+	}
+	@Override
+	public boolean deleteList(int noticeCode) throws Exception {
+		
+		return noticeListRepository.deleteList(noticeCode) > 0;
 	}
 	
 	

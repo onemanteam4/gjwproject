@@ -378,7 +378,22 @@ function getList(data) {
 
 }
 
-
+function addNoticeList(noticelist) {
+	$.ajax ({
+		type: "post",
+		url: "/api/v1/noticelist/addlist",
+		contentType: "application/json",
+		data: JSON.stringify(noticelist),
+		async: false,
+		dataType: "json",
+		success: (response) => {
+			if(response.data) {
+				boardList.innerHTML = '';
+				load();
+			}
+		}
+	})
+}
 
 
 

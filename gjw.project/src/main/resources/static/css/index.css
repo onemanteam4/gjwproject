@@ -249,13 +249,14 @@ body {
 
 .main-top-right ul {
     float: right;
-
+	display: flex;
     
 }
 
 .main-top-list ul li{
     float: left;
     margin-top: 5px;
+    
 }
 
 .main-top-list ul li:first-child a {
@@ -268,20 +269,31 @@ body {
     font-weight: 300;
     font-size: 0.67rem;
     margin-left: 14px;
+    display: block;
+    width:100%;
+    
+    padding-top: 5px;
+    
 }
 
 
 
 
-.choice {
+.main-top-list ul li.choice {
     margin-top: 0px;
+    position: relative;
+    top: 0px;
+    
+
+    
 }
 
 .main-top-search {
     clear: both;
     text-align: right;
     
-
+    position:relative;
+	top:0px;
 
 }
 .main-top-search form {

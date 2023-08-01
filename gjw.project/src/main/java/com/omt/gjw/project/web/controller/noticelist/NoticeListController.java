@@ -3,8 +3,11 @@ package com.omt.gjw.project.web.controller.noticelist;
 import java.util.List;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -14,6 +17,7 @@ import com.omt.gjw.project.service.noticelist.NoticeListService;
 import com.omt.gjw.project.web.dto.CMRespDto;
 import com.omt.gjw.project.web.dto.noticelist.CreateNoticeReqDto;
 import com.omt.gjw.project.web.dto.noticelist.NoticeListRespDto;
+import com.omt.gjw.project.web.dto.noticelist.UpdateNoticeReqDto;
 
 import lombok.RequiredArgsConstructor;
 
@@ -59,4 +63,35 @@ public class NoticeListController {
 		
 		return ResponseEntity.ok().body(new CMRespDto<>(1, page + "page list success to load", list));
 	}
+	
+	@PutMapping("/noticelist/{noticeCode}")
+	public ResponseEntity<?> setcompleteNotice(@PathVariable int noticeCode, @RequestBody UpdateNoticeReqDto updateNoticeReqDto) {
+		boolean status = false;
+		updateNoticeReqDto.setNoticeCode(noticeCode);
+		try {
+			status = noticeListService.updateList(updateNoticeReqDto);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return ResponseEntity.ok().body(new CMRespDto<>(-1, "failed", status));
+		}
+		
+		return ResponseEntity.ok().body(new CMRespDto<>(1, "success", status));
+	}
+	
+	@DeleteMapping("/noticelist/{noticeCode}")
+	public ResponseEntity<?> removeNotice(@PathVariable int noticeCode) {
+		boolean status = false;
+		
+		try {
+			status = noticeListService.deleteList(noticeCode);
+		} catch (Exception e) {
+			
+			e.printStackTrace();
+			return ResponseEntity.ok().body(new CMRespDto<>(-1, "failed", status));
+		}
+		return ResponseEntity.ok().body(new CMRespDto<>(1, "success", status));
+	}
+	
+	
+	
 }

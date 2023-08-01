@@ -79,6 +79,3 @@ function loadHeader(user) {
 let user = getPrincipal();
 loadHeader(user);
 
-function getUser() {
-	return user;
-}

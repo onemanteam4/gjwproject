@@ -17,7 +17,7 @@
 		)
 
 	</insert>
-	<select id="getTodoList" parameterType="hashmap" resultType="com.omt.gjw.project.domain.noticelist.NoticeList">
+	<select id="getNoticeList" parameterType="hashmap" resultType="com.omt.gjw.project.domain.noticelist.NoticeList">
 		SELECT
 			nn.notice_code,
 			nn.notice_title,
@@ -41,6 +41,21 @@
 	
 	
 	</select>
-
+	<update id="updateList" parameterType="com.omt.gjw.project.domain.noticelist.NoticeList">
+		UPDATE
+			notice_notice
+		SET
+			notice_title = #{notice_title}
+		WHERE
+			notice_code = #{notice_code}
+	</update>
+	
+	<delete id="deleteList" parameterType="Integer">
+		delete
+		from
+			notice_notice
+		where
+			notice_code = #{notice_code}
+	</delete>
 
 </mapper>

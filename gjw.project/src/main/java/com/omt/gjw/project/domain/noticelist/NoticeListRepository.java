@@ -9,5 +9,9 @@ import org.apache.ibatis.annotations.Mapper;
 public interface NoticeListRepository {
 	public int save(NoticeList noticeList) throws Exception;
 	
-	public List<NoticeList> getTodoList(Map<String, Object> map) throws Exception;
+	public List<NoticeList> getNoticeList(Map<String, Object> map) throws Exception;
+	
+	public int updateList(NoticeList noticeList) throws Exception;
+	
+	public int deleteList(int notice_code) throws Exception;
 }
