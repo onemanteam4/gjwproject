@@ -31,7 +31,7 @@ public class NoticeList {
 				.noticeCode(notice_code)
 				.noticeTitle(notice_title)
 				.noticeFile(notice_file)
-				.noticeCount(notice_code)
+				.noticeCount(notice_count)
 				.totalCount(total_count)
 				.createDate(notice_date)
 				.updateDate(notice_update)

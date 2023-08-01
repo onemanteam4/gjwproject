@@ -118,18 +118,72 @@ function banner () {
 
 let page = 1;
 let totalPage = 0;
-
+let newPage = 0;
 const listPage = document.querySelectorAll(".list-page ul li#num");
 const boardList = document.querySelector(".board-list tbody");
+const boardCount = document.querySelector(".board-count ul");
+
 
 for(let i = 0; i < listPage.length; i++) {
 	listPage[i].onclick = () => {
-		let newPage = page + i;
-		if(newPage < totalPage) {
-			load();
-		}
+		page = 1;
+		console.log(i + "된다!");
+		page = page + i;
+		
+
+		console.log("page값" + page);
+		boardList.innerHTML = ``;
+		
+		load();
 	}
 }
+
+
+/*	listPage[0].onclick = () => {
+		let page = 1;
+		console.log(i + "된다!");
+		let newPage = (page + i);
+		if(newPage < totalPage) {
+			boardList.innerHTML = ``;
+			load();
+		}
+		console.log("page값" + newPage);
+		boardList.innerHTML = ``;
+		load();
+	}
+
+
+
+	listPage[1].onclick = () => {
+		let page = 2;
+		
+		let newPage = page ;
+		if(newPage < totalPage) {
+			boardList.innerHTML = ``;
+			load();
+		}
+		
+		boardList.innerHTML = ``;
+		load1();
+	}
+
+
+
+	listPage[2].onclick = () => {
+		let page = 3;
+		
+		let newPage = page;
+		if(newPage < totalPage) {
+			boardList.innerHTML = ``;
+			load();
+		}
+		
+		boardList.innerHTML = ``;
+		load2();
+	}*/
+
+
+
 
 
 
@@ -139,10 +193,47 @@ function load() {
 		type: "get",
 		url: "/api/v1/noticelist/noticelist/notice",
 		data: {
-			"page":page,
+			"page": page,
 			contentCount: 10
 		},
 		dataType: "json",
+		
+		success: (response) => {
+			getList(response.data);
+		},
+		error:
+			errorMessage
+	})
+}
+
+function load1() {
+	$.ajax({
+		type: "get",
+		url: "/api/v1/noticelist/noticelist/notice",
+		data: {
+			page:2,
+			contentCount: 10
+		},
+		dataType: "json",
+		
+		success: (response) => {
+			getList(response.data);
+		},
+		error:
+			errorMessage
+	})
+}
+
+function load2() {
+	$.ajax({
+		type: "get",
+		url: "/api/v1/noticelist/noticelist/notice",
+		data: {
+			page:3,
+			contentCount: 10
+		},
+		dataType: "json",
+		
 		success: (response) => {
 			getList(response.data);
 		},
@@ -160,7 +251,7 @@ function errorMessage(request, status, error) {
 
 
 function setTotalCount(totalCount) {
-	totalPage = totalCount % 10 == 0 ? totalCount / 20 : Math.floor(totalCount / 20) + 1;
+	totalPage = totalCount % 10 == 0 ? totalCount / 10 : Math.floor(totalCount / 10) + 1;
 }
 
 function getList(data) {
@@ -181,8 +272,22 @@ function getList(data) {
                         </tr>
 		`
 		boardList.innerHTML += listContent;
+		
+		let nowCount = parseInt(content.totalCount / 10) + 1;
+		console.log("현재값 : " + parseInt(nowCount));
+		
+		boardCount.innerHTML = `
+				<li>
+                    전체게시물 :
+                    <span>${content.totalCount}</span>
+                    건
+                </li>
+                <li>현재페이지 : 1 / ${nowCount}</li>
+                `
 	}
 }
+
+
 
 
 
