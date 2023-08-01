@@ -860,8 +860,8 @@ body {
     border-collapse: collapse;
 }
 
-.num {
-    width: 100px;
+#num {
+    width: 35px;
 }
 
 .file {
@@ -934,7 +934,7 @@ body {
 .board-list-pager ul li button {
     color: #1d2124;
     display: inline-block;
-    width: 32px;
+    width: 33px;
     padding-right: 0px 1px 0px 0px;
     height: 32px;
     line-height: 28px;
@@ -946,7 +946,7 @@ body {
     
 }
 
-.board-list-pager ul .on {
+.board-list-pager ul li.num on{
     background-color: #ed1c24;
     border: 1px solid #ed1c24;
 }

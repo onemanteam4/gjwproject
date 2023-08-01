@@ -122,6 +122,11 @@ let newPage = 0;
 const listPage = document.querySelectorAll(".list-page ul li#num");
 const boardList = document.querySelector(".board-list tbody");
 const boardCount = document.querySelector(".board-count ul");
+const buttonLeft = document.querySelector(".button-left");
+const buttonRight = document.querySelector(".button-right");
+const num = document.querySelector(".num");
+
+
 
 
 for(let i = 0; i < listPage.length; i++) {
@@ -130,13 +135,62 @@ for(let i = 0; i < listPage.length; i++) {
 		console.log(i + "된다!");
 		page = page + i;
 		
-
+		
+		
 		console.log("page값" + page);
 		boardList.innerHTML = ``;
+				
 		
 		load();
+		for(let y = 0; y < listPage.length; y++) {
+                  listPage[y].classList.remove("on");
+                  console.log("제거");
+                }
+                if(listPage[i].className == "num") {
+                   listPage[i].classList.add("on");
+                   console.log("추가");
+                }
+			
 	}
+	
 }
+
+	buttonLeft.onclick = () => {
+	page = page -1;	
+	console.log("돌아감" + page);
+	
+	if(page > 0) {
+		
+	boardList.innerHTML = ``;
+	load();
+	
+			for(let x = 0; x < listPage.length; x++) {
+	          listPage[x].classList.remove("on");
+	          console.log("제거");
+	        }
+	        if(listPage[page-1].className == "num") {
+	           listPage[page-1].classList.add("on");
+	           console.log("page" + page);
+	        }
+	
+	
+	}
+	if(page < 1) {
+		page = 1;
+		console.log("왜안됌?" + page);
+		
+
+		
+	}
+	return;
+}
+
+
+
+
+
+
+	
 
 
 /*	listPage[0].onclick = () => {
@@ -260,6 +314,10 @@ function getList(data) {
 	setTotalCount(data[0].totalCount);
 	
 	for(let content of data) {
+		let year = content.createDate;
+		let year2 = year.substring(0, 10);
+		console.log(year2);
+		
 		const listContent = `
 						<tr>
                             <td> ${content.noticeCode}</td>
@@ -268,7 +326,7 @@ function getList(data) {
                             </td>
                             <td>${content.noticeFile}</td>
                             <td>${content.noticeCount}</td>
-                            <td>${content.createDate}</td>
+                            <td>${year2}</td>
                         </tr>
 		`
 		boardList.innerHTML += listContent;
@@ -284,7 +342,40 @@ function getList(data) {
                 </li>
                 <li>현재페이지 : 1 / ${nowCount}</li>
                 `
+                
+	buttonRight.onclick = () => {
+		page = page +1;
+		console.log("돈다" + page);
+		
+		if(page <= nowCount) {
+		
+		boardList.innerHTML = ``;
+		load();
+		
+		}
+		if(page > nowCount) {
+		page = nowCount;
+		console.log("왜안됌?" + page);
+		}
+		for(let x = 0; x < listPage.length; x++) {
+	          listPage[x].classList.remove("on");
+	          console.log("제거");
+	        }
+	        if(listPage[page-1].className == "num") {
+	           listPage[page-1].classList.add("on");
+	           console.log("page" + page);
+	        }
+		
+		
+		
+		
+		return;
+		
+	}        
+                
 	}
+	
+
 }
 
 
