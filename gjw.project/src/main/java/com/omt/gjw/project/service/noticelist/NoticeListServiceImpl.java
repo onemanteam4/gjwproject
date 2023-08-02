@@ -59,6 +59,11 @@ public class NoticeListServiceImpl implements NoticeListService{
 		
 		return noticeListRepository.deleteList(noticeCode) > 0;
 	}
+	@Override
+	public boolean updateCount(int noticeCode) throws Exception {
+		
+		return noticeListRepository.updateCount(noticeCode) > 0;
+	}
 	
 	
 	

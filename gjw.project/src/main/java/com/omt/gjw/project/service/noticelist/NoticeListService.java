@@ -13,5 +13,7 @@ public interface NoticeListService {
 	
 	public boolean updateList(UpdateNoticeReqDto updateNoticeReqDto) throws Exception;
 	
+	public boolean updateCount(int noticeCode) throws Exception;
+	
 	public boolean deleteList(int noticeCode) throws Exception;
 }

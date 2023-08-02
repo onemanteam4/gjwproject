@@ -121,7 +121,6 @@ let totalPage = 0;
 let newPage = 0;
 const listPage = document.querySelectorAll(".list-page ul li#num");
 const boardList = document.querySelector(".board-list tbody");
-
 const boardCount = document.querySelector(".board-count ul");
 const buttonLeft = document.querySelector(".button-left");
 const buttonRight = document.querySelector(".button-right");
@@ -261,7 +260,7 @@ function load() {
 	})
 }
 
-/*function load1() {
+function load1() {
 	$.ajax({
 		type: "get",
 		url: "/api/v1/noticelist/noticelist/notice",
@@ -295,7 +294,7 @@ function load2() {
 		error:
 			errorMessage
 	})
-}*/
+}
 
 function errorMessage(request, status, error) {
     alert("요청실패");
@@ -309,12 +308,11 @@ function setTotalCount(totalCount) {
 	totalPage = totalCount % 10 == 0 ? totalCount / 10 : Math.floor(totalCount / 10) + 1;
 }
 
-
 function getList(data) {
-
+	
 	
 	setTotalCount(data[0].totalCount);
-	let number = [];
+	
 	for(let content of data) {
 		let year = content.createDate;
 		let year2 = year.substring(0, 10);
@@ -324,7 +322,7 @@ function getList(data) {
 						<tr>
                             <td> ${content.noticeCode}</td>
                             <td class="subject">
-                                <a href="/notice/notice_list_details">${content.noticeTitle}</a>
+                                <a href="">${content.noticeTitle}</a>
                             </td>
                             <td>${content.noticeFile}</td>
                             <td>${content.noticeCount}</td>
@@ -332,16 +330,6 @@ function getList(data) {
                         </tr>
 		`
 		boardList.innerHTML += listContent;
-		
-		
-
-		number.push(content.noticeCode);
-
-		console.log(number);
-		
-	
-		
-		
 		
 		let nowCount = parseInt(content.totalCount / 10) + 1;
 		console.log("현재값 : " + parseInt(nowCount));
@@ -386,24 +374,9 @@ function getList(data) {
 	}        
                 
 	}
-	console.log("없냐..?"+number[0]);
-	
-	const boardListSelect = document.querySelectorAll(".board-list tbody tr td a");
-	console.log(boardListSelect);	
-	
-	for(let p = 0; p < 10; p ++) {
-		boardListSelect[p].onclick = () => {
-			console.log(p);
-			
-		addCount(number[p]);
-		}
-	}
 	
 
 }
-
-
-
 
 function addNoticeList(noticelist) {
 	$.ajax ({
@@ -418,31 +391,9 @@ function addNoticeList(noticelist) {
 				boardList.innerHTML = '';
 				load();
 			}
-		},
-		error:
-			errorMessage
+		}
 	})
 }
 
-function addCount(i) {
-		$.ajax({
-			type: "put",
-			url: "/api/v1/noticelist/noticelist/count",
-			data: {noticeCode: i
-			},
-			
-			dataType: "json",
-			success: (response) => {
-				
-				console.log(response);
-				if(response.data) {
-				boardList.innerHTML = '';
-				load();
-			}
-				},
-			error:
-			errorMessage
-		})
-}
 
 

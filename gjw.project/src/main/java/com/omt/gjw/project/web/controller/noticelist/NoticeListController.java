@@ -64,10 +64,10 @@ public class NoticeListController {
 		return ResponseEntity.ok().body(new CMRespDto<>(1, page + "page list success to load", list));
 	}
 	
-	@PutMapping("/noticelist/{noticeCode}")
-	public ResponseEntity<?> setcompleteNotice(@PathVariable int noticeCode, @RequestBody UpdateNoticeReqDto updateNoticeReqDto) {
+	@PutMapping("/noticelist/update")
+	public ResponseEntity<?> setcompleteNotice(@RequestBody UpdateNoticeReqDto updateNoticeReqDto) {
 		boolean status = false;
-		updateNoticeReqDto.setNoticeCode(noticeCode);
+		
 		try {
 			status = noticeListService.updateList(updateNoticeReqDto);
 		} catch (Exception e) {
@@ -78,8 +78,22 @@ public class NoticeListController {
 		return ResponseEntity.ok().body(new CMRespDto<>(1, "success", status));
 	}
 	
-	@DeleteMapping("/noticelist/{noticeCode}")
-	public ResponseEntity<?> removeNotice(@PathVariable int noticeCode) {
+	@PutMapping("/noticelist/count")
+	public ResponseEntity<?> NoticeCount(@RequestParam int noticeCode) {
+		boolean status = false;
+		
+		try {
+			status = noticeListService.updateCount(noticeCode);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return ResponseEntity.ok().body(new CMRespDto<>(-1, "failed", status));
+		}
+		return ResponseEntity.ok().body(new CMRespDto<>(1, "success", status));
+	}
+	
+	
+	@DeleteMapping("/noticelist/delete")
+	public ResponseEntity<?> removeNotice(@RequestParam int noticeCode) {
 		boolean status = false;
 		
 		try {

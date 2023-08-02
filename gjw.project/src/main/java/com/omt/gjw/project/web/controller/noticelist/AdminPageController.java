@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 public class AdminPageController {
 
-	@GetMapping("/notice/noticelist")
+	@GetMapping("/notice/notice_list")
 	public String loadList() {
-		return "notice/noticelist";
+		return "notice/notice_list";
 	}
 	
 }

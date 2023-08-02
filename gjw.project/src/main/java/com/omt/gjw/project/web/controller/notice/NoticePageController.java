@@ -27,4 +27,10 @@ public class NoticePageController {
 	public String loadNoticeQuestion() {
 		return "notice/notice_question";
 	}
+	
+//리스트들	
+	@GetMapping("/notice_list_details")
+	public String loadContents() {
+		return "notice/notice_list_details";
+	}
 }

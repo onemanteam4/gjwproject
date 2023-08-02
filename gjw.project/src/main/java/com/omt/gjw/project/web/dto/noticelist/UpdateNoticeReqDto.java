@@ -9,6 +9,7 @@ public class UpdateNoticeReqDto {
 	private int noticeCode;
 	private String noticeList;
 	
+	
 	public NoticeList toEntity() {
 		return NoticeList.builder()
 				.notice_code(noticeCode)

@@ -13,5 +13,7 @@ public interface NoticeListRepository {
 	
 	public int updateList(NoticeList noticeList) throws Exception;
 	
+	public int updateCount(int notice_code) throws Exception;
+	
 	public int deleteList(int notice_code) throws Exception;
 }

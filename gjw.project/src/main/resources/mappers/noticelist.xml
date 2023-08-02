@@ -4,7 +4,7 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
 <mapper namespace="com.omt.gjw.project.domain.noticelist.NoticeListRepository">
-	<insert id="save" parameterType="com.omt.gjw.project.domain.noticelist.NoticeList">
+ 	<insert id="save" parameterType="com.omt.gjw.project.domain.noticelist.NoticeList">
 		INSERT INTO
 			notice_notice
 		VALUES(
@@ -41,7 +41,7 @@
 	
 	
 	</select>
-	<update id="updateList" parameterType="com.omt.gjw.project.domain.noticelist.NoticeList">
+ 	<update id="updateList" parameterType="com.omt.gjw.project.domain.noticelist.NoticeList">
 		UPDATE
 			notice_notice
 		SET
@@ -57,5 +57,16 @@
 		where
 			notice_code = #{notice_code}
 	</delete>
-
+	
+	<update id="updateCount" parameterType="Integer">
+		UPDATE
+			notice_notice
+		SET
+			notice_count = notice_count + 1
+		WHERE
+			notice_code = #{notice_code}
+	</update>
+	
+	
+	
 </mapper>

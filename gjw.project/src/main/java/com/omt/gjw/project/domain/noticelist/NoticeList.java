@@ -17,6 +17,7 @@ public class NoticeList {
 	private int notice_code;
 	private String notice_title;
 	private String notice_file;
+	
 	private int notice_count;
 	
 	private int total_count;
