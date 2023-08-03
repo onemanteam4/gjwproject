@@ -5,16 +5,21 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/notice")
+@RequestMapping("/auth-notice")
 public class AdminPageController {
 
-	@GetMapping("/notice_list")
+	@GetMapping("/notice_list_admin")
 	public String loadList() {
-		return "notice/notice_list";
+		return "auth-notice/notice_list_admin";
 	}
 	
-	@GetMapping("/notice_admin")
+	@GetMapping("/notice_list_details")
 	public String loadListAdmin() {
-		return "notice/notice_list_admin";
+		return "auth-notice/notice_list_details";
+	}
+	
+	@GetMapping("/notice_list_modification")
+	public String loadListModification() {
+		return "auth-notice/notice_list_modification";
 	}
 }

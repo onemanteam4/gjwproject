@@ -26,12 +26,14 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class NoticeListController {
 	private final NoticeListService noticeListService;
+	
 	@PostMapping("/addlist")
 	public ResponseEntity<?> addContent(@RequestBody CreateNoticeReqDto createNoticeReqDto) {
 		boolean status = false;
 		
 		try {
 			status = noticeListService.createNoticeList(createNoticeReqDto);
+			
 			
 		} catch (Exception e) {
 			

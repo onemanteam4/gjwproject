@@ -121,6 +121,7 @@ let totalPage = 0;
 let newPage = 0;
 const listPage = document.querySelectorAll(".list-page ul li#num");
 const boardList = document.querySelector(".board-list tbody");
+
 const boardCount = document.querySelector(".board-count ul");
 const buttonLeft = document.querySelector(".button-left");
 const buttonRight = document.querySelector(".button-right");
@@ -260,7 +261,7 @@ function load() {
 	})
 }
 
-function load1() {
+/*function load1() {
 	$.ajax({
 		type: "get",
 		url: "/api/v1/noticelist/noticelist/notice",
@@ -294,7 +295,7 @@ function load2() {
 		error:
 			errorMessage
 	})
-}
+}*/
 
 function errorMessage(request, status, error) {
     alert("요청실패");
@@ -308,28 +309,55 @@ function setTotalCount(totalCount) {
 	totalPage = totalCount % 10 == 0 ? totalCount / 10 : Math.floor(totalCount / 10) + 1;
 }
 
+
 function getList(data) {
-	
+	let index = 0;
 	
 	setTotalCount(data[0].totalCount);
-	
+	let number = [];
 	for(let content of data) {
 		let year = content.createDate;
 		let year2 = year.substring(0, 10);
 		console.log(year2);
+		index = index + 1;
+		
+		console.log(index);
+		
 		
 		const listContent = `
 						<tr>
                             <td> ${content.noticeCode}</td>
                             <td class="subject">
-                                <a href="">${content.noticeTitle}</a>
+                                <a href="/notice/notice_list_details">${content.noticeTitle}</a>
                             </td>
-                            <td>${content.noticeFile}</td>
-                            <td>${content.noticeCount}</td>
+                            <td>
+                            	<button type="button" class="modification">
+                            		<span class="material-symbols-outlined">
+										contract_edit
+									</span>
+                            	</button>
+                            </td>
+                            <td>
+								<button type="button" class="delete">
+                            		<span class="material-symbols-outlined">
+										delete
+									</span>
+                            	</button>
+							</td>
                             <td>${year2}</td>
                         </tr>
 		`
 		boardList.innerHTML += listContent;
+		
+		
+
+		number.push(content.noticeCode);
+
+		console.log(number);
+		
+		
+		
+		
 		
 		let nowCount = parseInt(content.totalCount / 10) + 1;
 		console.log("현재값 : " + parseInt(nowCount));
@@ -374,9 +402,37 @@ function getList(data) {
 	}        
                 
 	}
+	console.log("없냐..?"+number[0]);
+	
+	const boardListSelect = document.querySelectorAll(".board-list tbody tr td a");
+	console.log(boardListSelect);	
+	
+	for(let p = 0; p < 10; p ++) {
+		boardListSelect[p].onclick = () => {
+			console.log(p);
+			
+		addCount(number[p]);
+		}
+	}
+	const deleteAll = document.querySelectorAll(".delete");
+	for(let m = 0; m < deleteAll.length; m++) {
+		deleteAll[m].onclick = () => {
+			deletelist(number[m]);
+			console.log(number[m]);
+		}
+	}
+	const modificationAll = document.querySelectorAll(".modification");
+	for(let n = 0; n < modificationAll.length; n++) {
+		modificationAll[n].onclick = () => {
+			location.href = "/auth-notice/notice_list_details";
+		}
+	}
 	
 
 }
+
+
+
 
 function addNoticeList(noticelist) {
 	$.ajax ({
@@ -391,9 +447,52 @@ function addNoticeList(noticelist) {
 				boardList.innerHTML = '';
 				load();
 			}
-		}
+		},
+		error:
+			errorMessage
+	})
+}
+const boardListTable = document.querySelector(".board-list table");
+
+function deletelist(i) {
+	$.ajax({
+		type: "delete",
+		url: "/api/v1/noticelist/noticelist/delete",
+		async: false,
+		data: {noticeCode: i},
+		dataType: "json",
+		success: (response) => {
+			if(response.data) {
+				/*boardListTable.removeChild(todoContent);*/
+				console.log(response.data);
+				boardList.innerHTML = '';
+				load();
+			}
+		},
+		error: errorMessage
 	})
 }
 
+
+function addCount(i) {
+		$.ajax({
+			type: "put",
+			url: "/api/v1/noticelist/noticelist/count",
+			data: {noticeCode: i
+			},
+			
+			dataType: "json",
+			success: (response) => {
+				
+				console.log(response);
+				if(response.data) {
+				boardList.innerHTML = '';
+				load();
+			}
+				},
+			error:
+			errorMessage
+		})
+}
 
 

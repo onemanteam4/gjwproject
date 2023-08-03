@@ -406,7 +406,7 @@ function getList(data) {
 
 }
 
-
+/*
 
 
 function addNoticeList(noticelist) {
@@ -426,7 +426,7 @@ function addNoticeList(noticelist) {
 		error:
 			errorMessage
 	})
-}
+}*/
 
 function addCount(i) {
 		$.ajax({
