@@ -140,6 +140,7 @@ function Calendar() {
     const DatePicker = document.querySelectorAll(".Date-Picker");
     const uiDatepickerCurrent = document.querySelector(".ui-datepicker-current");
     const ulDatepickerClose = document.querySelector(".ul-datepicker-close");
+    const ulDatepickerMonth = document.querySelector(".ul-datepicker-month");
     let year1 = today.getFullYear();
     let month1 = today.getMonth() + 1;
     let day1 = today.getDate();
@@ -155,18 +156,26 @@ function Calendar() {
     let month = today.getMonth() + 1;
     let day = today.getDate();
     let startDayValue = year + "-" + month + "-" + day;
-
+	
+	
+	
     console.log(startDayValue);
-
+	console.log(firstDate);
 
     let calendarMonthStartDay = firstDate.getDay();
     //시작 일
     let calendarMonthLastDate = lastDate.getDate();
     //마지막 일
+	let ulDatepickerYear1 = document.querySelector(".ul-datepicker-year");
+    ulDatepickerYear1.innerText = nowMonth.getFullYear();
+    let ulDatepickerMonth1 = document.querySelector(".ul-datepicker-month");
+    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
+    if(nowMonth.getMonth() < 9) {
+        ulDatepickerMonth1.innerText = "0" + (nowMonth.getMonth() + 1) + "월" + "(" + months[nowMonth.getMonth()] + ")"; 
+    } else{
+        ulDatepickerMonth1.innerText =  + (nowMonth.getMonth() + 1) + "월" + "(" + months[nowMonth.getMonth()] + ")";
+    }
 
-    console.log(firstDate);
-    console.log(lastDate);
-    console.log(calendarMonthStartDay);
 
     let tbodyCalendar = document.querySelector(".ul-datepicker-calendar > tbody");
 
