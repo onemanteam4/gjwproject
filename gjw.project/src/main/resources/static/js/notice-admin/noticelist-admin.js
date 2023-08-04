@@ -424,7 +424,10 @@ function getList(data) {
 	const modificationAll = document.querySelectorAll(".modification");
 	for(let n = 0; n < modificationAll.length; n++) {
 		modificationAll[n].onclick = () => {
-			location.href = "/auth-notice/notice_list_details";
+			
+			/*noticeUpdate(number[n]);*/
+			location.href = "/auth-notice/notice_list_modification/"+ number[n];
+			console.log(number[n]);
 		}
 	}
 	
@@ -473,6 +476,33 @@ function deletelist(i) {
 	})
 }
 
+/*const text = document.querySelector(".notice-title");
+
+let noticelist = {
+	noticeTitle : text.value
+};
+
+function noticeUpdate(i) {
+	$.ajax ({
+		type: "put",
+		url: "/api/v1/noticelist/noticelist/update",
+		data: {
+			noticeCode: i,
+			noticeTitle : noticelist
+		},
+		async: false,
+		dataType: "json",
+		success : (response) => {
+			if(response.data) {
+				boardListTable.removeChild(todoContent);
+				console.log(response.data);
+				location.replace("/auth-notice/notice_list_admin");
+			}
+		},
+		error: errorMessage
+	})
+}
+*/
 
 function addCount(i) {
 		$.ajax({

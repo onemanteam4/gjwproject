@@ -18,7 +18,7 @@ public class AdminPageController {
 		return "auth-notice/notice_list_details";
 	}
 	
-	@GetMapping("/notice_list_modification")
+	@GetMapping("/notice_list_modification/{noticeCode}")
 	public String loadListModification() {
 		return "auth-notice/notice_list_modification";
 	}

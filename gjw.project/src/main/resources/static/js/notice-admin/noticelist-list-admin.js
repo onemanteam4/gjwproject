@@ -115,7 +115,7 @@ function banner () {
 }
 
 
-const boardBtnSubmit = document.querySelector(".board-btn");
+const boardBtnSubmit = document.querySelector(".board-btn ul li button");
 const text = document.querySelector(".notice-title");
 
 

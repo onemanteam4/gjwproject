@@ -115,7 +115,7 @@ function banner () {
 }
 
 
-const boardBtnSubmit = document.querySelector(".board-btn");
+const boardBtnSubmit = document.querySelector(".board-btn ul li button");
 const text = document.querySelector(".notice-title");
 
 
@@ -125,11 +125,49 @@ let noticelist = {
 };
 	console.log(text.value);
 	console.log(noticelist);
-	addNoticeList(noticelist);
+	noticeUpdate(noticelist);
 	console.log("돌아감");
 }
 
-function noticeUpdate() {
+function errorMessage(request, status, error) {
+    alert("요청실패");
+    console.log(request.status);
+    console.log(request.responseText);
+    console.log(error);
+}
+
+console.log(noticeCode);
+
+
+
+function noticeUpdate(noticeCode) {
+	$.ajax ({
+		type: "put",
+		url: "/api/v1/noticelist/noticelist/update",
+		data: {
+			noticeCode: noticeCode,
+			noticeTitle : noticelist
+		},
+		async: false,
+		dataType: "json",
+		success : (response) => {
+			if(response.data) {
+				/*boardListTable.removeChild(todoContent);*/
+				console.log(response.data);
+				location.replace("/auth-notice/notice_list_admin");
+			}
+		},
+		error: errorMessage
+	})
+}
+
+
+
+
+
+
+
+/*function noticeUpdate() {
 	$.ajax ({
 		type: "put",
 		url: "/api/v1/noticelist/noticelist/update",
@@ -139,11 +177,11 @@ function noticeUpdate() {
 			
 		}
 	})
-}
+}*/
 
 
 
-function addNoticeList(noticelist) {
+/*function addNoticeList(noticelist) {
 	$.ajax ({
 		type: "post",
 		url: "/api/v1/noticelist/addlist",
@@ -168,7 +206,7 @@ function addNoticeList(noticelist) {
 			   }
 		}
 	})
-}
+}*/
 
 
 
