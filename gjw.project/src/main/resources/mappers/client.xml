@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.omt.gjw.project.domain.client.ClientRepository">
+	<insert id="clientSave" parameterType="com.omt.gjw.project.domain.client.Client">
+		INSERT INTO
+			client_mst
+		VALUES (
+			0,
+			#{client_division},
+			#{client_service},
+			#{client_name},
+			#{visit_day},
+			#{client_email},
+			#{client_phone},
+			#{client_gender},
+			#{client_age},
+			#{call_back},
+			#{client_title},
+			#{client_content},
+			#{client_file},
+			NOW(),
+			NOW()
+		);
+	</insert>
+
+
+</mapper>

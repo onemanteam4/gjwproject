@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>공지사항 작성</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <link rel="stylesheet" href="/static/css/notice.dyj/notice_style.css">
     <link rel="stylesheet" href="/static/css/notice.dyj/notice_client.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -223,7 +224,8 @@
                         <input type="hidden" class="frm-kind-service" name="frm-kind-service">
                         <dl class="client-list">
                             <dt style="height: 50px;">구분</dt>
-                            <dd class="full">
+                            <dd class="full" id="select-div">
+                            	<input type="text" class="division" value="1" style="display: none;">
                                 <input type="radio" name="frm-kind-part" class="frm-kind-part" value="1">
                                 칭찬사항
                                 <!-- checked data-parsley-multiple="frm-kind-part" -->
@@ -233,17 +235,18 @@
                                 문의사항
                             </dd>
                             <dt style="height: 50px;">서비스 유형</dt>
-                            <dd class="full">
-								<select name="frm-kind-service-cate">
-                                    <option value="01">놀이시설</option>
-                                    <option value="02">티켓 및 요금관련</option>
-                                    <option value="03">식음료매장</option>
-                                    <option value="04">스마트예매</option>
-                                    <option value="05">단체</option>
-                                    <option value="06">연간이용권</option>
-                                    <option value="07">주차장/정문</option>
-                                    <option value="08">공연</option>
-                                    <option value="09">기타</option>
+                            <dd class="full" id="option-select">
+								<select name="frm-kind-service-cate" class="select-option">
+									
+                                    <option value="놀이시설" id="city">놀이시설</option>
+                                    <option value="티켓 및 요금관련" id="city">티켓 및 요금관련</option>
+                                    <option value="식음료매장" id="city">식음료매장</option>
+                                    <option value="스마트예매" id="city">스마트예매</option>
+                                    <option value="단체" id="city">단체</option>
+                                    <option value="연간이용권" id="city">연간이용권</option>
+                                    <option value="주차장/정문" id="city">주차장/정문</option>
+                                    <option value="공연" id="city">공연</option>
+                                    <option value="기타" id="city">기타</option>
                                 </select>
 							</dd>
                             <dt style="height: 50px;">이름</dt>
@@ -275,14 +278,16 @@
 
 							</dd>
                             <dt style="height: 50px;">성별</dt>
-                            <dd class="full">
-								<input type="radio" name="frm-gender" id="frm-gender" value="M"> 남
-                                <input type="radio" name="frm-gender" id="frm-gender" value="F"> 여
+                            <dd class="full" id="gender-type">
+                            	<input type="text" class="gendername" value="1" style="display: none;">
+								<input type="radio" name="frm-gender" id="frm-gender" value="남"> 남
+                                <input type="radio" name="frm-gender" id="frm-gender" value="여"> 여
                                 <!-- data-parsley-multiple="frm_gender" -->
 
 							</dd>
                             <dt style="height: 50px;">연령</dt>
-                            <dd class="full">
+                            <dd class="full" id="age-type">
+                            	<input type="text" class="age" value="1" style="display: none;">
                                 <input type="radio" name="frm-age" value="10"> 10대
                                 <input type="radio" name="frm_age" value="20"> 20대
                                 <input type="radio" name="frm_age" value="30"> 30대
@@ -293,10 +298,11 @@
                                 <!-- data-parsley-multiple="frm_age" -->
                             </dd>
                             <dt style="height: 50px;">회신방법</dt>
-                            <dd class="full">
-								<input type="radio" name="frm-how-reply" id="frm-how-reply" value="1" checked="" > 이메일
-                                <input type="radio" name="frm-how-reply" id="frm-how-reply" value="2" > 전화
-                                <input type="radio" name="frm-how-reply" id="frm-how-reply" value="3" > 거부
+                            <dd class="full" id="call-type">
+                            	<input type="text" class="call-back" value="이메일" style="display: none;">
+								<input type="radio" name="frm-how-reply" id="frm-how-reply" value="이메일" checked="" > 이메일
+                                <input type="radio" name="frm-how-reply" id="frm-how-reply" value="전화" > 전화
+                                <input type="radio" name="frm-how-reply" id="frm-how-reply" value="거부" > 거부
                                 <!-- data-parsley-multiple="frm_how_reply" -->
 							</dd>
                             <dt style="height: 50px;">제목</dt>
@@ -388,7 +394,7 @@
                     <div class="bottom-left">
                         <div class="information-details-left">
                             <a href="https://www.gjw.co.kr/">
-                                <img src="/main_image/logo_0.jpg" alt="">
+                                <img src="/static/main-image/main-logo/bottom-logo.jpg">
                             </a>
                         </div>
                         <div class="information-details-center">

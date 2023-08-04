@@ -22,4 +22,6 @@ public class AdminPageController {
 	public String loadListModification() {
 		return "auth-notice/notice_list_modification";
 	}
+	
+	
 }
