@@ -311,7 +311,7 @@ function setTotalCount(totalCount) {
 
 
 function getList(data) {
-	let index = 0;
+	let r = 1;
 	
 	setTotalCount(data[0].totalCount);
 	let number = [];
@@ -319,14 +319,20 @@ function getList(data) {
 		let year = content.createDate;
 		let year2 = year.substring(0, 10);
 		console.log(year2);
-		index = index + 1;
 		
-		console.log(index);
+		r--;
+		let codeCode = content.totalCount + r;
+		if(page > 1) {
+			codeCode = content.totalCount + r -((page-1)*10);
+		}
 		
+		console.log(content);
+		console.log(r);
+		console.log(codeCode);
 		
 		const listContent = `
 						<tr>
-                            <td> ${content.noticeCode}</td>
+                            <td> ${codeCode}</td>
                             <td class="subject">
                                 <a href="/notice/notice_list_details">${content.noticeTitle}</a>
                             </td>
@@ -437,6 +443,10 @@ function getList(data) {
 
 
 
+
+
+
+
 function addNoticeList(noticelist) {
 	$.ajax ({
 		type: "post",
@@ -525,4 +535,8 @@ function addCount(i) {
 		})
 }
 
+const createBtn = document.querySelector(".create button");
+createBtn.onclick = () => {
+	location.href = "/auth-notice/notice_list_details";
+}
 

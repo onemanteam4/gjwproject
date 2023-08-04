@@ -11,7 +11,7 @@ public interface NoticeListService {
 	
 	public List<NoticeListRespDto> getNoticeList(int page, int contentCount) throws Exception;
 	
-	public boolean updateList(UpdateNoticeReqDto updateNoticeReqDto) throws Exception;
+	public boolean updateListSet(UpdateNoticeReqDto updateNoticeReqDto) throws Exception;
 	
 	public boolean updateCount(int noticeCode) throws Exception;
 	

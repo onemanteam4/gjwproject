@@ -49,7 +49,7 @@ public class NoticeListServiceImpl implements NoticeListService{
 		return NoticeListRespDtos;
 	}
 	@Override
-	public boolean updateList(UpdateNoticeReqDto updateNoticeReqDto) throws Exception {
+	public boolean updateListSet(UpdateNoticeReqDto updateNoticeReqDto) throws Exception {
 		
 		
 		return noticeListRepository.updateList(updateNoticeReqDto.toEntity())>0 ;

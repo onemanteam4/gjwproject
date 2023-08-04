@@ -66,12 +66,13 @@ public class NoticeListController {
 		return ResponseEntity.ok().body(new CMRespDto<>(1, page + "page list success to load", list));
 	}
 	
-	@PutMapping("/noticelist/update")
-	public ResponseEntity<?> setcompleteNotice(@RequestBody UpdateNoticeReqDto updateNoticeReqDto) {
+	@PutMapping("/noticelist/update/{noticeCode}")
+	public ResponseEntity<?> setcompleteNotice(@PathVariable int noticeCode, @RequestBody UpdateNoticeReqDto updateNoticeReqDto) {
 		boolean status = false;
+		updateNoticeReqDto.setNoticeCode(noticeCode); 
 		
 		try {
-			status = noticeListService.updateList(updateNoticeReqDto);
+			status = noticeListService.updateListSet(updateNoticeReqDto);
 		} catch (Exception e) {
 			e.printStackTrace();
 			return ResponseEntity.ok().body(new CMRespDto<>(-1, "failed", status));

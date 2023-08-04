@@ -7,13 +7,13 @@ import lombok.Data;
 @Data
 public class UpdateNoticeReqDto {
 	private int noticeCode;
-	private String noticeList;
+	private String noticeTitle;
 	
 	
 	public NoticeList toEntity() {
 		return NoticeList.builder()
 				.notice_code(noticeCode)
-				.notice_title(noticeList)
+				.notice_title(noticeTitle)
 				.build();
 	}
 }

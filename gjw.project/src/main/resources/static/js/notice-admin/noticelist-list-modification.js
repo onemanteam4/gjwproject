@@ -117,37 +117,21 @@ function banner () {
 
 const boardBtnSubmit = document.querySelector(".board-btn ul li button");
 const text = document.querySelector(".notice-title");
+let Code = location.pathname.substring(location.pathname.lastIndexOf("/")+1);
 
-
+console.log(Code);
+console.log(text.value);
 boardBtnSubmit.onclick = () => {
 let noticelist = {
+	noticeCode : Code,
 	noticeTitle : text.value
 };
-	console.log(text.value);
-	console.log(noticelist);
-	noticeUpdate(noticelist);
-	console.log("돌아감");
-}
-
-function errorMessage(request, status, error) {
-    alert("요청실패");
-    console.log(request.status);
-    console.log(request.responseText);
-    console.log(error);
-}
-
-console.log(noticeCode);
-
-
-
-function noticeUpdate(noticeCode) {
-	$.ajax ({
+console.log(text.value);
+		$.ajax ({
 		type: "put",
-		url: "/api/v1/noticelist/noticelist/update",
-		data: {
-			noticeCode: noticeCode,
-			noticeTitle : noticelist
-		},
+		url: `/api/v1/noticelist/noticelist/update/${Code}`,
+		data: JSON.stringify(noticelist),
+		contentType:"application/json",
 		async: false,
 		dataType: "json",
 		success : (response) => {
@@ -160,6 +144,39 @@ function noticeUpdate(noticeCode) {
 		error: errorMessage
 	})
 }
+
+function errorMessage(request, status, error) {
+    alert("요청실패");
+    console.log(request.status);
+    console.log(request.responseText);
+    console.log(error);
+}
+
+
+
+
+
+
+/*function noticeUpdate(noticelist, noticeCode) {
+	$.ajax ({
+		type: "put",
+		url: `/api/v1/noticelist/noticelist/update/${noticeCode}`,
+		data: {
+			noticeCode: noticelist.ListCode,
+			noticeTitle : noticelist
+		},
+		async: false,
+		dataType: "json",
+		success : (response) => {
+			if(response.data) {
+				boardListTable.removeChild(todoContent);
+				console.log(response.data);
+				location.replace("/auth-notice/notice_list_admin");
+			}
+		},
+		error: errorMessage
+	})
+}*/
 
 
 
