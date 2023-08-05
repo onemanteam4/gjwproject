@@ -27,6 +27,8 @@ public class Attraction {
 	private String ride_extra;
 	private int ride_stop;
 	private String location_name;
+	private int file_code;
+	private String file_name;
 	
 
 	
@@ -48,6 +50,8 @@ public class Attraction {
 									ride_location_code.equals("4") ? "위자드가든" : "")
 				.rideBoardingNum(ride_boarding_num)
 				.rideExtra(ride_extra)
+				.fileCode(file_code)
+				.fileName(file_name)
 				.build();
 	}
 	

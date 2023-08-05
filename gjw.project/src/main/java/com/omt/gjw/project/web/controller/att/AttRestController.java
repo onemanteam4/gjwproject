@@ -11,10 +11,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.omt.gjw.project.service.attraction.AttFoodService;
 import com.omt.gjw.project.service.attraction.AttService;
 import com.omt.gjw.project.web.dto.CMRespDto;
-import com.omt.gjw.project.web.dto.att.AttReqDto;
+import com.omt.gjw.project.web.dto.att.AttFacilityRespDto;
 import com.omt.gjw.project.web.dto.att.AttRespDto;
+import com.omt.gjw.project.web.dto.att.AttSearchReqDto;
+import com.omt.gjw.project.web.dto.att.AttfoodRespDto;
 import com.omt.gjw.project.web.dto.att.CourseRespDto;
 
 import lombok.RequiredArgsConstructor;
@@ -26,12 +29,23 @@ import lombok.extern.slf4j.Slf4j;
 public class AttRestController {
 	
 	private final AttService attService;
-
-	@Value("${file.path}")
-	private String filePath;
-	
+	private final AttFoodService attFoodService;
 
 	
+	@GetMapping("/mainride/{rideCode}")
+	public ResponseEntity<?> mainatt(@PathVariable int rideCode){
+		
+		List<AttRespDto> mainLists = null;
+		
+		try {
+			mainLists = attService.getmainList(rideCode);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return ResponseEntity.ok().body(new CMRespDto<>(-1,  "failed", mainLists));	
+		}
+		return ResponseEntity.ok().body(new CMRespDto<>(1, "success", mainLists));	
+	}
 	
 	@GetMapping("/attraction/{rideCode}")
 	public ResponseEntity<?> getattlist(@PathVariable int rideCode) {
@@ -50,7 +64,23 @@ public class AttRestController {
 		
 	}
 	
-	@GetMapping("/kdh-amusement/RcdCourse/{rideThemeCode}")
+	@GetMapping("/mainride/search")
+	public ResponseEntity<?> getsearch(AttSearchReqDto attSearchReqDto){
+		
+		List<AttRespDto> attRespDtos = null;
+		
+		try {
+			attRespDtos = attService.getSearchList(attSearchReqDto);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return ResponseEntity.ok().body(new CMRespDto<>(-1, "failed", attRespDtos));
+		}
+		
+		return ResponseEntity.ok().body(new CMRespDto<>(1, "success", attRespDtos));
+	}
+	
+	
+	@GetMapping("/RcdCourse/{rideThemeCode}")
 	public ResponseEntity<?> getcourse(@PathVariable int rideThemeCode) {
 		
 		List<CourseRespDto> courseList = null;
@@ -62,11 +92,39 @@ public class AttRestController {
 			return ResponseEntity.ok().body(new CMRespDto<>(-1, "failed", courseList));
 		}
 		return ResponseEntity.ok().body(new CMRespDto<>(1, "success", courseList));
+
 	}
 	
+	@GetMapping("/attfood/{snackCode}")
+	public ResponseEntity<?> getfood(@PathVariable int snackCode){
+		
+		List<AttfoodRespDto> foodList = null;
+		
+		try {
+			foodList = attFoodService.getfoodList(snackCode);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return ResponseEntity.ok().body(new CMRespDto<>(-1, "failed", foodList));
+		}
+		
+		return ResponseEntity.ok().body(new CMRespDto<>(1, "success", foodList));
+	}
 	
-	
-	
+	@GetMapping("/attservice/{serviceCode}")
+	public ResponseEntity<?> getfacility(@PathVariable int serviceCode){
+		
+		List<AttFacilityRespDto> facilList = null;
+				
+		try {
+			facilList = attFoodService.getfacil(serviceCode);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return ResponseEntity.ok().body(new CMRespDto<>(-1, "failed", facilList));
+		}
+		
+		return ResponseEntity.ok().body(new CMRespDto<>(1, "success", facilList));
+	}
 	
 	
 }

@@ -24,5 +24,7 @@ public class AttRespDto {
 	private String rideExtra;
 	private int rideStop;
 	private String locationName;
+	private int fileCode;
+	private String fileName;
 	
 }

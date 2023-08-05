@@ -966,9 +966,10 @@ body {
     text-align: center;
 }
 
-.add-ButtonArea span {
+.add-ButtonArea button {
     display: inline-block;
     height: 50px;
+ 
     line-height: 46px;
     padding: 0 63px 0 33px;
     border: 1px solid #000000;
@@ -979,6 +980,7 @@ body {
     background-repeat: no-repeat;
     background-position: top -702px right -240px;
     cursor: pointer;
+    
 }
 
 
