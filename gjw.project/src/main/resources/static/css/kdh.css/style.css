@@ -13,6 +13,8 @@ body, div, ul, li, h1, h2, h3, h4, h5, span, p, dl, dd, dt {
 }
 
 body {
+    min-height: 100%;
+    position: relative;
     box-sizing: border-box;
     letter-spacing: -1px;
     line-height: 1.4;

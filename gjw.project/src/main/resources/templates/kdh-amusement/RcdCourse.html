@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>추천코스 | 꿈, 사랑, 행복의 경주월드!</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <link rel="stylesheet" href="/static/css/kdh.css/RcdCourse.css">
     <link rel="stylesheet" href="/static/css/kdh.css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -406,30 +407,30 @@
                         <p>더욱 즐겁게 즐기실 수 있는 테마별 코스를 추천해 드립니다.</p>
                     </h4>
                     <ul>
-                        <li>
-                            <a href="">
-                            <img src="/static/img-kdh/restimg/family_2.png" onmouseover="this.src='/static/img-kdh/restimg/family_1.png'" onmouseout="this.src='/static/img-kdh/restimg/family_2.png'">
-                            </a>
+                        <li class="ThemeClick">
+                           
+                            <img id="Click1" src="/static/img-kdh/restimg/family_1.png" onmouseover="this.src='/static/img-kdh/restimg/family_2.png'" onmouseout="this.src='/static/img-kdh/restimg/family_1.png'">
+                            
                         </li>
-                        <li>
-                            <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0100/course/2">
-                                <img src="/static/img-kdh/restimg/friend_1.png" onmouseover="this.src='/static/img-kdh/restimg/friend_2.png'" onmouseout="this.src='/static/img-kdh/restimg/friend_1.png'">
-                            </a>
+                        <li class="ThemeClick">
+                           
+                                <img id="Click2" src="/static/img-kdh/restimg/friend_1.png" onmouseover="this.src='/static/img-kdh/restimg/friend_2.png'" onmouseout="this.src='/static/img-kdh/restimg/friend_1.png'">
+                            
                         </li>
-                        <li>
-                            <a href="">
-                                <img src="/static/img-kdh/restimg/couple_1.png" onmouseover="this.src='/static/img-kdh/restimg/couple_2.png'" onmouseout="this.src='/static/img-kdh/restimg/couple_1.png'">
-                            </a>
+                        <li class="ThemeClick">
+                        
+                                <img id="Click3" src="/static/img-kdh/restimg/couple_1.png" onmouseover="this.src='/static/img-kdh/restimg/couple_2.png'" onmouseout="this.src='/static/img-kdh/restimg/couple_1.png'">
+                            
                         </li>
-                        <li>
-                            <a href="">
-                                <img src="/static/img-kdh/restimg/thrili_1.png" onmouseover="this.src='/static/img-kdh/restimg/thrili_2.png'" onmouseout="this.src='/static/img-kdh/restimg/thrili_1.png'">
-                            </a>
+                        <li class="ThemeClick">
+                            
+                                <img id="Click4" src="/static/img-kdh/restimg/thrili_1.png" onmouseover="this.src='/static/img-kdh/restimg/thrili_2.png'" onmouseout="this.src='/static/img-kdh/restimg/thrili_1.png'">
+                            
                         </li>
-                        <li>
-                            <a href="">
-                                <img src="/static/img-kdh/restimg/rain_1.png" onmouseover="this.src='/static/img-kdh/restimg/rain_2.png'" onmouseout="this.src='/static/img-kdh/restimg/rain_1.png'">
-                            </a>
+                        <li class="ThemeClick">
+                            
+                                <img id="Click5" src="/static/img-kdh/restimg/rain_1.png" onmouseover="this.src='/static/img-kdh/restimg/rain_2.png'" onmouseout="this.src='/static/img-kdh/restimg/rain_1.png'">
+                            
                         </li>
                     </ul>
                 </div>
@@ -437,47 +438,48 @@
             <div class="WrapWidth-2">
                 <div id="RecommendedCourseList">
                     <h5>
-                        <b></b>끼리
+                        <b>가족</b>끼리
                     </h5>
                     <div class="CourseList">
                         <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/50">
-                            <div class="photo" style="background-image: url(/static/img-kdh/attration/attvalkyrie/view1_2.gif);"> </div>
+                            <div class="photo" style="background-image: url(/static/img-kdh/attration/attvalkyrie/view1_2.gif);"> </div> 
                             <div class="title">
-                                <span class="name"></span>
+                                <span class="name">발키리</span>
                             </div>
                             <div class="zone">
-                                <span class="name"></span>
+                                <span class="name">드라켄벨리</span>
                             </div>
                             <div class="num"> 01 </div>
                         </a>
                     </div>
                     <div class="CourseList">
                         <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/23">
-                            <div class="photo" style="background-image: url(/static/img-kdh/attration/attmiro/view21_2.jpg);"> </div>
+                            <div class="photo" style="background-image: url(/static/img-kdh/attration/attmiro/view21_2.jpg
+                            );"> </div> 
                             <div class="title">
-                                <span class="name"></span>
+                                <span class="name">미로탐험</span>
                             </div>
                             <div class="zone">
-                                <span class="name"></span>
+                                <span class="name">놀이기구</span>
                             </div>
                             <div class="num"> 02 </div>
                         </a>
                     </div>
                     <div class="CourseList">
                         <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/23">
-                            <div class="photo" style="background-image: url(/static/img-kdh/attration/attbiryongtrain/view20_2.jpg);"> </div>
+                             <div class="photo" style="background-image: url(/static/img-kdh/attration/attfamilybaiking/view18_2.jpg);"> </div>
                             <div class="title">
-                                <span class="name"></span>
+                                <span class="name">패밀리 바이킹</span>
                             </div>
                             <div class="zone">
-                                <span class="name"></span>
+                                <span class="name">놀이기구</span>
                             </div>
                             <div class="num"> 03 </div>
                         </a>
                     </div>
                     <div class="CourseList">
                         <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/23">
-                            <div class="photo" style="background-image: url(/static/img-kdh/attration/attballhouse/view7_2.jpg);"> </div>
+                              <div class="photo" style="background-image: url(/static/img-kdh/attration/attballhouse/view7_2.jpg);"> </div> 
                             <div class="title">
                                 <span class="name">트리키리키의 볼하우스</span>
                             </div>
@@ -489,7 +491,7 @@
                     </div>
                     <div class="CourseList">
                         <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/23">
-                            <div class="photo" style="background-image: url(/static/img-kdh/attration/attwizardtrain/view8_2.jpg);"> </div>
+                             <div class="photo" style="background-image: url(/static/img-kdh/attration/attwizardtrain/view8_2.jpg);"> </div> 
                             <div class="title">
                                 <span class="name">드롤의 위자드트레인</span>
                             </div>
@@ -501,7 +503,7 @@
                     </div>
                     <div class="CourseList">
                         <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/23">
-                            <div class="photo" style="background-image: url(/static/img-kdh/attration/attpumpkin/view9_2.jpg);"> </div>
+                             <div class="photo" style="background-image: url(/static/img-kdh/attration/attpumpkin/view9_2.jpg);"> </div>
                             <div class="title">
                                 <span class="name">글린다의 매직펌킨</span>
                             </div>
@@ -513,7 +515,7 @@
                     </div>
                     <div class="CourseList">
                         <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/23">
-                            <div class="photo" style="background-image: url(/static/img-kdh/attration/attsparkymagiccar/view13_2.jpg);"> </div>
+                             <div class="photo" style="background-image: url(/static/img-kdh/attration/attsparkymagiccar/view13_2.jpg);"> </div>
                             <div class="title">
                                 <span class="name">스파키의 매직카</span>
                             </div>
@@ -525,7 +527,7 @@
                     </div>
                     <div class="CourseList">
                         <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/23">
-                            <div class="photo" style="background-image: url(/static/img-kdh/attration/attairballoon/view24_2.jpg);"> </div>
+                          <div class="photo" style="background-image: url(/static/img-kdh/attration/attairballoon/view24_2.jpg);"> </div>
                             <div class="title">
                                 <span class="name">에어벌룬</span>
                             </div>
@@ -535,28 +537,28 @@
                             <div class="num"> 08 </div>
                         </a>
                     </div>
-                    <div class="CourseList">
+                   <div class="CourseList">
                         <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/23">
-                            <div class="photo" style="background-image: url(/static/img-kdh/attration/attdancingcup/view26_2.jpg);"> </div>
+                              <div class="photo" style="background-image: url(/static/img-kdh/attration/attdancingcup/view26_2.jpg);"> </div> 
                             <div class="title">
                                 <span class="name">댄싱컵</span>
                             </div>
                             <div class="zone">
                                 <span class="name">놀이기구</span>
                             </div>
-                            <div class="num"> 09 </div>
+                            <div class="num"> 04 </div>
                         </a>
                     </div>
                     <div class="CourseList">
                         <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/23">
-                            <div class="photo" style="background-image: url(/static/img-kdh/attration/attfamilytrain/view19_2.jpg);"> </div>
+                              <div class="photo" style="background-image: url(/static/img-kdh/attration/attfamilytrain/view19_2.jpg);"> </div> 
                             <div class="title">
                                 <span class="name">가족열차</span>
                             </div>
                             <div class="zone">
                                 <span class="name">놀이기구</span>
                             </div>
-                            <div class="num"> 10 </div>
+                            <div class="num"> 04 </div>
                         </a>
                     </div>
                 </div>
@@ -672,5 +674,8 @@
         </div>
     </div>
     <!-- 하단 바 끝 -->
+    <script src="/static/attraction/js/theme.js"></script>
+    <script src="/static/attraction/js/course.js"></script>
+    
 </body>
 </html>

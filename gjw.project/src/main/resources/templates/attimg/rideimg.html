@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 테스트</title>
+</head>
+<body>
+	<div>
+		<h1>파일 올리기</h1>
+	</div>
+	<article>
+    <form enctype="multipart/form-data">
+    <table>
+    	<tr>
+    		<th>일단 해봅니다</th>
+    		<td><input type="text" name="imgTitle"></td>
+    	</tr>
+    	
+    	<input type="text" name="filename">
+        <input type="file" class="ride-file" name="file" multiple="multiple" accept=".jpg, .png, .jpeg, .git, .pdf">
+		<input type="submit" name="submit">
+        <div style="background-image: url(/static/img-kdh/attraction/view1_1.gif);"></div>
+    </table>
+        
+    </form>
+    </article>
+    <script type="text/javascript" src="/static/attraction/js/imgtest.js"/></script>
+</body>
+	
+</html>

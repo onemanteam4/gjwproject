@@ -19,16 +19,21 @@
 		rm.ride_location_code,
 		rm.ride_boarding_num,
 		rm.ride_extra,
-		rld.location_name
+		rld.location_name,
+		rfd.file_code,
+		rfd.file_name
 	FROM
 		ride_mst rm
-
+	
 		LEFT OUTER JOIN ride_location_dtl rld ON(rm.ride_location_code = rld.ride_location_code)
+		LEFT OUTER JOIN ride_file_dtl rfd ON(rfd.ride_code = rm.ride_code)
 	WHERE
 		rm.ride_code = #{rideCode}
   	</select>
   	
-  	<select id="getRcdList" parameterType="String" resultType="com.omt.gjw.project.domain.att.RcdCourse">
+  	
+  	
+  	<select id="getRcdList" parameterType="Integer" resultType="com.omt.gjw.project.domain.att.RcdCourse">
 		SELECT
 			rm.ride_code,
 			rm.ride_name,
@@ -38,25 +43,75 @@
 			rm.ride_theme_thrill,
 			rm.ride_theme_rain,
 			rm.ride_location_code,
-			rld.location_name
+			rld.location_name,
+			rtd.ride_theme_code,
+			rtd.ride_stop,
+			rtd.theme_name
 			
 		FROM
 			ride_mst rm
-			
 			LEFT OUTER JOIN ride_location_dtl rld ON(rld.ride_location_code = rm.ride_location_code)
-					
+			LEFT OUTER JOIN ride_theme_dtl rtd ON(rtd.ride_stop = rm.ride_stop)
 		
 		where
-		 		1 = 1
-			<choose>
-				<when test='item.equals("rideThemeFamily")'>
-					item = #{ride_theme_family}
-				</when>
-			</choose>
+			rtd.ride_theme_code &gt;= 1 AND rtd.ride_theme_code &lt;= 5
 			
-			
-  	</select>
+			</select>
   	
-  	
+	<select id="getMainList" parameterType="Integer" resultType="com.omt.gjw.project.domain.att.MainAtt">
+			SELECT 
+					rm.ride_code,
+					rm.ride_name,
+					rm.ride_explanation,
+					rm.ride_theme_family,
+					rld.location_name,
+					rm.ride_theme_friend,
+					rm.ride_theme_couple,
+					rm.ride_theme_thrill,
+					rm.ride_theme_rain,
+					rm.ride_height_min,
+					rm.ride_height_max,
+					rm.ride_location_code,
+					rm.ride_boarding_num,
+					rm.ride_extra
+
+	
+			FROM
+					ride_mst rm
+					LEFT OUTER JOIN ride_location_dtl rld ON( rm.ride_location_code = rld.ride_location_code)
+	
+	
+
+			WHERE
+					rm.ride_code = #{rideCode}
+	
+	</select>
+	
+	<select id="getSearchList" parameterType="com.omt.gjw.project.domain.att.MainAtt" resultType="com.omt.gjw.project.domain.att.MainAtt">
+			SELECT 
+					rm.ride_code,
+					rm.ride_name,
+					rm.ride_explanation,
+					rm.ride_theme_family,
+					rld.location_name,
+					rm.ride_theme_friend,
+					rm.ride_theme_couple,
+					rm.ride_theme_thrill,
+					rm.ride_theme_rain,
+					rm.ride_height_min,
+					rm.ride_height_max,
+					rm.ride_location_code,
+					rm.ride_boarding_num,
+					rm.ride_extra
+
+	
+			FROM
+					ride_mst rm
+					LEFT OUTER JOIN ride_location_dtl rld ON( rm.ride_location_code = rld.ride_location_code)
+					
+	
+	</select>
+	
+	
   	
   </mapper>

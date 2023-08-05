@@ -6,12 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class AttPageController {
 	
-	@GetMapping("/kdh-amusement/attraction")
-	public String loadAttraction() {
-		return "/kdh-amusement/attraction";
-	}
 	
-	@GetMapping("/kdh-amusement/RcdCourse")
+	@GetMapping("/rcdcourse")
 	public String loadRcdCourse() {
 		return "/kdh-amusement/RcdCourse";
 	}
@@ -21,5 +17,25 @@ public class AttPageController {
 		return "/viewpage/attview50";
 	}
 	
+	@GetMapping("/course/{courseNum}")
+	public String loadcourse() {
+		return "/kdh-amusement/RcdCourse";
+	}
+	
+	@GetMapping("/mainattraction")
+	public String loadMain() {
+		return "/kdh-amusement/attraction";
+	}
+	
+	@GetMapping("/attfood")
+	public String loadfood() {
+		return "/kdh-amusement/attfood";
+	}
+	
+	@GetMapping("/attservice")
+	public String loadservice() {
+		return "/kdh-amusement/attfacility";
+	}
+
 	
 }
