@@ -41,7 +41,7 @@ public class CreateClientDto {
 	private String clientFile;
 	
 	
-	@AssertTrue(message = "필수약관에 동의하지 않았습니다.") 
+	@AssertTrue(message = "필수약관에 동의하지 않았습니다.")
 	private boolean checkagreeFlag;
 	 
 	

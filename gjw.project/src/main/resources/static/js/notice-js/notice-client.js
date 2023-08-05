@@ -119,8 +119,39 @@ const clientListInput = document.querySelectorAll(".client-list dd input");
 const agree = document.querySelector("#agree");
 
 
+
+var Value = "놀이기구";
+function func() {
+	var selectOption = document.getElementById("select-option");
+	
+	var selectedValue = selectOption.options[selectOption.selectedIndex].value;
+	
+	Value = selectedValue;
+	
+
+	
+}
+
+	var check = false;
+agree.onclick = () => {
+	const checkbox = document.getElementById("agree");
+	
+	const is_checked = checkbox.checked;
+	
+	check = is_checked;
+	
+	console.log(check);
+	
+	
+}
+
+
+
+
 up.onclick = () => {
-	console.log(clientListInput.length);
+	console.log(check);
+	
+	console.log(Value);
 	console.log(clientListInput[0].value);
 	console.log(clientListInput[1].value);
 	console.log(clientListInput[2].value);
@@ -133,6 +164,7 @@ up.onclick = () => {
 	console.log(clientListInput[9].value);
 	console.log(clientListInput[10].value);
 	console.log(clientListInput[24].value);
+	console.log(clientListInput[25].value);
 	console.log(callBack.value);
 	console.log(age.value);
 	console.log(division.value);
@@ -142,23 +174,47 @@ up.onclick = () => {
 const frmContent = document.querySelector("#frm-content");	
 
 	
-	console.log(target.value);
+	
 	let clientData = {
 		clientDivision : division.value,
-		clientService : target.value,
-		clientName : clientListInput[4].value,
-		visitDay : clientListInput[5].value,
-		clientEmail : clientListInput[6].value,
-		clientPhone : clientListInput[7].value,
+		clientService : Value,
+		clientName : clientListInput[5].value,
+		visitDay : clientListInput[6].value,
+		clientEmail : clientListInput[7].value,
+		clientPhone : clientListInput[8].value,
 		clientGender : gendername.value,
 		clientAge : age.value,
 		callBack : callBack.value,
-		clientTitle : clientListInput[23].value,
+		clientTitle : clientListInput[24].value,
 		clientContent : frmContent.value,
-		clientFile : clientListInput[24].value,
-		checkagreeFlag : agree.value
+		clientFile : clientListInput[25].value,
+		
+		checkagreeFlag : check
 		
 	}
+	
+		$.ajax({
+		async: false,
+		type: "post",
+		url: "/api/v1/client/clientup",
+		contentType: "application/json",
+		data: JSON.stringify(clientData),
+		dataType: "json",
+		success: (response) => {
+			if(response.data) {
+				alert("문의성공");
+				
+			}
+		},
+		error: (error) => {
+			if(error.status == 400) {
+				   alert(JSON.stringify(error.responseJSON.data))
+			   }else {
+				   console.log("요청실패");
+				   console.log(error);
+			   }
+		}
+	})
 }
 
 const genderType = document.querySelectorAll("#gender-type input");
@@ -232,6 +288,13 @@ function getCall() {
 		callBack.value = "거부";
 	}
 }
+
+
+
+
+
+
+
 
 
 

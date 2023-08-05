@@ -913,6 +913,8 @@ body {
     width: 100%;
     border-top: 1px solid #868686;
     list-style: none;
+    
+    height: 700px;
 }
 
 .board-write dl dt, .board-write dl dd{
@@ -934,6 +936,8 @@ body {
 .board-write dl.client-list dd.full {
     width: calc(100% - 150px);
 }
+
+
 
 .board-write dl dd input[type="radio"]:first-child {
     margin-left: 0px;
@@ -1001,10 +1005,12 @@ input[type="text"], input[type="password"], input[type="button"], input[type="su
 
 .board-write dl.client-list dd.full-content {
     width: calc(100% - 150px);
-    height: auto;
+    height: 255px;
     line-height: normal;
-    padding: 0px;
+    padding: 0px 30px;
     margin-bottom: 1px;
+    
+    
 }
 
 .board-write dl.client-list dd.full-subject {
