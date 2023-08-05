@@ -25,6 +25,75 @@
 			NOW()
 		);
 	</insert>
-
-
+	<select id="getClientList" parameterType="hashmap" resultType="com.omt.gjw.project.domain.client.Client">
+		SELECT
+			cm.client_code,
+			cm.client_division,
+			cm.client_service,
+			cm.client_name,
+			cm.visit_day,
+			cm.client_email,
+			cm.client_phone,
+			cm.client_gender,
+			cm.client_age,
+			cm.call_back,
+			cm.client_title,
+			cm.client_content,
+			cm.client_file,
+			cm.create_date,
+			cm.update_date,
+			
+			tt.total_count
+		FROM
+			client_mst cm
+			LEFT OUTER JOIN (select
+								COUNT(*) AS total_count
+							from
+								client_mst) tt ON(1 = 1)
+			
+		ORDER by
+			client_code DESC
+		limit
+			#{totalPage}, #{count};
+			
+	</select>
+	<delete id="clientDelete" parameterType="Integer">
+		delete
+		from
+			client_mst
+		where
+			client_code = #{client_code}
+	</delete>
+	<select id="getClientDetails" parameterType="Integer" resultType="com.omt.gjw.project.domain.client.Client">
+		SELECT
+			cm.client_code,
+			cm.client_division,
+			cm.client_service,
+			cm.client_name,
+			cm.visit_day,
+			cm.client_email,
+			cm.client_phone,
+			cm.client_gender,
+			cm.client_age,
+			cm.call_back,
+			cm.client_title,
+			cm.client_content,
+			cm.client_file,
+			cm.create_date,
+			cm.update_date,
+			
+			tt.total_count
+		FROM
+			client_mst cm
+			LEFT OUTER JOIN (select
+								COUNT(*) AS total_count
+							from
+								client_mst) tt ON(1 = 1)
+			
+		WHERE
+			client_code = #{client_code}
+			
+	</select>
+	
+	
 </mapper>

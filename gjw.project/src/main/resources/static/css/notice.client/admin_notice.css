@@ -749,356 +749,257 @@ body {
     background-position: -3px -503px;
 }
 
-#wrap-print {
-    margin: 0px;
-    padding: 0px;
-}
-
-.client-wrap-width {
-    margin: 0px auto;
+.board-wrap-width {
+    margin: 0 auto;
     width: 100%;
     max-width: 1300px;
 }
 
-.board-Agree {
-    margin: 0px;
-    padding: 0px;
-}
-
-.agree-text {
-    border: 1px solid #eee;
-    padding: 40px;
-}
-
-.agree-text table {
-    width: 100%;
-    margin-top: 20px;
-    font-size: 0.89rem;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-}
-
-.agree-text table th:first-child {
-    border: none;
-}
-.agree-text table th {
-    background: #f1f1f1;
-    font-weight: normal;
-    padding: 10px;
-    border-left: 1px solid #ddd;
-}
-
-.agree-text table td:first-child {
-    border: none;
-}
-
-.agree-text table td {
-    padding: 10px;
-    border-left: 1px solid #ddd;
-}
-
-.client-privacy {
-    margin-top: 10px;
-}
-
-.client-privacy i {
-    display: block;
-    color: #868686;
-    font-size: 0.78rem;
-    font-style: normal;
-    font-weight: 300;
-}
-
-.client-privacy a {
-    color: #000;
-    position: relative;
-}
-
-.popup-privacy {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    padding: 24px 24px 56px;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    background: #fff;
-    z-index: 200;
-    font-size: 0.78rem;
-    max-width: 858px;
-    max-height: 426px;
-    display: none;
-}
-
-.popup-text {
-    height: 324px;
-    overflow: auto;
-    white-space: pre-line;
-    margin: 0px 20px;
-    padding-right: 20px;
-    text-align: left;
-}
-
-.popup-text b {
-    display: block;
-    font-size: 1rem;
-}
-
-.close-privacy {
-    color: #fff;
-    padding: 8px 24px;
-    background: #222;
-    margin-top: 22px;
-    display: inline-block;
-}
-
-.board-Agree p {
-    font-size: 1.06rem;
-    color: #010101;
-    padding-bottom: 10px;
-}
-
-.board-Agree p label {
-    cursor: pointer;
-}
-
-/* .board-Agree p input[type='checkbox'] + label::before {
-    content: '';
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    vertical-align: middle;
-    margin: 0px 10px 0px 0px;
-    background-image: url('/static/main-image/notice/notice-client.png');
-    background-repeat: no-repeat;
-    background-position: -29px -536px;
-}
-
-.board-Agree p input[type='checkbox'] + label::after {
-    content: '';
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    vertical-align: middle;
-    margin: 0px 10px 0px 0px;
-    background-image: url('/static/main-image/notice/notice-client.png');
-    background-repeat: no-repeat;
-    background-position: -29px -636px;
-    display: none;
-} */
-.board-Agree p input {
-	display: inline-block;
-    width: 30px;
-    height: 30px;
-    vertical-align: middle;
-    margin: 0px 10px 0px 0px;
-    background-image: url('/static/main-image/notice/notice-client.png');
-    background-repeat: no-repeat;
-    background-position: -29px -536px;
-}
-
-
-
-.board-Agree p b {
-    color: #ed1c24;
-    font-weight: 400;
-}
-
-.board-write {
+.board-information {
     clear: both;
-    padding-bottom: 20px;
-    margin-top: 30px;
+    min-height: 60px;
+    border: 1px solid #c1c2c6;
+    padding: 10px 30px;
+    font-size: 0.78rem;
+    font-weight: 500;
 }
 
-.board-write dl {
-    width: 100%;
-    border-top: 1px solid #868686;
-    list-style: none;
+.board-information form {
+    display: flex;
+    justify-content: space-between;
 }
 
-.board-write dl dt, .board-write dl dd{
+.board-count > ul {
+    width: 250px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+.board-count  ul li{
     float: left;
-    min-height: 50px;
-    line-height: 45px;
-    border-bottom: 1px solid #e9e9e9;
     color: #1d2124;
-    font-weight: 400;
-    font-size: 0.83rem;
-    padding: 0px 30px;
-}
-
-.board-write dl dt {
-    width: 150px;
-    background-color: #f3f3f3;
-}
-
-.board-write dl.client-list dd.full {
-    width: calc(100% - 150px);
-}
-
-.board-write dl dd input[type="radio"]:first-child {
-    margin-left: 0px;
-}
-
-input[type="checkbox"], input[type="radio"] {
-    vertical-align: middle;
-}
-
-.board-write dl dd input[type="radio"] {
-    margin-top: -3px;
-    margin-left: 20px;
-    margin-right: 5px;
-}
-
-.board-write dl dd select {
-    border: 1px solid #dddddd;
-    height: 29px;
-    min-width: 150px;
-    cursor: pointer;
-    vertical-align: middle;
-}
-
-.board-write dl.client-list dd {
-    width: calc(50% - 150px);
-}
-
-.board-write dl dd input[type="text"] {
-    border: 1px solid #dddddd;
-    height: 29px;
-    min-width: 150px;
-}
-
-.error-list {
-    display: none;
-    margin: 15px 0px 0px 5px;
-    list-style-type: none;
-    font-size: 0.9rem;
-    line-height: 0.9rem;
-    position: absolute;
-}
-
-.error-list span {
-    background-color: #F2DEDE;
-    padding: 2px 5px 5px 5px;
-    display: inline-block;
-}
-
-#frm-email {
-    width: 100%;
-    max-width: 320px;
-}
-
-
-input[type="text"], input[type="password"], input[type="button"], input[type="submit"] {
-    border: none;
-    cursor: pointer;
-    vertical-align: middle;
-    appearance: none;
-}
-
-.board-write dl dd.full-subject input[type="text"] {
-    width: 100%;
-}
-
-.board-write dl.client-list dd.full-content {
-    width: calc(100% - 150px);
-    height: auto;
-    line-height: normal;
-    padding: 0px;
-    margin-bottom: 1px;
-}
-
-.board-write dl.client-list dd.full-subject {
-    width: calc(100% - 150px);
-}
-
-
-.board-write dl dd textarea {
-    width: 100%;
-    min-height: 250px;
-    border: 0px solid #c1c2c6;
-    padding: 30px;
-}
-
-.board-write dl dd input[type="file"] {
-    border: 0px solid #dddddd;
-    height: 29px;
-    min-width: 150px;
-    width: 100%;
-}
-
-.board-button {
-    clear: both;
-    padding: 20px 0px 80px 0px;
+    height: 40px;
+    line-height: 40px;
     
 }
 
-.board-button ul {
-    width: 100%;
-    height: 40px;
-    display: flex;
+
+
+.board-count > ul > li:first-child {
+    margin-left: 0px;
+    
 }
 
-.board-button ul li {
-    width: 33.3%;
-    float: left;
+.board-count > ul > li > span {
+    color: #ed1b24;
 }
 
-.board-button ul li:nth-child(2) {
-    text-align: center;
+
+.board-search {
+    float: right;
 }
 
-.board-button ul li input[type="button"].up {
-    border: 1px solid #ed1c24;
-    background-color: #ed1c24;
+.board-search select {
+    height: 37px;
+    line-height: 35px;
+    min-width: 130px;
+    border: 1px solid #c1c2c6;
+    padding-left: 15px;
+
+    appearance: none;
+    background-color: #ffffff;
+    background-image: url('/static/main-image/main-logo/button-collection.png');
+    background-repeat: no-repeat;
+    background-position: top -810px right -250px;
+
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.board-search label {
+    display: none;
+}
+
+.board-search input[type="text"] {
+    height: 37px;
+    line-height: 35px;
+    border: 1px solid #c1c2c6;
+    padding: 0px 15px;
 
     cursor: pointer;
     vertical-align: middle;
     appearance: none;
 }
 
-.board-button ul li input[type="button"] {
+.board-search input[type="submit"] {
+    width: 50px;
+    height: 37px;
+    line-height: 35px;
+    border: 1px solid #ed1c24;
+    background-color: #ed1c24;
+    color: #ffffff;
+    appearance: none;
+}
+
+.board-list {
+    clear: both;
+    padding-top: 20px;
+    color: #1d2124;
+    font-weight: 400;
+    font-size: 0.78rem;
+}
+
+.board-list table {
+    width: 100%;
+    border-top: 1px solid #868686;
+    border-collapse: collapse;
+}
+
+#num {
+    width: 35px;
+}
+
+.file {
+    width: 100px;
+}
+
+.hit {
+    width: 100px;
+}
+
+.write {
+    width: 130px;
+}
+
+.board-list table thead th {
+    background-color: #ebebeb;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #c1c2c6;
+    font-weight: 400;
+
+    padding: 0px;
+}
+
+.board-list table tbody td {
+    height: 30px;
+    padding: 10px 10px;
+    border-bottom: 1px solid #c1c2c6;
+    text-align: center;
+    max-width: 150px;
+    color: #1d2124;
+}
+
+.board-list table tbody tr .subject {
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+
+.subject a {
+    color: #1d2124;
+}
+
+.board-list-pager {
+    clear: both;
+    padding: 20px 0px 80px 0px;
+}
+
+.board-list-pager ul {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.board-list-pager ul li {
+    float: left;
+    letter-spacing: -1px;
+    border: 1px solid #c1c2c6;
+    min-height: 32px;
+    margin-left: 4px;
+}
+
+.board-list-pager ul li:first-child button {
+    text-indent: -9999px;
+}
+
+.board-list-pager ul li button {
+    color: #1d2124;
+    display: inline-block;
+    width: 33px;
+    padding-right: 0px 1px 0px 0px;
+    height: 32px;
+    line-height: 28px;
+    font-size: 0.78rem;
+    
+    border: none;
+    text-align: center;
+    
+    
+}
+
+.board-list-pager ul li.num on{
+    background-color: #ed1c24;
+    border: 1px solid #ed1c24;
+}
+
+.board-list-pager ul .on button {
+    color: #ffffff;
+    background-color: #ed1c24;
+}
+
+.board-list-pager ul li:last-child {
+    background-color: #ebebeb;
+    background-image: url('/static/main-image/main-logo/button-collection.png');
+    background-repeat: no-repeat;
+    background-position: -412px -412px;
+
+}
+.board-list-pager ul li:last-child button {
+    text-indent: -9999px;
+}
+
+
+
+.board-list-pager ul li:first-child {
+    background-color: #ebebeb;
+    background-image: url('/static/main-image/main-logo/button-collection.png');
+    background-repeat: no-repeat;
+    background-position: -212px -412px;
+
+    margin-left: 0px;
+}
+
+.create {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	margin-bottom: 40px;
+}
+
+
+
+.create button {
+	border: 1px solid #ed1c24;
+    background-color: #ed1c24;
+
     height: 40px;
     line-height: 34px;
-    border: 1px solid #a77c52;
-    background-color: #a77c52;
     padding: 0px 30px;
     font-size: 0.89rem;
     font-weight: 500;
     color: #ffffff;
     letter-spacing: -1px;
 }
-
-.board-button ul li:last-child {
-    text-align: right;
-}
-
-.board-write dl.client-list dd.full-content-file {
-    width: calc(100% - 150px);
-    height: auto;
-    line-height: normal;
-    padding: 0px;
-    border: none;
-    margin-bottom: 1px;
-}
-
-.board-write dl.client-list dd.full-content-file-details {
-    width: calc(100% - 150px);
-    height: auto;
-    line-height: normal;
-    padding: 0px;
-    margin-bottom: 1px;
-}
-
-.board-write dl dt.file-details {
-    border: none;
-}
-
-.board-write dl dt.file-details-second {
-    padding-right: 0%;
-}
-
-
-
 
 
 

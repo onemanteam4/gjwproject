@@ -21,6 +21,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class NoticeClientController {
 	private final ClientService clientService;
+	
 	@ValidCheck
 	@PostMapping("/clientup")
 	public ResponseEntity<?> clientup(@RequestBody @Valid CreateClientDto createClientDto, BindingResult bindingResult) {

@@ -3,26 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <title>공지사항 작성</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <link rel="stylesheet" href="/static/css/notice.dyj/notice_style.css">
-    <link rel="stylesheet" href="/static/css/notice.dyj/noticelist_list_admin.css">
+    <link rel="stylesheet" href="/static/css/adminnotice/admin_check.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
-    
     </head>
 <body style="position: relative; min-height: 100%; top: 0px;">
     <!--상단 배너 시작-->
     
-     <th:block th:replace="/mainfragments/mainheader"></th:block>
-     
+    	<th:block th:replace="/mainfragments/mainheader"></th:block>
+    	
     <!--상단 메인 끝-->
     <!--중단 메인 시작-->
     <main>
         <div id="TopLNB" style="top: 0px; background-size: cover; background-position: 50% 50%;">
             <div>
-                <h2>공지사항 관리자 페이지</h2>
+                <h2>고객센터</h2>
                 <div class="TopLocation">
                     <div class="Top-WrapWidth">
                         <ul>
@@ -83,7 +82,7 @@
         <div id="notice-contents">
             <div class="notice-contents-title">
                 <div class="notice-wrap-width">
-                    <h3>Admin공지사항</h3>
+                    <h3>admin 문의 확인페이지</h3>
                     <div class="content-control">
                         <ul>
                             <li class="snslistBtn">
@@ -137,44 +136,75 @@
                     </div>
                 </div>
             </div>
-            <div class="notice-print">
-                <div class="list-wrapwidth">
-                	
-	                   <div class="board-view">
-	                       <dl>
-	                           <dt>
-	                               <label for="notice-title" class="notice-title-name">제목</label>
-	                               <input type="text" class="notice-title" name="noticeTitle">
-	                           </dt>
-	                           <dd class="information">
-	                               <span>2023-07-04</span>
-	                               <span>조회 : 1391</span>
-	                           </dd>
-	                           <dd class="content">
-	                               <div style="text-align: center; margin: 0px auto;">
-	                                   <!-- <textarea name="ir1" id="ir1" style="width: 100%; height: 500px; resize: none; font-size: 18px;" placeholder="내용을 입력하세요"></textarea> -->
-	                               </div>
-	                           </dd>
-	                           <dd class="prev">
-	                               <input type="file" class="notice-file" name="file" multiple="multiple" accept=".jpg, .png, .jpeg, .git, .pdf">
-	                           </dd>
-	                       </dl>
-	                   </div>
-	                   <div class="board-btn">
-	                       <ul>
-	                           <li>
-	                               <button type="submit" class="modification">수정</button>
-	                           </li>
-	                           <li>
-	                               <button type="button" class="submit">작성</button>
-	                           </li>
-	                           <li>
-	                               <button type="submit" class="delete">삭제</button>
-	                           </li>
-	                       </ul>
-	                   </div>
-	            	
+        <div id="wrap-print">
+            <div class="client-wrap-width">
+                <div class="board-write">
+                    <form action="" method="" name="content-frm" class="content-frm" enctype="multipart/form-data">
+                        <!-- data-parsley-validate novalidate 뭔지 모름..-->
+                        <input type="hidden" class="isProcess" name="isProcess" value="write">
+                        <input type="hidden" class="frm-kind-service" name="frm-kind-service">
+                        <dl class="client-list">
+                            <dt style="height: 50px;">구분</dt>
+                            <dd class="full" id="select-div">
+                            	
+                            </dd>
+                            <dt style="height: 50px;">서비스 유형</dt>
+                            <dd class="full" id="option-select">
+								
+							</dd>
+                            <dt style="height: 50px;">이름</dt>
+                            <dd>
+								
+							</dd>
+                            <dt style="height: 50px;">방문일</dt>
+                            <dd>
+                               
+                            </dd>
+                            <dt style="height: 50px;">이메일</dt>
+                            <dd>
+								
+							</dd>
+                            <dt style="height: 50px;">연락처</dt>
+                            <dd>
+								
+							</dd>
+                            <dt style="height: 50px;">성별</dt>
+                            
+							</dd>
+                            <dt style="height: 50px;">연령</dt>
+                            <dd class="full" id="age-type">
+                            	
+                            </dd>
+                            <dt style="height: 50px;">회신방법</dt>
+                            <dd class="full" id="call-type">
+                            	
+							</dd>
+                            <dt style="height: 50px;">제목</dt>
+                            <dd class="full-subject">
+								
+							</dd>
+                            <dt style="height: 255px;">내용</dt>
+                            <dd class="full-content">
+								
+							</dd>
+                            <dt style="height: 50px;" class="file-details">파일첨부</dt>
+                            <dd class="full-content-file">
+								
+							</dd>
+                            <dt style="height: 50px;" class="file-details-second">(이미지만 가능)</dt>
+                            <dd class="full-content-file-details"></dd>
+                        </dl>
+                    </form>
                 </div>
+                <div class="board-button">
+                    <ul>
+                        <li></li>
+                        <li>
+                            <input type="button" value="뒤로가기">
+                        </li>
+                        <li></li>
+                    </ul>
+                </div>    
             </div>
         </div>
     </main>
@@ -231,7 +261,7 @@
                     <div class="bottom-left">
                         <div class="information-details-left">
                             <a href="https://www.gjw.co.kr/">
-                                <img src="/static/main-image/logo.jpg" alt="">
+                                <img src="/static/main-image/main-logo/bottom-logo.jpg">
                             </a>
                         </div>
                         <div class="information-details-center">
@@ -306,6 +336,6 @@
         </div>
     </footer>
     <script src="https://kit.fontawesome.com/ea1271e419.js" crossorigin="anonymous"></script>
-    <script src="/static/js/notice-admin/noticelist-list-admin.js"></script>
+    <script src="/static/js/admin-client/check-admin.js"></script>
 </body>
 </html>

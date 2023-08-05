@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <title>공지사항 작성</title>
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <link rel="stylesheet" href="/static/css/notice.dyj/notice_style.css">
@@ -236,7 +237,7 @@
                             </dd>
                             <dt style="height: 50px;">서비스 유형</dt>
                             <dd class="full" id="option-select">
-								<select name="frm-kind-service-cate" class="select-option">
+								<select name="frm-kind-service-cate" id="select-option" onchange="func()">
 									
                                     <option value="놀이시설" id="city">놀이시설</option>
                                     <option value="티켓 및 요금관련" id="city">티켓 및 요금관련</option>
@@ -248,6 +249,7 @@
                                     <option value="공연" id="city">공연</option>
                                     <option value="기타" id="city">기타</option>
                                 </select>
+                               	<input type="text" class="select-type" value="1" style="display: none;">
 							</dd>
                             <dt style="height: 50px;">이름</dt>
                             <dd>

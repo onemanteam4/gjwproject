@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <title>공지사항 작성</title>
+    <title>Admin 공지사항</title>
     <link rel="stylesheet" href="/static/css/notice.dyj/notice_style.css">
-    <link rel="stylesheet" href="/static/css/notice.dyj/noticelist_list_admin.css">
+    <link rel="stylesheet" href="/static/css/notice.client/admin_notice.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     
     </head>
 <body style="position: relative; min-height: 100%; top: 0px;">
@@ -22,7 +24,7 @@
     <main>
         <div id="TopLNB" style="top: 0px; background-size: cover; background-position: 50% 50%;">
             <div>
-                <h2>공지사항 관리자 페이지</h2>
+                <h2>공지사항 admin 페이지</h2>
                 <div class="TopLocation">
                     <div class="Top-WrapWidth">
                         <ul>
@@ -83,7 +85,7 @@
         <div id="notice-contents">
             <div class="notice-contents-title">
                 <div class="notice-wrap-width">
-                    <h3>Admin공지사항</h3>
+                    <h3>공지사항 admin 페이지</h3>
                     <div class="content-control">
                         <ul>
                             <li class="snslistBtn">
@@ -138,42 +140,82 @@
                 </div>
             </div>
             <div class="notice-print">
-                <div class="list-wrapwidth">
-                	
-	                   <div class="board-view">
-	                       <dl>
-	                           <dt>
-	                               <label for="notice-title" class="notice-title-name">제목</label>
-	                               <input type="text" class="notice-title" name="noticeTitle">
-	                           </dt>
-	                           <dd class="information">
-	                               <span>2023-07-04</span>
-	                               <span>조회 : 1391</span>
-	                           </dd>
-	                           <dd class="content">
-	                               <div style="text-align: center; margin: 0px auto;">
-	                                   <!-- <textarea name="ir1" id="ir1" style="width: 100%; height: 500px; resize: none; font-size: 18px;" placeholder="내용을 입력하세요"></textarea> -->
-	                               </div>
-	                           </dd>
-	                           <dd class="prev">
-	                               <input type="file" class="notice-file" name="file" multiple="multiple" accept=".jpg, .png, .jpeg, .git, .pdf">
-	                           </dd>
-	                       </dl>
-	                   </div>
-	                   <div class="board-btn">
-	                       <ul>
-	                           <li>
-	                               <button type="submit" class="modification">수정</button>
-	                           </li>
-	                           <li>
-	                               <button type="button" class="submit">작성</button>
-	                           </li>
-	                           <li>
-	                               <button type="submit" class="delete">삭제</button>
-	                           </li>
-	                       </ul>
-	                   </div>
-	            	
+                <div class="board-wrap-width">
+                    <div class="board-information">
+                        <form action="" method="" class="search_frm">
+                            <input type="hidden" class="cmsNo">
+                            <input type="hidden" class="bgrp">
+                            <div class="board-count">
+                                <ul>
+                                    <li>
+                                        전체게시물 :
+                                        <span></span>
+                                        건
+                                    </li>
+                                    <li>현재페이지 : 1 / 1</li>
+                                </ul>
+                            </div>
+                            <div class="board-search">
+                                <select name="srl">
+                                    <option value="title">제목</option>
+                                    <option value="name">작성자</option>
+                                </select>
+                                <label for="">검색어 필수</label>
+                                <input type="text" name="stl" class="stl" placeholder="value">
+                                <input type="submit" value="조회">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="board-list">
+                        <table>
+                            <colgroup>
+                                <col class="num">
+                                <col class="subject">
+                                <col class="file">
+                                <col class="hit">
+                                <col class="write">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>번호</th>
+                                    <th>제목</th>
+                                    <th>구분</th>
+                                    <th>삭제</th>
+                                    <th>등록일</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                    
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="board-list-pager">
+                        <div class="list-page">
+                            <ul>
+                                <li class="button-button-left">
+                                    <button type="button"><<</button>
+                                </li>
+                                <li class="button-left">
+                                    <button type="button"><</button>
+                                </li>
+                                <li id="num" class="num on">
+                                    <button type="button">1</button>
+                                </li>
+                                <li id="num" class="num">
+                                    <button type="button">2</button>
+                                </li>
+                                <li id="num" class="num">
+                                    <button type="button">3</button>
+                                </li>
+                                <li class="button-right">
+                                    <button type="button">></button>
+                                </li>
+                                <li class="button-button-right">
+                                    <button type="button">>></button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -306,6 +348,6 @@
         </div>
     </footer>
     <script src="https://kit.fontawesome.com/ea1271e419.js" crossorigin="anonymous"></script>
-    <script src="/static/js/notice-admin/noticelist-list-admin.js"></script>
+    <script src="/static/js/admin-client/client-admin.js"></script>
 </body>
 </html>

@@ -1,5 +1,9 @@
 package com.omt.gjw.project.domain.client;
 
+import java.time.LocalDateTime;
+
+import com.omt.gjw.project.web.dto.noticeclient.ClientRespDto;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -23,4 +27,33 @@ public class Client {
 	private String client_title;
 	private String client_content;
 	private String client_file;
+	
+	private int total_count;
+	
+	private LocalDateTime create_date;
+	private LocalDateTime update_date;
+	
+	
+	
+	public ClientRespDto toListDto() {
+		return ClientRespDto.builder()
+				.clientCode(client_code)
+				.clientDivision(client_division)
+				.clientService(client_service)
+				.clientName(client_name)
+				.visitDay(visit_day)
+				.clientEmail(client_email)
+				.clientPhone(client_phone)
+				.clientGender(client_gender)
+				.clientAge(client_age)
+				.callBack(call_back)
+				.clientTitle(client_title)
+				.clientContent(client_content)
+				.clientFile(client_file)
+				.totalCount(total_count)
+				.createDate(create_date)
+				.updateDate(update_date)
+				.build();
+	}
+	
 }
