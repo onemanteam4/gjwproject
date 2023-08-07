@@ -138,7 +138,7 @@ console.log(text.value);
 			if(response.data) {
 				/*boardListTable.removeChild(todoContent);*/
 				console.log(response.data);
-				location.replace("/auth-notice/notice_list_admin");
+				location.replace("/admin/notice_list_admin");
 			}
 		},
 		error: errorMessage

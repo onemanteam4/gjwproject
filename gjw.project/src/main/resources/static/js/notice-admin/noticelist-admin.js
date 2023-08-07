@@ -309,6 +309,7 @@ function setTotalCount(totalCount) {
 	totalPage = totalCount % 10 == 0 ? totalCount / 10 : Math.floor(totalCount / 10) + 1;
 }
 
+var Countcount = 0;
 
 function getList(data) {
 	let r = 1;
@@ -377,6 +378,9 @@ function getList(data) {
                 <li>현재페이지 : 1 / ${nowCount}</li>
                 `
                 
+
+        Countcount = nowCount;                 
+                
 	buttonRight.onclick = () => {
 		page = page +1;
 		console.log("돈다" + page);
@@ -408,6 +412,8 @@ function getList(data) {
 	}        
                 
 	}
+	
+	
 	console.log("없냐..?"+number[0]);
 	
 	const boardListSelect = document.querySelectorAll(".board-list tbody tr td a");
@@ -432,15 +438,31 @@ function getList(data) {
 		modificationAll[n].onclick = () => {
 			
 			/*noticeUpdate(number[n]);*/
-			location.href = "/auth-notice/notice_list_modification/"+ number[n];
+			location.href = "/admin/notice_list_modification/"+ number[n];
 			console.log(number[n]);
 		}
 	}
 	
 
+        console.log(Countcount);
+        addListBtn(Countcount);
 }
 
 
+console.log(listPage);
+function addListBtn(page) {
+	const ListPager = document.querySelector(".list-page ul");
+	
+	for(let i = 1; i <= page; i++) {
+		const PageNum = `
+		<li id="num" class="num">
+            <button type="button">${i}</button>
+        </li>
+		`
+		
+		ListPager.innerHTML += PageNum;
+	}
+}
 
 
 

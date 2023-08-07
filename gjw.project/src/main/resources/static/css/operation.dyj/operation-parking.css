@@ -10,7 +10,7 @@ body {
     padding: 0px;
     overflow-x: hidden;
     overflow-y: scroll;
-    
+
     font-family: 'Noto Sans KR', sans-serif;
     
     
@@ -249,13 +249,14 @@ body {
 
 .main-top-right ul {
     float: right;
-
+	display: flex;
     
 }
 
 .main-top-list ul li{
     float: left;
     margin-top: 5px;
+    
 }
 
 .main-top-list ul li:first-child a {
@@ -268,20 +269,40 @@ body {
     font-weight: 300;
     font-size: 0.67rem;
     margin-left: 14px;
+    display: block;
+    width:100%;
+    
+    padding-top: 5px;
+    
 }
 
 
 
 
-.choice {
+.main-top-list ul li.choice {
     margin-top: 0px;
+    position: relative;
+    top: 0px;
+    
+
+    
+}
+
+.main-top-list ul li.choice a {
+	display: flex;
+	padding-top:10px;
+}
+
+.main-top-list ul li.choice a img.choice-img {
+	height: 22px;
 }
 
 .main-top-search {
     clear: both;
     text-align: right;
     
-
+    position:relative;
+	top:0px;
 
 }
 .main-top-search form {
@@ -876,6 +897,8 @@ body {
     padding-left: 12px;
     line-height: 1.25;
     position: relative;
+    
+    text-align: left;
 }
 
 
