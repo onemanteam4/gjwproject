@@ -422,7 +422,7 @@ function getList(data) {
 		subject[n].onclick = () => {
 			
 			/*noticeUpdate(number[n]);*/
-			location.href = "/auth/auth_client_check/"+ number[n];
+			location.href = "/admin/auth_client_check/"+ number[n];
 			console.log(number[n]);
 		}
 	}

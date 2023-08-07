@@ -288,6 +288,15 @@ body {
     
 }
 
+.main-top-list ul li.choice a {
+	display: flex;
+	padding-top:10px;
+}
+
+.main-top-list ul li.choice a img.choice-img {
+	height: 22px;
+}
+
 .main-top-search {
     clear: both;
     text-align: right;
