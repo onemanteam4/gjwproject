@@ -1,6 +1,5 @@
 package com.omt.gjw.project.service.auth;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Map;
 
@@ -12,11 +11,9 @@ import org.springframework.security.oauth2.core.user.OAuth2User;
 import com.omt.gjw.project.domain.user.User;
 
 import lombok.Data;
-import lombok.extern.slf4j.Slf4j;
 
 
 @Data
-
 public class PrincipalDetails implements UserDetails, OAuth2User{
 	
 	private static final long serialVersionUID = 1L;
@@ -25,13 +22,6 @@ public class PrincipalDetails implements UserDetails, OAuth2User{
 	
 	private User user;
 	private Map<String, Object> attributes;
-	
-
-	
-	
-	
-	
-	
 	
 	public PrincipalDetails(User user) {
 		this.user = user;
@@ -44,15 +34,7 @@ public class PrincipalDetails implements UserDetails, OAuth2User{
 	
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-		Collection<GrantedAuthority> grantedAuthorities = new ArrayList<GrantedAuthority>();
-			System.out.println(user);
-			user.getUserRoles().forEach(role -> {
-				grantedAuthorities.add(() -> role);
-				
-				
-			});
-			System.out.println("hihi: " + grantedAuthorities);
-			return grantedAuthorities;
+		return null;
 	}
 	
 	@Override
