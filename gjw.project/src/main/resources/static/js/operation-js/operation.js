@@ -95,14 +95,10 @@ function banner () {
 //달력
 let nowMonth = new Date();
 let today = new Date();
-let nowYearMonth = new Date();
 
 window.onload = function() {Calendar();}
-/*window.onload = function() {nowMonthYear();}*/
 
 function Calendar() {
-	
-	
     let firstDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth(), 1);
     //시작 전체
     let lastDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth() + 1, 0);
@@ -113,9 +109,10 @@ function Calendar() {
     let calendarMonthLastDate = lastDate.getDate();
     //마지막 일
 
-	
-	
-	
+    console.log(firstDate);
+    console.log(lastDate);
+    console.log(calendarMonthStartDay);
+
     let tbodyCalendar = document.querySelector(".cols2 > table > tbody");
 
     let calendarWeekCount = Math.ceil((calendarMonthStartDay + calendarMonthLastDate) / 7);
@@ -124,19 +121,6 @@ function Calendar() {
 
     let nowRow = tbodyCalendar.insertRow();
 
-	let dayYear = nowYearMonth.getFullYear();
-	let dayMonth = nowYearMonth.getMonth() + 1;
-
-	if(dayMonth < 9) {
-		dayMonth = "0" + dayMonth;
-	}
-    
-	const YearMonth = document.querySelector(".cols2 span.month");
-	
-	YearMonth.innerText = dayYear+"."+dayMonth;
-		
-	
-	
     for(let i = 0; i < calendarMonthStartDay; i++) {
         let nowColum = nowRow.insertCell();
         console.log("실행은 됨.");
@@ -173,18 +157,5 @@ function Calendar() {
             Cols2[i].classList.add("on");
         }
     }
-    
 }
 
-/*function nowMonthYear () {
-	
-	let dayYear = nowYearMonth.getFullYear();
-	let dayMonth = nowYearMonth.getMonth() + 1;
-
-    
-	const YearMonth = document.querySelector(".cols2");
-	
-	YearMonth.innerHTML = `
-		<span class="month">${dayYear}.0${dayMonth}</span>
-	`
-}*/

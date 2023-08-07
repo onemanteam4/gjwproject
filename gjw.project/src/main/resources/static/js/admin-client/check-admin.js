@@ -204,7 +204,7 @@ function errorMessage(request, status, error) {
 const boardButton = document.querySelector(".board-button ul li input");
 
 boardButton.onclick = () => {
-	location.replace("/admin/admin_client");
+	location.replace("/auth/admin_client");
 }
 
 
