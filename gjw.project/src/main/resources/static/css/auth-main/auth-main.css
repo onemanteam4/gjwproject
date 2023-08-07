@@ -1,0 +1,301 @@
+
+body {
+    background-color: #FFFFFF;
+    margin: 0px;
+}
+
+.wrap {
+    max-width: 1280px;
+    padding: 0px 40px;
+    margin: 0px auto;
+}
+
+/*헤더*/
+#header {
+    margin-top: 46px;
+}
+
+header h1 {
+    float: left;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header h1 img {
+    width: 160px;
+}
+
+.nav-menu {
+    float: right;
+}
+
+.nav-menu ul{
+    height: 21px;
+
+    list-style: none;
+}
+
+.nav-menu li {
+    float: left;
+    font-size: 14px;
+}
+
+.nav-menu a {
+    color: #333;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.nav-menu img {
+    width: 16px;
+    height: 16px;
+
+}
+
+.nav-menu ul::after {
+    clear: both;
+    display: block;
+    content: '';
+}
+
+header::after {
+    clear: both;
+    display: block;
+    content: '';
+}
+/*헤더 끝*/
+
+/*바디 시작*/
+#container {
+    margin-top: 40px;
+}
+
+.my-info-wrap {
+    height: 75px;
+}
+.my-info-wrap h2 {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 75px;
+}
+
+.my-info {
+    display: inline-block;
+    font-size: 12px;
+    color: #333;
+    margin-left: 10px;
+    padding: 8px 12px;
+    vertical-align: middle;
+    border-radius: 30px;
+    border: 1px solid #aaa;
+    text-decoration: none;
+}
+
+.page-title p {
+    font-size: 21px;
+    color: #aaa;
+}
+
+.contents {
+    margin-top: 40px;
+}
+
+.mypage-contents h3 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.check-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.check-links li {
+    margin: 0px 12px;
+    padding-top: 80px;
+    width: 282px;
+
+    font-size: 12px;
+    text-align: center;
+
+}
+
+.check-links img {
+    display: block;
+    width: 76px;
+    height: 76px;
+    margin: 0px auto;
+}
+
+.check-links b {
+    font-size: 20px;
+}
+
+.check-links p {
+    color: #aaa;
+}
+
+.check-links a {
+    opacity: 0.5;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 32px;
+    background: #F85549;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.my-coupon {
+    margin-top: 70px;
+    padding-top: 40px;
+    border-top: 1px solid #ddd;
+}
+
+.my-coupon h3 {
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: 400;
+}
+
+.my-coupon ul {
+    margin: 8px 0px 12px 0px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.my-coupon .amuse {
+    background-image: url(/static/donguk-img/coupon_amuse.png);
+    background-position: center right;
+    background-repeat: no-repeat;
+    
+}
+
+.inner a {
+    color: #aaa;
+    text-decoration: none;
+}
+
+.inner b {
+    display: block;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.inner p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.inner span {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.my-coupon li {
+    width: 384px;
+    height: 167px;
+    margin: 12px;
+    padding: 20px 78px 20px 20px;
+    font-size: 12px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.my-coupon li .inner::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;    
+    bottom: -0.8px;
+    width: 384px;
+    height: 165px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    z-index: 0;
+}
+
+.my-coupon li::before {
+    content: '';
+    width: 23px;
+    height: 23px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    position: absolute;
+    top: -12px;
+    right: 66px;
+    z-index: 2;
+}
+
+.my-coupon li::after {
+    content: '';
+    width: 23px;
+    height: 23px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    position: absolute;
+    bottom: -12px;
+    right: 66px;
+    z-index: 2;
+}
+
+
+
+
+
+
+/*footer 시작*/
+footer {
+    display: block;
+    font-size: 12px;
+    font-weight: 300;
+    margin: 80px 0px 40px;
+
+    height: 90px;
+}
+
+footer img {
+    width: 80px;
+    display: block;
+}
+
+footer ul {
+    display: block;
+    height: 54px;
+    margin-top: 10px;
+    list-style: none;
+}
+
+footer li {
+    display: list-item;
+    float: left;
+    margin-left: 20px;
+    text-align: center;
+}
+
+footer li:nth-child(1) {
+    margin-left: 0px;
+}
+
+footer li:nth-child(5) {
+    clear: both;
+    margin-left: 0px;
+}
+
+footer li:nth-child(7) {
+    clear: both;
+    margin-left: 0px;
+    color: #aaa;
+    letter-spacing: 0.5px;
+}
