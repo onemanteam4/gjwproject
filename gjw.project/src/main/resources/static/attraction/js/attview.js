@@ -75,6 +75,7 @@ function getatt(attList) {
 	`;
 	
 	facilitymaparea.innerHTML=`
+		<h4>위치정보</h4>
 		<div class="FacilityMap">
                         <img src="/static/img-kdh/attractions/${attList.fileName}_6.jpg" alt="">
                     </div>

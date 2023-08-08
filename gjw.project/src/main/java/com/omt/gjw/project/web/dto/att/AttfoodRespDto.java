@@ -9,5 +9,10 @@ public class AttfoodRespDto {
 	private int snackCode;
 	private String snackName;
 	private String snackExplanation;
-	private int snackSerivce;
+	private String snackService;
+	private int fileNum;
+	private String snackMainFile;
+	private int snackNum;
+	private String snackMenu;
+	private String snackFile;
 }

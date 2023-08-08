@@ -30,7 +30,7 @@ function getfacility(data) {
 		
 		const facilList = `
 			<li class="ContainerRows" id="88">
-                            <a href="">
+                            
                                 <div class="thumWrap">
                                     <div class="photo" style="background-image: url(/static/img-kdh/facility/mainfacil${content.serviceCode}.jpg);"></div>
                                 </div>

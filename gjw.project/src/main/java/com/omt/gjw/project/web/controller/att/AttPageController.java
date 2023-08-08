@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class AttPageController {
 	
 	
-	@GetMapping("/rcdcourse")
+	@GetMapping("/maincourse")
 	public String loadRcdCourse() {
 		return "/kdh-amusement/RcdCourse";
 	}
@@ -27,15 +27,24 @@ public class AttPageController {
 		return "/kdh-amusement/attraction";
 	}
 	
-	@GetMapping("/attfood")
+	@GetMapping("/mainfood")
 	public String loadfood() {
 		return "/kdh-amusement/attfood";
 	}
 	
-	@GetMapping("/attservice")
+	@GetMapping("/mainservice")
 	public String loadservice() {
 		return "/kdh-amusement/attfacility";
 	}
-
+	
+	@GetMapping("/foodview/{snackCode}")
+	public String loadfoodview() {
+		return "/viewpage/foodview";
+	}
+	
+	@GetMapping("/facilityview/{serviceCode}")
+	public String loadfacilityview() {
+		return "/viewpage/facilityview";
+	}
 	
 }

@@ -125,7 +125,7 @@ public class AttServiceImpl implements AttService{
 		}
 		
 		
-		System.out.println(dtos);
+		
 		return dtos;
 	}
 }

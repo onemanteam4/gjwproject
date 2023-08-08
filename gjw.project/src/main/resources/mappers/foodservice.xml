@@ -16,6 +16,26 @@
 		WHERE
 			snack_code = #{snackCode}
 	</select>
+	
+	<select id="FoodViewList" parameterType="Integer" resultType="com.omt.gjw.project.domain.att.AttFood">
+	SELECT
+			snm.snack_code,
+			snm.snack_name,
+			snm.snack_explanation,
+			snm.snack_service,
+			sfd.snack_main_file,
+			sd.snack_menu,
+			sd.snack_file,
+			sd.snack_num
+
+	FROM
+			snack_mst snm
+			LEFT OUTER JOIN snack_file_dtl sfd ON(snm.snack_code = sfd.snack_code)
+			LEFT OUTER JOIN snack_dtl sd ON(snm.snack_code = sd.snack_code )
+	
+	WHERE
+			snm.snack_code = #{snackCode}
+	</select>
 
 
 
@@ -31,4 +51,24 @@
 		WHERE
 			service_code = #{serviceCode}
 	</select>
+	
+	
+	<select id="FacilViewList" parameterType="Integer" resultType="com.omt.gjw.project.domain.att.FacilView">
+	SELECT
+			sm.service_code,
+			sm.service_name,
+			sm.service_explanation,
+			sm.service_service,
+			sfd.file_num,
+			sfd.service_file
+		FROM
+			service_mst sm
+			LEFT OUTER JOIN service_file_dtl sfd ON(sfd.service_code = sm.service_code)
+	
+		WHERE
+			sm.service_code = #{serviceCode}
+	</select>
+	
+	
+	
 </mapper>
