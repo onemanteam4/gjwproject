@@ -50,4 +50,5 @@ public class PaymentRestController {
 		}
 		return ResponseEntity.ok().body(new CMRespDto<>(1, "예매성공", status));
 	}
+	
 }

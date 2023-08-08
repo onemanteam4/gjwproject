@@ -1,5 +1,6 @@
 let prevBtn = document.querySelector(".prev");
 let nextBtn = document.querySelector(".next");
+let inner = document.querySelector(".inner b");
 
 
 window.onload = function() {buildCalendar();}
@@ -13,7 +14,13 @@ today.setHours(0,0,0,0);
 function buildCalendar() {
     let firstDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth(), 1);
     let lastDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth() + 1, 0);
-
+    
+	if(nowMonth.getMonth() < 9) {
+        inner.innerText = nowMonth.getFullYear() + ". 0" + (nowMonth.getMonth() + 1);
+    } else{
+        inner.innerText = nowMonth.getFullYear() + "." + (nowMonth.getMonth() + 1);
+    }     
+    
     let tbody_calenar = document.querySelector(".calendar > tbody");
 
     while(tbody_calenar.rows.length > 0) { //이전에 출력된 행 삭제
@@ -49,9 +56,14 @@ function buildCalendar() {
             nowColum.onclick = function () {choiceDate(nowColum);}
             
         } else {
-            nowColum.className = "futureDay";
-            nowColum.style.cursor = "pointer";
-            nowColum.onclick = function () {choiceDate(nowColum);}
+			if(nowDay.getMonth() > today.getMonth() && nowDay.getDate() > today.getDate()) {
+				nowColum.className = "unable";
+				nowColum.style.opacity = "0.15";
+			}else {
+		        nowColum.className = "futureDay";
+		        nowColum.style.cursor = "pointer";
+		        nowColum.onclick = function () {choiceDate(nowColum);}
+			}
         }
 
     }
@@ -86,7 +98,7 @@ function choiceDate(nowColumn) {
 
 function prevCalendar() {
     nowMonth = new Date(nowMonth.getFullYear(), nowMonth.getMonth() - 1, nowMonth.getDate());   // 현재 달을 1 감소
-		buildCalendar();    // 달력 다시 생성
+	buildCalendar();    // 달력 다시 생성
     let changeCal = document.querySelector(".inner b");
     if(nowMonth.getMonth() < 9) {
         changeCal.innerText = nowMonth.getFullYear() + ". 0" + (nowMonth.getMonth() + 1);
@@ -105,8 +117,6 @@ function nextCalendar() {
     } else{
         changeCal.innerText = nowMonth.getFullYear() + "." + (nowMonth.getMonth() + 1);
     }
-
-    
 }
 /*
 let date = null;

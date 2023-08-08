@@ -89,13 +89,14 @@ header::after {
 }
 
 .search-wrap {
+    width: 100%;
     font-size: 14px;
     padding-left: 180px;
     position: relative;
 }
 
 .day-pick {
-    width: 667px;
+    width: calc(79.51% - 24px);
     float: left;
     margin: 0px 24px;
     position: relative;
@@ -106,7 +107,7 @@ header::after {
 }
 
 .calendar-show {
-    width: 321px;
+    width: calc(50% - 12px);
     margin-left: 24px;
     padding: 5px 36px 5px 8px;
     color: #aaa;
@@ -120,12 +121,197 @@ header::after {
     background-position: center right 12px;
 }
 
+.calendar-show-fir:focus {
+    outline: none;
+}
+
+.calendar-show-sec:focus {
+	    outline: none;
+}
+
+.calendar-show-fir {
+    text-align: center;
+}
+
+.calendar-show-sec {
+    text-align: center;
+}
+
 .day-pick span {
     color: #aaa;
     position: absolute;
     top: 30%;
     left: 50%;
 }
+
+.calendar {
+    position: absolute;
+    top: 30px;
+    left: 250px;
+    right: auto;
+
+    display: inline-block;
+    max-height: 640px;
+    border: 1px solid #aaa;
+    font-size: 14px;
+    line-height: 24px;
+    border-radius: 5px;
+    width: 307px;
+    background: #fff;
+
+    opacity: 1;
+    display: none;
+    z-index: 1;
+}
+
+.calendar-sec {
+    position: absolute;
+    top: 30px;
+    left: 650px;
+    right: auto;
+
+    display: inline-block;
+    max-height: 640px;
+    border: 1px solid #aaa;
+    font-size: 14px;
+    line-height: 24px;
+    border-radius: 5px;
+    width: 307px;
+    background: #fff;
+
+    opacity: 1;
+    display: none;
+    z-index: 1;
+}
+
+.calendar-months {
+    text-align: center;
+}
+
+.pre-month {
+    cursor: pointer;
+    
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 34px;
+    height: 34px;
+    background-image: url(/static/donguk-img/btn_prev.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 12px;
+    z-index: 1;
+
+}
+
+.next-month {
+    cursor: pointer;
+
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 34px;
+    height: 34px;
+    background-image: url(/static/donguk-img/btn_next.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 12px;
+    z-index: 1;
+}
+
+.calendar-month {
+    height: 34px;
+    line-height: 1;
+    text-align: center;
+    position: relative;
+
+    font-size: 20px;
+    font-weight: 300;
+    padding: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+tr {
+    display: table-row;
+    height: 28px;
+}
+
+.calendar tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.calendar tbody  tr th {
+    cursor: pointer;
+}
+
+.calendar-sec tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.calendar-sec tbody  tr th {
+    cursor: pointer;
+}
+
+.pre-month2 {
+    cursor: pointer;
+    
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 34px;
+    height: 34px;
+    background-image: url(/static/donguk-img/btn_prev.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 12px;
+    z-index: 1;
+
+}
+
+.next-month2 {
+    cursor: pointer;
+
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 34px;
+    height: 34px;
+    background-image: url(/static/donguk-img/btn_next.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 12px;
+    z-index: 1;
+}
+
+.choiceDay {
+    background: #569ff7;
+    background-color: #569ff7;
+    color: white !important;
+    border-radius: 50%;
+}
+
+.choiceDay2 {
+    background: #569ff7;
+    background-color: #569ff7;
+    color: white !important;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
 
 .btn-month-wrap {
     width: 180px;
@@ -171,7 +357,7 @@ header::after {
 }
 
 .monthbtn {
-    width: 154px;
+    width: calc(20.48% - 24px);
     font-size: 14px;
     padding: 5px 8px;
     line-height: 20px;
@@ -187,31 +373,116 @@ header::after {
     border-radius: 5px;
 }
 
+.list-wrap {
+    margin-top: 40px;
+}
 
+.ticket-list {
+    border-top: none;
+    font-size: 14px;
+    min-height: 125px;
+    position: relative;
+    padding: 20px 30px 20px 0px;
+}
 
+.ticket-list a {
+    text-decoration: none;
+}
 
+.buy-date {
+    color: #aaa;
+    width: 6.5%;
+    float: left;
+}
 
+.name {
+    width: calc(25.5% - 24px);
+    float: left;
+    margin-left: 24px;
+}
 
+.name p {
+    color: #aaa;
+}
 
+.name strong {
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    line-height: 1.3;
 
+    font-weight: 700;
+}
 
+.ticket-list dl {
+    color: #aaa;
+    width: calc(38.55% - 24px);
+    float: left;
+    margin-left: 24px;
+    padding-top: 20px;
+}
 
+.ticket-list dt {
+    clear: both;
+    float: left;
+}
 
+.ticket-list dd {
+    float: left;
+    margin-left: 10px;
+}
 
+.ticket-list dd::before {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    background: #ddd;
+    margin-right: 10px;
+}
 
+.price {
+    padding-top: 20px;
+    float: right;
+    text-align: right;
+}
 
+.price p {
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+}
 
+.ticket-status {
+    background: #ffe9e8;
+    color: #F85549;
 
+    display: inline-block;
+    min-width: 70px;
+    padding: 4px 0;
+    font-size: 12px;
+    border-radius: 5px;
+    text-align: center;
+}
 
+.ticket-list::after {
+    content: '';
+    display: block;
+    clear: both;
+}
 
-
-
-
-
-
-
-
-
+.ticket-list::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 48px;
+    right: 0;
+    background-image: url(/static/donguk-img/btn_next.png);
+    background-repeat: no-repeat;
+    background-size: 12px;
+}
 
 
 

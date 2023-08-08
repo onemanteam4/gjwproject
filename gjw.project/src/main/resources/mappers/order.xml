@@ -11,6 +11,8 @@
 		(0,
 		#{user_code},
 		#{ticket_code},
+		#{buy_date},
+		#{total_price},
 		#{card_number},
 		#{uniform_b_count},
 		#{uniform_s_count},
@@ -24,5 +26,71 @@
 		NOW()
 	 );	
 	</insert>
+	
+	<select id="checkTicket" parameterType="Integer" resultType="com.omt.gjw.project.domain.payment.Order">
+	SELECT
+		order_code,
+		user_code,
+		buy_date,
+		total_price,
+		card_number,
+		uniform_b_count,
+		uniform_s_count,
+		kb_b_count,
+		kb_s_count,
+		online_b_count,
+		online_m_count,
+		online_s_count,
+		after_b_count,
+		after_s_count
+	FROM
+		order_mst
+	WHERE
+		user_code = #{userCode}
+	ORDER BY
+		buy_date ASC
+	</select>
+	
+	<select id="getTicketInfo" parameterType="Integer" resultType="com.omt.gjw.project.domain.payment.Order">
+	SELECT
+		order_code,
+		user_code,
+		buy_date,
+		total_price,
+		card_number,
+		uniform_b_count,
+		uniform_s_count,
+		kb_b_count,
+		kb_s_count,
+		online_b_count,
+		online_m_count,
+		online_s_count,
+		after_b_count,
+		after_s_count
+	FROM
+		order_mst
+	WHERE
+		order_code = #{orderCode}
+	</select>
+	
+	<select id="getAllTicket" parameterType="String" resultType="com.omt.gjw.project.domain.payment.Order">
+	SELECT
+		order_code,
+		user_code,
+		buy_date,
+		total_price,
+		card_number,
+		uniform_b_count,
+		uniform_s_count,
+		kb_b_count,
+		kb_s_count,
+		online_b_count,
+		online_m_count,
+		online_s_count,
+		after_b_count,
+		after_s_count
+	FROM
+		order_mst
+	</select>
 
 </mapper>

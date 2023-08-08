@@ -1,5 +1,7 @@
 package com.omt.gjw.project.domain.user;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
@@ -13,4 +15,6 @@ public interface UserRepository {
 	public int updateUser(User user) throws Exception;
 	
 	public int deleteUser(int userCode) throws Exception;
+	
+	public List<User> getUserGender(String gender) throws Exception;
 }

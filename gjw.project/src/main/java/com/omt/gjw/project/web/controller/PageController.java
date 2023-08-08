@@ -16,7 +16,15 @@ public class PageController {
 		return "auth/signin";
 	}
 	
+	@GetMapping("/admin/checkUser")
+	public String loadCheckUser() {
+		return "chart/ticket_chart";
+	}
 	
+	@GetMapping("/admin/checkUserGender")
+	public String loadCheckUserGender() {
+		return "chart/user_gender";
+	}
 	
 	
 }

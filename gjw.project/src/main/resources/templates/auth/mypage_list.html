@@ -23,22 +23,104 @@
                     <div class="search-wrap">
                         <div class="day-pick">
                             <div class="calendar-show">
-                                <input type="text">
+                                <input type="text" class="calendar-show-fir" readonly="readonly">
                             </div>
                             <span>~</span>
                             <div class="calendar-show">
-                                <input type="text">
+                                <input type="text" class="calendar-show-sec" readonly="readonly">
                             </div>
                         </div>
+                        <div class="calendar">
+                            <div class="calendar-months">
+                                <span class="pre-month" onclick="prevCalendar();"></span>
+                                <span class="next-month" onclick="nextCalendar()"></span>
+                                <div class="calendar-month">
+                                    <span class="month">7월</span>
+                                    <span class="year">2023</span>
+                                </div>
+                            </div>
+                            <table>
+                                <tr>
+                                    <th>일</th>
+                                    <th>월</th>
+                                    <th>화</th>
+                                    <th>수</th>
+                                    <th>목</th>
+                                    <th>금</th>
+                                    <th>토</th>
+                                </tr>
+                            <tbody class="calendar-tbody">
+                                <tr>
+                                    <th>1</th>
+                                    <th>2</th>
+                                    <th>3</th>
+                                    <th>4</th>
+                                    <th>5</th>
+                                    <th>6</th>
+                                    <th>7</th>
+                                </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                        <div class="calendar-sec">
+                            <div class="calendar-months">
+                                <span class="pre-month2" onclick="prevCalendar2();"></span>
+                                <span class="next-month2" onclick="nextCalendar2()"></span>
+                                <div class="calendar-month">
+                                    <span class="month2">7월</span>
+                                    <span class="year2">2023</span>
+                                </div>
+                            </div>
+                            <table>
+                                <tr>
+                                    <th>일</th>
+                                    <th>월</th>
+                                    <th>화</th>
+                                    <th>수</th>
+                                    <th>목</th>
+                                    <th>금</th>
+                                    <th>토</th>
+                                </tr>
+                            <tbody class="calendar-sec-tbody">
+                                <tr>
+                                    <th>1</th>
+                                    <th>2</th>
+                                    <th>3</th>
+                                    <th>4</th>
+                                    <th>5</th>
+                                    <th>6</th>
+                                    <th>7</th>
+                                </tr>
+                            </tbody>
+                            </table>
+                        </div>
                         <div class="btn-month-wrap">
-                            <button type="button">1개월</button>
-                            <button type="button">3개월</button>
-                            <button type="button">6개월</button>
+                            <button type="button" onclick="changeDate1()">1개월</button>
+                            <button type="button" onclick="changeDate2()">3개월</button>
+                            <button type="button" onclick="changeDate3()">6개월</button>
                         </div>
                         <button type="button" class="monthbtn">검색</button>
                     </div>
                     <div class="list-wrap">
-
+<!--                         <div class="ticket-list">
+                            <a href="/auth/mypage_ticket_info">
+                                <p class="buy-date">2023-08-23</p>
+                                <div class="name">
+                                    <p>예매번호 110101010</p>
+                                    <strong>어뮤즈먼트 이용권 /1매</strong>
+                                </div>
+                                <dl>
+                                    <dt>오후할인권(3시)</dt>
+                                    <dd>대인/청소년 1매</dd>
+                                    <dt>이용기간</dt>
+                                    <dd>2023-08-23~2023-08-23</dd>
+                                </dl>
+                                <div class="price">
+                                    <p>25,400원</p>
+                                    <span class="ticket-status">미사용</span>
+                                </div>
+                            </a>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -56,5 +138,6 @@
             </footer>
         </div>
     </div>
+    <script type="text/javascript" src="/static/user/js/mypage_list.js"></script>
 </body>
 </html>

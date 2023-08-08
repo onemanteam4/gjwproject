@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="/static/user/css/user_style.css">
+    <link rel="stylesheet" href="/static/user/css/mypage_ticket_info.css">
+    <title>티켓 조회</title>
+</head>
+<body>
+    <div id="wrap_containers">
+        <div class="wrap">
+
+            <th:block th:replace="/fragments/header"></th:block>
+
+            <div id="container">
+                <div class="page-title">
+<!--                     <h2>예매조회</h2>
+                    <p>
+                        <span>2023-08-23</span>
+                        에 예약하신 내역이예요.
+                    </p> -->
+                </div>
+                <div class="contents">
+                    <div class="box-wrap">
+                        <section class="left-box">
+                            <h3>어뮤즈먼트 이용권</h3>
+                            <div class="ticket-preview">
+<!--                                 <dl class="ticket-estimate">
+                                    <dt>예매번호</dt>
+                                    <dd>111111111(orderCode)</dd>
+                                    <dt>이용기간</dt>
+                                    <dd>2023-08-23 ~ 2023-08-23</dd>
+                                    <dt class="clear">선택 권종</dt>
+                                    <dd class="option-detail">
+                                        <div class="list">
+                                            <strong>오후 할인권(3시)</strong>
+                                            <p>대인/청소년 1매</p>
+                                            <p>25,400원</p>
+                                            <span class="status">미사용</span>
+                                        </div>
+                                        <div class="btn-wrap">
+                                            <button class="btn-cancel">취소하기</button>
+                                            <button class="btn-varcode">바코드 보기</button>
+                                        </div>
+                                    </dd>
+                                </dl> -->
+                            </div>
+                        </section>
+                        <section class="right-box">
+                            <div class="info-view">
+<!--                                 <h4>방문자 정보</h4>
+                                <dl>
+                                    <dt>이름</dt>
+                                    <dd>신동욱</dd>
+                                    <dt>휴대폰 번호</dt>
+                                    <dd>010-8638-2774</dd>
+                                    <dt>이메일</dt>
+                                    <dd>sdw@gmail.com</dd>
+                                </dl> -->
+                            </div>
+                            <div class="info-view">
+<!--                                 <h4>결제 정보</h4>
+                                <dl>
+                                    <dt>2023-08-23</dt>
+                                    <dd>25,400원</dd>
+                                    <dd class="part-option">
+                                        <dl>
+                                            <dt>결제 수단 : 카카오페이</dt>
+                                            <dd>카카오 머니</dd>
+                                            <dt></dt>
+                                            <dd>결제 상태 : 승인</dd>
+                                        </dl>
+                                    </dd>
+                                    <div class="total">
+                                        <dl>
+                                            <dt>
+                                                <strong>총 결제 잔액</strong>
+                                            </dt>
+                                            <dd>
+                                                <strong>25,400원</strong>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </dl> -->
+                            </div>
+                            <div class="btn-last-wrap">
+                                <a href="/auth/mypage_list" class="btn-back">뒤로가기</a>
+                                <button type="button" class="btn-recipt">영수증 출력</button>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <img src="/static/donguk-img/logo.png" alt="경주월드">
+                <ul>
+                    <li> 경주월드 주식회사(경주지점) </li>
+                    <li> 주소 경주시 보문로 544(천군동) </li>
+                    <li> 대표전화 1544-8765 </li>
+                    <li> 사업자등록번호, 505-85-15586 </li>
+                    <li> 대표이사 정원기, 함영관 </li>
+                    <li> 개인정보관리자 권준오 </li>
+                    <li> ⓒ GyeongjuWorld. All rights reserved. </li>
+                </ul>
+            </footer>
+        </div>
+    </div>
+	<script type="text/javascript" src="/static/user/js/mypage_ticket_info.js"></script>
+</body>
+</html>
