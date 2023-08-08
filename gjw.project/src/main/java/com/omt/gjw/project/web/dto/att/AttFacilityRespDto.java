@@ -9,5 +9,8 @@ public class AttFacilityRespDto {
 	private int serviceCode;
 	private String serviceName;
 	private String serviceExplanation;
-	private int serviceService;
+	private String serviceService;
+	private int fileNum;
+	private String serviceFile;
+	
 }

@@ -458,195 +458,173 @@ body {
     top: 150px;
 }
 #TopLNB {
-    
-    position: absolute;
-    width: 100%;
-    height: 260px;
-    top: -5px;
-    clear: both;
-    background-image: url(/static/img-kdh/restimg/TopLNBimg.jpg);
-    z-index: 101;
-
+    position: relative;
+    background-image: url('/static/img-kdh/restimg/TopLNBimg.jpg');
 }
 
-.backimg {
+#TopLNB > div {
     height: 260px;
     background-color: rgba(0, 0, 0, 0.56);
 }
 
-.backimg h2 {
+#TopLNB h2 {
     font-weight: 500;
-    font-size: 57px;
+    font-size: 2.67rem;
     color: #ffffff;
+    width: 100%;
     text-align: center;
     line-height: 210px;
+    letter-spacing: -2px;
 }
 
-#TopLocation {
+.TopLocation {
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     border-top: 1px solid #959595;
     width: 100%;
     height: 40px;
     background-color: rgba(0, 0, 0, 0.56);
 }
 
-.WrapWidth {
-    margin: 0 auto;
-    margin-left: 180px;
+.Top-WrapWidth {
+    margin: 0px auto;
     width: 100%;
     max-width: 1300px;
 }
 
-.WrapWidth::after {
-    content: "";
-    clear: both;
-    display: block;
-}
-
-
-.first-ul {
-    display: flex;
-
-    margin: 0 auto;
-}
-
-.homeimg {
-    display: inline-block;
-    border-right: 1px solid #959595;
-    width: 40px;
-    height: 39px;
-    background-image: url(/static/img-kdh/restimg/homeimg.png);
-    background-repeat: no-repeat;
-    background-position: 0px -298px;
-}
-.homeimg a {
-    width: 40px;
-    display: inline-block;
-    height: 39px;
-    line-height: 36px;
-    color: #ffffff;
-    padding: 0px 15px;
-    font-size: 15px;
-    text-decoration: none;
-}
-
-.add-menu {
+.Top-WrapWidth > ul > li {
+    float: left;
     border-right: 1px solid #959595;
     width: 185px;
     height: 39px;
-    background-image: url(/static/img-kdh/restimg/sign.png);
+    background-image: url('/static/main-image/main-logo/button-collection.png');
     background-repeat: no-repeat;
     background-position: 145px 0px;
 }
 
-.add-menu span {
+.Top-WrapWidth > ul > li > a {
+    display: inline-block;
+    height: 40px;
+    line-height: 36px;
+    color: #ffffff;
+    padding: 0px 15px;
+    font-size: 0.89rem;
+    width: 100%;
+}
+
+.Top-WrapWidth > ul > li:first-child {
+    width: 40px;
+    background-image: url('/static/main-image/main-logo/glass.png');
+    background-repeat: no-repeat;
+    background-position: 0px -298px;
+}
+ 
+.Top-WrapWidth > ul > li:first-child > a {
+    width: 10px;
+    text-indent: -9999px;
+}
+
+.Top-WrapWidth > ul > li > span {
     display: inline-block;
     height: 40px;
     line-height: 40px;
     color: #ffffff;
-    padding: 0 17px;
+    padding: 0px 17px;
     width: 100%;
     cursor: pointer;
-    font-size: 14px;
-    box-sizing: border-box;
+    font-size: 0.89rem;
+
+    width: 150px;
+    text-align: start;
 }
 
 
-#TopLocation > div > ul > li > div {
-    border: 1px solid #e5e5e5;
+.Top-WrapWidth > ul > li:hover .amusementTab {
+    display: block;
+}
+
+.Top-WrapWidth > ul > li > div {
+    border-left: 1px solid #e5e5e5;
     width: calc(100% + 2px);
     margin-left: -1px;
     border-right: 1px solid #e5e5e5;
     border-bottom: 1px solid #e5e5e5;
     background-color: #ffffff;
-    display: block;
-}
-
-#TopLocation > div > ul > li.add-menu > div {
     display: none;
 }
 
-#TopLocation > div > ul > li.add-menu:hover > div {
-    display: block;
-}
-
-
-.select-menu a:hover {
-    background-color: #959595;
-    color: #ffffff;
-}
-
-
-
-.select-menu a {
+.amusementTab ul li a {
     display: inline-block;
     width: 100%;
     height: 40px;
     line-height: 40px;
     padding-left: 17px;
     color: #555555;
-    font-size: 12.5px;
+    font-size: 0.78rem;
+
+    text-align: start;
 }
 
-#WrapContents {
-    clear: both;
-    min-width: 900px;
-    padding-top: 410px;
-}
 
-#ContentTitle {
+
+.att-title {
     height: 90px;
 }
 
-#ContentTitle div.WrapWidth {
-    margin-left: 230px;
+.att-width {
+    margin: 0px auto;
+    width: 100%;
+    max-width: 1300px;
 }
 
-#ContentTitle h3 {
+.att-width h3 {
     float: left;
     height: 90px;
     width: 30%;
     font-weight: 500;
     color: #252525;
-    font-size: 26.7px;
+    font-size: 1.67rem;
     line-height: 110px;
     letter-spacing: -2px;
 }
 
-.ContentControl {
+.content-control {
     float: right;
     height: 90px;
     width: 70%;
 }
 
-.ContentControl ul {
+.content-control > ul {
     float: right;
     margin-top: 40px;
 }
 
-.snslistBtn {
-    
+.content-control > ul > li:first-child {
+    background-position: -3px -603px;
+}
+
+.content-control > ul > li {
+    float: left;
     display: inline-block;
     height: 32px;
     cursor: pointer;
     margin-left: 5px;
     padding: 0px 10px 0px 28px;
-    background-image: url(/static/img-kdh/restimg/Sharing.png);
-    background-position: -3px -603px;
+    background-image: url('/static/main-image/main-logo/glass.png');
+    background-repeat: no-repeat;
     color: #252525;
-    font-size: 0px;
+    font-size: 0;
     font-weight: 500;
     line-height: 28px;
     position: relative;
 }
 
-.snslist{
+.snslist {
     display: none;
     border: 1px solid #ed1c24;
     position: absolute;
     top: 36px;
-    right: 0px;
+    right: 0;
     width: 264px;
     min-height: 181px;
     background-color: #ffffff;
@@ -654,7 +632,22 @@ body {
     cursor: default;
 }
 
-.close {
+.snslistBtn:hover .snslist{
+    display: block;
+}
+
+
+.snslist > b {
+ display: block;
+ text-align: center;
+ font-size: 0.89rem;
+ color: #000000;
+ height: 40px;
+ line-height: 40px;
+ font-weight: 400;
+}
+
+.snslist > span {
     position: absolute;
     top: 11px;
     right: 8px;
@@ -662,45 +655,86 @@ body {
     width: 18px;
     height: 18px;
     cursor: pointer;
-    background-image: url(/static/img-kdh/restimg/sign.png);
+    background-image: url('/static/main-image/main-logo/button-collection.png');
+    background-repeat: no-repeat;
     background-position: -12px -511px;
-} /* 공유하기 버튼 누르기 */
-
-.clipboardUrlBtn {
-    
-    display: inline-block;
-    height: 32px;
-    cursor: pointer;
-    margin-left: 5px;
-    padding: 0px 10px 0px 28px;
-    background-image: url(/static/img-kdh/restimg/Sharing.png);
-    background-position: -3px -403px;
-    color: #252525;
-    font-size: 0px;
-    font-weight: 500;
-    line-height: 28px;
-    position: relative;
+}
+.snslist > ul {
+    padding: 0px 10px;
 }
 
-.printBtn {
-    
-    display: inline-block;
+.snslist > ul > li {
+    width: 25%;
+    float: left;
+    text-align: center;
+    padding-top: 10px;
+    color: #555555;
+    font-size: 0.65rem;
+    letter-spacing: -2px;
+    font-weight: 300;
+}
+
+.snslist > ul > li > span {
+    display: block;
+    width: 34px;
     height: 32px;
+    margin: 0px auto;
+    border: 1px solid #c1c2c6;
     cursor: pointer;
-    margin-left: 5px;
-    padding: 0px 10px 0px 28px;
-    background-image: url(/static/img-kdh/restimg/Sharing.png);
+    background-image: url('/static/main-image/main-logo/collection.png');
+    background-repeat: no-repeat;
+}
+
+.snslist > ul > li:first-child span{
+    background-color: #448ccb;
+    background-position: 50% -13px;
+}
+
+.snslist > ul > li:nth-child(2) span {
+    background-color: #44c8f5;
+    background-position: 50% -113px;
+}
+
+.snslist > ul > li:nth-child(3) span {
+    background-color: #5ab534;
+    background-position: 50% -213px;
+}
+
+.snslist > ul > li:nth-child(4) span {
+    background-color: #fff413;
+    background-position: 50% -613px;
+}
+
+.snslist > ul > li:nth-child(5) span {
+    background-color: #08ab1e;
+    background-position: 50% -713px;
+}
+
+.snslist > ul > li:nth-child(6) span {
+    background-color: #fae100;
+    background-position: 50% -813px;
+}
+
+.snslist > ul > li:nth-child(7) span {
+    background-color: #02b903;
+    background-position: 50% -913px;
+}
+
+.snslist > ul > li:nth-child(8) span {
+    background-color: #ffffff;
+    background-position: 50% -1013px;
+}
+
+.url-btn {
+    background-position: -3px -403px;
+}
+
+.print {
     background-position: -3px -503px;
-    color: #252525;
-    font-size: 0px;
-    font-weight: 500;
-    line-height: 28px;
-    position: relative;
 }
 
 #WrapPrint {
-    width: 2537px;
-    height: 1680px;
+   margin: 0  auto;
 }
 
 #RecommendedCourse {
@@ -709,7 +743,7 @@ body {
 }
 
 .WrapWidth-1 {
-    margin: 0 190px;
+    margin: 0 auto;
     width: 100%;
     max-width: 1300px;
     padding: 0;
@@ -759,7 +793,7 @@ img {
 }
 
 .WrapWidth-2 {
-    margin: 0 190px;
+    margin: 0 auto;
     width: 100%;
     height: 1300px;
     max-width: 1300px;
@@ -897,211 +931,259 @@ img {
 
 /* 하단 바 시작 */
 
-#WrapBottom {
+#footer-bottom {
     clear: both;
     background-color: #ffffff;
 }
 
-#BottomFNB {
+.footer-category {
     background-color: #2f3336;
     height: 60px;
+    
 }
 
-#BottomSNS ul {
-    height: 0px;
+.footer-category-list {
+    margin: 0px auto;
+    width: 100%;
+    max-width: 1300px;
 }
 
-.Sns-first-li {
-    margin-left: 0px;
-    float: left;
-}
-
-.Sns-Remain-li {
+.bottom-sns ul li {
     float: left;
     margin-left: 15px;
 }
 
-#BottomSNS ul li a {
+
+.bottom-sns ul li:first-child {
+    margin-left: 0px;
+}
+
+.bottom-sns ul li span {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-color: #4589ce;
+    background-image: url('/static/main-image/main-logo/collection.png');
+    background-repeat: no-repeat;
+    background-position: 50% -12px;
+    border-radius: 16px;
+    vertical-align: middle;
+    margin: 0px 10px;
+}
+
+.bottom-sns ul li a {
     display: inline-block;
     height: 60px;
     line-height: 60px;
     font-weight: 300;
     color: #ffffff;
-    font-size: 13px;
+    font-size: 0.83rem;
 }
 
-#BottomSNS ul li span {
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-    background-color: #4589ce;
-    background-image: url(/static/img-kdh/restimg/snsimg.png);
-    background-position: 50% -12px;
-    border-radius: 16px;
-    vertical-align: middle;
-    margin: 0 10px;
-}
-
-#BottomSNS ul li:nth-child(2) span {
+.bottom-sns ul li:nth-child(2) span {
     background-color: #3eb852;
     background-position: 50% -312px;
 }
 
-#BottomSNS ul li:nth-child(3) span {
+.bottom-sns ul li:nth-child(3) span {
     background-color: #7231a3;
     background-position: 50% -412px;
 }
 
-#BottomSNS ul li:nth-child(4) span {
+.bottom-sns ul li:nth-child(4) span {
     background-color: #e62c28;
     background-position: 50% -512px;
 }
 
-#BottomSNS ul li:nth-child(5) span {
+.bottom-sns ul li:nth-child(5) span {
     background-color: #000;
     background-position: 50% -1410px;
 }
 
-#BottomSNS ul li:nth-child(6) span {
+.bottom-sns ul li:nth-child(6) span {
     background-color: #e7b919;
     background-position: 50% -1465px;
 }
 
-#BottomGoTop {
+
+.footer-category-top {
+    
     float: right;
     display: inline-block;
     width: 105px;
     height: 60px;
+    line-height: 60px;
     background-color: #1e2123;
     text-align: center;
     font-weight: 300;
-    font-size: 13px;
+    font-size: 0.75rem;
     color: #ffffff;
-    background-image: url(/static/img-kdh/restimg/sign.png);
+    background-image: url('/static/main-image/main-logo/button-collection.png');
+    background-repeat: no-repeat;
     background-position: 17px -89px;
     padding-left: 20px;
-    padding-top: 22px;
     cursor: pointer;
-}
 
-#BottomContents {
-    width: 2537px;
-    height: 174px;
-}
-
-.WrapWidth-last {
-    width: 1300px;
-    height: 174px;
-    margin: 0px 200px;
-}
-
-#BottomLeft {
     
+    
+}
+
+.company-information-details {
+
+    
+}
+
+
+.bottom-left {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1300px;
+    height: 180px;
+    
+    position: relative;
+}
+
+.information-details-left {
+    margin-top: 33px;
     float: left;
     width: 250px;
+    height: 93px;
 }
 
-#BottomLogo {
-    margin-top: 33px;
-}
-
-#BottomCenter {
+.information-details-center {
     float: left;
-    width: 886px;
-    height: 174px;
+    width: 890px;
+   
 }
 
-#BottomMenu {
-    height: 33px;
+.center-company {
     clear: both;
     padding-top: 33px;
 }
 
-#BottomMenu ul {
-    height: 0px;
+.center-company ul li:first-child {
+    margin-left: 0px;
+    padding-left: 0px;
+    background-image: url('/static/main-image/main-logo/bullet.png');
+    background-repeat: no-repeat;
+    background-position: -11px -2px;
 }
-
-#BottomMenu ul li:first-child {
-    margin-left: 0;
-    padding-left: 0;
-}
-
-#BottomMenu ul li {
+.center-company ul li {
     float: left;
     margin-left: 8px;
     padding-left: 8px;
+    background-image: url('/static/main-image/main-logo/bullet.png');
+    background-repeat: no-repeat;
     background-position: -11px -2px;
 }
 
-#BottomMenu ul li:nth-child(n+2):nth-child(-n+6) {
-background-image: url(/static/img-kdh/restimg/Bottommenu.png);
-}
-
-#BottomMenu ul li a {
+.center-company ul li a {
     color: #707070;
-    font-size: 13px;
+    font-size: 0.83rem;
 }
 
-#BottomMobileLogo {
-    display: none;
-}
-
-#BottomInfomation {
+.center-company-imformation {
     clear: both;
     padding-top: 15px;
 }
 
-#BottomInfomation ul li:first-child {
-    margin-left: 0;
-    padding-left: 0;
+
+.center-company-imformation ul li:first-child {
+    margin-left: 0px;
+    padding-left: 0px;
+    background-image: none;
+
 }
 
-#BottomInfomation ul li {
+.center-company-imformation ul li {
     display: inline-block;
     margin-left: 8px;
     padding-left: 8px;
+    background-image: url('/static/main-image/main-logo/bullet.png');
+    background-repeat: no-repeat;
     background-position: -12px -405px;
     color: #898989;
-    font-size: 13px;
+    font-size: 0.65rem;
 }
 
-#BottomInfomation ul li:nth-child(n+2):nth-child(-n+5) {
-    background-image: url(/static/img-kdh/restimg/Bottommenu.png);
-}
-
-
-#BottomCopyright {
+.bottom-copyright {
     clear: both;
     padding-top: 7px;
     padding-bottom: 50px;
 }
 
-#BottomCopyright ul li {
+.bottom-copyright ul li {
     color: #a1a1a1;
-    font-size: 13px;
+    font-size: 0.75rem;
+    text-align: left;
 }
 
-#BottomRight {
+.right-company-imformation {
     float: left;
+    position: absolute;
+    left: 85%;
 }
 
-#BottomFamily {
+
+.company-family {
     width: 164px;
     height: 36px;
     line-height: 36px;
     border: 1px solid #d6d6d6;
     font-weight: 300;
-    font-size: 13px;
+    font-size: 0.78rem;
     color: #8a8a8a;
     text-align: center;
     margin-top: 30px;
     cursor: pointer;
+    
 }
 
-#BottomFamily ul li {
+.company-family ul li {
     height: 36px;
     line-height: 36px;
-    position: relative;
+    
+}
+
+.company-family ul > li:hover .company-name{
+    display: block;
+    
+}
+
+.company-family ul li div {
+    height: 0;
+    width: calc(100% + 2px);
+    margin-left: -1px;
+    margin-top: -1px;
+    position: absolute;
+    left: 0;
+    bottom: 36px;
+    transition: 0.2s;
+    
+}
+
+.company-name {
+    border-left: 1px solid #d6d6d6;
+    border-right: 1px solid #d6d6d6;
+    display: none;
+}
+
+.company-name li {
+    height: 34px;
+    line-height: 30px;
+    border-bottom: 1px solid #d6d6d6;
+    font-size: 0.67rem;
+    background-color: #ffffff;
+}
+
+.company-name li:first-child {
+    border-top: 1px solid #d6d6d6;
+}
+
+.company-name li a {
+    font-size: 0.67rem;
+    line-height: 30px;
+    
 }
 
 /* 하단 끝 */

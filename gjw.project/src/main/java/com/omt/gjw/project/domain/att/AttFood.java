@@ -15,14 +15,24 @@ public class AttFood {
 	private int snack_code;
 	private String snack_name;
 	private String snack_explanation;
-	private int snack_service;
+	private String snack_service;
+	private int file_num;
+	private String snack_Main_file;
+	private int snack_num;
+	private String snack_menu;
+	private String snack_file;
 	
 	public AttfoodRespDto foodListDto() {
 		return AttfoodRespDto.builder()
 				.snackCode(snack_code)
 				.snackName(snack_name)
 				.snackExplanation(snack_explanation)
-				.snackSerivce(snack_service)
+				.snackService(snack_service.equals("1") ? "운영중" : "")
+				.fileNum(file_num)
+				.snackMainFile(snack_Main_file)
+				.snackNum(snack_num)
+				.snackMenu(snack_menu)
+				.snackFile(snack_file)
 				.build();
 	}
 }

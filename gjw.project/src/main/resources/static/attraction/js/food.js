@@ -30,7 +30,7 @@ function getfood(data) {
 		
 		const foodList = `
 			<li class="ContainerRows" id="93">
-                            <a href="">
+                            
                                 <div class="thumWrap">
                                     <div class="photo" style="background-image: url(/static/img-kdh/food/mainfood${content.snackCode}.jpg);"></div>
                                 </div>

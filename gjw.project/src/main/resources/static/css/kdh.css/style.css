@@ -3,6 +3,8 @@ html {
     overflow-y: scroll;
     overflow-x: auto;
     font-size: 18px;
+    
+    
 }
 
 
@@ -13,12 +15,13 @@ body, div, ul, li, h1, h2, h3, h4, h5, span, p, dl, dd, dt {
 }
 
 body {
-    min-height: 100%;
+    width: 100%;
     position: relative;
     box-sizing: border-box;
     letter-spacing: -1px;
     line-height: 1.4;
     font-family: 'Noto Sans KR', sans-serif;
+    margin: 0 auto;
 }
 
 div {

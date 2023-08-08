@@ -95,36 +95,6 @@ public class AttRestController {
 
 	}
 	
-	@GetMapping("/attfood/{snackCode}")
-	public ResponseEntity<?> getfood(@PathVariable int snackCode){
-		
-		List<AttfoodRespDto> foodList = null;
-		
-		try {
-			foodList = attFoodService.getfoodList(snackCode);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			return ResponseEntity.ok().body(new CMRespDto<>(-1, "failed", foodList));
-		}
-		
-		return ResponseEntity.ok().body(new CMRespDto<>(1, "success", foodList));
-	}
-	
-	@GetMapping("/attservice/{serviceCode}")
-	public ResponseEntity<?> getfacility(@PathVariable int serviceCode){
-		
-		List<AttFacilityRespDto> facilList = null;
-				
-		try {
-			facilList = attFoodService.getfacil(serviceCode);
-		} catch (Exception e) {
-			e.printStackTrace();
-			return ResponseEntity.ok().body(new CMRespDto<>(-1, "failed", facilList));
-		}
-		
-		return ResponseEntity.ok().body(new CMRespDto<>(1, "success", facilList));
-	}
 	
 	
 }
