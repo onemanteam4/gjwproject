@@ -29,7 +29,7 @@ public class NoticePageController {
 	}
 	
 	@GetMapping("/notice_list")
-	public String loadList() {
+	public String loadNoticeList() {
 		return "notice/notice_list";
 	}
 	
