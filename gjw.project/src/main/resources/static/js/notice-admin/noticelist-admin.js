@@ -119,6 +119,7 @@ function banner () {
 let page = 1;
 let totalPage = 0;
 let newPage = 0;
+let CountList = 0;
 const listPage = document.querySelectorAll(".list-page ul li#num");
 const boardList = document.querySelector(".board-list tbody");
 
@@ -127,11 +128,13 @@ const buttonLeft = document.querySelector(".button-left");
 const buttonRight = document.querySelector(".button-right");
 const num = document.querySelector(".num");
 
+console.log(listPage);
 
+function listlist(ppp) {
+	
 
-
-for(let i = 0; i < listPage.length; i++) {
-	listPage[i].onclick = () => {
+for(let i = 0; i < ppp.length; i++) {
+	ppp[i].onclick = () => {
 		page = 1;
 		console.log(i + "된다!");
 		page = page + i;
@@ -143,18 +146,21 @@ for(let i = 0; i < listPage.length; i++) {
 				
 		
 		load();
-		for(let y = 0; y < listPage.length; y++) {
-                  listPage[y].classList.remove("on");
+		for(let y = 0; y < ppp.length; y++) {
+                  ppp[y].classList.remove("on");
                   console.log("제거");
                 }
-                if(listPage[i].className == "num") {
-                   listPage[i].classList.add("on");
-                   console.log("추가");
+                if(ppp[i].className == "num") {
+                   ppp[i].classList.add("on");
+                   console.log(ppp[i].className);
                 }
-			
 	}
 	
 }
+
+}
+
+
 
 	buttonLeft.onclick = () => {
 	page = page -1;	
@@ -241,7 +247,7 @@ for(let i = 0; i < listPage.length; i++) {
 
 
 
-
+console.log("hi"+page);
 load();
 function load() {
 	$.ajax({
@@ -252,9 +258,10 @@ function load() {
 			contentCount: 10
 		},
 		dataType: "json",
-		
+		async:false,
 		success: (response) => {
 			getList(response.data);
+			addListBtn(response.data[0].totalCount);
 		},
 		error:
 			errorMessage
@@ -419,13 +426,13 @@ function getList(data) {
 	const boardListSelect = document.querySelectorAll(".board-list tbody tr td a");
 	console.log(boardListSelect);	
 	
-	for(let p = 0; p < 10; p ++) {
+/*	for(let p = 0; p < 10; p ++) {
 		boardListSelect[p].onclick = () => {
 			console.log(p);
 			
 		addCount(number[p]);
 		}
-	}
+	}*/
 	const deleteAll = document.querySelectorAll(".delete");
 	for(let m = 0; m < deleteAll.length; m++) {
 		deleteAll[m].onclick = () => {
@@ -444,27 +451,37 @@ function getList(data) {
 	}
 	
 
-        console.log(Countcount);
-        addListBtn(Countcount);
+        
+		
 }
 
+console.log(Countcount);
 
-console.log(listPage);
 function addListBtn(page) {
-	const ListPager = document.querySelector(".list-page ul");
 	
-	for(let i = 1; i <= page; i++) {
-		const PageNum = `
-		<li id="num" class="num">
+		console.log(page);
+	let nowCount = parseInt(page / 10) + 1;
+		console.log("현재값 : " + parseInt(nowCount));
+	const ListPager = document.querySelector(".list-page-details");
+      ListPager.innerHTML = ``;
+
+	for(let i = 1; i <= nowCount; i++) {
+		const Btn = `
+        <li id="num" class="num">
             <button type="button">${i}</button>
         </li>
-		`
+        
+        `
+        ListPager.innerHTML += Btn;
+        }
+        const ppp = document.querySelectorAll(".list-page-details li#num");
+		console.log(ppp);
 		
-		ListPager.innerHTML += PageNum;
-	}
+		listlist(ppp);
+		console.log(listlist(ppp));
+
+		
 }
-
-
 
 
 
@@ -559,6 +576,6 @@ function addCount(i) {
 
 const createBtn = document.querySelector(".create button");
 createBtn.onclick = () => {
-	location.href = "/auth-notice/notice_list_details";
+	location.href = "/admin/notice_list_details";
 }
 

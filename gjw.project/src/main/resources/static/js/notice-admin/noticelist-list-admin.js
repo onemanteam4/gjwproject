@@ -141,7 +141,7 @@ function addNoticeList(noticelist) {
 		success: (response) => {
 			if(response.data) {
 				alert("작성성공");
-				location.replace("/auth-notice/notice_list_admin");
+				location.replace("/admin/notice_list_admin");
 				
 				
 			}

@@ -129,9 +129,9 @@ const num = document.querySelector(".num");
 
 
 
-
-for(let i = 0; i < listPage.length; i++) {
-	listPage[i].onclick = () => {
+function listlist(ppp) {
+for(let i = 0; i < ppp.length; i++) {
+	ppp[i].onclick = () => {
 		page = 1;
 		console.log(i + "된다!");
 		page = page + i;
@@ -155,7 +155,7 @@ for(let i = 0; i < listPage.length; i++) {
 	}
 	
 }
-
+}
 	buttonLeft.onclick = () => {
 	page = page -1;	
 	console.log("돌아감" + page);
@@ -186,6 +186,31 @@ for(let i = 0; i < listPage.length; i++) {
 	return;
 }
 
+function addListBtn(page) {
+	
+		console.log(page);
+	let nowCount = parseInt(page / 10) + 1;
+		console.log("현재값 : " + parseInt(nowCount));
+	const ListPager = document.querySelector(".list-page-details");
+      ListPager.innerHTML = ``;
+
+	for(let i = 1; i <= nowCount; i++) {
+		const Btn = `
+        <li id="num" class="num">
+            <button type="button">${i}</button>
+        </li>
+        
+        `
+        ListPager.innerHTML += Btn;
+        }
+        const ppp = document.querySelectorAll(".list-page-details li#num");
+		console.log(ppp);
+		
+		listlist(ppp);
+		console.log(listlist(ppp));
+
+		
+}
 
 
 
@@ -252,9 +277,10 @@ function load() {
 			contentCount: 10
 		},
 		dataType: "json",
-		
+		async:false,
 		success: (response) => {
 			getList(response.data);
+			addListBtn(response.data[0].totalCount);
 		},
 		error:
 			errorMessage

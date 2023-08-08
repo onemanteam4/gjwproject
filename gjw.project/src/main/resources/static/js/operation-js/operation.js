@@ -117,7 +117,7 @@ function Calendar() {
 	
 	
     let tbodyCalendar = document.querySelector(".cols2 > table > tbody");
-
+	
     let calendarWeekCount = Math.ceil((calendarMonthStartDay + calendarMonthLastDate) / 7);
 
     console.log(calendarWeekCount);
@@ -132,10 +132,10 @@ function Calendar() {
 	}
     
 	const YearMonth = document.querySelector(".cols2 span.month");
-	
+	const viewYearMonth = document.querySelector(".time-wrapwidth span.month");
 	YearMonth.innerText = dayYear+"."+dayMonth;
 		
-	
+	viewYearMonth.innerHTML = dayYear+"."+dayMonth;
 	
     for(let i = 0; i < calendarMonthStartDay; i++) {
         let nowColum = nowRow.insertCell();
@@ -160,7 +160,7 @@ function Calendar() {
     }
     const Cols2 = document.querySelectorAll(".cols2 table tbody tr td span");
     const Cols = document.querySelector(".cols2 table tbody tr td");
-    for(let i = 0; i < 30; i ++) {
+    for(let i = 0; i < 31; i ++) {
        
         
         Cols2[i].onclick = () => {
