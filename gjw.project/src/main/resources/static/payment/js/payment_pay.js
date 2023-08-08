@@ -63,7 +63,7 @@ function load2() {
 	if(optionData.cardN > 0 && optionData.cardN < 6) {
 		optionDetail.innerHTML += `
 			<div class="detail-list" id="detail-card">
-		        <img src="/static/donguk-img/payment/ticket_card.jpg" alt="카드사 제휴 할인">
+		        <img src="/static/donguk-img/payment/card.jpg" alt="카드사 제휴 할인">
 		        <strong>카드사 제휴 할인</strong>
 		        <b></b>
 		        <dl class = "list-details-c">
@@ -87,7 +87,7 @@ function load2() {
 	if(optionData.kbBN > 0 || optionData.kbSN > 0) {
 		optionDetail.innerHTML += `
 			<div class="detail-list" id="detail-kb">
-		        <img src="/static/donguk-img/payment/kbpay_icon.jpg" alt="KBPAY 특가">
+		        <img src="/static/donguk-img/payment/kbpay.jpg" alt="KBPAY 특가">
 		        <strong>KBPAY 특가</strong>
 		        <b></b>
 		        <dl class = "list-details-k">
@@ -99,7 +99,7 @@ function load2() {
 	if(optionData.onBN > 0 || optionData.onMN > 0 || optionData.onSN > 0) {
 		optionDetail.innerHTML += `
 			<div class="detail-list"  id="detail-online">
-		        <img src="/static/donguk-img/payment/ticket_free.png" alt="온라인 회원 할인">
+		        <img src="/static/donguk-img/payment/free.png" alt="온라인 회원 할인">
 		        <strong>온라인 회원 할인</strong>
 		        <b></b>
 		        <dl class = "list-details-o">
@@ -111,7 +111,7 @@ function load2() {
 	if(optionData.afBN > 0 || optionData.afSN > 0) {
 		optionDetail.innerHTML += `
 			<div class="detail-list"  id="detail-after">
-		        <img src="/static/donguk-img/payment/ticket_after.jpg" alt="야간 할인권">
+		        <img src="/static/donguk-img/payment/after.jpg" alt="야간 할인권">
 		        <strong>야간 할인권(4시)</strong>
 		        <b></b>
 		        <dl class = "list-details-a">

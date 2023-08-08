@@ -21,6 +21,8 @@ import com.omt.gjw.project.service.auth.AuthService;
 import com.omt.gjw.project.service.auth.PrincipalDetails;
 import com.omt.gjw.project.service.auth.PrincipalDetailsService;
 import com.omt.gjw.project.web.dto.CMRespDto;
+import com.omt.gjw.project.web.dto.auth.CheckUserTicketReqDto;
+import com.omt.gjw.project.web.dto.auth.CheckUserTicketRespDto;
 import com.omt.gjw.project.web.dto.auth.DeleteUserReqDto;
 import com.omt.gjw.project.web.dto.auth.GuListRespDto;
 import com.omt.gjw.project.web.dto.auth.SignupReqDto;
@@ -106,6 +108,55 @@ public class AuthRestController {
 		}
 		return ResponseEntity.ok().body(new CMRespDto<>(1, "DELETE SUCCESS", status));
 	}
+	
+	@GetMapping("/mypage/checkTicket")
+	public ResponseEntity<?> getUserTicket(CheckUserTicketReqDto checkUserTicketReqDto) {
+		List<CheckUserTicketRespDto> list = null;
+		try {
+			list = authService.getUserTicket(checkUserTicketReqDto);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return ResponseEntity.ok().body(new CMRespDto<>(-1, "failed", list));
+		}
+		return ResponseEntity.ok().body(new CMRespDto<>(1, "success", list));
+	}
+	
+	@GetMapping("/mypage/ticketInfo/{orderCode}")
+	public ResponseEntity<?> getTicketInfo(@PathVariable int orderCode) {
+		CheckUserTicketRespDto respDto = null;
+		try {
+			respDto = authService.getTicketInfo(orderCode);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return ResponseEntity.ok().body(new CMRespDto<>(-1, "failed", respDto));
+		}
+		return ResponseEntity.ok().body(new CMRespDto<>(1, "success", respDto));
+	}
+	
+	@GetMapping("/admin/getAllTicket/{year}")
+	public ResponseEntity<?> getAllTicket(@PathVariable String year) {
+		List<CheckUserTicketRespDto> list = null;
+		try {
+			list = authService.getAllTicket(year);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return ResponseEntity.ok().body(new CMRespDto<>(-1, "failed", list.size()));
+		}
+		return ResponseEntity.ok().body(new CMRespDto<>(1, "success", list.size()));
+	}
+	
+	@GetMapping("/admin/userInfo/{gender}")
+	public ResponseEntity<?> getUserGender(@PathVariable String gender) {
+		int count = 0;
+		try {
+			count = authService.getUserGender(gender);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return ResponseEntity.ok().body(new CMRespDto<>(-1, "failed", count));
+		}
+		return ResponseEntity.ok().body(new CMRespDto<>(1, "success", count));
+	}
+	
 	
 	@GetMapping("/principal")
 	public ResponseEntity<?> getPrincipal(@AuthenticationPrincipal PrincipalDetails principalDetails) {

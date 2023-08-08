@@ -163,6 +163,7 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
 tr {
     display: table-row;
 }
@@ -201,6 +202,7 @@ tr {
 .choiceDay {
     background: #f85549;
     background-color: #f85549;
+    color: white !important;
     width: 56px;
     height: 56px;
     border-radius: 50%;

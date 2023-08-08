@@ -38,4 +38,10 @@ public class AuthPageController {
 		return "auth/mypage_leave";
 	}
 	
+	@GetMapping("/mypage_ticket_info/{orderCode}")
+	public String loadMypageTicketInfo() {
+		return "auth/mypage_ticket_info";
+	}
+	
+
 }

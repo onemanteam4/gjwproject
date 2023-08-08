@@ -8,6 +8,8 @@ import lombok.Data;
 public class BookTicketReqDto {
 	
 	private int userCode;
+	private String buyDate;
+	private int totalPrice;
 	private int cardNum;
 	private int uniformBNum;
 	private int uniformSNum;
@@ -23,6 +25,8 @@ public class BookTicketReqDto {
 		return Order.builder()
 				.user_code(userCode)
 				.ticket_code(1)
+				.buy_date(buyDate)
+				.total_price(totalPrice)
 				.card_number(cardNum)
 				.uniform_b_count(uniformBNum)
 				.uniform_s_count(uniformSNum)

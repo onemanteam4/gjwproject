@@ -79,4 +79,22 @@
 	WHERE
 		user_code = #{user_code}
 	</delete>
+	
+	<select id="getUserGender" parameterType="String" resultType="com.omt.gjw.project.domain.user.User">
+	SELECT
+		user_code,
+		user_name,
+		user_id,
+		oauth2_id,
+		user_password,
+		user_email,
+		user_birth,
+		user_phone,
+		user_gender,
+		region_code
+	FROM
+		user_mst
+	WHERE
+		user_gender = #{gender}
+	</select>
 </mapper>

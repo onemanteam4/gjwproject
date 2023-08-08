@@ -4,23 +4,11 @@ const optionArea = document.querySelectorAll(".option-area");
 
 const ticketEstimate = document.querySelector(".ticket-estimate");
 
-/*const btnWrap = document.querySelector("btn-wrap");*/
 
 let dateY = localStorage.getItem("dateYear");
 let dateM = localStorage.getItem("dateMonth");
 let dateD = localStorage.getItem("dateDay");
-/*getUserInfo();
-function getUserInfo() {
-	if(getUser() != null) {
-		if(getUser.user_roles == "ROLE_USER") {
-			btnWrap.innerHTML =`
-			<button type="button" class="back-btn">뒤로</button>
-			<button type="button" class="next-btn">다음</button>
-			`
-		}
-		
-	}
-}*/
+
 
 
 load();
