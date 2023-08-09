@@ -661,6 +661,19 @@ body {
     position: relative;
 }
 
+.snslist {
+    display: none;
+    border: 1px solid #ed1c24;
+    position: absolute;
+    top: 36px;
+    right: 0;
+    width: 264px;
+    min-height: 181px;
+    background-color: #ffffff;
+    z-index: 101;
+    cursor: default;
+}
+
 .snslist visible{
     
     border: 1px solid #ed1c24;
@@ -674,7 +687,9 @@ body {
     cursor: default;
 }
 
-
+.snslistBtn:hover .snslist{
+    display: block;
+}
 
 
 .snslist > b {

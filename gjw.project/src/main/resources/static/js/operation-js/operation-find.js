@@ -96,7 +96,7 @@ const tabSelectorList = document.querySelectorAll(".tab-selector-list li");
 const detailList = document.querySelectorAll(".detail");
 const detail = document.querySelector(".detail");
 const tabSelector = document.querySelector(".tab-selector-list");
-
+const mapLink = document.querySelectorAll(".map-link ul li");
 
 
 //힘들었다... 클릭시 바꾸기
@@ -111,6 +111,10 @@ for(let i= 0; i < tabSelectorList.length; i++) {
 			
 			mapContentList[j].style.display = 'none';
 			console.log("안쪽 반복도 돌아감.");
+			
+			mapLink[j].classList.remove("on");
+			
+			
 		}
 		if(detailList[i].className == "detail") {
 			detailList[i].classList.add("on");
@@ -118,6 +122,10 @@ for(let i= 0; i < tabSelectorList.length; i++) {
 			
 			tabSelectorList[i].classList.add("on");
 			mapContentList[i].style.display = 'block';
+			
+			mapLink[i].classList.add("on");
+			
+			
 			}
 		}
 	
@@ -132,6 +140,11 @@ var infowindow = new naver.maps.InfoWindow({
 });
 
 
+
+
+
+
+
 var HOME_PATH = window.HOME_PATH || '.';
 
 var gjw = new naver.maps.LatLng(35.8363, 129.2821),
@@ -144,7 +157,7 @@ var gjw = new naver.maps.LatLng(35.8363, 129.2821),
         position: gjw
     });
 
-var contentString1 = [
+var contentString = [
         '<div class="iw_inner">',
         '   <h3>경주월드</h3>',
         '   <p>경상북도 경주시 천군동 191-5 | 보문로 554(우) 38117<br />',
@@ -156,8 +169,12 @@ var contentString1 = [
     ].join('');
 
 var infowindow = new naver.maps.InfoWindow({
-    content: contentString1
+    content: contentString
 });
+
+
+
+
 
 naver.maps.Event.addListener(marker, "click", function(e) {
     if (infowindow.getMap()) {
@@ -168,29 +185,102 @@ naver.maps.Event.addListener(marker, "click", function(e) {
 });
 
 infowindow.open(map, marker);
-
+infowindow.close(map, marker);
 var polyline = new naver.maps.Polyline({
     map: map,
+    strokeColor :"blue",
+    strokeStyle :"solid",
     path: [
         new naver.maps.LatLng(35.8403, 129.2014),
-        new naver.maps.LatLng(35.8383, 129.2024),
+        new naver.maps.LatLng(35.8404, 129.2024),
+        new naver.maps.LatLng(35.8383, 129.2025),
+        new naver.maps.LatLng(35.8382, 129.2028),
+        new naver.maps.LatLng(35.8384, 129.2036),
+        new naver.maps.LatLng(35.8389, 129.2069),
         new naver.maps.LatLng(35.839, 129.2071),
-        new naver.maps.LatLng(35.8445, 129.2073),
-        new naver.maps.LatLng(35.8441, 129.2169),
-        new naver.maps.LatLng(35.8358, 129.2219),
+        new naver.maps.LatLng(35.8392, 129.2072),
+        new naver.maps.LatLng(35.8444, 129.2071),
+        new naver.maps.LatLng(35.8446, 129.2074),
+        new naver.maps.LatLng(35.8443, 129.2168),
+        new naver.maps.LatLng(35.844, 129.2171),
+        new naver.maps.LatLng(35.8405, 129.2172),
+        new naver.maps.LatLng(35.8401, 129.2173),
+        new naver.maps.LatLng(35.8382, 129.2184),
+        new naver.maps.LatLng(35.8374, 129.219),
+        new naver.maps.LatLng(35.8368, 129.2197),
+        new naver.maps.LatLng(35.8358, 129.2217),
+        new naver.maps.LatLng(35.8359, 129.2222),
+        new naver.maps.LatLng(35.8365, 129.2225),
         new naver.maps.LatLng(35.8402, 129.2227),
-        new naver.maps.LatLng(35.84, 129.2321),
+        new naver.maps.LatLng(35.8403, 129.2227),
+        new naver.maps.LatLng(35.8403, 129.2228),
+        new naver.maps.LatLng(35.8398, 129.2313),
+        new naver.maps.LatLng(35.84, 129.232),
+        new naver.maps.LatLng(35.8403, 129.2324),
+        new naver.maps.LatLng(35.8417, 129.2332),
         new naver.maps.LatLng(35.842, 129.2336),
-        new naver.maps.LatLng(35.8395, 129.2439),
-        new naver.maps.LatLng(35.8463, 129.2582),
+        new naver.maps.LatLng(35.8421, 129.2337),
+        new naver.maps.LatLng(35.8421, 129.2338),
+        new naver.maps.LatLng(35.8396, 129.2413),
+        new naver.maps.LatLng(35.8394, 129.2426),
+        new naver.maps.LatLng(35.8395, 129.2436),
+        new naver.maps.LatLng(35.8396, 129.2444),
+        new naver.maps.LatLng(35.8398, 129.245),
+        new naver.maps.LatLng(35.8461, 129.2576),
+        new naver.maps.LatLng(35.8462, 129.258),
+        new naver.maps.LatLng(35.8465, 129.2584),
+        new naver.maps.LatLng(35.8491, 129.26),
+        new naver.maps.LatLng(35.8499, 129.2608),
+        new naver.maps.LatLng(35.8504, 129.2614),
         new naver.maps.LatLng(35.8509, 129.2626),
-        new naver.maps.LatLng(35.8532, 129.2681),
+        new naver.maps.LatLng(35.851, 129.2629),
+        new naver.maps.LatLng(35.8511, 129.2631),
+        new naver.maps.LatLng(35.8528, 129.2676),
+        new naver.maps.LatLng(35.8532, 129.2682),
+        new naver.maps.LatLng(35.8538, 129.2687),
+        new naver.maps.LatLng(35.8571, 129.2702),
+        new naver.maps.LatLng(35.8571, 129.2703),
+        new naver.maps.LatLng(35.8581, 129.2707),
+        new naver.maps.LatLng(35.8587, 129.271),
+        new naver.maps.LatLng(35.8588, 129.2712),
         new naver.maps.LatLng(35.8589, 129.2715),
-        new naver.maps.LatLng(35.8538, 129.279),
-        new naver.maps.LatLng(35.8498, 129.2785),
-        new naver.maps.LatLng(35.8381, 129.2858),
-        new naver.maps.LatLng(35.8347, 129.2843),
+        new naver.maps.LatLng(35.8589, 129.2717),
+        new naver.maps.LatLng(35.8588, 129.2721),
+        new naver.maps.LatLng(35.8586, 129.2723),
+        new naver.maps.LatLng(35.8584, 129.2725),
+        new naver.maps.LatLng(35.8571, 129.2734),
+        new naver.maps.LatLng(35.8568, 129.2738),
+        new naver.maps.LatLng(35.8544, 129.2785),
+        new naver.maps.LatLng(35.854, 129.2789),
+        new naver.maps.LatLng(35.8534, 129.2792),
+        new naver.maps.LatLng(35.8524, 129.2792),
+        new naver.maps.LatLng(35.8507, 129.2784),
+        new naver.maps.LatLng(35.8499, 129.2784),
+        
+        new naver.maps.LatLng(35.8495, 129.2786),
+        new naver.maps.LatLng(35.8493, 129.2788),
+        new naver.maps.LatLng(35.8475, 129.2811),
+        new naver.maps.LatLng(35.847, 129.2819),
+        new naver.maps.LatLng(35.8463, 129.2837),
+        new naver.maps.LatLng(35.8453, 129.286),
+        new naver.maps.LatLng(35.8447, 129.2867),
+
+        new naver.maps.LatLng(35.8447, 129.2867),
+        new naver.maps.LatLng(35.8434, 129.2879),
+        new naver.maps.LatLng(35.8422, 129.2885),
+        new naver.maps.LatLng(35.8415, 129.2884),
+        new naver.maps.LatLng(35.8411, 129.2883),
+        new naver.maps.LatLng(35.8376, 129.2852),
+        new naver.maps.LatLng(35.8371, 129.2847),
+        new naver.maps.LatLng(35.8365, 129.2844),
+        new naver.maps.LatLng(35.836, 129.2842),
+        
+ 
+		new naver.maps.LatLng(35.8352, 129.2843),
+        new naver.maps.LatLng(35.8349, 129.2843),
+       
         new naver.maps.LatLng(35.8363, 129.2821)
+
     ]
 });
 
@@ -204,7 +294,7 @@ var polyline = new naver.maps.Polyline({
 
 
 var infowindow = new naver.maps.InfoWindow({
-	content: contentString2
+	content: contentString
 });
 
 
@@ -213,14 +303,14 @@ var HOME_PATH = window.HOME_PATH || '.';
 var gjw = new naver.maps.LatLng(35.8363, 129.2821),
     map2 = new naver.maps.Map('map2', {
         center: gjw.destinationPoint(0, 500),
-        zoom: 13
+        zoom: 12
     }),
     marker = new naver.maps.Marker({
         map: map2,
         position: gjw
     });
 
-var contentString2 = [
+var contentString = [
         '<div class="iw_inner">',
         '   <h3>경주월드</h3>',
         '   <p>경상북도 경주시 천군동 191-5 | 보문로 554(우) 38117<br />',
@@ -232,7 +322,7 @@ var contentString2 = [
     ].join('');
 
 var infowindow = new naver.maps.InfoWindow({
-    content: contentString2
+    content: contentString
 });
 
 naver.maps.Event.addListener(marker, "click", function(e) {
@@ -244,10 +334,12 @@ naver.maps.Event.addListener(marker, "click", function(e) {
 });
 
 infowindow.open(map2, marker);
-
+infowindow.close(map2, marker);
 
 var polyline2 = new naver.maps.Polyline({
     map: map2,
+    strokeColor :"blue",
+    strokeStyle :"solid",
     path: [
         new naver.maps.LatLng(35.7983, 129.1399),
         new naver.maps.LatLng(35.7973, 129.1393),
@@ -384,7 +476,7 @@ var polyline2 = new naver.maps.Polyline({
 
 
 
-var infowindow = new naver.maps.InfoWindow({
+/*var infowindow = new naver.maps.InfoWindow({
 	content: contentString
 });
 
@@ -425,7 +517,7 @@ naver.maps.Event.addListener(marker, "click", function(e) {
 });
 
 infowindow.open(map3, marker);
-
+infowindow.close(map, marker);
 var polyline3 = new naver.maps.Polyline({
     map: map3,
     path: [
@@ -500,7 +592,7 @@ naver.maps.Event.addListener(marker, "click", function(e) {
 });
 
 infowindow.open(map4, marker);
-
+infowindow.close(map4, marker);
 var polyline4 = new naver.maps.Polyline({
     map: map,
     path: [
@@ -578,7 +670,7 @@ naver.maps.Event.addListener(marker, "click", function(e) {
 });
 
 infowindow.open(map5, marker);
-
+infowindow.close(map5, marker);
 var polyline5 = new naver.maps.Polyline({
     map: map5,
     path: [
@@ -606,3 +698,4 @@ var polyline5 = new naver.maps.Polyline({
 
 
 
+*/

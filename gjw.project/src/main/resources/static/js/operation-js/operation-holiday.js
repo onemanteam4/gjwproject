@@ -232,7 +232,7 @@ console.log("ggg" + prevMonthLastDate.getDate());
 let i = 0;
 today = new Date(year, month, days);
 
-
+let comeGetdate = now.getDate(); 
 day.setDate(day.getDate()-(day.getDay()));
 console.log("pp" + nowDate2);
 console.log("gg" + day);
@@ -294,14 +294,22 @@ console.log("gg" + today);
         
         break;
     }
-        
+        if(comeGetdate == date) {
+		rightUl.innerHTML += `
+                <li class="date on">
+                  <span>${date}</span>
+                </li>
+                            
+                 `
+		}else {
+		
         rightUl.innerHTML += `
                             <li class="date">
                               <span>${date}</span>
                             </li>
                             
                  `
-        
+       } 
         
     }
     if(date > lastDate.getDate()) {
