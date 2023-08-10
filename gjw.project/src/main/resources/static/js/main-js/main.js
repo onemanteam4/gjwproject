@@ -8,6 +8,9 @@ const listHover = document.querySelector(".list-hover");
 const hover = document.querySelectorAll(".hover");
 const mainTopMenu = document.querySelector(".main-top-menu");
 
+
+
+
 //탑 메뉴 오버시 나오게
 mainTopMenu.onmouseover = () => {
     for(let i = 0; i < hover.length; i++) {
@@ -143,7 +146,7 @@ function mainbanner () {
 
             setTimeout(() => {
                 centerMainBannerList.style.transition = 'transform 0s ease-out';
-                centerMainBannerList.style.transform = 'translate3d( -3900px, 0px, 0px)';
+                centerMainBannerList.style.transform = 'translate3d( 0px, 0px, 0px)';
             }, 501)
         }
     }, 10000);
@@ -169,7 +172,7 @@ function mainbanner () {
     
                 setTimeout(() => {
                     centerMainBannerList.style.transition = 'transform 0s ease-out';
-                    centerMainBannerList.style.transform = 'translate3d( -3900px, 0px, 0px)';
+                    centerMainBannerList.style.transform = 'translate3d( 0px, 0px, 0px)';
                 }, 501)
             }
         }, 10000);
@@ -190,15 +193,18 @@ sliderPre.onclick = () => {
     console.log(centerMainBannerList.style.transform = 'translate3d(-'+ 1300*2 + 'px, 0px, 0px)');
 }
 
-
 let index = 0;
 sliderNext.onclick = () => {
     
     index ++;
+    
+    let int = (-1300*index)
+    
+    console.log(index);
     centerMainBannerList.style.transition = 'transform 0.5s ease-out';
     centerMainBannerList.style.transform = 'translate3d(-'+ 1300*index + 'px, 0px, 0px)';
     if(index >= 7) {
-        index=3
+        index=1
     }
     console.log("ㅇㅇ" + index);
 }
@@ -240,10 +246,21 @@ function attractionbanner () {
 }
 
 
+const upBtn = document.querySelector(".up-button");
+const downBtn = document.querySelector(".down-button");
+
+const noticeDetailsList = document.querySelectorAll(".notice-list-details li");
 
 
-
-
+let int = 0;
+downBtn.onclick = () => {
+	const noticeDetails = document.querySelector(".notice-list-details");
+	int = int+1;
+	console.log("작동" + int);
+	noticeDetails.style.tranform = 'translate3d(0px, -117px, 0px)';
+	noticeDetails.style.transition = 'transform 0s ease-out';
+	console.log(noticeDetails.style.tranform);
+}
 
 
 
