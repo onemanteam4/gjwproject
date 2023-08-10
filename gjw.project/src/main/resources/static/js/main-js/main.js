@@ -173,7 +173,7 @@ function mainbanner () {
                 setTimeout(() => {
 			centerMainBannerList.style.transition = 'transform 0s ease-out';
 	    	centerMainBannerList.style.transform = 'translate3d(-11700px, 0px, 0px)';
-                }, 530)
+                }, 501)
 	        
 	    }
 	}
@@ -206,7 +206,7 @@ function mainbanner () {
 
 		
         console.log(index+1);
-        if( index >= 9) {
+        if( index >= 10) {
             index = 1;
 
             setTimeout(() => {
@@ -378,8 +378,8 @@ downBtn.onclick = () => {
 	const noticeDetails = document.querySelector(".notice-list-details");
 	int = int+1;
 	console.log("작동" + int);
+	noticeDetails.style.transition = 'transform 0.5s ease-out';
 	noticeDetails.style.tranform = 'translate3d(0px, -117px, 0px)';
-	noticeDetails.style.transition = 'transform 0s ease-out';
 	console.log(noticeDetails.style.tranform);
 }
 
@@ -390,6 +390,11 @@ downBtn.onclick = () => {
 
 const guideSlider = document.querySelector(".guide-slider");
 const guideList = document.querySelectorAll(".guide-slider li");
+const mainGuideButtenDirection = document.querySelector(".main-guide-butten-direction a");
+const guidePre = document.querySelector(".guide-pre");
+const guideNext = document.querySelector(".guide-next");
+const mainGuideBoxViewport = document.querySelector(".main-guide-box-viewport");
+
 
 guidebanner();
 
@@ -400,23 +405,154 @@ function guidebanner () {
 
     let index = 0;
 
-    setInterval( () => {
+    let time = setInterval( () => {
         
 
         guideSlider.style.transition = 'transform 1s ease-out';
-        guideSlider.style.transform = 'translate3d(-' + 936*(index+1) + 'px, 0px, 0px)';
+        guideSlider.style.transform = 'translate3d(-' + 936*(index) + 'px, 0px, 0px)';
+        
+        guidePre.onclick = () => {
+			index = index - 1;
+			
+			guideSlider.style.transition = 'transform 0.5s ease-out';
+        	guideSlider.style.transform = 'translate3d(-' + 936*(index) + 'px, 0px, 0px)';
+		
+			console.log("내용" +index);
+			if(index <= -1) {
+				guideSlider.style.transition = 'transform 0s ease-out';
+                guideSlider.style.transform = 'translate3d( -3744px, 0px, 0px)';
+                index = 4;
+			}
+		}
+        
+        
         index ++;
         
         console.log(index);
-        if( index >= 4) {
-            index = -1;
+        if( index >= 5) {
+            index = 0;
 
             setTimeout(() => {
                 guideSlider.style.transition = 'transform 0s ease-out';
                 guideSlider.style.transform = 'translate3d( 0px, 0px, 0px)';
-            }, 1001)
+            }, 1050)
         }
+        
+         guideNext.onclick = () => {
+		   
+	   	guideSlider.style.transition = 'transform 1s ease-out';
+        guideSlider.style.transform = 'translate3d(-' + 936*(index) + 'px, 0px, 0px)';
+	   
+	   	index = index + 1;
+	   	console.log("내용" + index);
+       if( index >= 5) {
+		   console.log("this" + index);
+        index = 0;
+
+        setTimeout(() => {
+			
+	    	guideSlider.style.transition = 'transform 0s ease-out';
+        	guideSlider.style.transform = 'translate3d( 0px, 0px, 0px)';
+        }, 1050)
+        }
+	   }
+
+        
     }, 5000);
        
+       guidePre.onmouseover = () => {
+        clearInterval(time);
+        console.log("멈춰!");
+    }
+    
+      guidePre.onmouseout = () => {
+		
+        
+        time = setInterval( () => {
+			
+			
+            console.log("재시작 메인!" + index);
+            
+	   	guideSlider.style.transition = 'transform 1s ease-out';
+        guideSlider.style.transform = 'translate3d(-' + 936*(index) + 'px, 0px, 0px)';
+            index ++;
+            
+            console.log(index+1);
+       	if( index >= 4) {
+		   console.log("this" + index);
+        	index = 0;
+
+        	setTimeout(() => {
+			
+	    	guideSlider.style.transition = 'transform 0s ease-out';
+        	guideSlider.style.transform = 'translate3d( 0px, 0px, 0px)';
+        }, 1050)
+        }
+        }, 5000);
+    }
+    
+    
+    
+       guideNext.onmouseover = () => {
+        clearInterval(time);
+        console.log("멈춰!");
+    }
+    
+      guideNext.onmouseout = () => {
+		
+        
+        time = setInterval( () => {
+			
+			
+            console.log("재시작 메인!" + index);
+            
+	   	guideSlider.style.transition = 'transform 1s ease-out';
+        guideSlider.style.transform = 'translate3d(-' + 936*(index) + 'px, 0px, 0px)';
+            index ++;
+            
+            console.log(index+1);
+       	if( index >= 4) {
+		   console.log("this" + index);
+        	index = 0;
+
+        	setTimeout(() => {
+			
+	    	guideSlider.style.transition = 'transform 0s ease-out';
+        	guideSlider.style.transform = 'translate3d( 0px, 0px, 0px)';
+        }, 1050)
+        }
+        }, 5000);
+    }
+    
+           mainGuideBoxViewport.onmouseover = () => {
+        clearInterval(time);
+        console.log("멈춰!");
+    }
+    
+      mainGuideBoxViewport.onmouseout = () => {
+		
+        
+        time = setInterval( () => {
+			
+			
+            console.log("재시작 메인!" + index);
+            
+	   	guideSlider.style.transition = 'transform 1s ease-out';
+        guideSlider.style.transform = 'translate3d(-' + 936*(index) + 'px, 0px, 0px)';
+            index ++;
+            
+            console.log(index+1);
+       	if( index >= 4) {
+		   console.log("this" + index);
+        	index = 0;
+
+        	setTimeout(() => {
+			
+	    	guideSlider.style.transition = 'transform 0s ease-out';
+        	guideSlider.style.transform = 'translate3d( 0px, 0px, 0px)';
+        }, 1050)
+        }
+        }, 5000);
+    }
 
 }
