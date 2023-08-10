@@ -45,7 +45,6 @@ function checkUserTicket() {
 		dataType: "json",
 		success: (response) => {
 			loadTicket(response.data);
-			console.log(response.data);
 		},
 		error: (error) => {
 			console.log(error);

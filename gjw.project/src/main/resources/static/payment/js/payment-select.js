@@ -118,16 +118,7 @@ function nextCalendar() {
         changeCal.innerText = nowMonth.getFullYear() + "." + (nowMonth.getMonth() + 1);
     }
 }
-/*
-let date = null;
-localStorage.setItem("날짜", date);
 
-const btnType = document.querySelector(".btn-type");
-
-btnType.onclick = () => {
-
-}
-*/
 
 
 

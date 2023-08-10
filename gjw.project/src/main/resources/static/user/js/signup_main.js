@@ -19,7 +19,6 @@ checkBtn.onclick = () => {
 		dataType: "json",
 		success: (response) => {
 			checkUsernameFlag = response.data;
-			console.log(checkUsernameFlag);
 			getValid(checkUsernameFlag);
 		},
 		error: (error) => {
@@ -38,8 +37,6 @@ const inputData = document.querySelectorAll(".input_wrap input");
 
 signupBtn.onclick = () => {
 	checkPassword();
-	console.log(inputData[9].value);
-	console.log(inputData[10].value);
 	
 	let signupData = {
 		userId: inputData[0].value,
@@ -123,7 +120,6 @@ for(let i = 0; i < addsidoop.length; i++) {
 
 addsigungu.onclick = () => {
 	regionCode = addsigungu.value;
-	console.log(regionCode);
 }
 /* 지역 선택 끝 */
 

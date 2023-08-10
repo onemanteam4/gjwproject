@@ -75,7 +75,6 @@ public class AuthRestController {
 		try {
 			list = authService.getGuList(siCode);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return ResponseEntity.ok().body(new CMRespDto<>(-1, "fail to load", list));
 		}

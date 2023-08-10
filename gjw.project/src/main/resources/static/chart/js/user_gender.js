@@ -37,10 +37,10 @@ function loadAllTicket(gender) {
 	return count;
 }
 
-/*const backBtn = document.querySelector(".back-btn");
+const backBtn = document.querySelector(".back-btn");
 backBtn.onclick = () => {
-	location.href = "";
-}*/
+	location.href = "/admin/main";
+}
 
 
 

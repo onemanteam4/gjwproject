@@ -20,7 +20,6 @@ const gendername = document.querySelector(".gendername");
 let RegionCheckFlag = false;
 
 getUser();
-console.log(getUser());
 loadUserInfo();
 function loadUserInfo() {
 	signupName.value = getUser().user_name;
@@ -174,14 +173,3 @@ const btnModifyLeave = document.querySelector(".btn-modify-leave");
 btnModifyLeave.onclick = () => {
 	location.href = "/auth/mypage_leave";
 }
-
-
-
-
-
-
-
-
-
-
-

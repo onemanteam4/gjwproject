@@ -31,7 +31,6 @@ public class PrincipalDetailsService implements UserDetailsService {
 		if(userEntity == null) {
 			throw new UsernameNotFoundException(username + "사용자이름을 사용할 수 없습니다.");
 		}
-		System.out.println("userEntity: " + userEntity);
 		return new PrincipalDetails(userEntity);
 		
 	}

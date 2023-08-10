@@ -45,13 +45,11 @@ public class PrincipalDetails implements UserDetails, OAuth2User{
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		Collection<GrantedAuthority> grantedAuthorities = new ArrayList<GrantedAuthority>();
-			System.out.println(user);
 			user.getUserRoles().forEach(role -> {
 				grantedAuthorities.add(() -> role);
 				
 				
 			});
-			System.out.println("hihi: " + grantedAuthorities);
 			return grantedAuthorities;
 	}
 	
