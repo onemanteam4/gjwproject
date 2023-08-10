@@ -379,7 +379,8 @@ downBtn.onclick = () => {
 	int = int+1;
 	console.log("작동" + int);
 	noticeDetails.style.transition = 'transform 0.5s ease-out';
-	noticeDetails.style.tranform = 'translate3d(0px, -117px, 0px)';
+	noticeDetails.style.transform = 'translate3d( + 0px, -'+ 117*(int) + 'px, 0px)';
+	
 	console.log(noticeDetails.style.tranform);
 }
 

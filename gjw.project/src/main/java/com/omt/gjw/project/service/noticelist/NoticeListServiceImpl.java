@@ -30,7 +30,12 @@ public class NoticeListServiceImpl implements NoticeListService{
 		
 		List<NoticeList> noticeLists = noticeListRepository.getNoticeList(createGetNoticeListMap(page, contentCount));
 		
-		System.out.println(createNoticeListRespDtos(noticeLists));
+
+		for(int i = 0; i < noticeLists.size(); i++) {
+			if(noticeLists.get(i).getNotice_file() == null) {
+				noticeLists.get(i).setNotice_file("-");			}
+		}
+		
 		return createNoticeListRespDtos(noticeLists);
 	}
 	
@@ -43,9 +48,14 @@ public class NoticeListServiceImpl implements NoticeListService{
 	
 	private List<NoticeListRespDto> createNoticeListRespDtos(List<NoticeList> noticeLists) {
 		List<NoticeListRespDto> NoticeListRespDtos = new ArrayList<NoticeListRespDto>();
+		
+			
+		
 		noticeLists.forEach(notice -> {
 			NoticeListRespDtos.add(notice.toListDto());
 		});
+
+		
 		return NoticeListRespDtos;
 	}
 	@Override
