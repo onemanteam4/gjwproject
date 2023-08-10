@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>우대프로그램 | 꿈, 사랑, 행복의 경주월드!</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <link rel="stylesheet" href="/static/css/kdh.css/style.css">
     <link rel="stylesheet" href="/static/css/kdh.css/preferential.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -135,29 +136,24 @@
                 <div id="UsetipList">
                     <div class="WrapWidth">
                         <ul class="selectTab">
-                            <li id="step1" class="">
-                                <a href="">일반</a>
+                            <li id="Step1" class="on">
+                               	일반
                             </li>
-                            <li id="step2" class="">
-                                <a href="">신용카드</a>
+                            <li id="Step2" class="on">
+                                신용카드
                             </li>
-                            <li id="step3" class="">
-                                <a href="">연간이용</a>
+                            <li id="Step3" class="on">
+                                연간이용
                             </li>
                         </ul>
                         <ul id="ajaxContainer">
-                            <a href=""></a>
-                            <div class="photo" style="background-image: url(/static/img-kdh/preferential/main1.jpg);"></div>
-                            <div class="info">
-                                <span class="name">홈페이지 회원할인</span>
-                                <p> 홈페이지 회원할인 구분 정상요금...</p>
-                                <span></span>
-                            </div>
+                            <li class="blank">우대프로그램 정보가 없습니다.</li>
                         </ul>
                     </div>
                 </div>
             </div>
     </main> 
+    <!--하단-->
     <footer>
         <div id="footer-bottom">
             <div class="footer-category">
@@ -283,5 +279,6 @@
             </div>
         </div>
     </footer>
+    <script src="/static/preferential/js/preferentials.js"></script>
 </body>
 </html>

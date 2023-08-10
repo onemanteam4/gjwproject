@@ -535,6 +535,7 @@ body {
 
 .Top-WrapWidth > ul > li:hover .amusementTab {
     display: block;
+    
 }
 
 .Top-WrapWidth > ul > li > div {
@@ -545,6 +546,9 @@ body {
     border-bottom: 1px solid #e5e5e5;
     background-color: #ffffff;
     display: none;
+    position: relative;
+    z-index: 101;
+    
 }
 
 .amusementTab ul li a {
@@ -768,6 +772,7 @@ body {
     color: #ffffff;
     vertical-align: middle;
     float: left; 
+    z-index: 1;
 }
 
 .rightbar::after {
@@ -948,6 +953,7 @@ body {
     margin-left: 24px;
     margin-bottom: 56px;
     position: relative;
+    cursor: pointer;
 }
 
 .ContainerRows a {

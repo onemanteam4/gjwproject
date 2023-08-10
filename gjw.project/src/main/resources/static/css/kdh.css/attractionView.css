@@ -551,6 +551,8 @@
     border-bottom: 1px solid #e5e5e5;
     background-color: #ffffff;
     display: none;
+    position: relative;
+    z-index: 101;
 }
 
 .amusementTab ul li a {
