@@ -489,9 +489,10 @@ body {
     background-repeat: no-repeat;
     background-position: right -468px top -204px;
 }
+
 #TopLNB {
     position: relative;
-    background-image: url('/static/main-image/notice/operation.jpg');
+    background-image: url('/static/donguk-img/subvisual.jpg');
 }
 
 #TopLNB > div {
@@ -921,310 +922,60 @@ body {
 
 }
 
-
-
-
-.information {
-    padding: 65px 0px 0px 0px;
+.show-list {
+    padding: 50px 0;
 }
 
-.information-width {
-    margin: 0px auto;
+.show-wrap {
+    margin: 0 auto;
     width: 100%;
     max-width: 1300px;
 }
 
-.information h4 {
-    font-size: 1.5rem;
-    font-weight: 300;
-    height: 55px;
-    line-height: 51px;
-
-    letter-spacing: -2px;
-}
-
-.ajax-container {
+table {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.ajax-container li:nth-child(5n+1) {
-    margin-left: 0px;
-}
-
-.ajax-container li {
-    width: calc(20% - 16px);
-    float: left;
-    margin-left: 20px;
-    margin-bottom: 28px;
-    border: 1px solid #dedede;
-    min-height: 334px;
-    background-color: #ffffff;
-    position: relative;
-}
-
-.ajax-container li a {
-    color: #000000;
-}
-
-.container-row div.photo {
-    height: 166px;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: cover;
-    position: relative;
-
-}
-
-.ajax-container li div span.badge {
-    position: absolute;
-    width: 61px;
-    height: 52px;
-    background-color: #5674b9;
-    font-weight: 500;
-    font-size: 0.69rem;
-    color: #ffffff;
-    text-align: center;
-    padding: 12px 18px;
-    line-height: 14.5px;
-    word-break: break-all;
-
-    left: 0px;
-}
-
-.ajax-container li div span.badget {
-    position: absolute;
-    width: 61px;
-    height: 52px;
-    background-color: #00A651;
-    font-weight: 500;
-    font-size: 0.69rem;
-    color: #ffffff;
-    text-align: center;
-    padding: 12px 18px;
-    line-height: 14.5px;
-    word-break: break-all;
-    left: 0px;
-}
-
-.ajax-container li div.theme-information {
-    padding: 24px 15px 46px;
-    font-size: 0.83rem;
-    color: #555555;
-
-    text-align: left;
-}
-
-.ajax-container li div span.name {
-    font-weight: 700;
-    font-size: 1.06rem;
-}
-
-.ajax-container li div span.location {
-    display: block;
-    font-weight: 300;
-    font-size: 0.78rem;
-    color: #8c8c8c;
-    padding: 3px 0 3px 20px;
-    background-image: url('/static/main-image/main-logo/glass.png');
-    background-repeat: no-repeat;
-    background-position: -408px -715px;
-    margin-top: 13px;
-    position: absolute;
-    bottom: 20px;
-    left: 15px;
-}
-
-.ajax-container li div p {
-    display: block;
-    line-height: 24px;
-    letter-spacing: -1px;
-    margin-top: 3px;
-}
-
-.information-width::after {
-    content: '';
-    clear: both;
-    display: block;
-}
-
-.information::after {
-    content: '';
-    clear: both;
-    display: block;
-}
-
-.content-width {
-    margin: 0px auto;
-    width: 100%;
-    max-width: 1300px;
-}
-
-.content-width::after{
-    content: "";
-    clear: both;
-    display: block;
-}
-
-.total-information {
-    padding: 21px 0px 65px 0px;
-}
-
-.total-information::after {
-    content: "";
-    clear: both;
-    display: block;
-}
-
-
-
-
-.total-information h4 {
-    font-size: 1.5rem;
-    font-weight: 300;
-    height: 55px;
-    line-height: 51px;
-}
-
-.icon-desc {
-    display: inline-block;
-    font-size: 0.89rem;
-    margin-left: 8px;
-    color: #8c8c8c;
-}
-
-.icon-desc span {
-    margin: 0px 4px;
-}
-
-.icon-desc span::before {
-    content: '';
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    background-image: url('/static/main-image/main-logo/button-collection.png');
-    background-size: 250px;
-    background-position: -106px -507px;
-    vertical-align: middle;
-}
-
-.icon-desc span::after {
-    content: '';
-    display: inline-block;
-    width: 1px;
-    height: 12px;
-    margin-left: 8px;
-    background: #8c8c8c;
-}
-
-.icon-desc span:nth-child(2)::before {
-    background-position: -4px -507px;
-}
-
-.icon-desc span:nth-child(3)::before {
-    background-position: -206px -507px;
-}
-
-.total-information dl {
     border-top: 2px solid #000000;
-    border-bottom: 2px solid #9a9696;
+
+    border-collapse: collapse;
+
+    display: table;
+    border-spacing: 2px;
+    border-color: gray;
 }
 
-.total-information dl::after {
-    content: "";
-    clear: both;
-    display: block;
-}
-
-.total-information dt {
-    float: left;
-    width: 16%;
-    height: 93px;
-    line-height: 90px;
-    border-bottom: 1px solid #ffffff;
-    background-color: #00a651;
-    color: #ffffff;
-    font-size: 1rem;
-    font-weight: 500;
-    text-align: center;
-}
-
-.total-information dd {
-    float: left;
-    width: 12%;
-    height: 93px;
-    border-right: 1px solid #cccccc;
-    font-size: 0.94rem;
-}
-
-.total-information dd span.title {
-    display: inline-block;
-    width: 100%;
-    height: 41px;
-    line-height: 38px;
-    background-color: #f2f2f2;
-    text-align: center;
-    letter-spacing: -2px;
-}
-
-.total-information dd span.state {
-    display: inline-block;
-    width: 100%;
-    height: 52px;
-    line-height: 48px;
-    text-align: center;
-}
-
-.total-information dd span.state span {
+.show-info table thead {
+    background-color: #f9f9f9;
     vertical-align: middle;
 }
 
-.total-information dd span.on {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    background-image: url('/static/main-image/main-logo/button-collection.png');
-    background-repeat: no-repeat;
-    background-position: -212px -1014px;
+.show-info table thead tr {
+    display: table-row;
 }
 
-.total-information dd span.wait {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    background-image: url('/static/main-image/main-logo/button-collection.png');
-    background-repeat: no-repeat;
-    background-position: -9px -1014px;
+.show-info table thead th {
+    border-bottom: 1px solid #000000;
+    font-weight: 400;
+    color: #303030;
+    font-size: 18px;
+    padding: 13px 0 15px 0;
 }
 
-.total-information dd span.off {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    background-image: url('/static/main-image/main-logo/button-collection.png');
-    background-repeat: no-repeat;
-    background-position: -412px -1014px;
+.show-info table tbody tr td {
+    width: 270px;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 30px 35px;
+    text-align: center;
+    color: #171717;
+    font-size: 22px;
+    font-weight: 300;
 }
 
-
-
-
-.total-information dt.last {
-    border-bottom: 0px solid #ffffff;
+.show-wrap p {
+    font-size: 12px;
+    color: #ed1c24;
+    text-align: center;
+    padding: 5px 0;
 }
-
-.total-information dt.row2 {
-    height: 186px;
-    line-height: 183px;
-}
-
-
-
-
-
-
-
 
 #footer-bottom {
     clear: both;
