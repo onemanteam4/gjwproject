@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ko" style="height: 100%;">
+<html lang="ko" style="height: 100%;" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>추천코스 | 꿈, 사랑, 행복의 경주월드!</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <link rel="stylesheet" href="/static/css/kdh.css/RcdCourse.css">
     <link rel="stylesheet" href="/static/css/kdh.css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,6 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body id="Amusement">
+
+	<th:block th:replace="/mainfragments/mainheader"></th:block>
+	
     <main>
         <div id="TopLNB" style="top: 0px; background-size: cover; background-position: 50% 50%;">
             <div>
@@ -177,8 +180,8 @@
                             <b>가족</b>끼리
                         </h5>
                         <div class="CourseList">
-                            <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/50">
-                                <div class="photo" style="background-image: url(/static/img-kdh/attration/attvalkyrie/view1_2.gif);"> </div> 
+                            <a href="/attride/1">
+                                <div class="photo" style="background-image: url(/static/img-kdh/mainimg/view1.jpg);"> </div> 
                                 <div class="title">
                                     <span class="name">발키리</span>
                                 </div>
@@ -189,8 +192,8 @@
                             </a>
                         </div>
                         <div class="CourseList">
-                            <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/23">
-                                <div class="photo" style="background-image: url(/static/img-kdh/attration/attmiro/view21_2.jpg
+                            <a href="/attride/21">
+                                <div class="photo" style="background-image: url(/static/img-kdh/mainimg/view21.jpg
                                 );"> </div> 
                                 <div class="title">
                                     <span class="name">미로탐험</span>
@@ -202,8 +205,8 @@
                             </a>
                         </div>
                         <div class="CourseList">
-                            <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/23">
-                                <div class="photo" style="background-image: url(/static/img-kdh/attration/attfamilybaiking/view18_2.jpg);"> </div>
+                            <a href="/attride/18">
+                                <div class="photo" style="background-image: url(/static/img-kdh/mainimg/view18.jpg);"> </div>
                                 <div class="title">
                                     <span class="name">패밀리 바이킹</span>
                                 </div>
@@ -214,8 +217,8 @@
                             </a>
                         </div>
                         <div class="CourseList">
-                            <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/23">
-                                <div class="photo" style="background-image: url(/static/img-kdh/attration/attballhouse/view7_2.jpg);"> </div> 
+                            <a href="/attride/7">
+                                <div class="photo" style="background-image: url(/static/img-kdh/mainimg/view7.jpg);"> </div> 
                                 <div class="title">
                                     <span class="name">트리키리키의 볼하우스</span>
                                 </div>
@@ -226,8 +229,8 @@
                             </a>
                         </div>
                         <div class="CourseList">
-                            <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/23">
-                                <div class="photo" style="background-image: url(/static/img-kdh/attration/attwizardtrain/view8_2.jpg);"> </div> 
+                            <a href="/attride/8">
+                                <div class="photo" style="background-image: url(/static/img-kdh/mainimg/view8.jpg);"> </div> 
                                 <div class="title">
                                     <span class="name">드롤의 위자드트레인</span>
                                 </div>
@@ -238,8 +241,8 @@
                             </a>
                         </div>
                         <div class="CourseList">
-                            <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/23">
-                                <div class="photo" style="background-image: url(/static/img-kdh/attration/attpumpkin/view9_2.jpg);"> </div>
+                            <a href="/attride/9">
+                                <div class="photo" style="background-image: url(/static/img-kdh/mainimg/view9.jpg);"> </div>
                                 <div class="title">
                                     <span class="name">글린다의 매직펌킨</span>
                                 </div>
@@ -250,8 +253,8 @@
                             </a>
                         </div>
                         <div class="CourseList">
-                            <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/23">
-                                <div class="photo" style="background-image: url(/static/img-kdh/attration/attsparkymagiccar/view13_2.jpg);"> </div>
+                            <a href="/attride/13">
+                                <div class="photo" style="background-image: url(/static/img-kdh/mainimg/view13.jpg);"> </div>
                                 <div class="title">
                                     <span class="name">스파키의 매직카</span>
                                 </div>
@@ -262,8 +265,8 @@
                             </a>
                         </div>
                         <div class="CourseList">
-                            <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/23">
-                            <div class="photo" style="background-image: url(/static/img-kdh/attration/attairballoon/view24_2.jpg);"> </div>
+                            <a href="/attride/24">
+                            <div class="photo" style="background-image: url(/static/img-kdh/mainimg/view24.jpg);"> </div>
                                 <div class="title">
                                     <span class="name">에어벌룬</span>
                                 </div>
@@ -274,8 +277,8 @@
                             </a>
                         </div>
                     <div class="CourseList">
-                            <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/23">
-                                <div class="photo" style="background-image: url(/static/img-kdh/attration/attdancingcup/view26_2.jpg);"> </div> 
+                            <a href="/attride/26">
+                                <div class="photo" style="background-image: url(/static/img-kdh/mainimg/view26.jpg);"> </div> 
                                 <div class="title">
                                     <span class="name">댄싱컵</span>
                                 </div>
@@ -286,8 +289,8 @@
                             </a>
                         </div>
                         <div class="CourseList">
-                            <a href="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DB0200/view/23">
-                                <div class="photo" style="background-image: url(/static/img-kdh/attration/attfamilytrain/view19_2.jpg);"> </div> 
+                            <a href="/attride/19">
+                                <div class="photo" style="background-image: url(/static/img-kdh/mainimg/view19.jpg);"> </div> 
                                 <div class="title">
                                     <span class="name">가족열차</span>
                                 </div>

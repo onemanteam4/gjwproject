@@ -1,9 +1,5 @@
 
 
-
-
-
-
 load();
 function load() {
 	
@@ -14,9 +10,6 @@ function load() {
 		dataType: "json",
 		success: (response) => {
 			preferential(response.data);
-			console.log(response.data);
-			
-			
 		},
 		error: (error) => {
 			console.log(error);
@@ -37,7 +30,6 @@ function preferential(data){
 	
 	
 	for(let content of data){
-		console.log(content.rateCode);
 		let k = content.rateCode;
 		let explan = content.discountExplanation;
 		let explan2 = explan + "...";
@@ -58,17 +50,17 @@ function preferential(data){
 		`;
 		
 		ajaxContainer.innerHTML += udae;
-		console.log(udae);
-		
 		}
 	}
 	
 		step1.onclick = () => {
+		step2.style.border = '';
+		step3.style.border = '';
+		step1.style.border = "2px solid #ed1c24";
 		
 		ajaxContainer.innerHTML = '';
 		
 		for(let content of data){
-		console.log(content.rateCode);
 		let k = content.rateCode;
 		let explan = content.discountExplanation;
 		let explan2 = explan + "...";
@@ -88,18 +80,18 @@ function preferential(data){
 		`;
 		
 		ajaxContainer.innerHTML += udae;
-		console.log(udae);
-		
 			}
 		}
 	}	
 	
 	step2.onclick = () => {
+		step1.style.border = '';
+		step3.style.border = '';
+		step2.style.border = "2px solid #ed1c24";
 		
 		ajaxContainer.innerHTML = '';
 		
 		for(let content of data){
-		console.log(content.rateCode);
 		let k = content.rateCode;
 		let explan = content.discountExplanation;
 		let explan2 = explan + "...";
@@ -119,14 +111,17 @@ function preferential(data){
 		`;
 		
 		ajaxContainer.innerHTML = udae;
-		console.log(udae);
 			}
 		}
 	}	
 	
 	step3.onclick = () => {
+		step1.style.border = '';
+		step2.style.border = '';
+		step3.style.border = "2px solid #ed1c24";
 		
 		ajaxContainer.innerHTML = '';
+		
 		blank.style.display = "block";
 		const udae = 
 		`
@@ -135,6 +130,7 @@ function preferential(data){
 		ajaxContainer.innerHTML = udae;
 	}
 }
-	
+
+
 
 

@@ -1,147 +1,164 @@
-body {
-    top: 0;
+html {
+    font-size: 18px;
+    scroll-behavior: smooth;
 }
 
-.box-wrapper {
+
+body {
+    top: 0 !important;
     margin: 0px;
     padding: 0px;
-   }
-   
-   
-   
-   .box-slider-list li {
-       height: 110px;
-       background-repeat: no-repeat;
-       background-position: 50% 50%;
-   
-       float: left;
-       position: relative;
-       width: 1903px;
-   }
-   
-   .box-slider-list li a {
-       height: 110px;
-       width: 100%;
-       display: inline-block;
-   }
-   
-   .box-pager {
-       position: absolute;
-   
-       
-       top: 90px;
-       left: 50%;
-       margin-left: -650px;
-       /* z-index: 100; */
-   }
-   
-   .box-pager-link {
-       background-color: #ffffff;
-       text-indent: -9999px;
-       display: block;
-       width: 14px;
-       height: 14px;
-       margin: 0px 6px;
-       outline: 0;
-       border-radius: 7px;
-   
-       font-size: 18px;
-   }
-   
-   .box-pager-item {
-       display: inline-block;
-   }
-   
-   .box-pager-link:active {
-       background-color: #ed1c24;
-   }
-   
-   .box-pager-link:hover {
-       background-color: #ed1c24;
-   }
-   
-   
-   
-   #quickController {
-       width: 138px;
-       position: fixed;
-       right: -73px;
-       top: 50%;
-       transform: translate(-50%);
-       z-index: 111;
-       transition: 0.4s;
-   }
-   .toggle-botten {
-       position: absolute;
-       display: none;
-       width: 20px;
-       height: 31px;
-   
-       background-repeat: no-repeat;
-       background-position: 100% 50%;
-       cursor: pointer;
-       right: 138px;
-       top: 0;
-       /* z-index: 110; */
-       
-   }
-   
-   #quickController ul {
-       border-top: 1px solid #cecece;
-   }
-   
-   #quickController ul li {
-       border-left: 1px solid #cecece;
-       border-right: 1px solid #cecece;
-       border-bottom: 1px solid #dadada;
-       background-color: #f7f7f7;
-       
-       margin: 0px;
-       padding: 0px;
-   }
-   
-   
-   
-   #quickController ul li a img {
-       margin: 7px;
-       float: left;
-   
-       
-       overflow-clip-margin: content-box;
-       overflow: clip;
-   }
-   
-   #quickController ul li a span {
-       display: block;
-       margin-left: 64px;
-       height: 64px;
-       line-height: 60px;
-       color: #272727;
-       font-size: 0.83rem;
-   
-       cursor: pointer;
-   }
-   
-   #quickController ul .draken {
-       border-left: 1px solid #6b001e;
-       border-right: 1px solid #6b001e;
-       border-bottom: 1px solid #6b001e;
-       background-color: #6b001e;
-   
-       
-   }
-   
-   #quickController ul .draken a span {
-       color: #fff;
-       background-color: #6b001e;
-       font-size: 0.73rem;
-       
-   }
-   
-   
-   
-   
-   #main-top {
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    font-family: 'Noto Sans KR', sans-serif;
+    
+    
+}
+
+
+
+
+.box-wrapper {
+ margin: 0px;
+ padding: 0px;
+}
+
+
+
+.box-slider-list li {
+    height: 110px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    float: left;
+    position: relative;
+    width: 1903px;
+}
+
+.box-slider-list li a {
+    height: 110px;
+    width: 100%;
+    display: inline-block;
+}
+
+.box-pager {
+    position: absolute;
+
+    
+    top: 90px;
+    left: 50%;
+    margin-left: -650px;
+    /* z-index: 100; */
+}
+
+.box-pager-link {
+    background-color: #ffffff;
+    text-indent: -9999px;
+    display: block;
+    width: 14px;
+    height: 14px;
+    margin: 0px 6px;
+    outline: 0;
+    border-radius: 7px;
+
+    font-size: 18px;
+}
+
+.box-pager-item {
+    display: inline-block;
+}
+
+.box-pager-link:active {
+    background-color: #ed1c24;
+}
+
+.box-pager-link:hover {
+    background-color: #ed1c24;
+}
+
+
+
+#quickController {
+    width: 138px;
+    position: fixed;
+    right: -145px;
+    top: 50%;
+    transform: translate(-50%);
+    z-index: 111;
+    transition: 0.4s;
+}
+.toggle-botten {
+    position: absolute;
+    display: none;
+    width: 20px;
+    height: 31px;
+
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    cursor: pointer;
+    right: 138px;
+    top: 0;
+    /* z-index: 110; */
+    
+}
+
+#quickController ul {
+    border-top: 1px solid #cecece;
+}
+
+#quickController ul li {
+    border-left: 1px solid #cecece;
+    border-right: 1px solid #cecece;
+    border-bottom: 1px solid #dadada;
+    background-color: #f7f7f7;
+    
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+#quickController ul li a img {
+    margin: 7px;
+    float: left;
+
+    
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+#quickController ul li a span {
+    display: block;
+    margin-left: 64px;
+    height: 64px;
+    line-height: 60px;
+    color: #272727;
+    font-size: 0.83rem;
+
+    cursor: pointer;
+}
+
+#quickController ul .draken {
+    border-left: 1px solid #6b001e;
+    border-right: 1px solid #6b001e;
+    border-bottom: 1px solid #6b001e;
+    background-color: #6b001e;
+
+    
+}
+
+#quickController ul .draken a span {
+    color: #fff;
+    background-color: #6b001e;
+    font-size: 0.73rem;
+    
+}
+
+
+
+
+#main-top {
     
     position: relative;
 
@@ -232,13 +249,14 @@ body {
 
 .main-top-right ul {
     float: right;
-
+   display: flex;
     
 }
 
 .main-top-list ul li{
     float: left;
     margin-top: 5px;
+    
 }
 
 .main-top-list ul li:first-child a {
@@ -251,20 +269,40 @@ body {
     font-weight: 300;
     font-size: 0.67rem;
     margin-left: 14px;
+    display: block;
+    width:100%;
+    
+    padding-top: 5px;
+    
 }
 
 
 
 
-.choice {
+.main-top-list ul li.choice {
     margin-top: 0px;
+    position: relative;
+    top: 0px;
+    
+
+    
+}
+
+.main-top-list ul li.choice a {
+   display: flex;
+   padding-top:10px;
+}
+
+.main-top-list ul li.choice a img.choice-img {
+   height: 22px;
 }
 
 .main-top-search {
     clear: both;
     text-align: right;
     
-
+    position:relative;
+   top:0px;
 
 }
 .main-top-search form {
@@ -451,6 +489,8 @@ body {
     background-repeat: no-repeat;
     background-position: right -468px top -204px;
 }
+
+
 #TopLNB {
     position: relative;
     background-image: url('/static/img-kdh/restimg/TopLNBimg.jpg');
