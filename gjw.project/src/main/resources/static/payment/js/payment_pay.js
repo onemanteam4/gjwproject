@@ -244,7 +244,6 @@ function loadDetail() {
 }
 
 let totalAllPrice = totalPrice.textContent;
-console.log("totalAllPrice: "+totalAllPrice);
 const sameVisitorBtn = document.querySelector(".same-visitor input");
 const inputType = document.querySelectorAll(".input-wrap input");
 sameVisitorBtn.onclick = () => {

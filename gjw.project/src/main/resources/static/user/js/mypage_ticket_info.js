@@ -22,7 +22,6 @@ function orderInfo() {
 	return order;
 }
 
-console.log(getUser());
 function fillPage(data) {
 	const pageTitle = document.querySelector(".page-title");
 	const ticketPreview = document.querySelector(".ticket-preview");

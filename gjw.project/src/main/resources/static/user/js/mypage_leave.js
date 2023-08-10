@@ -7,7 +7,6 @@ const btnLeave = document.querySelector(".btn-leave");
 
 
 getUser();
-console.log(getUser());
 loadUserInfo();
 function loadUserInfo() {
 	myId.value = getUser().user_id;
@@ -32,7 +31,6 @@ function getPrincipalPassword() {
 	return userP;
 }
 
-console.log(userPass);
 
 
 btnLeave.onclick = () => {

@@ -169,7 +169,6 @@ public class AuthServiceImpl implements AuthService {
 	public int getUserGender(String gender) throws Exception {
 		List<User> list = null;
 		list = userRepository.getUserGender(gender);
-		System.out.println(list.size());
 		return list.size();
 	}
 

@@ -293,11 +293,6 @@ function afIncrease(num, price) {
 }
 
 
-
-
-console.log(getUser());
-
-
 const nextBtn = document.querySelector(".next-btn");
 nextBtn.onclick = () => {
 

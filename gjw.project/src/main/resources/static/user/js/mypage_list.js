@@ -243,8 +243,6 @@ function nextCalendar2() {
 
 let ticket = loadUserTicket();
 function loadUserTicket() {
-	console.log(newToday);
-	console.log(nextToday);
 	let ticket = null
 	$.ajax({
 		async: false,
@@ -274,7 +272,6 @@ function loadTicket(data) {
 		for(let i = 0; i < data.length; i++) {
 
 			let ticketCount = data[i].cardNum + data[i].uniformBCount + data[i].uniformSCount + data[i].kbBCount + data[i].kbSCount + data[i].onlineBCount + data[i].onlineMCount + data[i].onlineSCount + data[i].afterBCount + data[i].afterSCount;
-			console.log(ticketCount);
 			listWrap.innerHTML += `
 		        <div class="ticket-list">
 		            <a href="/auth/mypage_ticket_info/${data[i].orderCode}">
