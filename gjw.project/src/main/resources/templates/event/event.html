@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <title>공연 및 이벤트</title>
+    <link rel="stylesheet" href="/static/css/operation.dyj/operation_style.css">
+    <link rel="stylesheet" href="/static/event/css/event.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body style="position: relative; min-height: 100%; top: 0px;">
+    <!--상단 배너 시작-->
+    
+    <th:block th:replace="/mainfragments/mainheader"></th:block>
+    
+    <!--상단 메인 끝-->
+    <!--중단 메인 시작-->
+    <main>
+        <div id="TopLNB" style="top: 0px; background-size: cover; background-position: 50% 50%;">
+            <div>
+                <h2>공연 및 이벤트</h2>
+                <div class="TopLocation">
+                    <div class="Top-WrapWidth">
+                        <ul>
+                            <li>
+                                <a href="/">홈</a>
+                            </li>
+                            <li>
+                                <span>공연 및 이벤트</span>
+                                <div class="notice-details">
+                                    <ul>
+                                        <li>
+                                            <a href="/hours-of-operation/operation">이용정보</a>
+                                        </li>
+                                        <li>
+                                            <a href="/mainfee">요금정보</a>
+                                        </li>
+                                        <li>
+                                            <a href="/maincourse">어뮤즈먼트 소개</a>
+                                        </li>
+                                        <li>
+                                            <a href="/event">공연 및 이벤트</a>
+                                        </li>
+                                        <li>
+                                            <a href="/notice/notice_list">고객센터</a>
+                                        </li>
+                                        <li>
+                                            <a href="/payment/payment_first">스마트할인예약</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <span>공연 및 이벤트</span>
+                                <div class="notice-details">
+                                    <ul>
+                                        <li>
+                                            <a href="/event">공연 및 이벤트</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="notice-contents">
+            <div class="notice-contents-title">
+                <div class="notice-wrap-width">
+                    <h3>공연 및 이벤트</h3>
+                    <div class="content-control">
+                        <ul>
+                            <li class="snslistBtn">
+                                공유하기
+                                <div class="snslist">
+                                    <b>공유하기</b>
+                                    <span class="close"></span>
+                                    <ul>
+                                        <li>
+                                            <span onclick=""></span>
+                                            페이스북
+                                        </li>
+                                        <li>
+                                            <span onclick=""></span>
+                                            트위터
+                                        </li>
+                                        <li>
+                                            <span onclick=""></span>
+                                            블로그
+                                        </li>
+                                        <li>
+                                            <span onclick=""></span>
+                                            카카오톡
+                                        </li>
+                                        <li>
+                                            <span onclick=""></span>
+                                            밴드
+                                        </li>
+                                        <li>
+                                            <span onclick=""></span>
+                                            카카오스토리
+                                        </li>
+                                        <li>
+                                            <span onclick=""></span>
+                                            라인
+                                        </li>
+                                        <li>
+                                            <span onclick=""></span>
+                                            구글
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="url-btn" data-clipboard-text="https://www.gjw.co.kr/Contents/contents.php?cmsNo=DD0100">
+                                링크복사
+                            </li>
+                            <li class="print">
+                                인쇄
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="operation-print">
+                <div class="select-day">
+                    <div class="select-width">
+                        <div class="select-day-details">
+                            <div class="left">2023.07</div>
+                            <div class="right">
+                                <button type="button">
+                                    <span class="prev">이전</span>
+                                </button>
+                                <ul>
+                                    
+                                </ul>
+                                <button type="button">
+                                    <span class="next">다음</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="show-list">
+                    <div class="show-wrap">
+                        <div class="show-info">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">공연정보</th>
+                                        <th>공연시간</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="3">금일은 휴연입니다.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>
+                            ※기상상황에 따라 공연이 취소 또는 변경이 될 수 있습니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--중단 메인 끝-->
+    <!--하단 메인 시작-->
+    <footer>
+        <div id="footer-bottom">
+            <div class="footer-category">
+                <div class="footer-category-list">
+                    <div class="bottom-sns">
+                        <ul>
+                            <li>
+                                <span></span>
+                                <a href="http://www.facebook.com/hi.gjw" target="_blank">공식페이스북</a>
+                            </li>
+                            <li>
+                                <span></span>
+                                <a href="https://blog.naver.com/hi_gjw" target="_blank">공식블로그</a>
+                            </li>
+                            <li>
+                                <span></span>
+                                <a href="https://www.instagram.com/hi_gyeongju/" target="_blank">공식인스타그램</a>
+                            </li>
+                            <li>
+                                <span></span>
+                                <a href="https://www.youtube.com/channel/UCY5OQjDmW1_SRO4saLQzveQ/feed" target="_blank">공식유튜브</a>
+                            </li>
+                            <li>
+                                <span></span>
+                                <a href="https://www.tiktok.com/@hi_gjw" target="_blank">공식틱톡</a>
+                            </li>
+                            <li>
+                                <span></span>
+                                <a href="https://pf.kakao.com/_xcExbpC" target="_blank">공식카카오톡채널</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <span class="footer-category-top">
+                        TOP
+                        <script>
+                            let topBtn = document.querySelector(".footer-category-top");
+                            topBtn.onclick = () => {
+                                window.scrollTo({
+                                    top: 0,
+                                    scbehavior: "smooth"
+                                })
+                            };
+                        </script>
+                    </span>
+                </div>
+            </div>
+            <div class="company-information">
+                <div class="company-information-details">
+                    <div class="bottom-left">
+                        <div class="information-details-left">
+                            <a href="https://www.gjw.co.kr/">
+                                <img src="/static/main-image/logo.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="information-details-center">
+                            <div class="center-company">
+                                <ul>
+                                    <li>
+                                        <a href="">경주월드 소개</a>
+                                    </li>
+                                    <li>
+                                        <a href="">이용약관</a>
+                                    </li>
+                                    <li>
+                                        <a href="">개인정보취급방침</a>
+                                    </li>
+                                    <li>
+                                        <a href="">제휴문의</a>
+                                    </li>
+                                    <li>
+                                        <a href="">채용안내 및 지원</a>
+                                    </li>
+                                    <li>
+                                        <a href="">이메일무단수집거부</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="center-company-imformation">
+                                <ul>
+                                    <li>경주월드 주식회사 (경주지점)</li>
+                                    <li>주소 : 경주시 보문로 544(천군동)</li>
+                                    <li>대표전화 : 1544-8765</li>
+                                    <li>사업자등록번호 : 505-85-15586</li>
+                                    <li>대표이사 : 정원기, 함영관</li>
+                                </ul>
+                            </div>
+                            <div class="bottom-copyright">
+                                <ul>
+                                    <li>ⓒ GyeongjuWorld. All rights reserved.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="right-company-imformation">
+                            <div class="company-family">
+                                <ul>
+                                    <li>
+                                        관련사이트 바로가기
+                                        <div>
+                                            <ul class="company-name">
+                                                <li>
+                                                    <a href="http://www.asiacement.co.kr">아세아시멘트</a>
+                                                </li>
+                                                <li>
+                                                    <a href="http://www.asiasan.co.kr">아세아산업개발</a>
+                                                </li>
+                                                <li>
+                                                    <a href="http://www.yujinpanji.co.kr">유진판자공업</a>
+                                                </li>
+                                                <li>
+                                                    <a href="http://www.cheilacc.co.kr">제일산업</a>
+                                                </li>
+                                                <li>
+                                                    <a href="http://www.a-pack.co.kr">에이팩</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/ea1271e419.js" crossorigin="anonymous"></script>
+    <script src="/static/event/js/event.js"></script>
+</body>
+</html>

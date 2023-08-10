@@ -26,5 +26,10 @@ public class PageController {
 		return "chart/user_gender";
 	}
 	
+	@GetMapping("/event")
+	public String loadEvent() {
+	return "event/event";
+	}
+	
 	
 }
