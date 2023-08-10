@@ -596,6 +596,8 @@ main {
     background: #fff;
     border-radius: 50px;
     text-align: center;
+    
+    cursor: pointer;
 }
 
 .main-visual .center-main-pointer .box-pager-item .box-pager-link:hover {
@@ -1037,6 +1039,8 @@ main {
     position: absolute;
     top: 170px;
     left: 0;
+    
+    cursor: pointer;
 }
 
 .box-next {
@@ -1051,6 +1055,8 @@ main {
     position: absolute;
     top: 170px;
     right: 0;
+    
+    cursor: pointer;
 }
 
 .main-guide {
