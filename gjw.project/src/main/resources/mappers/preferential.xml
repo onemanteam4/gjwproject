@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.omt.gjw.project.domain.rate.PreferentialRepository">
+  	<select id="preferntialList"  resultType="com.omt.gjw.project.domain.rate.Preferential">
+	SELECT
+		rate_code,
+		discount_name,
+		discount_explanation,
+		file_name
+
+	FROM
+		rate_info_mst
+	
+	
+		
+  	</select>
+  	
+  	</mapper>

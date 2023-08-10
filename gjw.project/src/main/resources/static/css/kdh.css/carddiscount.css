@@ -1,465 +1,6 @@
-body {
-    top: 0;
-}
-
-.box-wrapper {
-    margin: 0px;
-    padding: 0px;
-   }
-   
-   
-   
-   .box-slider-list li {
-       height: 110px;
-       background-repeat: no-repeat;
-       background-position: 50% 50%;
-   
-       float: left;
-       position: relative;
-       width: 1903px;
-   }
-   
-   .box-slider-list li a {
-       height: 110px;
-       width: 100%;
-       display: inline-block;
-   }
-   
-   .box-pager {
-       position: absolute;
-   
-       
-       top: 90px;
-       left: 50%;
-       margin-left: -650px;
-       /* z-index: 100; */
-   }
-   
-   .box-pager-link {
-       background-color: #ffffff;
-       text-indent: -9999px;
-       display: block;
-       width: 14px;
-       height: 14px;
-       margin: 0px 6px;
-       outline: 0;
-       border-radius: 7px;
-   
-       font-size: 18px;
-   }
-   
-   .box-pager-item {
-       display: inline-block;
-   }
-   
-   .box-pager-link:active {
-       background-color: #ed1c24;
-   }
-   
-   .box-pager-link:hover {
-       background-color: #ed1c24;
-   }
-   
-   
-   
-   #quickController {
-       width: 138px;
-       position: fixed;
-       right: -73px;
-       top: 50%;
-       transform: translate(-50%);
-       z-index: 111;
-       transition: 0.4s;
-   }
-   .toggle-botten {
-       position: absolute;
-       display: none;
-       width: 20px;
-       height: 31px;
-   
-       background-repeat: no-repeat;
-       background-position: 100% 50%;
-       cursor: pointer;
-       right: 138px;
-       top: 0;
-       /* z-index: 110; */
-       
-   }
-   
-   #quickController ul {
-       border-top: 1px solid #cecece;
-   }
-   
-   #quickController ul li {
-       border-left: 1px solid #cecece;
-       border-right: 1px solid #cecece;
-       border-bottom: 1px solid #dadada;
-       background-color: #f7f7f7;
-       
-       margin: 0px;
-       padding: 0px;
-   }
-   
-   
-   
-   #quickController ul li a img {
-       margin: 7px;
-       float: left;
-   
-       
-       overflow-clip-margin: content-box;
-       overflow: clip;
-   }
-   
-   #quickController ul li a span {
-       display: block;
-       margin-left: 64px;
-       height: 64px;
-       line-height: 60px;
-       color: #272727;
-       font-size: 0.83rem;
-   
-       cursor: pointer;
-   }
-   
-   #quickController ul .draken {
-       border-left: 1px solid #6b001e;
-       border-right: 1px solid #6b001e;
-       border-bottom: 1px solid #6b001e;
-       background-color: #6b001e;
-   
-       
-   }
-   
-   #quickController ul .draken a span {
-       color: #fff;
-       background-color: #6b001e;
-       font-size: 0.73rem;
-       
-   }
-   
-   
-   
-   
-   #main-top {
-       
-       position: relative;
-   
-   }
-   
-   .topWrap {
-       width: 100%;
-       height: 150px;
-       position: absolute;
-       
-   }
-   
-   
-   .main-top-top {
-       clear: both;
-       top: 110px;
-       
-       position: absolute;
-       width: 100%;
-       height: 90px;
-       background-color: #ffffff;
-       /* z-index: 102; */
-       top: 0;
-    }
-   
-   .main-top-top-details {
-      margin: 0 auto;
-      width: 100%;
-      max-width: 1300px;
-       cursor: pointer;
-   }
-   
-   .main-top-left {
-       float: left;
-       width: 30%;
-       
-   }
-   
-   .main-top-left ul {
-       margin-top: 25px;
-       
-   }
-   
-   
-   .main-top-left ul li{
-       float: left;
-       height: 42px;
-   
-   }
-   .first {
-      background-image: url('/main_image/main_logo/collection.png');
-      background-repeat: no-repeat;
-      background-position: -17px -1107px;
-      padding-left: 62px;
-   }
-   
-   
-   .main-top-left ul a{
-       display: inline-block;
-       height: 42px;
-       line-height: 38px;
-       text-align: center;
-       color: #707070;
-       font-size: 0.67rem;
-   }
-   
-   .second {
-       background-image: url('/main_image/main_logo/collection.png');
-      background-repeat: no-repeat;
-      background-position: -17px -1207px;
-      padding-left: 62px;
-   }
-   .main-top-middle {
-       float: left;
-       width: 40%;
-       text-align: center;
-       padding: 6px 0px;
-   }
-   
-   .main-top-middle a {
-       cursor: pointer;
-   }
-   
-   .main-top-right {
-       float: left;
-       width: 30%;
-   }
-   
-   .main-top-right ul {
-       float: right;
-   
-       
-   }
-   
-   .main-top-list ul li{
-       float: left;
-       margin-top: 5px;
-   }
-   
-   .main-top-list ul li:first-child a {
-       margin-left: 0px;
-   }
-   
-   
-   .main-top-list ul li a{
-       color: #707070;
-       font-weight: 300;
-       font-size: 0.67rem;
-       margin-left: 14px;
-   }
-   
-   
-   
-   
-   .choice {
-       margin-top: 0px;
-   }
-   
-   .main-top-search {
-       clear: both;
-       text-align: right;
-       
-   
-   
-   }
-   .main-top-search form {
-       display: inline-block;
-       width: 196px;
-       height: 37px;
-       margin-top: 13px;
-       border: 1px solid #cccccc;
-   }
-   .main-top-search form label {
-       display: none;
-   }
-   .main-top-search form .hash-tag-input1 {
-       width: 131px;
-       height: 35px;
-       padding: 0 10px;
-       float: left;
-       border: none;
-       color: #707070;
-       font-size: 0.89rem;
-       font-weight: 300;
-   
-       cursor: pointer;
-       vertical-align: middle;
-   }
-   
-   .main-top-search form .hash-tag-input2 {
-       width: 131px;
-       height: 35px;
-       line-height: 31px;
-       padding: 0 10px;
-       float: left;
-       border: none;
-       color: #707070;
-       font-size: 0.89rem;
-       font-weight: 300;
-   }
-   
-   .main-top-search form .sch_submit {
-       width: 35px;
-       height: 35px;
-       float: right;
-       text-indent: -9999px;
-       border: none;
-       background-image: url('/main_image/main_logo/돋보기.png');
-       background-repeat: no-repeat;
-       background-position: -2px -200px;
-       background-color: #ffffff;
-       cursor: pointer;
-   
-       vertical-align: middle;
-   }
-   
-   
-   
-   .main-top-bottom {
-       border-top: 1px solid #e1e1e1;
-       border-bottom: 1px solid #e1e1e1;
-       clear: both;
-       width: 100%;
-       position: absolute;
-       
-       height: 55px;
-       top: 100px;
-       background-color: #ffffff;
-       z-index: 103;
-   
-   
-   }
-   
-   .main-top-bottom-all {
-       position: relative;
-       margin: 0 auto;
-       width: 100%;
-       max-width: 1300px;
-   }
-   .main-top-menu {
-       position: absolute;
-       
-       overflow: hidden;
-       transition: 0.4s;
-       width: 100%; 
-       top: 0px; 
-       
-   }
-   
-   .main-top-menu > ul {
-       background-color: #ffffff;
-   }
-   
-   
-   .main-top-menu ul > li {
-       float: left;
-       width: 16.6%;
-       text-align: center;
-       position: relative;
-   }
-   
-   .main-top-menu ul > li:hover .hover {
-       display: block;
-       opacity: 1;
-   }
-   
-   .main-top-menu ul li a{
-       display: inline-block;
-       text-align: center;
-       width: 100%;
-       height: 56px;
-       line-height: 56px;
-       font-family: 'NanumSqare';
-       font-weight: 700;
-       color: #000000;
-       font-size: 1.11rem;
-   }
-   
-   
-   .list-hover > a:hover{
-       color: #ed1c24;
-       border-bottom: 3px solid #ed1c24;
-       
-       
-   }
-   
-   /* .list-hover > a:hover .hover {
-       display: block;
-       opacity: 1;
-   
-   } */
-   .hover {
-       border-top: 1px solid #ffffff;
-       background-color: #ffffff;
-   }
-   
-   
-   
-   .main-top-menu ul > li > ul {
-       width: 100%;
-       border-top: 1px solid #c3c7c8;
-       border-left: 1px solid #eaeaea;
-       border-bottom: 1px solid #eaeaea;
-       height: 299px;
-       padding-top: 14px;
-       
-       display: none;
-       opacity: 0;
-   }
-   
-   .list-hover ul li {
-       clear: both;
-       width: 175px;
-       min-height: 32px;
-       position: relative;
-       top: 0%;
-       
-   }
-   
-   
-   .list-hover ul li :hover {
-       background-color: #f9f9f9;
-       color: #ed1c24;
-       background-position: right -468px top -304px;
-   }
-   
-   .main-top-menu ul li:last-child {
-       width: 17%;
-   }
-   
-   .main-top-menu ul li ul li a {
-       display: inline-block;
-       color: #505050;
-       font-size: 0.78rem;
-       width: 165px;
-       height: 32px;
-       line-height: 32px;
-       border-bottom: 1px solid #eaeaea;
-       text-align: left;
-       padding-left: 10px;
-       background-image: url('/main_image/main_logo/button_collection.png');
-       background-repeat: no-repeat;
-       background-position: right -468px top -204px;
-   }
-
-
-
-/* 내부 사진 및 설명 */
-
-.WrapTop {
-    position: relative;
-    width: 1754.6px;
-    height: 0px;
-    top: 150px;
-}
 #TopLNB {
     position: relative;
-    background-image: url('/static/img-kdh/restimg/TopLNBimg.jpg');
+    background-image: url('/static/img-kdh/restimg/rateinformation.jpg');
 }
 
 #TopLNB > div {
@@ -735,97 +276,170 @@ body {
     background-position: -3px -503px;
 }
 
-#RestaurantList {
+/* 상단 바까지 */
 
+#discountinfo {
+    padding: 10px 0;
 }
 
-.ContainerRows {
-	cursor: pointer;
-}
-
-.foodWrap {
+.WrapWidth {
     margin: 0 auto;
     width: 100%;
-    height: 865px;
     max-width: 1300px;
 }
 
-#RestaurantList ul {
+#discountinfo dl {
     width: 100%;
-    margin-top: 0px;
+    border-top: 1px solid #868686;
 }
 
-#RestaurantList ul li {
-    width: calc(20% - 20px);
-    float: left;
-    margin-left: 24px;
-    margin-bottom: 56px;
-}
-
-#RestaurantList ul li:nth-child(5n+1) {
-    margin-left: 0;
-    clear: both;
-}
-
-#RestaurantList ul li a {
-    color: #000000;
-}
-
-.thumWrap {
-    border-radius: 8px;
-    overflow: hidden;
+#discountinfo dl dt {
+    min-height: 52px;
+    line-height: 52px;
+    border-bottom: 1px solid #c1c2c6;
+    text-align: left;
+    font-size: 28px;
+    padding-left: 70px;
     position: relative;
 }
 
-.photo {
-    padding-top: 100%;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: cover;
-    position: relative;
-}
-
-.infomation {
-    padding: 24px 0 0;
-    font-size: 13px;
-    color: #555555;
-}
-
-.name {
-    font-weight: 700;
-    font-size: 18px;
-}
-
-#RestaurantList ul li div p {
-    display: block;
-    font-weight: 300;
-    margin-top: 4px;
-}
-
-.add-ButtonArea {
-    clear: both;
-    padding-top: 100px;
+.badge {
+    position: absolute;
+    width: 61px;
+    height: 52px;
+    background-color: #5674b9;
+    left: 0;
+    font-weight: 500;
+    font-size: 11px;
+    color: #ffffff;
     text-align: center;
+    padding: 12px 18px;
+    line-height: 14.5px;
+    word-break: break-all; /* 글자 기준 강제 줄바꿈 */
 }
 
-.add-ButtonArea span {
+#discountinfo dl dd {
+    border-bottom: 1px solid #c1c2c6;
+    min-height: 40px;
+}
+
+#discountinfo dl dd.information span:first-child {
+    font-size: 0;
+}
+
+#discountinfo dl dd.information span:last-child {
+    text-align: right;
+}
+
+#discountinfo dl dd.information span {
+    float: left;
+    width: 50%;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    color: #868686;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+#discountinfo dl dd.content {
+    padding: 35px 0;
+    word-wrap: break-word; /*비 아시아 언어 줄바꿈 제어*/
+    word-break: break-all;
+    overflow: auto;
+}
+
+#discountinfo h4 {
+    font-size: 31px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.priceinfo h4 {
+    min-height: 90px;
+    line-height: 40px;
+    letter-spacing: -2px;
+}
+
+.priceinfo table {
+    width: 100%;
+    border-top: 1px solid #000000;
+}
+
+table {
+    border-collapse: collapse; /*셀의 테두리 선 간격을 벌려 표시*/
+}
+
+.priceinfo table thead {
+    background-color: #f9f9f9;
+}
+
+.priceinfo table thead th {
+    height: 54px;
+    border-right: 1px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2;
+    font-weight: 400;
+}
+
+.priceinfo table thead th:first-child {
+    border-left: 1px solid #e2e2e2;
+}
+
+.priceinfo table tbody th {
+    border-left: 1px solid #e2e2e2;
+    border-right: 1px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2;
+    font-weight: 400;
+    word-wrap: break-word;
+    word-break: keep-all; /* 단어 기준으로 줄 바꿈 */
+}
+
+.priceinfo table tbody td {
+    border-right: 1px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2;
+    text-align:  center;
+    padding: 15px 4px;
+    word-wrap: break-word;
+    word-break: keep-all;
+}
+
+#discountinfo .button-Area {
+    clear: both;
+    padding: 30px 0 80px 0;
+}
+
+.button-Area a {
+    display: inline-block;
+    height: 64px;
+    padding: 0px 50px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(237, 28, 36);
+    line-height: 60px;
+    font-weight: 500;
+}
+
+.button-Main {
+    clear: both;
+    text-align: right;
+    padding: 30px 0 80px 0;
+}
+
+#discountinfo .button-Main a {
     display: inline-block;
     height: 50px;
-    line-height: 46px;
-    padding: 0 63px 0 33px;
-    border: 1px solid #000000;
+    width: 140px;
+    text-align: center;
+    line-height: 44px;
+    border: 2px solid #ed1c24;
     border-radius: 25px;
     font-size: 18px;
-    color: #676767;
-    background-image: url(/static/img-kdh/sign.png);
-    background-repeat: no-repeat;
-    background-position: top -702px right -240px;
-    cursor: pointer;
-    
+    color: #ed1c24;
+    background-color: #f7f7f7;
 }
 
-/* 하단 바 시작 */
+/* 중앙 끝 */
 
+/* 하단바 시작*/
 #footer-bottom {
     clear: both;
     background-color: #ffffff;
@@ -920,11 +534,6 @@ body {
     cursor: pointer;
 
     
-    
-}
-
-.company-information-details {
-
     
 }
 
@@ -1079,6 +688,5 @@ body {
     font-size: 0.67rem;
     line-height: 30px;
     
-}
-
-/* 하단 끝 */
+} 
+/* 하단바 끝*/
