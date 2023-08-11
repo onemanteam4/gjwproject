@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>우대프로그램 | 꿈, 사랑, 행복의 경주월드!</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <link rel="stylesheet" href="/static/css/kdh.css/style.css">
     <link rel="stylesheet" href="/static/css/kdh.css/preferential.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,6 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body id="Amusement">
+
+	<th:block th:replace="/mainfragments/mainheader"></th:block>
+	
     <main>
         <div id="TopLNB" style="top: 0px; background-size: cover; background-position: 50% 50%;">
             <div>
