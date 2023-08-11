@@ -45,7 +45,6 @@ function mainbanner () {
         
     	sliderNext.onclick = () => {
     		
-		console.log(index);
 		centerMainBannerList.style.transition = 'transform 0.5s ease-out';
 		centerMainBannerList.style.transform = 'translate3d(-'+ 1300*index + 'px, 0px, 0px)';
 		
@@ -91,7 +90,6 @@ function mainbanner () {
             centerMainBannerList.style.transform = 'translate3d(-'+ 1300*(index) + 'px, 0px, 0px)';
             index ++;
             
-            console.log(index+1);
             if( index >= 10) {
                 index = 1;
     
@@ -111,7 +109,6 @@ function mainbanner () {
             centerMainBannerList.style.transform = 'translate3d(-'+ 1300*(index) + 'px, 0px, 0px)';
             index ++;
             
-            console.log(index+1);
             if( index >= 10) {
                 index = 1;
     
@@ -368,7 +365,6 @@ function guidebanner () {
         guideSlider.style.transform = 'translate3d(-' + 936*(index) + 'px, 0px, 0px)';
             index ++;
             
-            console.log(index+1);
        	if( index >= 4) {
         	index = 0;
 
