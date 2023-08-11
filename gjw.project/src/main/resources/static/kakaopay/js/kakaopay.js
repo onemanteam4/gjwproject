@@ -3,6 +3,7 @@ const totalPrice = document.querySelector(".total span");
 let regularPrice = innerPrice[0].textContent * 1;
 let discountedPrice = innerPrice[1].textContent * -1;
 
+/* 구매한 티켓 정보 */
 function getTicket() {
 	let ticket = null;
 	$.ajax({
@@ -262,12 +263,3 @@ function bookTicket() {
 		}
 	})
 }
-
-
-
-
-
-
-
-
-

@@ -3,14 +3,7 @@ body {
     background-color: #FFFFFF;
     margin: 0px;
 }
-/*
-#wrap-contents {
-    padding: 50px 0px;
-    width: 100%;
-    max-width: 1300px;
-    margin: 0px auto;
-}
-*/
+
 .wrap {
     max-width: 1280px;
     padding: 0px 40px;
@@ -198,8 +191,6 @@ header h1 img {
     padding-right: 15px;
     line-height: 40px;
     position: relative;
-    /*background: url(/donguk_img/arrow_down.png) center right no-repeat;
-    background-size: 12px;*/
 }
 
 .slt-type option {
@@ -263,6 +254,7 @@ ol {
     font-size: 14px;
     margin-top: 10px;
 }
+
 /* 체크박스 시작 */
 .check-type {
     position: relative;

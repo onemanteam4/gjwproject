@@ -2,7 +2,7 @@ let prevBtn = document.querySelector(".prev");
 let nextBtn = document.querySelector(".next");
 let inner = document.querySelector(".inner b");
 
-
+/* 날짜 선택하기 */
 window.onload = function() {buildCalendar();}
 
 let nowMonth = new Date(); // 현재 달을 페이지를 로드한 날로 초기화
@@ -118,15 +118,3 @@ function nextCalendar() {
         changeCal.innerText = nowMonth.getFullYear() + "." + (nowMonth.getMonth() + 1);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-

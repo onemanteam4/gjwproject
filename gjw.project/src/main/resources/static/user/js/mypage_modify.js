@@ -21,6 +21,7 @@ let RegionCheckFlag = false;
 
 getUser();
 loadUserInfo();
+/* 회원 정보 가져오기 */
 function loadUserInfo() {
 	signupName.value = getUser().user_name;
 	signupId.value = getUser().user_id;
@@ -79,7 +80,7 @@ btnModify.onclick = () => {
 	})
 }
 
-/* 지역 선택 */
+/* 지역 선택 시작 */
 let siCode = 1;
 let regionCode = 1;
 regionLoad();
@@ -121,8 +122,6 @@ for(let i = 0; i < addsidoop.length; i++) {
 addsigungu.onclick = () => {
 	regionCode = addsigungu.value;
 }
-
-
 /* 지역 선택 끝 */
 
 /* 약관동의 시작 */
@@ -138,7 +137,7 @@ function agreeCheck() {
 }
 /* 약관동의 끝 */
 
-/* 성별확인 */
+/* 성별확인 시작 */
 getGender();
 function getGender() {
 	genderType[0].onclick = () => {

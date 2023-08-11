@@ -7,7 +7,7 @@ let visitNameFlag = false;
 let visitPhoneFlag = false;
 let visitEmailFlag = false;
 
-
+/* 리스트 온오프 */
 function showlist(num) {
     const list = document.querySelectorAll(".list");
 
@@ -18,6 +18,7 @@ function showlist(num) {
     }
 }
 
+/* 전체 티켓 정보 가져오기 */
 function getTicket() {
 	let ticket = null;
 	$.ajax({
@@ -265,10 +266,11 @@ sameVisitorBtn.onclick = () => {
 	}
 }
 
+/* 방문자 정보확인 */
 function checkVisit() {
 	const nameReg = /^[가-힣]{2,4}$/;
 	const phoneReg = /^[0-9]{3}-[0-9]{4}-[0-9]{4}$/;
-	const emailReg = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+	const emailReg = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
 	
 	if(nameReg.test(inputType[0].value)) {
 		visitNameFlag = true;
@@ -318,17 +320,3 @@ payBtn.onclick = () => {
 		}
 	})
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

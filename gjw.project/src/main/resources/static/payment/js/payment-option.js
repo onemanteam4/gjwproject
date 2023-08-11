@@ -292,7 +292,7 @@ function afIncrease(num, price) {
 
 }
 
-
+/* 선택한 정보 저장 */
 const nextBtn = document.querySelector(".next-btn");
 nextBtn.onclick = () => {
 

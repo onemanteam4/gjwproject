@@ -9,6 +9,7 @@ const addsigunguop = document.querySelectorAll("#addsigungu");
 let checkUsernameFlag = false;
 let passwordCheckFlag = false;
 
+/* 아이디 중복 확인 시작*/
 checkBtn.onclick = () => {
 	
 	$.ajax({
@@ -32,9 +33,25 @@ checkBtn.onclick = () => {
 	})
 }
 
+function getValid(flag) {
+	const idCheck = document.querySelector("#check-result");
+	if(flag) {
+		idCheck.innerText = "사용가능한 아이디입니다."
+		idCheck.classList.remove("false");
+	} else {
+		idCheck.innerText = "이미 사용중인 아이디입니다."
+		if(idCheck.className == "check-result") {
+			idCheck.classList.add("false");
+		}
+	}
+	
+}
+/*아이디 중복확인 끝 */
+
 const signupBtn = document.querySelector("#btn-signup");
 const inputData = document.querySelectorAll(".input_wrap input");
 
+/* 회원가입 */
 signupBtn.onclick = () => {
 	checkPassword();
 	
@@ -78,7 +95,7 @@ signupBtn.onclick = () => {
 	})
 }
 
-/* 지역 선택 */
+/* 지역 선택 시작*/
 let siCode = 1;
 let regionCode = 1;
 regionLoad();
@@ -123,7 +140,7 @@ addsigungu.onclick = () => {
 }
 /* 지역 선택 끝 */
 
-/* 약관 동의 */
+/* 약관 동의 시작 */
 const allcheck = document.querySelector("#allchk");
 const checkrows = document.querySelectorAll(".chkbox");
 const chk1 = document.querySelector("#chk1")
@@ -166,7 +183,7 @@ function agreeCheck() {
 }
 /* 약관동의 끝 */
 
-/* 성별확인 */
+/* 성별확인 시작 */
 const genderType = document.querySelectorAll(".radio-type input");
 const gendername = document.querySelector(".gendername");
 gendername.value = "남자";
@@ -184,22 +201,7 @@ function getGender() {
 }
 /*성별확인 끝 */
 
-/*아이디 중복확인*/
-function getValid(flag) {
-	const idCheck = document.querySelector("#check-result");
-	if(flag) {
-		idCheck.innerText = "사용가능한 아이디입니다."
-		idCheck.classList.remove("false");
-	} else {
-		idCheck.innerText = "이미 사용중인 아이디입니다."
-		if(idCheck.className == "check-result") {
-			idCheck.classList.add("false");
-		}
-	}
-	
-}
-
-/*비밀번호 중복 확인*/
+/*비밀번호 중복 확인 시작 */
 const signupPw = document.querySelector("#signup-pw");
 const chkSignupPw = document.querySelector("#chk-signup-pw");
 const passwordBool = document.querySelector(".password-bool");
@@ -214,3 +216,4 @@ function checkPassword() {
 	}
 
 }
+/*비밀번호 중복 확인 끝 */
