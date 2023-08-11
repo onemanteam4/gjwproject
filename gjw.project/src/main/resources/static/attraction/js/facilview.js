@@ -11,8 +11,6 @@ function load(uri){
 		dataType: "json",
 		success: (response)=> {
 			getfacil(response.data[0]);
-			console.log(response.data[0]);
-			console.log(response.data);
 		},
 		error: (error) => {
 			console.log(error);

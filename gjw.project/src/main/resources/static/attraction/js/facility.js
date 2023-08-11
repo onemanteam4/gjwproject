@@ -12,7 +12,6 @@ function load(i){
 		dataType: "json",
 		success: (response) => {
 			getfacility(response.data);
-			console.log(response.data);
 		},
 		error: (error) => {
 			console.log(error);

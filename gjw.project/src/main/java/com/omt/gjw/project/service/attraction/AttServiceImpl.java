@@ -90,8 +90,6 @@ public class AttServiceImpl implements AttService{
 	public List<AttRespDto> getSearchList(AttSearchReqDto attSearchReqDto) throws Exception {
 		List<MainAtt> mainsearch = attractionRepository.getSearchList(attSearchReqDto.toEntity());	
 
-		
-		
 		return createSearchList(mainsearch, attSearchReqDto);
 	}
 
@@ -123,9 +121,6 @@ public class AttServiceImpl implements AttService{
 			}
 			
 		}
-		
-		
-		
 		return dtos;
 	}
 }
