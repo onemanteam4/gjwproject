@@ -1,15 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
 //달력
 let nowMonth = new Date();
 let today = new Date();
@@ -17,15 +6,10 @@ let today = new Date();
 window.onload = function() {Calendar();}
 
 function Calendar() {
-    const Cols2 = document.querySelectorAll(".ul-datepicker-calendar tbody tr td span");
-    const daydate = document.querySelector(".ul-datepicker-calendar tbody tr td span");
-    const Cols = document.querySelector(".ul-datepicker-calendar tbody tr td");
     const Sdate = document.querySelector("#sdate");
     const Edate = document.querySelector("#edate");
-    const DatePicker = document.querySelectorAll(".Date-Picker");
     const uiDatepickerCurrent = document.querySelector(".ui-datepicker-current");
     const ulDatepickerClose = document.querySelector(".ul-datepicker-close");
-    const ulDatepickerMonth = document.querySelector(".ul-datepicker-month");
     let year1 = today.getFullYear();
     let month1 = today.getMonth() + 1;
     let day1 = today.getDate();
@@ -41,11 +25,6 @@ function Calendar() {
     let month = today.getMonth() + 1;
     let day = today.getDate();
     let startDayValue = year + "-" + month + "-" + day;
-	
-	
-	
-    console.log(startDayValue);
-	console.log(firstDate);
 
     let calendarMonthStartDay = firstDate.getDay();
     //시작 일
@@ -66,7 +45,6 @@ function Calendar() {
 
     let calendarWeekCount = Math.ceil((calendarMonthStartDay + calendarMonthLastDate) / 7);
 
-    console.log(calendarWeekCount);
 
     let nowRow = tbodyCalendar.insertRow();
 
@@ -83,9 +61,6 @@ function Calendar() {
         let starDate = nowYear + "-" + nowMonth + "-" + nowDate;
         
         
-        console.log(starDate);
-        
-        
         
         nowColum.innerHTML += `
             <span id="span">${nowDay.getDate()}</span>
@@ -95,13 +70,7 @@ function Calendar() {
             <span id="colum" style = "display: none;">${nowDay.getFullYear()}-${nowDay.getMonth() + 1}-${nowDay.getDate()}
             </span>
         `;
-        
 
-    
-
-
-
-        
 
         if(nowDay.getDay() == 6) {
             nowRow = tbodyCalendar.insertRow();
@@ -111,7 +80,6 @@ function Calendar() {
 
        
 
-        console.log(lastDate.getDate());
     }
 
     for(let i = 0; i < lastDate.getDate(); i ++) {
@@ -189,40 +157,15 @@ Edate.onclick = () => {
     }
 }
     
-
-
-
-
-
-
-
-
-
-
     for(let i = 0; i < 31; i ++) {
        
         
        
         uiDatepickerCurrent.onclick = () => {
             Sdate.value = startDayValue;
-            console.log(startDayValue);
         }
 
     }
-
-//     for(let i = 0; i < DatePicker.length; i++) {
-//         const ulDatepickerDiv = document.querySelector(".ul-datepicker-div");
-//         DatePicker[i].onclick = () => {
-            
-        
-//             ulDatepickerDiv.style.display = 'block';
-//         }
-//         ulDatepickerClose.onclick = () => {
-//             ulDatepickerDiv.style.display = 'none';
-//         }
-//     }
-// }
-
 
 //전년도 달
 
@@ -241,7 +184,6 @@ ulDatepickerNext.onclick = () => {
 function prevCalendar() {
     let ulDatepickerCalendar = document.querySelector(".ul-datepicker-calendar tbody");
     nowMonth = new Date(nowMonth.getFullYear(), nowMonth.getMonth() - 1, nowMonth.getDate());
-    console.log(nowMonth);
     ulDatepickerCalendar.innerHTML = "";
     Calendar();
 
@@ -260,7 +202,6 @@ function prevCalendar() {
 function nextCalendaar() {
     let ulDatepickerCalendar = document.querySelector(".ul-datepicker-calendar tbody");
     nowMonth = new Date(nowMonth.getFullYear(), nowMonth.getMonth() + 1, nowMonth.getDate());
-    console.log(nowMonth);
     ulDatepickerCalendar.innerHTML = "";
     Calendar();
 

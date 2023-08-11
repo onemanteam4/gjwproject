@@ -93,6 +93,10 @@ function choiceDate(nowColumn) {
     
     const choiceDay = document.querySelector(".choiceDay");
     let day = choiceDay.textContent;
+
+    if(day < 10) {
+		day = ("0" + day);
+	}
     localStorage.setItem("dateDay", day);
 }
 

@@ -10,7 +10,6 @@ let dateM = localStorage.getItem("dateMonth");
 let dateD = localStorage.getItem("dateDay");
 
 
-
 load();
 function load() {
 	ticketEstimate.innerHTML = 

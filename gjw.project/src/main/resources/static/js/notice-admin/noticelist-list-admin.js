@@ -9,10 +9,7 @@ boardBtnSubmit.onclick = () => {
 let noticelist = {
 	noticeTitle : text.value
 };
-	console.log(text.value);
-	console.log(noticelist);
 	addNoticeList(noticelist);
-	console.log("돌아감");
 }
 
 

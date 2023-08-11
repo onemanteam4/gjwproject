@@ -1,7 +1,4 @@
 
-
-
-
 let page = 1;
 let totalPage = 0;
 let newPage = 0;
@@ -20,19 +17,16 @@ for(let i = 0; i < ppp.length; i++) {
 	ppp[i].onclick = () => {
 		page = 1;
 		page = page + i;
-		
-		
-		
+
 		boardList.innerHTML = ``;
-				
-		
+
 		load();
-		for(let y = 0; y < listPage.length; y++) {
+/*		for(let y = 0; y < listPage.length; y++) {
                   listPage[y].classList.remove("on");
                 }
                 if(listPage[i].className == "num") {
                    listPage[i].classList.add("on");
-                }
+                }*/
 			
 	}
 	
@@ -46,12 +40,12 @@ for(let i = 0; i < ppp.length; i++) {
 	boardList.innerHTML = ``;
 	load();
 	
-			for(let x = 0; x < listPage.length; x++) {
+/*			for(let x = 0; x < listPage.length; x++) {
 	          listPage[x].classList.remove("on");
 	        }
 	        if(listPage[page-1].className == "num") {
 	           listPage[page-1].classList.add("on");
-	        }
+	        }*/
 	
 	
 	}
@@ -85,18 +79,6 @@ function addListBtn(page) {
 
 		
 }
-
-
-
-
-
-	
-
-
-
-
-
-
 
 load();
 function load() {
@@ -184,7 +166,6 @@ function getList(data) {
                 
 	buttonRight.onclick = () => {
 		page = page +1;
-		console.log("돈다" + page);
 		
 		if(page <= nowCount) {
 		
@@ -195,12 +176,12 @@ function getList(data) {
 		if(page > nowCount) {
 		page = nowCount;
 		}
-		for(let x = 0; x < listPage.length; x++) {
+/*		for(let x = 0; x < listPage.length; x++) {
 	          listPage[x].classList.remove("on");
 	        }
 	        if(listPage[page-1].className == "num") {
 	           listPage[page-1].classList.add("on");
-	        }
+	        }*/
 		
 		
 		
@@ -213,7 +194,7 @@ function getList(data) {
 	
 	const boardListSelect = document.querySelectorAll(".board-list tbody tr td a");
 	
-	for(let p = 0; p < 10; p ++) {
+	for(let p = 0; p < 10; p++) {
 		boardListSelect[p].onclick = () => {
 			
 		addCount(number[p]);
@@ -235,7 +216,6 @@ function addCount(i) {
 			dataType: "json",
 			success: (response) => {
 				
-				console.log(response);
 				if(response.data) {
 				boardList.innerHTML = '';
 				load();

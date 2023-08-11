@@ -11,7 +11,6 @@ function load() {
 		
 		success: (response) => {
 			getList(response.data);
-			console.log(response.data);
 		},
 		error:
 			errorMessage
@@ -20,7 +19,6 @@ function load() {
 
 function getList(data) {
 	const clientList = document.querySelector(".client-list");
-	console.log(data);
 	for(let content of data) {
 		
 	const listContent = `

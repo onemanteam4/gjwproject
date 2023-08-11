@@ -16,9 +16,6 @@ body {
     
 }
 
-
-
-
 .box-wrapper {
  margin: 0px;
  padding: 0px;
@@ -836,8 +833,7 @@ body {
     float: left;
 
     height: 26px;
-    /* display: flex;
-    justify-content: space-between; */
+
 }
 
 
@@ -863,6 +859,7 @@ body {
     font-weight: 500;
     color: #ffffff;
     letter-spacing: -1px;
+   	cursor: pointer;
 }
 
 .board-btn::after {

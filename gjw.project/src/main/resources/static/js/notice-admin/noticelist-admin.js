@@ -1,6 +1,3 @@
-
-
-
 let page = 1;
 let totalPage = 0;
 let newPage = 0;
@@ -13,7 +10,6 @@ const buttonLeft = document.querySelector(".button-left");
 const buttonRight = document.querySelector(".button-right");
 const num = document.querySelector(".num");
 
-console.log(listPage);
 
 function listlist(ppp) {
 	
@@ -41,11 +37,8 @@ for(let i = 0; i < ppp.length; i++) {
 
 }
 
-
-
 	buttonLeft.onclick = () => {
 	page = page -1;	
-	console.log("돌아감" + page);
 	
 	if(page > 0) {
 		
@@ -71,20 +64,6 @@ for(let i = 0; i < ppp.length; i++) {
 }
 
 
-
-
-
-
-	
-
-
-
-
-
-
-
-
-console.log("hi"+page);
 load();
 function load() {
 	$.ajax({
@@ -217,13 +196,7 @@ function getList(data) {
 	
 	const boardListSelect = document.querySelectorAll(".board-list tbody tr td a");
 	
-/*	for(let p = 0; p < 10; p ++) {
-		boardListSelect[p].onclick = () => {
-			console.log(p);
-			
-		addCount(number[p]);
-		}
-	}*/
+
 	const deleteAll = document.querySelectorAll(".delete");
 	for(let m = 0; m < deleteAll.length; m++) {
 		deleteAll[m].onclick = () => {
@@ -234,17 +207,14 @@ function getList(data) {
 	for(let n = 0; n < modificationAll.length; n++) {
 		modificationAll[n].onclick = () => {
 			
-			/*noticeUpdate(number[n]);*/
+
 			location.href = "/admin/notice_list_modification/"+ number[n];
 		}
 	}
 	
-
-        
-		
+	
 }
 
-console.log(Countcount);
 
 function addListBtn(page) {
 	

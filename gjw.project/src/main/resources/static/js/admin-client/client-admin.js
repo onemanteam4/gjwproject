@@ -110,7 +110,6 @@ function load() {
 		
 		success: (response) => {
 			getList(response.data);
-			console.log("오는디");
 			addListBtn(response.data[0].totalCount);
 		},
 		error:
