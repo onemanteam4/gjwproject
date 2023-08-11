@@ -10,8 +10,6 @@ function load(uri){
 		dataType: "json",
 		success: (response)=> {
 			getatt(response.data[0]);
-			console.log(response.data[0]);
-			
 		},
 		error: (error) => {
 			console.log(error);
@@ -38,7 +36,6 @@ function getatt(attList) {
                             <li class="imgId"  style="background-image: url(/static/img-kdh/attractions/${attList.fileName}_5.jpg);"></li>
                         </ul>
 	`;
-	console.log(attractionsphoto.innerHTML);
 	
 	
 	
@@ -74,12 +71,13 @@ function getatt(attList) {
                         </ul>
 	`;
 	
-	facilitymaparea.innerHTML=`
+	facilitymaparea.innerHTML=
+	`
 		<h4>위치정보</h4>
 		<div class="FacilityMap">
-                        <img src="/static/img-kdh/attractions/${attList.fileName}_6.jpg" alt="">
-                    </div>
-	`;
+        	<img src="/static/img-kdh/attractions/${attList.fileName}_6.jpg">
+        </div>
+    `;
 	
 }
 
@@ -97,7 +95,6 @@ function changeimg(){
 	}
 }
 changeimg();
-console.log(changeimg);
 
 
 

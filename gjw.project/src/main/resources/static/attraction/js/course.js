@@ -28,7 +28,6 @@ function load(uri){
 		dataType: "json",
 		success: (response) => {
 			getrcd(response.data);
-			console.log(response.data);
 		},
 		error: (error) => {
 			console.log("에러입니다.");

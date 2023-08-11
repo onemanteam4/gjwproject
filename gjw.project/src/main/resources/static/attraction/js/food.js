@@ -12,7 +12,6 @@ function load(i){
 		dataType: "json",
 		success: (response) => {
 			getfood(response.data);
-			console.log(response.data);
 		},
 		error: (error) => {
 			console.log(error);

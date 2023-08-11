@@ -14,7 +14,6 @@ function load(uri){
 		dataType: "json",
 		success: (response)=>{
 				foodexplanation(response.data);
-			
 		},
 		error: (error) => {
 			console.log(error);

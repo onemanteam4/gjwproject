@@ -8,7 +8,6 @@ for(i=0; i < 26; i++){
 function load(i) {
 	let rideCode = 1;
 	rideCode = rideCode + i;
-	console.log(rideCode);
 	$.ajax({
 		async: false,
 		type: "get",
@@ -16,8 +15,6 @@ function load(i) {
 		dataType: "json",
 		success: (response) => {
 			getride(response.data);
-			console.log(response.data);
-			
 		},
 		error: (error) => {
 			console.log(error);
@@ -37,8 +34,6 @@ function getride(data) {
 		
 		let explan = content.rideExplanation;
 		let explan2 = explan.substring(0, 38).replaceAll("br")+"...";
-		console.log(explan2);
-		
 		
 		const mainList = 
 		`
@@ -56,10 +51,6 @@ function getride(data) {
                         </li>
 		`;
 		containerrows.innerHTML += mainList;
-		
-		console.log(mainList);
-		
-		
 	}
 	
 }
@@ -104,13 +95,10 @@ document.addEventListener("DOMContentLoaded", function () {
 function checklist(num) {
 	
 		if(checktheme[num].checked == true){
-			console.log("체크성공");
 			
 			checktheme[num].value = "1";
-			console.log(checktheme[num].value);
 		}else if(checktheme[num].checked == false){
 			checktheme[num].value = "0";
-			console.log(checktheme[num].value);
 		}
 }
 
@@ -121,14 +109,6 @@ searchBtn.onclick = () => {
 	
 	const containerrows = document.querySelector("#ajaxContainer");
     containerrows.innerHTML = '';
-	
-	
-	console.log(checktheme[0].value);
-	console.log(checktheme[1].value);
-	console.log(checktheme[2].value);
-	console.log(checktheme[3].value);
-	console.log(checktheme[4].value);
-	console.log(height.value);
 	
 	$.ajax({
 		async: false,
@@ -145,7 +125,6 @@ searchBtn.onclick = () => {
 		dataType: "json",
 		success: (response) => {
 			searchride(response.data);
-			console.log(response.data);
 		},
 		error: (error) => {
 			console.log(error);
@@ -164,8 +143,6 @@ function searchride(data) {
 		
 		let explan = content.rideExplanation;
 		let explan2 = explan.substring(0, 38).replaceAll("br")+"...";
-		console.log(explan2);
-		
 		
 		const searchList = 
 		`
@@ -183,8 +160,6 @@ function searchride(data) {
                         </li>
 		`;
 		containerrowss.innerHTML += searchList;
-		
-		console.log(searchList);
 	}
 	  
 	  const rideNumber = document.querySelectorAll("#ajaxContainer li");
