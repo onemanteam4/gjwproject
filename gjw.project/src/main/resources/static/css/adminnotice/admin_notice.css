@@ -944,10 +944,14 @@ body {
 }
 
 
+
+
 .board-list-pager ul {
     display: table;
 
     text-align: center;
+    
+    
 }
 
 .board-list-pager ul li {
@@ -956,6 +960,8 @@ body {
     border: 1px solid #c1c2c6;
     min-height: 32px;
     margin-left: 4px;
+    
+    
 }
 
 /* .board-list-pager ul li:first-child button {

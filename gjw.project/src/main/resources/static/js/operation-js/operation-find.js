@@ -1,83 +1,5 @@
 
-const listHover = document.querySelector(".list-hover");
-const hover = document.querySelectorAll(".hover");
-const mainTopMenu = document.querySelector(".main-top-menu");
 
-//탑 메뉴 오버시 나오게
-mainTopMenu.onmouseover = () => {
-    for(let i = 0; i < hover.length; i++) {
-        if(hover[i].style.display == 'none') {
-            hover[i].style.display = 'block';
-            hover[i].style.opacity = '1';
-    
-            mainTopMenu.style.height = '374px';
-        }else {
-            hover[i].style.display = 'none';
-            hover[i].style.opacity = '0';
-        }
-    }
-}
-
-mainTopMenu.onmouseout = () => {
-    for(let i = 0; i < hover.length; i++) {
-        if(hover[i].style.display == 'block') {
-            hover[i].style.display = 'none';
-            hover[i].style.opacity = '0';
-    
-            mainTopMenu.style.height = '56px';
-        }else {
-            hover[i].style.display = 'block';
-            hover[i].style.opacity = '1';
-        }
-    }
-}
-
-//오른쪽 이미지 오버시 나오게
-const quickController = document.querySelector("#quickController");
-
-quickController.onmouseover = () => {
-    quickController.style.right = '-75px';
-}
-
-quickController.onmouseout = () => {
-    quickController.style.right = '-145px';
-}
-
-
-
-//맨 위 배너 슬라이드
-const boxSlider = document.querySelector(".box-slider-list");
-const boxSliderList = document.querySelectorAll(".box-slider-list li");
-let imgCount = 0;
-let slideCount = boxSliderList.length;
-
-
-banner();
-
-let slideWidth = -1903;
-
-function banner () {
-    // for(let i = 0; i < boxSliderList.length; i++) {
-    //     imgCount++;
-    // }
-
-    let index = 0;
-
-    setInterval( () => {
-        
-
-        boxSlider.style.transition = 'transform 1s ease-out';
-        boxSlider.style.transform = 'translate3d(-' + 1903*(index+1) + 'px, 0px, 0px)';
-        index ++;
-        
-        console.log(index);
-        if( index >= 4) {
-            index = -1;
-        }
-    }, 10000);
-       
-
-}
 
 
 
@@ -103,14 +25,12 @@ const mapLink = document.querySelectorAll(".map-link ul li");
 
 
 for(let i= 0; i < tabSelectorList.length; i++) {
-	console.log("반복은 돌아감.");
 	tabSelectorList[i].onclick = () => {
 		for(let j = 0; j < tabSelectorList.length; j++) {
 			detailList[j].className = "detail";
 			tabSelectorList[j].classList.remove("on");
 			
 			mapContentList[j].style.display = 'none';
-			console.log("안쪽 반복도 돌아감.");
 			
 			mapLink[j].classList.remove("on");
 			
@@ -118,7 +38,6 @@ for(let i= 0; i < tabSelectorList.length; i++) {
 		}
 		if(detailList[i].className == "detail") {
 			detailList[i].classList.add("on");
-			console.log("작동은 됨.");
 			
 			tabSelectorList[i].classList.add("on");
 			mapContentList[i].style.display = 'block';

@@ -81,11 +81,6 @@ function loadHeader(user) {
 let user = getPrincipal();
 loadHeader(user);
 
-const operationTimeCalendar = document.querySelector(".operation-time-calendar");
-const viewCalendar = document.querySelector(".view-calendar");
-
-
-
 
 const listHover = document.querySelector(".list-hover");
 const hover = document.querySelectorAll(".hover");
@@ -142,14 +137,13 @@ const boxSliderList = document.querySelectorAll(".box-slider-list li");
 
 const boxPagerLink = document.querySelectorAll(".box-pager div a");
 
-console.log(boxPagerLink.length);
 
 
 for(let x = 0; x < boxPagerLink.length; x++) {
-   boxPagerLink[x].onclick = () => {
-      boxSlider.style.transition = 'transform 0.5s ease-out';
+	boxPagerLink[x].onclick = () => {
+		boxSlider.style.transition = 'transform 0.5s ease-out';
         boxSlider.style.transform = 'translate3d(-' + 1903*x + 'px, 0px, 0px)';
-   }
+	}
 }
 
 
@@ -177,7 +171,6 @@ function banner () {
         boxSlider.style.transform = 'translate3d(-' + 1903*(index+1) + 'px, 0px, 0px)';
         index ++;
         
-        console.log(index);
         if( index >= 5) {
             index = -1;
             setTimeout(() => {
@@ -188,20 +181,17 @@ function banner () {
     }, 10000);
     boxSlider.onmouseover = () => {
         clearInterval(time);
-        console.log("멈춰!");
     }
 
     boxSlider.onmouseout = () => {
 
         index = 0;
         time = setInterval( () => {
-            console.log("재시작!");
 
             boxSlider.style.transition = 'transform 1s ease-out';
             boxSlider.style.transform = 'translate3d(-'+ 1903*(index+1) + 'px, 0px, 0px)';
             index ++;
             
-            console.log(index+1);
             if( index >= 5) {
                 index = -1;
     
@@ -215,4 +205,3 @@ function banner () {
        
 
 }
-

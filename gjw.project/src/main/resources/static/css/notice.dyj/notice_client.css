@@ -1383,3 +1383,271 @@ input[type="text"], input[type="password"], input[type="button"], input[type="su
     line-height: 30px;
     
 }
+
+
+
+.ul-datepicker-div {
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+
+    border: 1px solid #dddddd;
+    background: white 50% top repeat-x;
+    color: #333333;
+
+    font-size: 1.1em;
+    width: 20em;
+    padding: 0.2em 0.2em 0px;
+    min-height: 0px;
+    z-index: 200 !important;
+}
+
+
+
+.ul-widget-header {
+    position: relative;
+    padding: 0.2em 0px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+
+    border: 1px solid #e78f08;
+    background: #f6a828 url('/static/main-image/calendar/lost-calendar.png') 50% 50% repeat-x;
+    color: #ffffff;
+    font-weight: bold;
+
+    min-height: 0px;
+    font-size: 1.1em;
+}
+
+.ul-datepicker-calendar {
+    width: 100%;
+    font-size: .9em;
+    border-collapse: collapse;
+    margin: 0px 0px 0.4em;
+    color: #333333;
+}
+
+.ul-datepicker-calendar th {
+    padding: 0.7em 0.3em;
+    text-align: center;
+    font-weight: bold;
+    border: 0px;
+
+    font-size: 1.3em;
+    color: #333333;
+}
+
+.ul-datepicker-calendar td {
+    border: 0px;
+    padding: 1px;
+    color: #333333;
+}
+
+.ul-datepicker-button {
+    background-image: none;
+    margin: 0.85em 0px 0px 0px;
+    padding: 0px 0.25em;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+
+    position: relative;
+    bottom: 2%;
+}
+
+.ui-datepicker-current {
+    margin: 0.6em 0.25em 0.5em;
+    cursor: pointer;
+    padding: 0.25em 0.66em 0.35em 0.65em;
+    width: auto;
+    overflow: visible;
+
+    float: left;
+    font-weight: normal;
+    border: 1px solid #cccccc;
+    background: #f5f5f5 url('/static/main-image/calendar/lost-calendar2.png') 50% 50% repeat-x;
+    color: #333333;
+
+    font-size: 1em;
+
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.ul-datepicker-close {
+    float: right;
+    margin: 0.6em 0.25em 0.5em;
+    cursor: pointer;
+    padding: 0.25em 0.75em 0.35em 0.75em;
+    width: auto;
+    overflow: visible;
+
+    font-weight: bold;
+    border: 1px solid #cccccc;
+    background: #f5f5f5 url('/static/main-image/calendar/lost-calendar3.png') 50% 50% repeat-x;
+    color: #333333;
+
+    font-size: 1em;
+
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.ul-helper-clearfix::before {
+    content: "";
+    display: table;
+    border-collapse: collapse;
+    color: #333333;
+
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    line-height: 1.4;
+}
+
+
+
+.ul-helper-clearfix::after {
+    clear: both;
+    content: "";
+    display: table;
+    border-collapse: collapse;
+    
+}
+
+.ul-datepicker-prev {
+    left: 2px;
+    position: absolute;
+    top: 2px;
+    width: 1.8em;
+    height: 1.8em;
+
+    color: #ffffff;
+
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+
+    font-size: 1.1em;
+    font-weight: bold;
+
+    border: none;
+    padding: 0px;
+
+    background: none;
+    cursor: pointer;
+}
+
+
+.ul-datepicker-prev span {
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin-left: -8px;
+    top: 50%;
+    margin-top: -8px;
+
+    background-image: url('/static/main-image/calendar/lost-left.png');
+    background-position: -80px -192px;
+    width: 16px;
+    height: 16px;
+    text-indent: -99999px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    
+    color: #ffffff
+}
+
+.ul-datepicker-next {
+    right: 2px;
+    position: absolute;
+    top: 2px;
+    width: 1.8em;
+    height: 1.8em;
+    color: #ffffff;
+
+    font-size: 1.1em;
+    font-weight: bold;
+
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+
+    border: none;
+    padding: 0px;
+
+    background: none;
+    cursor: pointer;
+    
+    color: #ffffff
+}
+
+.ul-datepicker-next span {
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin-left: -8px;
+    top: 50%;
+    margin-top: -8px;
+
+    background-image: url('/static/main-image/calendar/lost-left.png');
+    background-position: -48px -192px;
+    width: 16px;
+    height: 16px;
+    text-indent: -99999px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    
+    color: #ffffff
+}
+
+.ul-datepicker-title {
+    margin: 0 2.3em;
+    line-height: 1.8em;
+    text-align: center;
+    
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.1em;
+    letter-spacing: -1px;
+}
+
+.ul-datepicker-calendar tbody tr td span {
+    font-weight: normal;
+    opacity: .7;
+
+    border: 1px solid #cccccc;
+    background: #f5f5f5 url('/static/main-image/calendar/lost-main.png') 50% 50% repeat-x;
+    color: black;
+
+    display: block;
+    padding: 0.25em;
+    text-align: right;
+    text-decoration: none;
+
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+
+.ul-datepicker-calendar tbody tr td span.on {
+    border: 1px solid #fed22f;
+    background: #ffe45c url('/static/main-image/calendar/lost-click.png') 50% top
+    repeat-x;
+    color: #363636;
+}
+
+
+.ul-datepicker-calendar tbody tr td span:hover {
+    border: 1px solid #fbd850;
+    background: #ffffff url('/static/main-image/calendar/lost-hover.png') 50% 50% repeat-x;
+    font-weight: bold;
+    color: #eb8f00;
+}
