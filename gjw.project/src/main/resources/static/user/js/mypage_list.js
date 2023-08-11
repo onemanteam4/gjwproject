@@ -13,7 +13,7 @@ const listWrap = document.querySelector(".list-wrap");
 const btnMonth = document.querySelectorAll("btn-month-wrap button");
 const monthbtn = document.querySelector(".monthbtn");
 
-
+/* 달력 만들기 시작 */
 let nowMonth = new Date(); // 현재 달을 페이지를 로드한 날로 초기화
 let nowMonth2 = new Date();
 let today = new Date(); // 페이지를 로드한 날짜를 저장
@@ -236,11 +236,9 @@ function nextCalendar2() {
         changeCal2.innerText = (nowMonth2.getMonth() + 1) + "월";
     }
 }
+/* 달력 만들기 끝 */
 
-//달력만들기 끝
-
-//티켓 가져오기
-
+/* 회원 티켓정보 가져오기 */
 let ticket = loadUserTicket();
 function loadUserTicket() {
 	let ticket = null
@@ -420,8 +418,7 @@ function ticketDeail(ticket) {
 
 }
 
-//1,3,6개월 선택시 변경 시작
-
+/* 1,3,6개월 선택시 변경 시작 */
 function changeDate1() {
 	let changeDay = new Date();
 	let changeY = changeDay.getFullYear();
@@ -463,7 +460,6 @@ function changeDate3() {
 	}
 	calendarShowFir.value = changeY + "-" + changeM + "-" + changeD;
 }
-
 //1,3,6개월 선택시 변경 끝
 
 monthbtn.onclick = () => {
@@ -473,20 +469,3 @@ monthbtn.onclick = () => {
 	ticket = loadUserTicket();
 	ticketDeail(ticket);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

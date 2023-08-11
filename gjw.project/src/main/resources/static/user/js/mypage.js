@@ -3,6 +3,7 @@ const checkLinksList = document.querySelector(".check-links-list");
 
 getUser();
 loadName();
+/* 마이페이지 타이틀 */
 function loadName() {
 	getUser();
 	pageTitle.innerHTML = `
@@ -14,6 +15,7 @@ function loadName() {
 	`;
 }
 
+/* 현재 날짜 이후 티켓 가져오기 */
 let today = new Date();
 let yyyy = today.getFullYear();
 let mm = today.getMonth() + 1;
@@ -52,6 +54,7 @@ function checkUserTicket() {
 	})
 }
 
+/* 티켓 유무 확인 */
 function loadTicket(data) {
 	if(data.length == 0) {
 		checkLinksList.innerHTML = `

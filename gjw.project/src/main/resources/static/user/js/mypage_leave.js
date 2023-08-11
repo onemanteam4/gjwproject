@@ -4,15 +4,15 @@ const myPw = document.querySelector("#myPw");
 
 const btnLeave = document.querySelector(".btn-leave");
 
-
-
 getUser();
 loadUserInfo();
+/* 회원정보 가져오기 */
 function loadUserInfo() {
 	myId.value = getUser().user_id;
 	myName.value = getUser().user_name;
 }
 
+/* 회원 패스워드 가져오기 */
 let userPass = getPrincipalPassword();
 function getPrincipalPassword() {
 	let userP = null;
@@ -32,7 +32,7 @@ function getPrincipalPassword() {
 }
 
 
-
+/* 비밀번호 확인 후 탈퇴 */
 btnLeave.onclick = () => {
 	userCode = getUser().user_code;
 	

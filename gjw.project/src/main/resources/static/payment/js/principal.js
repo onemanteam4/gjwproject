@@ -1,3 +1,4 @@
+/* 유저정보 가져오기 */
 function getPrincipal() {
 	let user = null;
 	$.ajax({

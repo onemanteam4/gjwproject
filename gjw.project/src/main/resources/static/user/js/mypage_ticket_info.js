@@ -1,8 +1,6 @@
-
-
 let orderCode = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
 
-
+/* 티켓정보 가져오기 */
 let order = orderInfo();
 function orderInfo() {
 	let order = null;

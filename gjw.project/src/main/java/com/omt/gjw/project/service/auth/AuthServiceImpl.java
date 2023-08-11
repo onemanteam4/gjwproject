@@ -33,23 +33,26 @@ public class AuthServiceImpl implements AuthService {
 	private final OrderRepository orderRepository;
 	private final PrincipalDetailsService principalDetailsService;
 	
-	
+	// 아이디 중복확인
 	@Override
 	public boolean checkUserByUserId(UserIdCheckReqDto userIdCheckReqDto) throws Exception {
 		return userRepository.findUserByUsername(userIdCheckReqDto.getUserId()) == null;
 	}
 
+	// 회원가입
 	@Override
 	public boolean signup(SignupReqDto signupReqDto) throws Exception {
 		return userRepository.save(signupReqDto.toEntity()) > 0;
 	}
 
+	// 회원가입시 지역가져오기
 	@Override
 	public List<GuListRespDto> getGuList(int siCode) throws Exception {
 		List<Region> regions = regionRepository.getGuList(siCode);
 		return createGuListRespDtos(regions);
 	}
 	
+	// 지역 리스트에 넣기
 	private List<GuListRespDto> createGuListRespDtos(List<Region> regions) {
 		List<GuListRespDto> guListRespDtos = new ArrayList<GuListRespDto>();
 		regions.forEach(gu -> {
@@ -58,11 +61,13 @@ public class AuthServiceImpl implements AuthService {
 		return guListRespDtos;
 	}
 
+	// 회원수정
 	@Override
 	public boolean updateUser(UpdateUserReqDto updateUserReqDto) throws Exception {
 		return userRepository.updateUser(updateUserReqDto.updateToEntity()) > 0;
 	}
 
+	// 회원탈퇴 및 비밀번호 확인
 	@Override
 	public boolean deleteUser(DeleteUserReqDto deleteUserReqDto) throws Exception {
 		User user = null;
@@ -76,6 +81,7 @@ public class AuthServiceImpl implements AuthService {
 		}
 	}
 
+	// 날짜에 맞는 회원 티켓가져오기
 	@Override
 	public List<CheckUserTicketRespDto> getUserTicket(CheckUserTicketReqDto checkUserTicketReqDto) throws Exception {
 		List<Order> orders = orderRepository.checkTicket(checkUserTicketReqDto.getUserCode());
@@ -86,6 +92,7 @@ public class AuthServiceImpl implements AuthService {
 		return selectTicket(orders, preDate, nextDate);
 	}
 	
+	// 날짜 확인 로직
 	private List<CheckUserTicketRespDto> selectTicket(List<Order> orders, String preDate, String nextDate) {
 		List<CheckUserTicketRespDto> dtos = new ArrayList<CheckUserTicketRespDto>();
 		for(int i = 0; i < orders.size(); i++) {
@@ -129,6 +136,7 @@ public class AuthServiceImpl implements AuthService {
 		return dtos;
 	}
 
+	// 티켓정보 가져오기
 	@Override
 	public CheckUserTicketRespDto getTicketInfo(int orderCode) throws Exception {
 		CheckUserTicketRespDto checkUserTicketRespDto = null;
@@ -137,6 +145,7 @@ public class AuthServiceImpl implements AuthService {
 		return checkUserTicketRespDto;
 	}
 
+	// 차트에 월별 예약자수 가져오기
 	@Override
 	public List<CheckUserTicketRespDto> getAllTicket(String year) throws Exception {
 		List<Order> orders = null;
@@ -145,6 +154,7 @@ public class AuthServiceImpl implements AuthService {
 		return createAllTicket(orders, year);
 	}
 	
+	// 차트, 월별 예약자수 날짜 확인
 	private List<CheckUserTicketRespDto> createAllTicket(List<Order> orders, String year) {
 		List<CheckUserTicketRespDto> dtos = new ArrayList<CheckUserTicketRespDto>();
 		
@@ -165,6 +175,7 @@ public class AuthServiceImpl implements AuthService {
 		return dtos;
 	}
 
+	// 차트, 회원 성별 가져오기
 	@Override
 	public int getUserGender(String gender) throws Exception {
 		List<User> list = null;
