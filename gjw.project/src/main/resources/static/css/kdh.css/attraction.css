@@ -1016,14 +1016,6 @@ body {
     position: relative;
 }
 
-.thumwrap:hover .photo {
-    transform: scale(1.2);
-}
-
-.thumwrap .photo {
-    transition: .5s ease-out;
-}
-
 .loction {
     display: block;
     font-weight: 300;
