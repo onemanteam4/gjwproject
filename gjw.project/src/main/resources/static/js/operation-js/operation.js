@@ -44,7 +44,7 @@ function Calendar() {
 
 	let dayYear = nowYearMonth.getFullYear();
 	let dayMonth = nowYearMonth.getMonth() + 1;
-
+	//10월 보다 작다면 앞에 0이 붙게
 	if(dayMonth < 9) {
 		dayMonth = "0" + dayMonth;
 	}
@@ -66,7 +66,7 @@ function Calendar() {
         `;
 
 
-
+		//일요일이 0부터 시작이기에 6이 된다면 한 줄 더 생기게
         if(nowDay.getDay() == 6) {
             nowRow = tbodyCalendar.insertRow();
         }
@@ -77,11 +77,13 @@ function Calendar() {
     }
     const Cols2 = document.querySelectorAll(".cols2 table tbody tr td span");
     const Cols = document.querySelector(".cols2 table tbody tr td");
+    
+    //클릭시 클래스 이름이 바꿔서 CSS적용
     for(let i = 0; i < 31; i ++) {
        
         
         Cols2[i].onclick = () => {
-            for(let j = 0; j < 30; j ++) {
+            for(let j = 0; j < 31; j ++) {
                 Cols2[j].classList.remove("on");
             }
 

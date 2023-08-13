@@ -1,17 +1,13 @@
-
 let page = 1;
 let totalPage = 0;
 let newPage = 0;
 const listPage = document.querySelectorAll(".list-page ul li#num");
 const boardList = document.querySelector(".board-list tbody");
-
 const boardCount = document.querySelector(".board-count ul");
 const buttonLeft = document.querySelector(".button-left");
 const buttonRight = document.querySelector(".button-right");
 const num = document.querySelector(".num");
-
-
-
+//page수와 맞게 아래 버튼 만들기
 function listlist(ppp) {
 for(let i = 0; i < ppp.length; i++) {
 	ppp[i].onclick = () => {
@@ -21,17 +17,9 @@ for(let i = 0; i < ppp.length; i++) {
 		boardList.innerHTML = ``;
 
 		load();
-/*		for(let y = 0; y < listPage.length; y++) {
-                  listPage[y].classList.remove("on");
-                }
-                if(listPage[i].className == "num") {
-                   listPage[i].classList.add("on");
-                }*/
-			
 	}
-	
 }
-}
+}	//버튼 왼쪽 클릭 시 이전 페이지 가져오기
 	buttonLeft.onclick = () => {
 	page = page -1;	
 	
@@ -39,25 +27,14 @@ for(let i = 0; i < ppp.length; i++) {
 		
 	boardList.innerHTML = ``;
 	load();
-	
-/*			for(let x = 0; x < listPage.length; x++) {
-	          listPage[x].classList.remove("on");
-	        }
-	        if(listPage[page-1].className == "num") {
-	           listPage[page-1].classList.add("on");
-	        }*/
-	
-	
+
 	}
 	if(page < 1) {
 		page = 1;
-		
-
-		
 	}
 	return;
 }
-
+//리스트 가져오기
 function addListBtn(page) {
 	
 	let nowCount = parseInt(page / 10) + 1;
@@ -76,10 +53,8 @@ function addListBtn(page) {
         const ppp = document.querySelectorAll(".list-page-details li#num");
 		
 		listlist(ppp);
-
-		
 }
-
+//리스트 정보 page에 맞게 10개씩 가져오기
 load();
 function load() {
 	$.ajax({
@@ -109,15 +84,12 @@ function errorMessage(request, status, error) {
     console.log(error);
 }
 
-
 function setTotalCount(totalCount) {
 	totalPage = totalCount % 10 == 0 ? totalCount / 10 : Math.floor(totalCount / 10) + 1;
 }
-
-
+//가져온 데이터 innerHTML로 넣기
 function getList(data) {
 	let r = 1;
-	
 	
 	setTotalCount(data[0].totalCount);
 	let number = [];
@@ -126,6 +98,7 @@ function getList(data) {
 		let year2 = year.substring(0, 10);
 		
 		r--;
+		//게시글 번호 noticeCode가 아닌 게시글 순서에 맞게 넣기
 		let codeCode = content.totalCount + r;
 		if(page > 1) {
 			codeCode = content.totalCount + r -((page-1)*10);
@@ -143,16 +116,9 @@ function getList(data) {
                         </tr>
 		`
 		boardList.innerHTML += listContent;
-		
-		
-
+		//배열에 noticeCode넣기
 		number.push(content.noticeCode);
 
-		
-	
-		
-		
-		
 		let nowCount = parseInt(content.totalCount / 10) + 1;
 		
 		boardCount.innerHTML = `
@@ -176,18 +142,7 @@ function getList(data) {
 		if(page > nowCount) {
 		page = nowCount;
 		}
-/*		for(let x = 0; x < listPage.length; x++) {
-	          listPage[x].classList.remove("on");
-	        }
-	        if(listPage[page-1].className == "num") {
-	           listPage[page-1].classList.add("on");
-	        }*/
-		
-		
-		
-		
 		return;
-		
 	}        
                 
 	}
@@ -203,8 +158,6 @@ function getList(data) {
 	
 
 }
-
-
 
 function addCount(i) {
 		$.ajax({

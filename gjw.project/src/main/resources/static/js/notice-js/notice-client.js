@@ -1,6 +1,3 @@
-
-
-
 //달력
 let nowMonth = new Date();
 let today = new Date();
@@ -8,20 +5,8 @@ let today = new Date();
 window.onload = function() {Calendar();}
 
 function Calendar() {
-    const Cols2 = document.querySelectorAll(".ul-datepicker-calendar tbody tr td span");
-    const daydate = document.querySelector(".ul-datepicker-calendar tbody tr td span");
-    const Cols = document.querySelector(".ul-datepicker-calendar tbody tr td");
-    const Sdate = document.querySelector(".hasDatepicker parsley-error");
-    const Edate = document.querySelector("#edate");
-    const DatePicker = document.querySelectorAll(".Date-Picker");
     const uiDatepickerCurrent = document.querySelector(".ui-datepicker-current");
     const ulDatepickerClose = document.querySelector(".ul-datepicker-close");
-    const ulDatepickerMonth = document.querySelector(".ul-datepicker-month");
-    let year1 = today.getFullYear();
-    let month1 = today.getMonth() + 1;
-    let day1 = today.getDate();
-    let startDayValue1 = year1 + "-" + month1 + "-" + day1;
-
 
     let firstDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth(), 1);
     //시작 전체
@@ -33,9 +18,6 @@ function Calendar() {
     let day = today.getDate();
     let startDayValue = year + "-" + month + "-" + day;
 	
-	
-	
-
     let calendarMonthStartDay = firstDate.getDay();
     //시작 일
     let calendarMonthLastDate = lastDate.getDate();
@@ -43,6 +25,7 @@ function Calendar() {
 	let ulDatepickerYear1 = document.querySelector(".ul-datepicker-year");
     ulDatepickerYear1.innerText = nowMonth.getFullYear();
     let ulDatepickerMonth1 = document.querySelector(".ul-datepicker-month");
+    //달 영어 배열 추가
     const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
     if(nowMonth.getMonth() < 9) {
         ulDatepickerMonth1.innerText = "0" + (nowMonth.getMonth() + 1) + "월" + "(" + months[nowMonth.getMonth()] + ")"; 
@@ -50,14 +33,13 @@ function Calendar() {
         ulDatepickerMonth1.innerText =  + (nowMonth.getMonth() + 1) + "월" + "(" + months[nowMonth.getMonth()] + ")";
     }
 
-
     let tbodyCalendar = document.querySelector(".ul-datepicker-calendar > tbody");
 
     let calendarWeekCount = Math.ceil((calendarMonthStartDay + calendarMonthLastDate) / 7);
 
-
     let nowRow = tbodyCalendar.insertRow();
 
+	//캘린더 innerHTML 부분
     for(let i = 0; i < calendarMonthStartDay; i++) {
         let nowColum = nowRow.insertCell();
     }
@@ -70,10 +52,6 @@ function Calendar() {
         let nowDate = nowDay.getDate();
         let starDate = nowYear + "-" + nowMonth + "-" + nowDate;
         
-        
-        
-        
-        
         nowColum.innerHTML += `
             <span id="span">${nowDay.getDate()}</span>
         `;
@@ -83,33 +61,22 @@ function Calendar() {
             </span>
         `;
         
-
-    
-
-
-
-        
-
         if(nowDay.getDay() == 6) {
             nowRow = tbodyCalendar.insertRow();
         }
 
         nowColum.style.cursor = "pointer";
-
        
-
     }
 
     for(let i = 0; i < lastDate.getDate(); i ++) {
         const Cols2 = document.querySelectorAll(".ul-datepicker-calendar tbody tr td span#span");
         const colum = document.querySelectorAll("#colum");
 
-
         Cols2[i].onclick = () => {
             for(let j = 0; j < lastDate.getDate(); j ++) {
                 Cols2[j].classList.remove("on");
             }
-
 
             frmVisitDate.value = colum[i].innerText;
             Cols2[i].classList.add("on");
@@ -120,7 +87,6 @@ frmVisitDate.onclick = () => {
     const ulDatepickerDiv = document.querySelector(".ul-datepicker-div");
     ulDatepickerDiv.style.display = 'block';
     close();
-    
 
     for(let i = 0; i < lastDate.getDate(); i ++) {
         const Cols2 = document.querySelectorAll(".ul-datepicker-calendar tbody tr td span#span");
@@ -163,21 +129,7 @@ function close () {
 
     }
 
-//     for(let i = 0; i < DatePicker.length; i++) {
-//         const ulDatepickerDiv = document.querySelector(".ul-datepicker-div");
-//         DatePicker[i].onclick = () => {
-            
-        
-//             ulDatepickerDiv.style.display = 'block';
-//         }
-//         ulDatepickerClose.onclick = () => {
-//             ulDatepickerDiv.style.display = 'none';
-//         }
-//     }
-// }
 
-
-//전년도 달
 
 const ulDatepickerPrev = document.querySelector(".ul-datepicker-prev");
 const ulDatepickerNext = document.querySelector(".ul-datepicker-next");
@@ -227,35 +179,9 @@ function nextCalendaar() {
 }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const up = document.querySelector(".up");
 const clientListInput = document.querySelectorAll(".client-list dd input");
 const agree = document.querySelector("#agree");
-
-
 
 var Value = "놀이기구";
 function func() {
@@ -264,8 +190,6 @@ function func() {
 	var selectedValue = selectOption.options[selectOption.selectedIndex].value;
 	
 	Value = selectedValue;
-	
-
 	
 }
 
@@ -277,40 +201,13 @@ agree.onclick = () => {
 	
 	check = is_checked;
 	
-	
-	
 }
-
-
-
-
+//등록 버튼 클릭 시 들어가는 값
 up.onclick = () => {
-	console.log(check);
 	
-	console.log(Value);
-	console.log(clientListInput[0].value);
-	console.log(clientListInput[1].value);
-	console.log(clientListInput[2].value);
-	console.log(clientListInput[3].value);
-	console.log(clientListInput[4].value);
-	console.log(clientListInput[5].value);
-	console.log(clientListInput[6].value);
-	console.log(clientListInput[7].value);
-	console.log(clientListInput[8].value);
-	console.log(clientListInput[9].value);
-	console.log(clientListInput[10].value);
-	console.log(clientListInput[24].value);
-	console.log(clientListInput[25].value);
-	console.log(callBack.value);
-	console.log(age.value);
-	console.log(division.value);
-	console.log(agree.value);
 	
-
 const frmContent = document.querySelector("#frm-content");	
 
-	
-	
 	let clientData = {
 		clientDivision : division.value,
 		clientService : Value,
@@ -325,10 +222,9 @@ const frmContent = document.querySelector("#frm-content");
 		clientContent : frmContent.value,
 		clientFile : clientListInput[25].value,
 		
-		checkagreeFlag : check
-		
+		checkagreeFlag : check	
 	}
-	
+	//등록 버튼 post요청
 		$.ajax({
 		async: false,
 		type: "post",
@@ -402,7 +298,6 @@ function getAge() {
 	}
 	}
 }
-
 
 const callType = document.querySelectorAll("#call-type input");
 const callBack = document.querySelector(".call-back");

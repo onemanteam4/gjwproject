@@ -1,4 +1,4 @@
-
+//주간 캘린더
 const rightUl = document.querySelector(".right ul");
 var day = new Date();
 let today = new Date();
@@ -31,9 +31,6 @@ function week_calandar(week) {
     
     today.setDate(today.getDate()-(today.getDay()-1));
 
-
-
-
     day.setDate(day.getDate()+week*7);
     today.setDate(today.getDate()+week*7);
     lastDate = new Date(day.getFullYear(), day.getMonth() + 1, 0);
@@ -41,27 +38,23 @@ function week_calandar(week) {
     nowDate3 = new Date(today.getFullYear(), today.getMonth() + 1, 1);
     
     const Left = document.querySelector(".left");
-    if(nowDate2.getMonth() < 9) {
+    //10월보다 작을 경우 0을 붙인다.
+    if(nowDate2.getMonth() < 10) {
 
         Left.innerText = nowDate2.getFullYear() + "."+ "0" + nowDate2.getMonth();
     } else {
         Left.innerText = nowDate2.getFullYear() + "." +nowDate2.getMonth();
     }
- 
+ 	//캘린더는 0월부터 시작하기에 0일 시 12를 붙여준다.
+ 	if(nowDate2.getMonth() == 0) {
+		 
+		 Left.innerText = nowDate2.getFullYear()-1 + ".12";
+	 }
 
-    // if(day.getDate() <= 7) {
-    //     prevMonth1.setMonth(now.getMonth())-1;
-    //     console.log("ㅇㅇ"+prevMonth1);
-    // }
-
-    let TodayDay = nowMonth.getDay();
-    var title = day.getFullYear() + "/" + (day.getMonth()+1);
     var date = "";
     for(var i = 0; i < 7; i++) {
         date = day.getDate() + i;
     if(date > lastDate.getDate()) {
-        
-       
         
         break;
     }
@@ -97,35 +90,16 @@ function week_calandar(week) {
         
         
     }
-    
-//     if(date > prevMonth.getDate()) {
-    
-//     console.log("이건 제발.." + prevMonth.getMonth());
-    
-//     for(let j = 0; j < prevMonth.getDay(); j ++) {
-//         date = prevMonthLastDate.getDate() + j
-//         console.log("si" + prevMonth.getDay());
-//         console.log("하" + date);
-
-//         rightUl.innerHTML += `
-//                             <li>
-//                               <span>${date}</span>
-//                             </li>
-                            
-//                  `
-//     }
-    
-// }
     select();
 }
-
+//현재 날짜
 function set_day() {
     day = new Date();
     day.setDate(day.getDate()-3);
 
     week_calandar(0);
 }
-
+//전 버튼 눌릴시 week_calandar 함수에 매개변수로 -1를 넣어줌
 const rightPrevBtn = document.querySelector(".right button span.prev");    
 rightPrevBtn.onclick = () => {
    rightUl.innerHTML = ``;
@@ -139,13 +113,14 @@ function prevCalendar() {
     
     
 }
-
+//다음 버튼 눌릴시 week_calandar 함수에 매개변수로 +1를 넣어줌
 const rightNextBtn = document.querySelector(".right button span.next");
 rightNextBtn.onclick = () => {
     rightUl.innerHTML = ``;
 
    week_calandar(+1)
 };
+//클릭한 날짜 CSS변경
 function select () {
 
     const selectDayDetails = document.querySelectorAll(".select-day-details ul li");
@@ -162,36 +137,3 @@ function select () {
 }
 
 
-
-// now_day();
-
-
-// day.setDate(day.getDate()-(day.getDay()-1));
-// function now_day(week) {
-//     console.log(day);
-
-//     day.setDate(day.getDate()+week*7);
-//     console.log("d"+ day);
-
-//     var date = "";
-//     for(var i = 0; i < 7; i++) {
-//         console.log(day.getDate());
-//         date = day.getDate() + i;
-//         console.log("뭐지" + date);
-//     if(date > prevMonth.getDate()) {
-        
-       
-        
-//         break;
-//     }
-        
-//         rightUl.innerHTML += `
-//                             <li>
-//                               <span>${date}</span>
-//                             </li>
-                            
-//                  `
-        
-        
-//     }
-// }

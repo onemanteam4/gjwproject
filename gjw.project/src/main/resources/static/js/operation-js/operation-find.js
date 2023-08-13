@@ -1,18 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const mapContentList = document.querySelectorAll(".map-content-list li div");
 const tabSelectorList = document.querySelectorAll(".tab-selector-list li");
 const detailList = document.querySelectorAll(".detail");
@@ -20,9 +5,7 @@ const detail = document.querySelector(".detail");
 const tabSelector = document.querySelector(".tab-selector-list");
 const mapLink = document.querySelectorAll(".map-link ul li");
 
-
-//힘들었다... 클릭시 바꾸기
-
+//리스트 선택 시 변경
 
 for(let i= 0; i < tabSelectorList.length; i++) {
 	tabSelectorList[i].onclick = () => {
@@ -33,8 +16,6 @@ for(let i= 0; i < tabSelectorList.length; i++) {
 			mapContentList[j].style.display = 'none';
 			
 			mapLink[j].classList.remove("on");
-			
-			
 		}
 		if(detailList[i].className == "detail") {
 			detailList[i].classList.add("on");
@@ -44,25 +25,14 @@ for(let i= 0; i < tabSelectorList.length; i++) {
 			
 			mapLink[i].classList.add("on");
 			
-			
 			}
 		}
-	
 };
-
-
-
 
 //지도 api 들고온 것.
 var infowindow = new naver.maps.InfoWindow({
 	content: contentString
 });
-
-
-
-
-
-
 
 var HOME_PATH = window.HOME_PATH || '.';
 
@@ -90,10 +60,6 @@ var contentString = [
 var infowindow = new naver.maps.InfoWindow({
     content: contentString
 });
-
-
-
-
 
 naver.maps.Event.addListener(marker, "click", function(e) {
     if (infowindow.getMap()) {
